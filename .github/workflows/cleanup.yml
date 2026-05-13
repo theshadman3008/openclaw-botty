@@ -1,0 +1,41 @@
+name: Cleanup old docs
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Delete docs older than 30 days
+        run: |
+          CUTOFF=$(date -d "30 days ago" +%s 2>/dev/null || date -v-30d +%s)
+          DELETED=0
+          if [ -d "docs" ]; then
+            for f in docs/*.pdf docs/*.docx docs/*.xlsx 2>/dev/null; do
+              [ -f "$f" ] || continue
+              COMMIT_DATE=$(git log -1 --format="%ct" -- "$f")
+              if [ -n "$COMMIT_DATE" ] && [ "$COMMIT_DATE" -lt "$CUTOFF" ]; then
+                git rm "$f"
+                DELETED=$((DELETED+1))
+                echo "Deleted: $f (committed $(date -d @$COMMIT_DATE 2>/dev/null || date -r $COMMIT_DATE))"
+              fi
+            done
+          fi
+          if [ "$DELETED" -gt 0 ]; then
+            git config user.name "ross-bot"
+            git config user.email "ross@nextmindlab.ai"
+            git commit -m "Auto-cleanup: removed $DELETED document(s) older than 30 days"
+            git push
+          else
+            echo "No documents to clean up."
+          fi
