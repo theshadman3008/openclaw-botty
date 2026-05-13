@@ -137,7 +137,8 @@
   <div class="login-box">
     <div class="logo">🤖</div>
     <h1>Ross AI · Dashboard</h1>
-    <p>Inserisci la password per accedere</p>
+    <p>Inserisci le credenziali per accedere</p>
+    <input type="text" id="user-input" placeholder="Username" onkeydown="if(event.key==='Enter') doLogin()" style="margin-bottom:12px">
     <input type="password" id="pwd-input" placeholder="Password" onkeydown="if(event.key==='Enter') doLogin()">
     <button onclick="doLogin()">Accedi</button>
     <div class="login-error" id="login-error">Password errata. Riprova.</div>
@@ -262,7 +263,8 @@
 
 <script>
   // ── PASSWORD ──
-  const HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // "password" sha256 — CHANGE THIS
+  const USER_HASH = '0348beb745f863940c77cc68dc7b724fd5998186f5c2ad4e72febbb6c0be0578';
+  const PASS_HASH = 'bd88fae64208b00b4c3b8d2d91a36b5d70916f4a324b225809b57422cabac9f4';
 
   async function sha256(msg) {
     const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
@@ -270,9 +272,11 @@
   }
 
   async function doLogin() {
-    const val = document.getElementById('pwd-input').value;
-    const h = await sha256(val);
-    if (h === HASH) {
+    const userVal = document.getElementById('user-input').value;
+    const passVal = document.getElementById('pwd-input').value;
+    const uh = await sha256(userVal);
+    const ph = await sha256(passVal);
+    if (uh === USER_HASH && ph === PASS_HASH) {
       sessionStorage.setItem('ross_auth', '1');
       document.getElementById('login-overlay').style.display = 'none';
       document.getElementById('app').style.display = 'block';
