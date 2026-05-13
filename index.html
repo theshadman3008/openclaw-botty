@@ -6,60 +6,25 @@
 <title>Ross AI · Dashboard</title>
 <style>
   :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --surface2: #21262d;
-    --border: #30363d;
-    --accent: #58a6ff;
-    --accent2: #3fb950;
-    --warn: #d29922;
-    --danger: #f85149;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --red: #E2001A;
+    --bg: #0d1117; --surface: #161b22; --surface2: #21262d;
+    --border: #30363d; --accent: #58a6ff; --accent2: #3fb950;
+    --warn: #d29922; --danger: #f85149; --text: #e6edf3;
+    --muted: #8b949e; --red: #E2001A;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; }
 
-  /* LOGIN OVERLAY */
-  #login-overlay {
-    position: fixed; inset: 0; background: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-    z-index: 999;
-  }
-  .login-box {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 40px; width: 360px; text-align: center;
-  }
-  .login-box .logo { font-size: 2.5rem; margin-bottom: 8px; }
-  .login-box h1 { font-size: 1.4rem; margin-bottom: 4px; }
-  .login-box p { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
-  .login-box input {
-    width: 100%; padding: 12px 16px; background: var(--surface2);
-    border: 1px solid var(--border); border-radius: 8px;
-    color: var(--text); font-size: 1rem; margin-bottom: 16px;
-    outline: none; transition: border 0.2s;
-  }
-  .login-box input:focus { border-color: var(--accent); }
-  .login-box button {
-    width: 100%; padding: 12px; background: var(--accent);
-    color: #0d1117; border: none; border-radius: 8px;
-    font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s;
-  }
-  .login-box button:hover { opacity: 0.85; }
-  .login-error { color: var(--danger); font-size: 0.85rem; margin-top: 10px; display: none; }
-
-  /* MAIN LAYOUT */
-  #app { display: none; }
   header {
     background: var(--surface); border-bottom: 1px solid var(--border);
     padding: 16px 32px; display: flex; align-items: center; justify-content: space-between;
     position: sticky; top: 0; z-index: 10;
   }
   .header-left { display: flex; align-items: center; gap: 12px; }
-  .header-left .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent2); box-shadow: 0 0 6px var(--accent2); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent2); box-shadow: 0 0 6px var(--accent2); }
   .header-left h1 { font-size: 1.2rem; font-weight: 700; }
   .header-left span { color: var(--muted); font-size: 0.85rem; }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .last-update { color: var(--muted); font-size: 0.8rem; }
   .logout-btn {
     background: none; border: 1px solid var(--border); color: var(--muted);
     padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 0.85rem;
@@ -67,69 +32,86 @@
   }
   .logout-btn:hover { border-color: var(--danger); color: var(--danger); }
 
-  main { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+  main { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
 
-  /* STATS ROW */
   .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
   .stat-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 10px; padding: 20px; text-align: center;
   }
   .stat-card .num { font-size: 2rem; font-weight: 800; }
-  .stat-card .label { color: var(--muted); font-size: 0.8rem; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-card .lbl { color: var(--muted); font-size: 0.78rem; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
   .stat-card.blue .num { color: var(--accent); }
   .stat-card.green .num { color: var(--accent2); }
   .stat-card.yellow .num { color: var(--warn); }
   .stat-card.red .num { color: var(--red); }
 
-  /* SECTIONS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
   .section-title {
-    font-size: 1rem; font-weight: 700; color: var(--muted);
+    font-size: 0.78rem; font-weight: 700; color: var(--muted);
     text-transform: uppercase; letter-spacing: 0.08em;
     margin-bottom: 14px; padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
   }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
-  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
 
-  /* CONVERSATIONS TABLE */
-  .conv-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-  .conv-table th { color: var(--muted); text-align: left; padding: 8px 12px; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; border-bottom: 1px solid var(--border); }
-  .conv-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-  .conv-table tr:last-child td { border-bottom: none; }
+  /* CONVERSATIONS */
+  .conv-item {
+    display: flex; flex-direction: column; gap: 4px;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .conv-item:last-child { border-bottom: none; }
+  .conv-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .conv-link {
+    color: var(--accent); text-decoration: none; font-size: 0.92rem; font-weight: 600;
+    transition: color 0.2s; flex: 1;
+  }
+  .conv-link:hover { color: var(--text); text-decoration: underline; }
+  .conv-meta { color: var(--muted); font-size: 0.76rem; white-space: nowrap; }
+  .conv-snippet {
+    color: var(--muted); font-size: 0.82rem; line-height: 1.5;
+    background: var(--surface2); border-radius: 6px; padding: 8px 10px;
+    border-left: 2px solid var(--border);
+    overflow: hidden;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+
   .badge {
     display: inline-block; padding: 3px 10px; border-radius: 20px;
-    font-size: 0.75rem; font-weight: 600;
+    font-size: 0.72rem; font-weight: 600; white-space: nowrap;
   }
   .badge-done { background: rgba(63,185,80,0.15); color: var(--accent2); }
   .badge-prog { background: rgba(88,166,255,0.15); color: var(--accent); }
   .badge-sched { background: rgba(210,153,34,0.15); color: var(--warn); }
 
-  /* TASKS LIST */
+  /* TASKS */
   .task-item {
     display: flex; align-items: flex-start; gap: 12px;
     padding: 12px 0; border-bottom: 1px solid var(--border);
   }
   .task-item:last-child { border-bottom: none; }
   .task-icon { font-size: 1.2rem; margin-top: 2px; }
-  .task-info .task-name { font-size: 0.92rem; font-weight: 600; }
-  .task-info .task-meta { color: var(--muted); font-size: 0.8rem; margin-top: 3px; }
+  .task-name { font-size: 0.92rem; font-weight: 600; }
+  .task-meta { color: var(--muted); font-size: 0.8rem; margin-top: 3px; }
+  .empty { color: var(--muted); font-size: 0.88rem; text-align: center; padding: 20px; }
 
-  /* EMPTY STATE */
-  .empty { color: var(--muted); font-size: 0.9rem; text-align: center; padding: 24px; }
-
-  /* FOOTER */
-  footer { text-align: center; color: var(--muted); font-size: 0.78rem; padding: 24px; border-top: 1px solid var(--border); margin-top: 16px; }
-
-  .conv-link {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s;
+  /* DOCUMENTS */
+  .doc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .doc-table th {
+    color: var(--muted); text-align: left; padding: 8px 12px;
+    font-weight: 600; font-size: 0.76rem; text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
   }
-  .conv-link:hover { color: var(--text); text-decoration: underline; }
+  .doc-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .doc-table tr:last-child td { border-bottom: none; }
+  .dl-link {
+    color: var(--accent2); text-decoration: none; font-weight: 600; font-size: 0.85rem;
+    padding: 4px 10px; border: 1px solid rgba(63,185,80,0.3); border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .dl-link:hover { background: rgba(63,185,80,0.1); }
 
-  /* LAST UPDATE */
-  .last-update { color: var(--muted); font-size: 0.8rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.76rem; padding: 24px; border-top: 1px solid var(--border); margin-top: 16px; }
 
   @media (max-width: 700px) {
     .stats-row { grid-template-columns: repeat(2,1fr); }
@@ -138,183 +120,121 @@
 </style>
 </head>
 <body>
-
-<!-- LOGIN -->
-<div id="login-overlay">
-  <div class="login-box">
-    <div class="logo">🤖</div>
-    <h1>Ross AI · Dashboard</h1>
-    <p>Inserisci le credenziali per accedere</p>
-    <input type="text" id="user-input" placeholder="Username" onkeydown="if(event.key==='Enter') doLogin()" style="margin-bottom:12px">
-    <input type="password" id="pwd-input" placeholder="Password" onkeydown="if(event.key==='Enter') doLogin()">
-    <button onclick="doLogin()">Accedi</button>
-    <div class="login-error" id="login-error">Password errata. Riprova.</div>
+<header>
+  <div class="header-left">
+    <div class="dot"></div>
+    <h1>🤖 Ross AI</h1>
+    <span>Dashboard operativa</span>
   </div>
-</div>
+  <div class="header-right">
+    <span class="last-update" id="update-time"></span>
+    <button class="logout-btn" onclick="doLogout()">Esci</button>
+  </div>
+</header>
 
-<!-- MAIN APP -->
-<div id="app">
-  <header>
-    <div class="header-left">
-      <div class="dot"></div>
-      <h1>🤖 Ross AI</h1>
-      <span>Dashboard operativa</span>
-    </div>
-    <div style="display:flex;align-items:center;gap:16px;">
-      <span class="last-update" id="update-time"></span>
-      <button class="logout-btn" onclick="doLogout()">Esci</button>
-    </div>
-  </header>
+<main>
+  <div class="stats-row">
+    <div class="stat-card blue"><div class="num">3</div><div class="lbl">Conversazioni</div></div>
+    <div class="stat-card green"><div class="num">2</div><div class="lbl">Completate</div></div>
+    <div class="stat-card yellow"><div class="num">0</div><div class="lbl">Task programmati</div></div>
+    <div class="stat-card red"><div class="num">2</div><div class="lbl">Documenti</div></div>
+  </div>
 
-  <main>
-    <!-- STATS -->
-    <div class="stats-row">
-      <div class="stat-card blue">
-        <div class="num" id="stat-conv">3</div>
-        <div class="label">Conversazioni totali</div>
-      </div>
-      <div class="stat-card green">
-        <div class="num" id="stat-done">2</div>
-        <div class="label">Completate</div>
-      </div>
-      <div class="stat-card yellow">
-        <div class="num" id="stat-sched">0</div>
-        <div class="label">Task programmati</div>
-      </div>
-      <div class="stat-card red">
-        <div class="num" id="stat-docs">2</div>
-        <div class="label">Documenti generati</div>
-      </div>
-    </div>
-
-    <!-- CONVERSATIONS + TASKS -->
-    <div class="grid-2">
-      <!-- CONVERSATIONS -->
-      <div class="panel">
-        <div class="section-title">💬 Conversazioni</div>
-        <table class="conv-table">
-          <thead>
-            <tr>
-              <th>Titolo</th>
-              <th>Data</th>
-              <th>Stato</th>
-            </tr>
-          </thead>
-          <tbody id="conv-tbody">
-            <tr>
-              <td><a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">✈️ Viaggio Londra via Milano</a></td>
-              <td>11 mag 2026</td>
-              <td><span class="badge badge-done">✓ Completato</span></td>
-            </tr>
-            <tr>
-              <td><a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🔴 Fastweb AI Strategy Doc</a></td>
-              <td>12 mag 2026</td>
-              <td><span class="badge badge-done">✓ Completato</span></td>
-            </tr>
-            <tr>
-              <td><a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">⚙️ Dashboard GitHub Pages</a></td>
-              <td>13 mag 2026</td>
-              <td><span class="badge badge-prog">⟳ In corso</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- SCHEDULED TASKS -->
-      <div class="panel">
-        <div class="section-title">⏰ Task Programmati</div>
-        <div id="tasks-list">
-          <div class="empty">Nessun task programmato al momento.<br>Puoi chiedere a Ross di impostare promemoria o task ricorrenti.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DOCUMENTS -->
-    <div class="panel" style="margin-bottom:32px;">
-      <div class="section-title">📄 Documenti Generati</div>
-      <table class="conv-table">
-        <thead>
-          <tr><th>Documento</th><th>Tipo</th><th>Generato il</th><th>Pagine</th><th>Download</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>🇬🇧 Viaggio Londra — Famiglia Digioia · Agosto 2026</td>
-            <td><span class="badge badge-done">PDF</span></td>
-            <td>12 mag 2026</td>
-            <td>10</td>
-            <td><a class="conv-link" href="https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/londra_viaggio.pdf" target="_blank" download>⬇ Scarica</a></td>
-          </tr>
-          <tr>
-            <td>🔴 Fastweb AI Strategy — C-Level Document</td>
-            <td><span class="badge badge-done">PDF</span></td>
-            <td>13 mag 2026</td>
-            <td>23</td>
-            <td><a class="conv-link" href="https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/fastweb_ai_strategy.pdf" target="_blank" download>⬇ Scarica</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- NOTES -->
+  <div class="grid-2">
+    <!-- CONVERSATIONS -->
     <div class="panel">
-      <div class="section-title">📝 Note rapide</div>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;">
-        Questa dashboard viene aggiornata da Ross ad ogni nuova conversazione completata o task programmato.
-        Per aggiornamenti manuali, chiedi a Ross di sincronizzare la dashboard.
-      </p>
-    </div>
-  </main>
+      <div class="section-title">💬 Conversazioni</div>
 
-  <footer>
-    Ross AI · Dashboard · Powered by NextMindLab &nbsp;|&nbsp; Ultimo aggiornamento: <span id="footer-date"></span>
-  </footer>
-</div>
+      <div class="conv-item">
+        <div class="conv-top">
+          <a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">✈️ Viaggio Londra via Milano</a>
+          <span class="conv-meta">11 mag · <span class="badge badge-done">✓ Completato</span></span>
+        </div>
+        <div class="conv-snippet">Ho cercato voli BRI↔BGY/LIN↔LGW/STN per agosto 2026, hotel a Milano vicino Linate e a Londra zone 1-2, attrazioni per ragazzi 12 anni. Budget stimato €3.800–5.600. PDF 10 pagine con itinerario completo.</div>
+      </div>
+
+      <div class="conv-item">
+        <div class="conv-top">
+          <a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🔴 Fastweb AI Strategy</a>
+          <span class="conv-meta">12 mag · <span class="badge badge-done">✓ Completato</span></span>
+        </div>
+        <div class="conv-snippet">Documento C-level su come AI e AI agentica trasformeranno Way of Working, CX e portfolio prodotti Fastweb nei prossimi 3-5 anni. 23 pagine, roadmap 36 mesi, investment framework €350–520M, 5 decisioni per il board.</div>
+      </div>
+
+      <div class="conv-item">
+        <div class="conv-top">
+          <a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">⚙️ Dashboard GitHub Pages</a>
+          <span class="conv-meta">13 mag · <span class="badge badge-prog">⟳ In corso</span></span>
+        </div>
+        <div class="conv-snippet">Dashboard protetta da login separato (cookie 24h), con conversazioni, task programmati, documenti scaricabili e pulizia automatica file >30gg via GitHub Actions.</div>
+      </div>
+    </div>
+
+    <!-- TASKS -->
+    <div class="panel">
+      <div class="section-title">⏰ Task Programmati</div>
+      <div class="empty">Nessun task programmato.<br>Chiedi a Ross di impostare promemoria o task ricorrenti.</div>
+    </div>
+  </div>
+
+  <!-- DOCUMENTS -->
+  <div class="panel" style="margin-bottom:32px;">
+    <div class="section-title">📄 Documenti Generati</div>
+    <table class="doc-table">
+      <thead>
+        <tr><th>Documento</th><th>Tipo</th><th>Generato il</th><th>Pagine</th><th>Download</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🇬🇧 Viaggio Londra — Famiglia Digioia · Agosto 2026</td>
+          <td><span class="badge badge-done">PDF</span></td>
+          <td>12 mag 2026</td>
+          <td>10</td>
+          <td><a class="dl-link" href="https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/londra_viaggio.pdf" target="_blank" download>⬇ Scarica</a></td>
+        </tr>
+        <tr>
+          <td>🔴 Fastweb AI Strategy — C-Level Document</td>
+          <td><span class="badge badge-done">PDF</span></td>
+          <td>13 mag 2026</td>
+          <td>23</td>
+          <td><a class="dl-link" href="https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/fastweb_ai_strategy.pdf" target="_blank" download>⬇ Scarica</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">📝 Note</div>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.6;">
+      Dashboard aggiornata da Ross ad ogni nuova conversazione o task. I documenti vengono eliminati automaticamente dopo 30 giorni. Per sincronizzare manualmente, chiedi a Ross.
+    </p>
+  </div>
+</main>
+
+<footer>Ross AI · Dashboard · Powered by NextMindLab &nbsp;|&nbsp; Aggiornato: <span id="footer-date"></span></footer>
 
 <script>
-  // ── PASSWORD ──
-  const USER_HASH = '0348beb745f863940c77cc68dc7b724fd5998186f5c2ad4e72febbb6c0be0578';
-  const PASS_HASH = 'bd88fae64208b00b4c3b8d2d91a36b5d70916f4a324b225809b57422cabac9f4';
-
-  async function sha256(msg) {
-    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
-    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+function getCookie(n) {
+  const m = document.cookie.match('(?:^|; )' + n + '=([^;]*)');
+  return m ? m[1] : null;
+}
+function deleteCookie(n) {
+  document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+}
+function doLogout() {
+  deleteCookie('ross_session');
+  window.location.href = 'login.html';
+}
+window.onload = function() {
+  if (!getCookie('ross_session')) {
+    window.location.href = 'login.html';
+    return;
   }
-
-  async function doLogin() {
-    const userVal = document.getElementById('user-input').value;
-    const passVal = document.getElementById('pwd-input').value;
-    const uh = await sha256(userVal);
-    const ph = await sha256(passVal);
-    if (uh === USER_HASH && ph === PASS_HASH) {
-      sessionStorage.setItem('ross_auth', '1');
-      document.getElementById('login-overlay').style.display = 'none';
-      document.getElementById('app').style.display = 'block';
-      initDashboard();
-    } else {
-      document.getElementById('login-error').style.display = 'block';
-    }
-  }
-
-  function doLogout() {
-    sessionStorage.removeItem('ross_auth');
-    location.reload();
-  }
-
-  function initDashboard() {
-    const now = new Date();
-    const fmt = now.toLocaleString('it-IT', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-    document.getElementById('update-time').textContent = 'Aggiornato: ' + fmt;
-    document.getElementById('footer-date').textContent = fmt;
-  }
-
-  // Auto-login if session active
-  window.onload = function() {
-    if (sessionStorage.getItem('ross_auth') === '1') {
-      document.getElementById('login-overlay').style.display = 'none';
-      document.getElementById('app').style.display = 'block';
-      initDashboard();
-    }
-  };
+  const now = new Date();
+  const fmt = now.toLocaleString('it-IT', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  document.getElementById('update-time').textContent = 'Aggiornato: ' + fmt;
+  document.getElementById('footer-date').textContent = fmt;
+};
 </script>
 </body>
 </html>
