@@ -121,6 +121,13 @@
   /* FOOTER */
   footer { text-align: center; color: var(--muted); font-size: 0.78rem; padding: 24px; border-top: 1px solid var(--border); margin-top: 16px; }
 
+  .conv-link {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .conv-link:hover { color: var(--text); text-decoration: underline; }
+
   /* LAST UPDATE */
   .last-update { color: var(--muted); font-size: 0.8rem; }
 
@@ -195,17 +202,17 @@
           </thead>
           <tbody id="conv-tbody">
             <tr>
-              <td>✈️ Viaggio Londra via Milano</td>
+              <td><a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">✈️ Viaggio Londra via Milano</a></td>
               <td>11 mag 2026</td>
               <td><span class="badge badge-done">✓ Completato</span></td>
             </tr>
             <tr>
-              <td>🔴 Fastweb AI Strategy Doc</td>
+              <td><a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🔴 Fastweb AI Strategy Doc</a></td>
               <td>12 mag 2026</td>
               <td><span class="badge badge-done">✓ Completato</span></td>
             </tr>
             <tr>
-              <td>⚙️ Dashboard GitHub Pages</td>
+              <td><a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">⚙️ Dashboard GitHub Pages</a></td>
               <td>13 mag 2026</td>
               <td><span class="badge badge-prog">⟳ In corso</span></td>
             </tr>
