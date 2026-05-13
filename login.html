@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ross AI · Accedi</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    background: #0d1117;
+    display: flex; align-items: center; justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  /* animated background */
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(88,166,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(88,166,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: drift 20s linear infinite;
+  }
+  @keyframes drift { from { background-position: 0 0; } to { background-position: 40px 40px; } }
+
+  .glow {
+    position: fixed; width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(226,0,26,0.12) 0%, transparent 70%);
+    top: -150px; left: -150px; z-index: 0;
+    animation: pulse 4s ease-in-out infinite;
+  }
+  .glow2 {
+    position: fixed; width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(88,166,255,0.1) 0%, transparent 70%);
+    bottom: -100px; right: -100px; z-index: 0;
+    animation: pulse 6s ease-in-out infinite reverse;
+  }
+  @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.8} 50%{transform:scale(1.1);opacity:1} }
+
+  .card {
+    position: relative; z-index: 1;
+    background: rgba(22,27,34,0.92);
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 420px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+  }
+  .logo-wrap { text-align: center; margin-bottom: 28px; }
+  .logo-icon {
+    width: 72px; height: 72px; border-radius: 18px;
+    background: linear-gradient(135deg, #E2001A, #ff4d63);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 2rem; margin-bottom: 14px;
+    box-shadow: 0 8px 24px rgba(226,0,26,0.35);
+  }
+  .logo-wrap h1 { font-size: 1.5rem; font-weight: 800; color: #e6edf3; }
+  .logo-wrap p { color: #8b949e; font-size: 0.88rem; margin-top: 6px; }
+
+  .form-group { margin-bottom: 18px; }
+  label { display: block; font-size: 0.82rem; color: #8b949e; margin-bottom: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+  input {
+    width: 100%; padding: 13px 16px;
+    background: #0d1117; border: 1px solid #30363d;
+    border-radius: 8px; color: #e6edf3; font-size: 0.95rem;
+    outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88,166,255,0.15);
+  }
+
+  .btn {
+    width: 100%; padding: 14px;
+    background: linear-gradient(135deg, #E2001A, #ff3347);
+    color: #fff; border: none; border-radius: 8px;
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    margin-top: 8px;
+    box-shadow: 0 4px 14px rgba(226,0,26,0.4);
+  }
+  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+
+  .error-msg {
+    color: #f85149; font-size: 0.84rem; text-align: center;
+    margin-top: 14px; display: none;
+    background: rgba(248,81,73,0.1); border-radius: 6px; padding: 8px;
+  }
+  .footer-note { text-align: center; color: #484f58; font-size: 0.76rem; margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="glow"></div>
+<div class="glow2"></div>
+
+<div class="card">
+  <div class="logo-wrap">
+    <div class="logo-icon">🤖</div>
+    <h1>Ross AI</h1>
+    <p>Dashboard operativa — accesso riservato</p>
+  </div>
+
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" id="u" placeholder="username" autocomplete="username" onkeydown="if(event.key==='Enter') doLogin()">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" id="p" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter') doLogin()">
+  </div>
+
+  <button class="btn" onclick="doLogin()">Accedi alla Dashboard →</button>
+  <div class="error-msg" id="err">Credenziali errate. Riprova.</div>
+  <div class="footer-note">Sessione valida per 24 ore</div>
+</div>
+
+<script>
+const U_HASH = '0348beb745f863940c77cc68dc7b724fd5998186f5c2ad4e72febbb6c0be0578';
+const P_HASH = 'bd88fae64208b00b4c3b8d2d91a36b5d70916f4a324b225809b57422cabac9f4';
+
+async function sha256(s) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+function setCookie(name, value, hours) {
+  const exp = new Date(Date.now() + hours * 3600000).toUTCString();
+  document.cookie = name + '=' + value + '; expires=' + exp + '; path=/; SameSite=Strict';
+}
+
+function getCookie(name) {
+  const m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+  return m ? m[1] : null;
+}
+
+async function doLogin() {
+  const u = document.getElementById('u').value.trim();
+  const p = document.getElementById('p').value;
+  const [uh, ph] = await Promise.all([sha256(u), sha256(p)]);
+  if (uh === U_HASH && ph === P_HASH) {
+    const token = btoa(JSON.stringify({ts: Date.now(), v: '1'}));
+    setCookie('ross_session', token, 24);
+    window.location.href = 'index.html';
+  } else {
+    const err = document.getElementById('err');
+    err.style.display = 'block';
+    setTimeout(() => err.style.display='none', 3000);
+  }
+}
+
+// Already logged in? Redirect immediately
+function getCookieVal(name) {
+  const m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+  return m ? m[1] : null;
+}
+window.onload = function() {
+  if (getCookieVal('ross_session')) window.location.href = 'index.html';
+};
+</script>
+</body>
+</html>
