@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-05-14T06:40:49.859207+00:00",
+  "last_updated": "2026-05-14T07:03:30.716500+00:00",
   "stats": {
-    "conversations": 5,
-    "completed": 4,
+    "conversations": 6,
+    "completed": 5,
     "scheduled_tasks": 0,
     "documents": 2
   },
@@ -44,8 +44,16 @@
       "title": "🔄 Dashboard real-time",
       "date": "2026-05-14",
       "date_label": "14 mag",
-      "status": "active",
+      "status": "done",
       "snippet": "Dashboard aggiornata con sistema di dati live: JSON su GitHub + fetch automatico ogni 60 secondi. I contenuti si aggiornano senza ricaricare la pagina. Ross aggiorna il JSON ad ogni nuova conversazione o documento generato."
+    },
+    {
+      "id": "conv_006",
+      "title": "📋 Analisi contratti Google RCS per operatori telco",
+      "date": "2026-05-14",
+      "date_label": "14 mag",
+      "status": "active",
+      "snippet": "Analisi dei contratti standard Google per RCS: quali ricavi P2P e A2P può mantenere un operatore telco in caso di sottoscrizione."
     }
   ],
   "documents": [
