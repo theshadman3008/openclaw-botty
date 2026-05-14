@@ -215,6 +215,18 @@
   .cbtn-white { background: #fff; color: #6366f1; }
   .cbtn-outline { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
 
+  /* LIVE INDICATOR */
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;
+    border-radius: 20px; padding: 3px 10px; font-size: 0.75rem; font-weight: 600;
+  }
+  .live-dot {
+    width: 7px; height: 7px; border-radius: 50%; background: #10b981;
+    animation: livepulse 1.5s ease-in-out infinite;
+  }
+  @keyframes livepulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
   footer { text-align: center; color: var(--muted2); font-size: 0.85rem; padding: 20px 28px; border-top: 1px solid var(--border); }
 
   /* ZOOM CONTROLS */
@@ -287,6 +299,7 @@
   <div class="topbar">
     <h2>Panoramica</h2>
     <div class="topbar-right">
+      <span class="live-badge"><span class="live-dot"></span> Live</span>
       <div class="zoom-bar">
         <button class="zbtn" onclick="changeZoom(-0.1)" title="Riduci">−</button>
         <span id="zoom-label">100%</span>
@@ -301,22 +314,10 @@
   <main>
     <!-- STATS -->
     <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-icon si-purple">💬</div>
-        <div class="stat-info"><div class="num c-purple">3</div><div class="lbl">Conversazioni</div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon si-green">✅</div>
-        <div class="stat-info"><div class="num c-green">2</div><div class="lbl">Completate</div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon si-amber">⏰</div>
-        <div class="stat-info"><div class="num c-amber">0</div><div class="lbl">Task programmati</div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon si-cyan">📄</div>
-        <div class="stat-info"><div class="num c-cyan">2</div><div class="lbl">Documenti</div></div>
-      </div>
+      <div class="stat-card"><div class="stat-icon si-purple">💬</div><div class="stat-info"><div class="num c-purple" id="s-conv">—</div><div class="lbl">Conversazioni</div></div></div>
+      <div class="stat-card"><div class="stat-icon si-green">✅</div><div class="stat-info"><div class="num c-green" id="s-done">—</div><div class="lbl">Completate</div></div></div>
+      <div class="stat-card"><div class="stat-icon si-amber">⏰</div><div class="stat-info"><div class="num c-amber" id="s-tasks">—</div><div class="lbl">Task programmati</div></div></div>
+      <div class="stat-card"><div class="stat-icon si-cyan">📄</div><div class="stat-info"><div class="num c-cyan" id="s-docs">—</div><div class="lbl">Documenti</div></div></div>
     </div>
 
     <!-- CHAT RAPIDA -->
@@ -335,65 +336,18 @@
     <div class="grid-2">
       <div class="card">
         <div class="card-title"><span>💬</span> Conversazioni recenti</div>
-
-        <div class="conv-item">
-          <div class="conv-top">
-            <a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">✈️ Viaggio Londra via Milano</a>
-            <span class="conv-date">11 mag</span>
-            <span class="badge b-green">✓ Fatto</span>
-          </div>
-          <div class="conv-snippet">PDF 10 pagine con voli BRI↔BGY/LIN↔LGW, hotel Milano e Londra, itinerario 14–24 agosto, attrazioni per ragazzi, budget €3.800–5.600.</div>
-        </div>
-
-        <div class="conv-item">
-          <div class="conv-top">
-            <a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🔴 Fastweb AI Strategy</a>
-            <span class="conv-date">12 mag</span>
-            <span class="badge b-green">✓ Fatto</span>
-          </div>
-          <div class="conv-snippet">Documento C-level 23pp su AI agentica in Fastweb: WoW, CX, portfolio, roadmap 36 mesi, investment €350–520M, 5 decisioni per il board.</div>
-        </div>
-
-        <div class="conv-item">
-          <div class="conv-top">
-            <a class="conv-link" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">⚙️ Dashboard GitHub Pages</a>
-            <span class="conv-date">13 mag</span>
-            <span class="badge b-blue">⟳ In corso</span>
-          </div>
-          <div class="conv-snippet">Dashboard protetta con login separato (cookie 24h), tema Copilot light, chat rapida, documenti scaricabili, cleanup automatico >30gg via GitHub Actions.</div>
-        </div>
+        <div id="conv-list"><div class="empty-state"><div class="ei">⏳</div>Caricamento...</div></div>
       </div>
-
       <div class="card">
         <div class="card-title"><span>⏰</span> Task programmati</div>
-        <div class="empty-state">
-          <div class="ei">🗓️</div>
-          Nessun task programmato.<br>Chiedi a Ross di impostare promemoria o task ricorrenti.
-        </div>
+        <div id="tasks-list"><div class="empty-state"><div class="ei">🗓️</div>Caricamento...</div></div>
       </div>
     </div>
 
     <!-- DOCUMENTS -->
     <div class="card" style="margin-bottom:20px;">
       <div class="card-title"><span>📄</span> Documenti generati</div>
-
-      <div class="doc-item">
-        <div class="doc-icon">🇬🇧</div>
-        <div>
-          <div class="doc-name">Viaggio Londra — Famiglia Digioia · Agosto 2026</div>
-          <div class="doc-meta">PDF · 10 pagine · 12 mag 2026</div>
-        </div>
-        <a class="dl-btn" href="https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/londra_viaggio.pdf" target="_blank" download>⬇ Scarica</a>
-      </div>
-
-      <div class="doc-item">
-        <div class="doc-icon">🔴</div>
-        <div>
-          <div class="doc-name">Fastweb AI Strategy — C-Level Document</div>
-          <div class="doc-meta">PDF · 23 pagine · 13 mag 2026</div>
-        </div>
-        <a class="dl-btn" href="https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/fastweb_ai_strategy.pdf" target="_blank" download>⬇ Scarica</a>
-      </div>
+      <div id="docs-list"><div class="empty-state"><div class="ei">⏳</div>Caricamento...</div></div>
     </div>
 
   </main>
@@ -412,6 +366,94 @@ function doLogout() {
   deleteCookie('ross_session');
   window.location.href = 'login.html';
 }
+// ── DATA FETCH ──
+const DATA_URL = 'https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/data.json';
+const TG_URL   = 'https://web.telegram.org/k/#@TestHeyrossbot';
+
+const STATUS_MAP = {
+  done:   {cls:'b-green', label:'✓ Fatto'},
+  active: {cls:'b-blue',  label:'⟳ In corso'},
+  sched:  {cls:'b-amber', label:'⏳ Programmato'}
+};
+
+function renderConversations(convs) {
+  const el = document.getElementById('conv-list');
+  if (!convs || convs.length === 0) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">💬</div>Nessuna conversazione ancora.</div>';
+    return;
+  }
+  el.innerHTML = convs.map(c => {
+    const s = STATUS_MAP[c.status] || STATUS_MAP.active;
+    return `<div class="conv-item">
+      <div class="conv-top">
+        <a class="conv-link" href="${TG_URL}" target="_blank">${c.title}</a>
+        <span class="conv-date">${c.date_label}</span>
+        <span class="badge ${s.cls}">${s.label}</span>
+      </div>
+      <div class="conv-snippet">${c.snippet}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderDocuments(docs) {
+  const el = document.getElementById('docs-list');
+  if (!docs || docs.length === 0) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">📄</div>Nessun documento generato ancora.</div>';
+    return;
+  }
+  el.innerHTML = docs.map(d => `
+    <div class="doc-item">
+      <div class="doc-icon">${d.icon}</div>
+      <div>
+        <div class="doc-name">${d.title}</div>
+        <div class="doc-meta">${d.type} · ${d.pages} pagine · ${d.date_label}</div>
+      </div>
+      <a class="dl-btn" href="${d.url}" target="_blank" download>⬇ Scarica</a>
+    </div>`).join('');
+}
+
+function renderTasks(tasks) {
+  const el = document.getElementById('tasks-list');
+  if (!tasks || tasks.length === 0) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">🗓️</div>Nessun task programmato.<br>Chiedi a Ross di impostare promemoria o task ricorrenti.</div>';
+    return;
+  }
+  el.innerHTML = tasks.map(t => `
+    <div class="conv-item">
+      <div class="conv-top">
+        <span style="font-weight:600;font-size:0.95rem;">${t.icon || '⏰'} ${t.title}</span>
+        <span class="badge b-amber">⏳ ${t.schedule}</span>
+      </div>
+      <div class="conv-snippet">${t.description || ''}</div>
+    </div>`).join('');
+}
+
+let lastUpdated = null;
+async function fetchData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!res.ok) return;
+    const d = await res.json();
+    if (d.last_updated === lastUpdated) return; // no change
+    lastUpdated = d.last_updated;
+    // Stats
+    document.getElementById('s-conv').textContent  = d.stats.conversations;
+    document.getElementById('s-done').textContent  = d.stats.completed;
+    document.getElementById('s-tasks').textContent = d.stats.scheduled_tasks;
+    document.getElementById('s-docs').textContent  = d.stats.documents;
+    // Lists
+    renderConversations(d.conversations);
+    renderDocuments(d.documents);
+    renderTasks(d.scheduled_tasks);
+    // Last update
+    const lu = new Date(d.last_updated);
+    document.getElementById('topbar-date').textContent =
+      lu.toLocaleString('it-IT',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    document.getElementById('footer-date').textContent =
+      'Aggiornato: ' + lu.toLocaleString('it-IT',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  } catch(e) { console.warn('Data fetch failed', e); }
+}
+
 // Zoom
 let currentZoom = parseFloat(localStorage.getItem('ross_zoom') || '1');
 function applyZoom(z) {
@@ -426,10 +468,8 @@ function resetZoom() { applyZoom(1); }
 window.onload = function() {
   if (!getCookie('ross_session')) { window.location.href = 'login.html'; return; }
   applyZoom(currentZoom);
-  const now = new Date();
-  const fmt = now.toLocaleString('it-IT', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  document.getElementById('topbar-date').textContent = fmt;
-  document.getElementById('footer-date').textContent = 'Aggiornato: ' + fmt;
+  fetchData();
+  setInterval(fetchData, 60000); // refresh every 60s
 };
 </script>
 </div><!-- /zoom-wrap -->
