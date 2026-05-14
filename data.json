@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-05-14T08:38:00+02:00",
+  "last_updated": "2026-05-14T06:40:49.859207+00:00",
   "stats": {
-    "conversations": 4,
-    "completed": 3,
+    "conversations": 5,
+    "completed": 4,
     "scheduled_tasks": 0,
     "documents": 2
   },
@@ -36,8 +36,16 @@
       "title": "🔄 Dashboard aggiornamento real-time",
       "date": "2026-05-14",
       "date_label": "14 mag",
-      "status": "active",
+      "status": "done",
       "snippet": "Aggiornamento automatico della dashboard via JSON + GitHub API: i dati si aggiornano in tempo reale ad ogni nuova conversazione o documento generato."
+    },
+    {
+      "id": "conv_005",
+      "title": "🔄 Dashboard real-time",
+      "date": "2026-05-14",
+      "date_label": "14 mag",
+      "status": "active",
+      "snippet": "Dashboard aggiornata con sistema di dati live: JSON su GitHub + fetch automatico ogni 60 secondi. I contenuti si aggiornano senza ricaricare la pagina. Ross aggiorna il JSON ad ogni nuova conversazione o documento generato."
     }
   ],
   "documents": [
