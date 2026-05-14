@@ -1,12 +1,66 @@
 {
-  "last_updated": "2026-05-14T10:20:51.000000+00:00",
+  "last_updated": "2026-05-14T08:38:00+02:00",
   "stats": {
-    "conversations": 0,
-    "completed": 0,
+    "conversations": 4,
+    "completed": 3,
     "scheduled_tasks": 0,
-    "documents": 0
+    "documents": 2
   },
-  "conversations": [],
-  "documents": [],
-  "tasks": []
+  "conversations": [
+    {
+      "id": "conv_001",
+      "title": "✈️ Viaggio Londra via Milano",
+      "date": "2026-05-11",
+      "date_label": "11 mag",
+      "status": "done",
+      "snippet": "PDF 10 pagine con voli BRI↔BGY/LIN↔LGW, hotel Milano e Londra, itinerario 14–24 agosto, attrazioni per ragazzi, budget €3.800–5.600."
+    },
+    {
+      "id": "conv_002",
+      "title": "🔴 Fastweb AI Strategy",
+      "date": "2026-05-12",
+      "date_label": "12 mag",
+      "status": "done",
+      "snippet": "Documento C-level 23pp su AI agentica in Fastweb: WoW, CX, portfolio, roadmap 36 mesi, investment €350–520M, 5 decisioni per il board."
+    },
+    {
+      "id": "conv_003",
+      "title": "⚙️ Dashboard GitHub Pages",
+      "date": "2026-05-13",
+      "date_label": "13 mag",
+      "status": "done",
+      "snippet": "Dashboard con login separato (cookie 24h), tema Copilot light, chat rapida, documenti scaricabili, cleanup automatico >30gg via GitHub Actions."
+    },
+    {
+      "id": "conv_004",
+      "title": "🔄 Dashboard aggiornamento real-time",
+      "date": "2026-05-14",
+      "date_label": "14 mag",
+      "status": "active",
+      "snippet": "Aggiornamento automatico della dashboard via JSON + GitHub API: i dati si aggiornano in tempo reale ad ogni nuova conversazione o documento generato."
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc_001",
+      "title": "Viaggio Londra — Famiglia Digioia · Agosto 2026",
+      "icon": "🇬🇧",
+      "type": "PDF",
+      "date": "2026-05-12",
+      "date_label": "12 mag 2026",
+      "pages": 10,
+      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/londra_viaggio.pdf"
+    },
+    {
+      "id": "doc_002",
+      "title": "Fastweb AI Strategy — C-Level Document",
+      "icon": "🔴",
+      "type": "PDF",
+      "date": "2026-05-13",
+      "date_label": "13 mag 2026",
+      "pages": 23,
+      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/fastweb_ai_strategy.pdf"
+    }
+  ],
+  "scheduled_tasks": []
 }
