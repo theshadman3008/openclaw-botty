@@ -109,44 +109,44 @@
   "scheduled_tasks": [],
   "rassegna": [
     {
-      "id": "google-io-2026-gemini35",
+      "id": "telus-66b-canada-5g-ai",
       "date": "2026-05-19",
-      "caption": "🤖 Google I/O 2026: Gemini 3.5 Flash e occhiali Android XR",
-      "snippet": "Google annuncia Gemini 3.5 Flash, 4x più veloce dei modelli frontier, già disponibile in Search e nell'app Gemini. Presentati anche gli occhiali Android XR con Samsung e Qualcomm, in arrivo in autunno. L'IA di Google entra nei Shorts, in Google Flow e in Workspace.",
+      "caption": "📡 TELUS investe 66 miliardi di dollari in 5G, fibra e AI in Canada",
+      "snippet": "Il carrier canadese TELUS ha annunciato oggi un piano da $66 miliardi fino al 2030 per espandere 5G e fibra, potenziare il supercomputer AI nazionale e trasformare edifici corporate in residenziale. Un segnale chiaro: le telco si riposizionano da operatori di rete a pilastri dell'infrastruttura AI nazionale.",
+      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202605190945CANADANWCANADAPR_C3102-1",
+      "source": "FT Markets / CNW"
+    },
+    {
+      "id": "google-io-2026-gemini35-android-xr",
+      "date": "2026-05-19",
+      "caption": "🤖 Google I/O 2026: Gemini 3.5 Flash live, occhiali XR e Halo su Android",
+      "snippet": "Google lancia oggi Gemini 3.5 Flash (4x più veloce dei modelli frontier attuali) e Gemini Omni, che genera video da testo e audio. Annunciati anche gli occhiali Android XR firmati Samsung/Qualcomm in arrivo in autunno, e Android Halo: un overlay che mostra in tempo reale cosa sta facendo l'agente AI sul tuo telefono.",
       "url": "https://9to5google.com/2026/05/19/google-io-2026-news/",
       "source": "9to5Google"
     },
     {
-      "id": "anthropic-spacex-colossus",
+      "id": "google-blackstone-5b-ai-cloud",
       "date": "2026-05-19",
-      "caption": "⚡ Anthropic prende in esclusiva Colossus 1 di SpaceX: 220.000 GPU NVIDIA",
-      "snippet": "Anthropic ha siglato un accordo con SpaceX per usare l'intera capacità computazionale del data center Colossus 1 (220.000 GPU, 300 MW). Risultato immediato: i limiti di Claude Code per tutti gli abbonati a pagamento sono stati raddoppiati overnight.",
-      "url": "https://www.anthropic.com/news/higher-limits-spacex",
-      "source": "Anthropic"
+      "caption": "💰 Google e Blackstone lanciano una joint venture da $5 miliardi per l'AI cloud",
+      "snippet": "Google e Blackstone hanno annunciato oggi una joint venture per costruire infrastruttura AI as-a-service: data center, TPU Google e 500 MW online entro il 2027. L'operazione sfida direttamente il dominio di Nvidia nel mercato del compute AI e segnala un cambio di modello: dall'hardware alla capacità computazionale venduta come utility.",
+      "url": "https://techstartups.com/2026/05/19/top-tech-news-today-may-19-2026/",
+      "source": "TechStartups"
     },
     {
-      "id": "telco-autonomous-networks-ai",
+      "id": "meta-layoffs-10pct-ai-pivot",
       "date": "2026-05-19",
-      "caption": "📡 Reti autonome: Nokia, Ericsson e Ciena puntano sull'AI per tagliare i costi",
-      "snippet": "Gli operatori telecom sono stretti tra traffico in crescita e ricavi in stallo. Secondo Capgemini, le reti autonome alimentate da AI portano già un 20% di efficienza operativa e -18% di OpEx. Nokia, Ericsson e Ciena indicano nella gestione autonoma dei guasti e nella manutenzione predittiva i primi casi d'uso concreti.",
-      "url": "https://capacityglobal.com/news/digital-wholesale-report-role-of-ai-in-telecoms/",
-      "source": "Capacity Media"
+      "caption": "🔁 Meta taglia 8.000 posti (10%) per finanziare la corsa all'AI",
+      "snippet": "Meta ha avviato oggi un round di licenziamenti da ~8.000 persone (10% del personale), con ulteriori tagli previsti ad agosto e autunno. I risparmi finanziano l'accelerazione AI. Un pattern che si vede su tutto il Big Tech: headcount giù, budget compute su.",
+      "url": "https://techstartups.com/2026/05/19/top-tech-news-today-may-19-2026/",
+      "source": "TechStartups"
     },
     {
-      "id": "openai-gpt55-agentic",
-      "date": "2026-04-23",
-      "caption": "🧠 OpenAI lancia GPT-5.5: 82,7% su Terminal-Bench, coding agentiale al top",
-      "snippet": "OpenAI ha rilasciato GPT-5.5 con le migliori performance di coding agentiale: 82,7% su Terminal-Bench 2.0 e 58,6% su SWE-Bench Pro. Disponibile subito per Plus, Pro, Business e Enterprise. La cadenza di rilascio si accorcia: 6 settimane da GPT-5.4.",
-      "url": "https://aitoolsrecap.com/Blog/ai-news-may-2026",
-      "source": "AI Tools Recap"
-    },
-    {
-      "id": "amazon-globalstar-satellite",
-      "date": "2026-04-14",
-      "caption": "🛰️ Amazon acquisisce Globalstar per $11,57 miliardi: sfida diretta a Starlink",
-      "snippet": "Amazon ha annunciato l'acquisizione di Globalstar, operatore satellitare con licenze MSS spectrum. Il deal, soggetto ad approvazione regolatoria, punta a costruire una rete satellite concorrente di SpaceX Starlink per connettività mobile diretta (D2D).",
-      "url": "https://www.reuters.com/business/media-telecom/amazon-signs-1157-billion-deal-satellite-firm-globalstar-challenge-starlink-2026-04-14/",
-      "source": "Reuters"
+      "id": "mistral-emmi-ai-physics-acquisition",
+      "date": "2026-05-19",
+      "caption": "🇪🇺 Mistral acquisisce la startup austriaca Emmi AI: l'Europa punta sull'AI industriale",
+      "snippet": "Mistral AI ha comprato Emmi AI (Linz), specializzata in simulazioni fisiche per aerospazio, automotive e semiconduttori. È la prima grande acquisizione europea nell'AI industriale del 2026 e consolida la strategia di Mistral per differenziarsi dai modelli generalisti americani con applicazioni B2B verticali.",
+      "url": "https://techstartups.com/2026/05/19/top-tech-news-today-may-19-2026/",
+      "source": "TechStartups"
     }
   ]
 }
