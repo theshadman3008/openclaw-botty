@@ -251,7 +251,18 @@
     .grid-2 { grid-template-columns: 1fr; }
     .chat-btns { flex-direction: column; }
   }
-</style>
+
+    /* ===== RASSEGNA ===== */
+    .news-item { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; margin-bottom:10px; display:flex; flex-direction:column; gap:6px; }
+    .news-caption { font-size:0.95rem; font-weight:700; color:#1e293b; }
+    .news-snippet { font-size:0.82rem; color:#475569; line-height:1.5; }
+    .news-footer { display:flex; align-items:center; gap:10px; margin-top:4px; }
+    .news-source { font-size:0.75rem; color:#94a3b8; }
+    .news-link { font-size:0.75rem; color:#6366f1; text-decoration:none; font-weight:600; }
+    .news-link:hover { text-decoration:underline; }
+    .news-date { font-size:0.72rem; color:#cbd5e1; margin-left:auto; }
+
+    </style>
 </head>
 <body>
 
@@ -263,6 +274,18 @@
     <div>
       <div class="name">Ross AI</div>
       <div class="sub">Dashboard operativa</div>
+
+          <!-- RASSEGNA -->
+          <div class="section-card" id="rassegna-section">
+            <div class="section-header">
+              <span class="section-icon">📰</span>
+              <span class="section-title">Rassegna</span>
+              <span class="badge-count" id="news-count">0</span>
+            </div>
+            <div id="news-list">
+              <div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>
+            </div>
+          </div>
     </div>
   </div>
   <nav class="sidebar-nav">
@@ -395,6 +418,28 @@ function renderConversations(convs) {
   }).join('');
 }
 
+
+function renderRassegna(news) {
+  const el = document.getElementById('news-list');
+  const cnt = document.getElementById('news-count');
+  if (!news || news.length === 0) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>';
+    cnt.textContent = '0';
+    return;
+  }
+  cnt.textContent = news.length;
+  el.innerHTML = news.map(n => `
+    <div class="news-item">
+      <div class="news-caption">${n.caption}</div>
+      <div class="news-snippet">${n.snippet}</div>
+      <div class="news-footer">
+        <span class="news-source">${n.source}</span>
+        <a class="news-link" href="${n.url}" target="_blank">→ Leggi</a>
+        <span class="news-date">${n.date}</span>
+      </div>
+    </div>`).join('');
+}
+
 function renderDocuments(docs) {
   const el = document.getElementById('docs-list');
   if (!docs || docs.length === 0) {
@@ -444,6 +489,7 @@ async function fetchData() {
 
     renderConversations(d.conversations);
     renderDocuments(d.documents);
+    renderRassegna(d.rassegna || []);
     renderTasks(d.scheduled_tasks);
 
     const lu = new Date(d.last_updated);
