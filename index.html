@@ -272,10 +272,82 @@
   /* ── FOOTER ── */
   .footer { padding: 16px 28px; font-size: 0.75rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: auto; }
 
+  /* ══════════════════════════════════════════════════════════
+     RESPONSIVE — TABLET  ≤ 900px
+     Sidebar si riduce a icone+tooltip, label sezione sparisce
+  ══════════════════════════════════════════════════════════ */
   @media (max-width: 900px) {
     .stats-row { grid-template-columns: repeat(2,1fr); }
     .grid-2 { grid-template-columns: 1fr; }
+
+    .sidebar { width: 62px; }
+    .sidebar-logo .name,
+    .sidebar-logo .sub { display: none; }
+    .sidebar-logo { padding: 14px 10px; justify-content: center; }
+    .sidebar-logo .icon { margin: 0; }
+    .nav-label { display: none; }
+    .nav-item { justify-content: center; padding: 10px 0; }
+    .nav-item span:not(.ico):not(.nav-badge) { display: none; }
+    .nav-badge { display: none; }
+    .logout-btn span:last-child { display: none; }
+    .logout-btn { justify-content: center; }
+    #zoom-wrap { margin-left: 62px; }
+    .topbar { padding: 0 16px; }
+    .page { padding: 18px 14px; }
   }
+
+  /* ══════════════════════════════════════════════════════════
+     RESPONSIVE — MOBILE  ≤ 600px
+     Sidebar nascosta; bottom nav bar con 6 icone
+  ══════════════════════════════════════════════════════════ */
+  @media (max-width: 600px) {
+    .sidebar { display: none; }
+    #zoom-wrap { margin-left: 0; padding-bottom: 64px; }
+
+    /* Bottom nav */
+    .bottom-nav {
+      display: flex !important;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
+      background: var(--sidebar); border-top: 1px solid rgba(255,255,255,0.08);
+      height: 60px;
+    }
+    .bottom-nav-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 2px;
+      color: var(--sidebar-muted); font-size: 0.58rem; font-weight: 600;
+      cursor: pointer; padding: 6px 0; transition: color 0.15s;
+      position: relative; user-select: none;
+    }
+    .bottom-nav-item .bni-ico { font-size: 1.25rem; line-height: 1; }
+    .bottom-nav-item.active { color: #a5b4fc; }
+    .bottom-nav-item .bnbadge {
+      position: absolute; top: 4px; right: calc(50% - 16px);
+      background: var(--accent); color: #fff;
+      font-size: 0.55rem; font-weight: 700;
+      padding: 1px 4px; border-radius: 8px; min-width: 14px; text-align: center;
+    }
+
+    .topbar { padding: 0 14px; height: 50px; }
+    .topbar-right .zoom-ctrl { display: none; }
+    .topbar-date { font-size: 0.7rem; }
+    .live-dot { width: 7px; height: 7px; }
+
+    .stats-row { grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 16px; }
+    .stat-card { padding: 12px 14px; }
+    .stat-value { font-size: 1.6rem; }
+
+    .page { padding: 14px 12px; }
+    .news-page-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .news-card { grid-template-columns: 1fr; }
+    .news-date-badge { grid-column: 1; grid-row: unset; }
+    .tag-filter-bar { gap: 6px; }
+    .tag-pill { padding: 4px 10px; font-size: 0.72rem; }
+
+    .chat-btns { flex-direction: column; }
+  }
+
+  /* Bottom nav oculta di default — appare solo su ≤600px */
+  .bottom-nav { display: none; }
 </style>
 </head>
 <body>
@@ -328,6 +400,31 @@
 
 <!-- ═══ MAIN CONTENT ═══ -->
 <div style="flex:1; display:flex; flex-direction:column; min-height:100vh;">
+
+  <!-- BOTTOM NAV (mobile only) -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <div class="bottom-nav-item active" onclick="showPage('home',this)" data-page="home">
+      <span class="bni-ico">🏠</span><span>Home</span>
+    </div>
+    <div class="bottom-nav-item" onclick="showPage('conversations',this)" data-page="conversations">
+      <span class="bni-ico">💬</span><span>Chat</span>
+      <span class="bnbadge" id="bnb-conv"></span>
+    </div>
+    <div class="bottom-nav-item" onclick="showPage('documents',this)" data-page="documents">
+      <span class="bni-ico">📄</span><span>Docs</span>
+      <span class="bnbadge" id="bnb-docs"></span>
+    </div>
+    <div class="bottom-nav-item" onclick="showPage('rassegna',this)" data-page="rassegna">
+      <span class="bni-ico">📰</span><span>News</span>
+      <span class="bnbadge" id="bnb-news"></span>
+    </div>
+    <div class="bottom-nav-item" onclick="showPage('tasks',this)" data-page="tasks">
+      <span class="bni-ico">⚙️</span><span>Task</span>
+    </div>
+    <div class="bottom-nav-item" onclick="doLogout()" data-page="">
+      <span class="bni-ico">🚪</span><span>Esci</span>
+    </div>
+  </nav>
 
   <!-- TOPBAR -->
   <div class="topbar">
@@ -517,9 +614,12 @@ const pageTitles = {
 function showPage(name, el) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.querySelectorAll('.bottom-nav-item').forEach(n => n.classList.remove('active'));
   const page = document.getElementById('page-' + name);
   if (page) page.classList.add('active');
   if (el) el.classList.add('active');
+  // Sync bottom nav active state
+  document.querySelectorAll('.bottom-nav-item[data-page="' + name + '"]').forEach(n => n.classList.add('active'));
   document.getElementById('topbar-section-title').textContent = pageTitles[name] || name;
 }
 
@@ -549,10 +649,20 @@ async function fetchData() {
     document.getElementById('s-docs').textContent  = d.stats?.documents ?? 0;
     document.getElementById('s-tasks').textContent = d.stats?.scheduled_tasks ?? 0;
 
-    // Nav badges
-    document.getElementById('nb-conv').textContent = (d.conversations || []).length;
-    document.getElementById('nb-docs').textContent = (d.documents || []).length;
-    document.getElementById('nb-news').textContent = (d.rassegna || []).length;
+    // Nav badges (sidebar + bottom nav)
+    const convN = (d.conversations || []).length;
+    const docsN = (d.documents || []).length;
+    const newsN = (d.rassegna || []).length;
+    document.getElementById('nb-conv').textContent = convN;
+    document.getElementById('nb-docs').textContent = docsN;
+    document.getElementById('nb-news').textContent = newsN;
+    // Bottom nav badges
+    const bnConv = document.getElementById('bnb-conv');
+    const bnDocs = document.getElementById('bnb-docs');
+    const bnNews = document.getElementById('bnb-news');
+    if (bnConv) bnConv.textContent = convN > 0 ? convN : '';
+    if (bnDocs) bnDocs.textContent = docsN > 0 ? docsN : '';
+    if (bnNews) bnNews.textContent = newsN > 0 ? newsN : '';
 
     renderConversations(d.conversations || [], 'home-conv-list', 5);
     renderConversations(d.conversations || [], 'all-conv-list', 100);
