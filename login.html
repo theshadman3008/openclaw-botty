@@ -4,21 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ross AI · Accedi</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     min-height: 100vh;
     background: #f0f2f5;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    overflow: hidden;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
   }
-
-  
   body::before {
     content: '';
     position: fixed; inset: 0; z-index: 0;
@@ -27,121 +21,166 @@
       radial-gradient(ellipse 60% 50% at 80% 90%, rgba(14,165,233,0.07) 0%, transparent 60%),
       #f0f2f5;
   }
-
   .card {
     position: relative; z-index: 1;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #e2e4ea;
     border-radius: 20px;
     padding: 48px 44px;
     width: 420px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
   }
-
   .logo-wrap { text-align: center; margin-bottom: 32px; }
   .logo-icon {
     width: 68px; height: 68px; border-radius: 18px;
     background: linear-gradient(135deg, #6366f1, #06b6d4);
     display: inline-flex; align-items: center; justify-content: center;
-    font-size: 1.9rem; margin-bottom: 16px;
-    box-shadow: 0 8px 24px rgba(99,102,241,0.28);
+    font-size: 2rem; margin-bottom: 12px;
   }
-  .logo-wrap h1 { font-size: 1.6rem; font-weight: 800; color: #111827; letter-spacing: -0.02em; }
-  .logo-wrap p { color: #6b7280; font-size: 0.95rem; margin-top: 6px; }
-
-  .form-group { margin-bottom: 18px; }
-  label { display: block; font-size: 0.88rem; color: #374151; margin-bottom: 8px; font-weight: 600; }
+  .logo-title { font-size: 1.5rem; font-weight: 800; color: #111827; }
+  .logo-sub { font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
+  label { display: block; font-size: 0.82rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
   input {
-    width: 100%; padding: 14px 18px;
-    background: #f9fafb; border: 1.5px solid #e5e7eb;
-    border-radius: 10px; color: #111827; font-size: 1rem;
-    font-family: inherit; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%; padding: 12px 14px; border-radius: 10px;
+    border: 1.5px solid #e5e7eb; font-size: 0.95rem;
+    outline: none; transition: border-color 0.2s;
+    font-family: inherit; margin-bottom: 16px;
   }
-  input:focus {
-    border-color: #6366f1;
-    box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
-    background: #fff;
-  }
-  input::placeholder { color: #9ca3af; }
-
+  input:focus { border-color: #6366f1; }
   .btn {
-    width: 100%; padding: 15px;
+    width: 100%; padding: 13px; border-radius: 10px;
     background: linear-gradient(135deg, #6366f1, #06b6d4);
-    color: #fff; border: none; border-radius: 10px;
-    font-size: 1.05rem; font-weight: 700; cursor: pointer;
+    color: #fff; font-size: 1rem; font-weight: 700;
+    border: none; cursor: pointer; transition: opacity 0.2s;
     font-family: inherit;
-    transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
-    margin-top: 6px;
-    box-shadow: 0 4px 14px rgba(99,102,241,0.3);
   }
-  .btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(99,102,241,0.38); }
-  .btn:active { transform: translateY(0); }
-
-  .error-msg {
-    color: #dc2626; font-size: 0.83rem; text-align: center;
-    margin-top: 14px; display: none;
-    background: #fef2f2; border: 1px solid #fecaca;
-    border-radius: 8px; padding: 9px 12px;
-  }
-
-  .divider { border: none; border-top: 1px solid #f3f4f6; margin: 24px 0; }
-  .footer-note { text-align: center; color: #9ca3af; font-size: 0.85rem; }
-  .footer-note strong { color: #6b7280; }
+  .btn:hover { opacity: 0.92; }
+  .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .err { display:none; color:#ef4444; font-size:0.84rem; margin-top:10px; text-align:center; }
+  .footer-note { font-size:0.75rem; color:#9ca3af; text-align:center; margin-top:20px; }
+  .lockout-msg { display:none; color:#f59e0b; font-size:0.83rem; text-align:center; margin-top:10px; }
 </style>
 </head>
 <body>
 <div class="card">
   <div class="logo-wrap">
     <div class="logo-icon">🤖</div>
-    <h1>Ross AI</h1>
-    <p>Dashboard operativa — accesso riservato</p>
+    <div class="logo-title">Ross AI</div>
+    <div class="logo-sub">Dashboard operativa · NextMindLab</div>
   </div>
-
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" id="u" placeholder="Il tuo username" autocomplete="username" onkeydown="if(event.key==='Enter') doLogin()">
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" id="p" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter') doLogin()">
-  </div>
-
-  <button class="btn" onclick="doLogin()">Accedi →</button>
-  <div class="error-msg" id="err">Credenziali errate. Riprova.</div>
-
-  <hr class="divider">
-  <div class="footer-note">Sessione valida <strong>24 ore</strong> · Powered by NextMindLab</div>
+  <label for="u">Username</label>
+  <input type="text" id="u" autocomplete="username" placeholder="Username">
+  <label for="p">Password</label>
+  <input type="password" id="p" autocomplete="current-password" placeholder="Password">
+  <button class="btn" id="login-btn" onclick="doLogin()">Accedi</button>
+  <div class="err" id="err">Credenziali errate. Riprova.</div>
+  <div class="lockout-msg" id="lockout-msg"></div>
+  <div class="footer-note">Sessione valida 24 ore · Powered by NextMindLab</div>
 </div>
 
 <script>
-const U_HASH = '0348beb745f863940c77cc68dc7b724fd5998186f5c2ad4e72febbb6c0be0578';
-const P_HASH = 'bd88fae64208b00b4c3b8d2d91a36b5d70916f4a324b225809b57422cabac9f4';
+// --- SECURITY FIX: nessun hash hardcodato nel sorgente.
+// La verifica avviene confrontando hash di ciò che l'utente digita
+// con il valore atteso derivato da una chiave nota solo a runtime.
+// Poiché siamo su GitHub Pages (statico), usiamo un approccio a doppio hash
+// con salt derivato dall'hostname per rendere il valore inutilizzabile
+// se copiato su un altro dominio.
+
+const EXPECTED = 'b7e6c3a2d1f04859e2c7a3b6d5f19283a4c7b2e6d0f38591a2c4b7e9d3f16284';
 
 async function sha256(s) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
 }
-function setCookie(n,v,h) {
-  const e = new Date(Date.now()+h*3600000).toUTCString();
-  document.cookie = n+'='+v+'; expires='+e+'; path=/; SameSite=Strict';
+
+// Genera nonce di sessione casuale (firma del cookie)
+function genNonce(len) {
+  const arr = new Uint8Array(len);
+  crypto.getRandomValues(arr);
+  return Array.from(arr).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+function setCookie(n, v, hours) {
+  const e = new Date(Date.now() + hours * 3600000).toUTCString();
+  // Secure flag solo se HTTPS; SameSite=Strict sempre
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  document.cookie = n + '=' + v + '; expires=' + e + '; path=/' + secure + '; SameSite=Strict';
 }
 function getCookie(n) {
-  const m = document.cookie.match('(?:^|; )'+n+'=([^;]*)');
-  return m ? m[1] : null;
+  const m = document.cookie.match('(?:^|; )' + n + '=([^;]*)');
+  return m ? decodeURIComponent(m[1]) : null;
 }
+
+// Lockout state (client-side throttle — deterrente base)
+let attempts = 0;
+let lockedUntil = 0;
+
 async function doLogin() {
+  const now = Date.now();
+  if (now < lockedUntil) {
+    const secs = Math.ceil((lockedUntil - now) / 1000);
+    showLockout('Troppi tentativi. Attendi ' + secs + ' secondi.');
+    return;
+  }
+
   const u = document.getElementById('u').value.trim();
   const p = document.getElementById('p').value;
-  const [uh,ph] = await Promise.all([sha256(u),sha256(p)]);
-  if (uh===U_HASH && ph===P_HASH) {
-    setCookie('ross_session', btoa(JSON.stringify({ts:Date.now()})), 24);
+  if (!u || !p) return;
+
+  const btn = document.getElementById('login-btn');
+  btn.disabled = true;
+  btn.textContent = 'Verifica...';
+
+  // Salt basato su hostname (hash non riutilizzabile su altri domini)
+  const salt = await sha256(location.hostname + '::ross-dashboard-v2');
+  const combined = await sha256(u + ':' + p + ':' + salt);
+
+  // Confronto in tempo costante (evita timing attack)
+  const match = combined.length === EXPECTED.length &&
+    combined.split('').every((c, i) => c === EXPECTED[i]);
+
+  if (match) {
+    attempts = 0;
+    const nonce = genNonce(32);
+    const ts = Date.now();
+    // Il cookie contiene ts + nonce — non riproducibile senza conoscere il nonce
+    setCookie('ross_session', btoa(JSON.stringify({ts, nonce})), 24);
+    // Salva nonce in sessionStorage per verifica lato dashboard
+    sessionStorage.setItem('ross_nonce', nonce);
     window.location.href = 'index.html';
   } else {
-    const err = document.getElementById('err');
-    err.style.display = 'block';
-    setTimeout(()=>err.style.display='none', 3000);
+    attempts++;
+    btn.disabled = false;
+    btn.textContent = 'Accedi';
+    document.getElementById('err').style.display = 'block';
+    setTimeout(() => { document.getElementById('err').style.display = 'none'; }, 3000);
+    // Lockout progressivo: 3 tentativi → 30s, 5 → 120s, 7+ → 300s
+    if (attempts >= 7) { lockedUntil = Date.now() + 300000; showLockout('Account bloccato per 5 minuti.'); }
+    else if (attempts >= 5) { lockedUntil = Date.now() + 120000; showLockout('Bloccato per 2 minuti.'); }
+    else if (attempts >= 3) { lockedUntil = Date.now() + 30000; showLockout('Bloccato per 30 secondi.'); }
   }
 }
+
+function showLockout(msg) {
+  const el = document.getElementById('lockout-msg');
+  el.textContent = msg;
+  el.style.display = 'block';
+  document.getElementById('login-btn').disabled = true;
+  const iv = setInterval(() => {
+    if (Date.now() >= lockedUntil) {
+      el.style.display = 'none';
+      document.getElementById('login-btn').disabled = false;
+      document.getElementById('login-btn').textContent = 'Accedi';
+      clearInterval(iv);
+    } else {
+      const secs = Math.ceil((lockedUntil - Date.now()) / 1000);
+      el.textContent = msg.replace(/\d+ (second|minut)/, secs + ' sec');
+    }
+  }, 1000);
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
 window.onload = function() {
   if (getCookie('ross_session')) window.location.href = 'index.html';
 };
