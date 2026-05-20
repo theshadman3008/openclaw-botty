@@ -230,6 +230,39 @@
     background: #f3f4f6; border-radius: 20px;
   }
 
+  /* ── TAG FILTER BAR ── */
+  .tag-filter-bar {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 20px;
+  }
+  .tag-pill {
+    font-size: 0.78rem; font-weight: 600;
+    padding: 5px 14px; border-radius: 20px; cursor: pointer;
+    border: 1.5px solid transparent; transition: all 0.15s;
+    user-select: none;
+  }
+  .tag-pill.all    { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .tag-pill.all.inactive { background: #f3f4f6; color: var(--muted); border-color: #e5e7eb; }
+  .tag-pill.inactive { background: #f3f4f6; color: var(--muted); border-color: #e5e7eb; }
+  .tag-pill.active  { color: #fff; }
+  .tag-pill[data-tag="AI"].active        { background: #6366f1; border-color: #6366f1; }
+  .tag-pill[data-tag="Telco"].active     { background: #06b6d4; border-color: #06b6d4; }
+  .tag-pill[data-tag="Mobile"].active    { background: #10b981; border-color: #10b981; }
+  .tag-pill[data-tag="Innovation"].active{ background: #f59e0b; border-color: #f59e0b; }
+  .tag-pill[data-tag="New Business"].active { background: #ef4444; border-color: #ef4444; }
+
+  /* ── NEWS TAG BADGES (in-card) ── */
+  .news-tags { display: flex; flex-wrap: wrap; gap: 5px; grid-column: 1 / -1; margin-top: 6px; }
+  .news-tag {
+    font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 10px;
+    letter-spacing: 0.03em;
+  }
+  .news-tag-AI        { background: #eef2ff; color: #6366f1; }
+  .news-tag-Telco     { background: #ecfeff; color: #0891b2; }
+  .news-tag-Mobile    { background: #d1fae5; color: #065f46; }
+  .news-tag-Innovation{ background: #fef3c7; color: #92400e; }
+  .news-tag-NewBusiness{ background: #fee2e2; color: #991b1b; }
+
   /* ── EMPTY STATE ── */
   .empty-state {
     padding: 32px; text-align: center; color: var(--muted); font-size: 0.88rem;
@@ -402,6 +435,7 @@
       </div>
       <div class="news-week-label" id="news-week-range">—</div>
     </div>
+    <div class="tag-filter-bar" id="tag-filter-bar"></div>
     <div class="news-grid" id="news-list">
       <div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>
     </div>
@@ -622,17 +656,68 @@ function renderDocuments(docs) {
   });
 }
 
-function renderRassegna(news) {
+// ── TAG LOGIC ─────────────────────────────────────────────────────────────────
+const TAG_KEYWORDS = {
+  'AI':          ['ai', 'artificial intelligence', 'intelligenza artificiale', 'machine learning', 'llm', 'gpt', 'gemini', 'openai', 'mistral', 'claude', 'chatgpt', 'deep learning', 'neural', 'modello', 'hassabis', 'agents', 'agent', 'copilot', 'automation', 'automatiz'],
+  'Telco':       ['telco', 'telecom', 'telecomunicaz', 'vodafone', 'tim', 'iliad', 'fastweb', 'wind', '5g', 'fibra', 'banda larga', 'broadband', 'operatore', 'rete mobile', 'telus', 'globalstar', 'satellite', 'spectrum'],
+  'Mobile':      ['mobile', 'smartphone', 'iphone', 'android', 'app store', 'google play', 'ios', 'tablet', 'wearable', 'apple', 'samsung', 'pixel', 'device', 'handset'],
+  'Innovation':  ['innovation', 'innovazione', 'startup', 'ricerca', 'research', 'quantum', 'xr', 'ar', 'vr', 'mixed reality', 'robotics', 'drone', 'space', 'spazio', 'biotech', 'climate tech', 'greentech', 'io 2026', 'google i/o'],
+  'New Business':['business', 'revenue', 'acquisition', 'acquisizione', 'merger', 'invest', 'investimento', 'ipo', 'valuation', 'deal', 'partnership', 'lancio', 'launch', 'market', 'mercato', 'billion', 'miliard']
+};
+
+function inferTags(n) {
+  if (n.tags && Array.isArray(n.tags) && n.tags.length) return n.tags;
+  const hay = ((n.caption || '') + ' ' + (n.snippet || '') + ' ' + (n.source || '')).toLowerCase();
+  const found = [];
+  for (const [tag, kws] of Object.entries(TAG_KEYWORDS)) {
+    if (kws.some(k => hay.includes(k))) found.push(tag);
+  }
+  return found.length ? found : ['Innovation'];
+}
+
+let allNews = [];
+let activeTag = null; // null = tutte
+
+function buildTagFilterBar(news) {
+  const bar = document.getElementById('tag-filter-bar');
+  bar.innerHTML = '';
+  // raccolta tag presenti
+  const tagSet = new Set();
+  news.forEach(n => inferTags(n).forEach(t => tagSet.add(t)));
+  const tags = ['AI','Telco','Mobile','Innovation','New Business'].filter(t => tagSet.has(t));
+
+  // pill "Tutte"
+  const all = document.createElement('span');
+  all.className = 'tag-pill all' + (activeTag === null ? '' : ' inactive');
+  all.textContent = 'Tutte (' + news.length + ')';
+  all.addEventListener('click', () => { activeTag = null; renderFilteredNews(); buildTagFilterBar(allNews); });
+  bar.appendChild(all);
+
+  tags.forEach(tag => {
+    const count = news.filter(n => inferTags(n).includes(tag)).length;
+    const pill = document.createElement('span');
+    pill.className = 'tag-pill' + (activeTag === tag ? ' active' : ' inactive');
+    pill.setAttribute('data-tag', tag);
+    pill.textContent = tag + ' (' + count + ')';
+    pill.addEventListener('click', () => {
+      activeTag = (activeTag === tag) ? null : tag;
+      renderFilteredNews();
+      buildTagFilterBar(allNews);
+    });
+    bar.appendChild(pill);
+  });
+}
+
+function renderFilteredNews() {
+  const filtered = activeTag ? allNews.filter(n => inferTags(n).includes(activeTag)) : allNews;
+  renderNewsCards(filtered);
+}
+
+function renderNewsCards(news) {
   const el = document.getElementById('news-list');
   if (!news.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>';
+    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia per questo tag.</div>';
     return;
-  }
-  // Range date
-  const dates = news.map(n => n.date).filter(Boolean).sort();
-  if (dates.length) {
-    document.getElementById('news-week-range').textContent =
-      dates[0] + ' → ' + dates[dates.length-1];
   }
   el.innerHTML = '';
   news.forEach(n => {
@@ -650,6 +735,16 @@ function renderRassegna(news) {
     const snippet = document.createElement('div');
     snippet.className = 'news-snippet';
     snippet.textContent = n.snippet || '';
+
+    // Tag badges in-card
+    const tagsDiv = document.createElement('div');
+    tagsDiv.className = 'news-tags';
+    inferTags(n).forEach(tag => {
+      const tb = document.createElement('span');
+      tb.className = 'news-tag news-tag-' + tag.replace(' ', '');
+      tb.textContent = tag;
+      tagsDiv.appendChild(tb);
+    });
 
     const footer = document.createElement('div');
     footer.className = 'news-footer';
@@ -671,9 +766,29 @@ function renderRassegna(news) {
     card.appendChild(caption);
     card.appendChild(dateBadge);
     card.appendChild(snippet);
+    card.appendChild(tagsDiv);
     card.appendChild(footer);
     el.appendChild(card);
   });
+}
+
+function renderRassegna(news) {
+  allNews = news;
+  activeTag = null;
+  const el = document.getElementById('news-list');
+  if (!news.length) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>';
+    document.getElementById('tag-filter-bar').innerHTML = '';
+    return;
+  }
+  // Range date
+  const dates = news.map(n => n.date).filter(Boolean).sort();
+  if (dates.length) {
+    document.getElementById('news-week-range').textContent =
+      dates[0] + ' → ' + dates[dates.length-1];
+  }
+  buildTagFilterBar(news);
+  renderNewsCards(news);
 }
 
 function renderHomeNews(news) {
