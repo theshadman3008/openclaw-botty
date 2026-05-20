@@ -86,7 +86,7 @@
 // con salt derivato dall'hostname per rendere il valore inutilizzabile
 // se copiato su un altro dominio.
 
-const EXPECTED = 'b7e6c3a2d1f04859e2c7a3b6d5f19283a4c7b2e6d0f38591a2c4b7e9d3f16284';
+const EXPECTED = '78992df2da06d36ffb4153228396937976d7223f128d3b6b772a3872813b08fe';
 
 async function sha256(s) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
