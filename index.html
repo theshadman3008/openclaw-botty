@@ -4,53 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ross AI · Dashboard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f0f2f5;
-    --surface: #ffffff;
-    --surface2: #f9fafb;
-    --border: #e5e7eb;
-    --border2: #f3f4f6;
-    --accent: #6366f1;
-    --accent2: #06b6d4;
-    --accent-green: #10b981;
-    --accent-amber: #f59e0b;
-    --accent-red: #ef4444;
-    --text: #111827;
-    --text2: #374151;
-    --muted: #6b7280;
-    --muted2: #9ca3af;
-    --sidebar: #1e1e2e;
-    --sidebar-text: #e2e8f0;
-    --sidebar-muted: #94a3b8;
-    --sidebar-hover: rgba(255,255,255,0.07);
-    --sidebar-active: rgba(99,102,241,0.25);
+    --bg: #f0f2f5; --surface: #ffffff; --border: #e5e7eb;
+    --accent: #6366f1; --accent2: #06b6d4;
+    --green: #10b981; --amber: #f59e0b; --red: #ef4444;
+    --text: #111827; --text2: #374151; --muted: #6b7280;
+    --sidebar: #1e1e2e; --sidebar-text: #e2e8f0; --sidebar-muted: #94a3b8;
+    --sidebar-hover: rgba(255,255,255,0.07); --sidebar-active: rgba(99,102,241,0.25);
     --grad: linear-gradient(135deg, #6366f1, #06b6d4);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    font-size: 18px;
+    background: var(--bg); color: var(--text);
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh; display: flex; font-size: 15px;
     -webkit-font-smoothing: antialiased;
   }
 
-  
+  /* ── SIDEBAR ── */
   .sidebar {
-    width: 240px; min-height: 100vh; flex-shrink: 0;
+    width: 230px; min-height: 100vh; flex-shrink: 0;
     background: var(--sidebar);
     display: flex; flex-direction: column;
-    position: fixed; top: 0; left: 0; bottom: 0;
-    z-index: 20;
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 20;
   }
   .sidebar-logo {
-    padding: 22px 20px 18px;
+    padding: 22px 18px 16px;
     display: flex; align-items: center; gap: 10px;
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
@@ -60,447 +40,699 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 1.1rem; flex-shrink: 0;
   }
-  .sidebar-logo .name { font-size: 1.05rem; font-weight: 700; color: var(--sidebar-text); }
-  .sidebar-logo .sub { font-size: 0.78rem; color: var(--sidebar-muted); margin-top: 1px; }
-
-  .sidebar-nav { padding: 16px 10px; flex: 1; }
-  .nav-label { font-size: 0.72rem; font-weight: 700; color: var(--sidebar-muted); text-transform: uppercase; letter-spacing: 0.1em; padding: 0 10px; margin: 16px 0 6px; }
+  .sidebar-logo .name { font-size: 1rem; font-weight: 700; color: var(--sidebar-text); }
+  .sidebar-logo .sub { font-size: 0.72rem; color: var(--sidebar-muted); margin-top: 1px; }
+  .sidebar-nav { padding: 12px 8px; flex: 1; overflow-y: auto; }
+  .nav-label {
+    font-size: 0.68rem; font-weight: 700; color: var(--sidebar-muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 0 10px; margin: 14px 0 4px;
+  }
   .nav-item {
     display: flex; align-items: center; gap: 10px;
-    padding: 10px 10px; border-radius: 8px; cursor: pointer;
-    color: var(--sidebar-muted); font-size: 0.92rem;
+    padding: 9px 10px; border-radius: 8px; cursor: pointer;
+    color: var(--sidebar-muted); font-size: 0.88rem;
     transition: background 0.15s, color 0.15s;
-    text-decoration: none; margin-bottom: 2px;
+    text-decoration: none; margin-bottom: 2px; user-select: none;
   }
   .nav-item:hover { background: var(--sidebar-hover); color: var(--sidebar-text); }
   .nav-item.active { background: var(--sidebar-active); color: #a5b4fc; }
-  .nav-item .ico { font-size: 1rem; width: 20px; text-align: center; }
-
+  .nav-item .ico { font-size: 0.95rem; width: 20px; text-align: center; flex-shrink: 0; }
+  .nav-badge {
+    margin-left: auto; background: var(--accent); color: #fff;
+    font-size: 0.65rem; font-weight: 700;
+    padding: 1px 6px; border-radius: 10px; min-width: 18px; text-align: center;
+  }
   .sidebar-footer {
-    padding: 14px 16px;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px; border-top: 1px solid rgba(255,255,255,0.07);
   }
-  .avatar {
-    width: 32px; height: 32px; border-radius: 50%;
-    background: var(--grad);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem; font-weight: 700; color: #fff; flex-shrink: 0;
-  }
-  .user-info .uname { font-size: 0.88rem; font-weight: 600; color: var(--sidebar-text); }
-  .user-info .urole { font-size: 0.76rem; color: var(--sidebar-muted); }
   .logout-btn {
-    margin-left: auto; background: none; border: none; color: var(--sidebar-muted);
-    cursor: pointer; font-size: 1rem; padding: 4px; transition: color 0.2s;
+    display: flex; align-items: center; gap: 8px;
+    color: var(--sidebar-muted); font-size: 0.82rem; cursor: pointer;
+    padding: 7px 8px; border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
   }
-  .logout-btn:hover { color: #f87171; }
+  .logout-btn:hover { background: rgba(239,68,68,0.12); color: #fca5a5; }
 
-  
-  .main-wrap { margin-left: 240px; flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
-
+  /* ── MAIN ── */
+  #zoom-wrap { margin-left: 230px; flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
   .topbar {
-    background: #fff; border-bottom: 1px solid var(--border);
-    padding: 14px 28px; display: flex; align-items: center; justify-content: space-between;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 0 28px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
     position: sticky; top: 0; z-index: 10;
   }
-  .topbar h2 { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+  .topbar-title { font-size: 1rem; font-weight: 700; color: var(--text); }
   .topbar-right { display: flex; align-items: center; gap: 12px; }
-  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 6px #10b981; }
-  .topbar-date { font-size: 0.85rem; color: var(--muted); }
+  .topbar-date { font-size: 0.78rem; color: var(--muted); }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .zoom-ctrl { display: flex; align-items: center; gap: 4px; }
+  .zoom-btn {
+    background: #f3f4f6; border: 1px solid var(--border); border-radius: 6px;
+    padding: 3px 8px; font-size: 0.8rem; cursor: pointer; color: var(--text2);
+  }
+  .zoom-btn:hover { background: #e5e7eb; }
+  .zoom-label { font-size: 0.78rem; color: var(--muted); min-width: 36px; text-align: center; }
 
-  main { padding: 28px; flex: 1; }
+  /* ── PAGES ── */
+  .page { display: none; padding: 28px; }
+  .page.active { display: block; }
 
-  
-  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+  /* ── STATS ── */
+  .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 24px; }
   .stat-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 20px 22px;
-    display: flex; align-items: center; gap: 14px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 6px;
   }
-  .stat-icon {
-    width: 44px; height: 44px; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;
-  }
-  .si-purple { background: rgba(99,102,241,0.1); }
-  .si-cyan   { background: rgba(6,182,212,0.1); }
-  .si-amber  { background: rgba(245,158,11,0.1); }
-  .si-green  { background: rgba(16,185,129,0.1); }
-  .stat-info .num { font-size: 2.2rem; font-weight: 800; line-height: 1; }
-  .stat-info .lbl { font-size: 0.85rem; color: var(--muted); margin-top: 4px; font-weight: 500; }
-  .c-purple { color: #6366f1; } .c-cyan { color: #06b6d4; } .c-amber { color: #f59e0b; } .c-green { color: #10b981; }
+  .stat-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-value { font-size: 2rem; font-weight: 800; color: var(--text); line-height: 1; }
+  .stat-sub { font-size: 0.75rem; color: var(--muted); }
 
-  
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  }
-  .card-title {
-    font-size: 0.82rem; font-weight: 700; color: var(--muted);
-    text-transform: uppercase; letter-spacing: 0.08em;
-    margin-bottom: 16px; padding-bottom: 10px;
-    border-bottom: 1px solid var(--border2);
-    display: flex; align-items: center; gap: 7px;
-  }
+  /* ── GRID ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 
-  
-  .conv-item { padding: 12px 0; border-bottom: 1px solid var(--border2); }
+  /* ── SECTION CARD ── */
+  .section-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden;
+  }
+  .section-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 18px; border-bottom: 1px solid var(--border);
+    background: #fafafa;
+  }
+  .section-icon { font-size: 1rem; }
+  .section-title { font-size: 0.92rem; font-weight: 700; color: var(--text); flex: 1; }
+  .badge-count {
+    background: var(--accent); color: #fff;
+    font-size: 0.7rem; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px;
+  }
+  .section-body { padding: 14px 18px; }
+
+  /* ── CONVERSATIONS ── */
+  .conv-item {
+    padding: 11px 0; border-bottom: 1px solid #f3f4f6;
+    display: flex; flex-direction: column; gap: 4px;
+  }
   .conv-item:last-child { border-bottom: none; }
-  .conv-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-  .conv-link {
-    color: var(--accent); text-decoration: none; font-size: 1rem; font-weight: 600;
-    flex: 1; transition: color 0.15s;
-  }
-  .conv-link:hover { color: #4f46e5; text-decoration: underline; }
-  .conv-date { font-size: 0.78rem; color: var(--muted2); white-space: nowrap; }
-  .conv-snippet {
-    font-size: 0.9rem; color: var(--muted); line-height: 1.6;
-    background: var(--surface2); border-radius: 8px; padding: 9px 13px;
-    border-left: 3px solid #e0e7ff;
-    overflow: hidden;
-    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-  }
-  .badge {
-    font-size: 0.73rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; white-space: nowrap;
-  }
-  .b-green { background: #ecfdf5; color: #059669; }
-  .b-blue  { background: #eff6ff; color: #3b82f6; }
-  .b-amber { background: #fffbeb; color: #d97706; }
+  .conv-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .conv-link { font-size: 0.88rem; font-weight: 600; color: var(--accent); text-decoration: none; flex: 1; }
+  .conv-link:hover { text-decoration: underline; }
+  .conv-date { font-size: 0.72rem; color: var(--muted); }
+  .badge { font-size: 0.68rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+  .badge-done { background: #d1fae5; color: #065f46; }
+  .badge-pend { background: #fef3c7; color: #92400e; }
+  .conv-snippet { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
 
-  
-  .empty-state { text-align: center; padding: 24px; color: var(--muted2); font-size: 0.92rem; line-height: 1.6; }
-  .empty-state .ei { font-size: 2rem; margin-bottom: 8px; }
-
-  
+  /* ── DOCUMENTS ── */
   .doc-item {
-    display: flex; align-items: center; gap: 12px;
-    padding: 12px 0; border-bottom: 1px solid var(--border2);
+    display: flex; align-items: center; gap: 14px;
+    padding: 11px 0; border-bottom: 1px solid #f3f4f6;
   }
   .doc-item:last-child { border-bottom: none; }
-  .doc-icon {
-    width: 40px; height: 40px; border-radius: 10px;
-    background: #fef2f2; display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem; flex-shrink: 0;
-  }
-  .doc-name { font-size: 1rem; font-weight: 600; color: var(--text2); }
-  .doc-meta { font-size: 0.85rem; color: var(--muted2); margin-top: 3px; }
+  .doc-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .doc-name { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+  .doc-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
   .dl-btn {
-    margin-left: auto; flex-shrink: 0;
-    background: #eff6ff; color: #3b82f6; border: none;
-    padding: 7px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;
-    text-decoration: none; transition: background 0.2s; font-family: inherit;
-  }
-  .dl-btn:hover { background: #dbeafe; }
-
-  
-  .chat-card {
-    background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
-    border-radius: 14px; padding: 24px 28px;
-    display: flex; align-items: center; gap: 24px;
-    margin-bottom: 20px; color: #fff;
-    box-shadow: 0 6px 24px rgba(99,102,241,0.28);
-  }
-  .chat-card .chat-info { flex: 1; }
-  .chat-card .chat-info h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
-  .chat-card .chat-info p { font-size: 0.97rem; opacity: 0.88; line-height: 1.55; }
-  .chat-btns { display: flex; gap: 10px; flex-shrink: 0; }
-  .cbtn {
-    padding: 12px 22px; border-radius: 9px; font-size: 0.97rem; font-weight: 700;
-    text-decoration: none; transition: opacity 0.2s, transform 0.1s; white-space: nowrap;
-    border: none; cursor: pointer; font-family: inherit;
-  }
-  .cbtn:hover { opacity: 0.88; transform: translateY(-1px); }
-  .cbtn-white { background: #fff; color: #6366f1; }
-  .cbtn-outline { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
-
-  
-  .live-badge {
-    display: inline-flex; align-items: center; gap: 5px;
-    background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;
-    border-radius: 20px; padding: 3px 10px; font-size: 0.75rem; font-weight: 600;
-  }
-  .live-dot {
-    width: 7px; height: 7px; border-radius: 50%; background: #10b981;
-    animation: livepulse 1.5s ease-in-out infinite;
-  }
-  @keyframes livepulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-  footer { text-align: center; color: var(--muted2); font-size: 0.85rem; padding: 20px 28px; border-top: 1px solid var(--border); }
-
-  
-  .zoom-bar {
-    display: flex; align-items: center; gap: 6px;
-    background: var(--surface2); border: 1px solid var(--border);
-    border-radius: 8px; padding: 4px 8px;
-  }
-  .zoom-bar span { font-size: 0.8rem; color: var(--muted); min-width: 38px; text-align: center; font-weight: 600; }
-  .zbtn {
-    background: none; border: 1px solid var(--border); color: var(--text2);
-    width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
-    font-size: 1rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    margin-left: auto; padding: 5px 12px; border-radius: 8px;
+    background: #f0f0ff; color: var(--accent); font-size: 0.78rem; font-weight: 600;
+    text-decoration: none; white-space: nowrap; flex-shrink: 0;
     transition: background 0.15s;
   }
-  .zbtn:hover { background: var(--border); }
+  .dl-btn:hover { background: #e0e0ff; }
 
-  @media (max-width: 900px) {
-    .sidebar { display: none; }
-    .main-wrap { margin-left: 0; }
-    .stats-row { grid-template-columns: repeat(2,1fr); }
-    .grid-2 { grid-template-columns: 1fr; }
-    .chat-btns { flex-direction: column; }
+  /* ── TASKS ── */
+  .task-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 11px 0; border-bottom: 1px solid #f3f4f6;
+  }
+  .task-item:last-child { border-bottom: none; }
+  .task-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+  .task-dot.active { background: var(--green); }
+  .task-dot.pending { background: var(--amber); }
+  .task-name { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+  .task-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+
+  /* ── CHAT RAPIDA ── */
+  .chat-btns { display: flex; gap: 10px; margin-top: 4px; }
+  .chat-btn {
+    flex: 1; padding: 11px; border-radius: 10px; text-align: center;
+    font-size: 0.85rem; font-weight: 600; text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .chat-btn:hover { opacity: 0.88; }
+  .chat-btn-app { background: var(--grad); color: #fff; }
+  .chat-btn-web { background: #f0f0ff; color: var(--accent); }
+
+  /* ── RASSEGNA (pagina dedicata) ── */
+  .news-grid { display: flex; flex-direction: column; gap: 14px; }
+  .news-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 20px;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 4px 16px; transition: box-shadow 0.15s;
+  }
+  .news-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .news-caption {
+    font-size: 0.97rem; font-weight: 700; color: var(--text);
+    grid-column: 1; line-height: 1.3;
+  }
+  .news-date-badge {
+    grid-column: 2; grid-row: 1;
+    font-size: 0.7rem; color: var(--muted); white-space: nowrap;
+    align-self: start; padding-top: 2px;
+  }
+  .news-snippet {
+    font-size: 0.84rem; color: var(--text2); line-height: 1.55;
+    grid-column: 1 / -1; margin-top: 6px;
+  }
+  .news-footer {
+    grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; margin-top: 8px;
+  }
+  .news-source-tag {
+    font-size: 0.72rem; font-weight: 600; color: #fff;
+    background: var(--accent); padding: 2px 9px; border-radius: 20px;
+  }
+  .news-link {
+    font-size: 0.78rem; color: var(--accent); text-decoration: none; font-weight: 600;
+  }
+  .news-link:hover { text-decoration: underline; }
+  .news-page-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .news-page-title { font-size: 1.3rem; font-weight: 800; color: var(--text); }
+  .news-page-sub { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
+  .news-week-label {
+    font-size: 0.75rem; color: var(--muted); padding: 4px 12px;
+    background: #f3f4f6; border-radius: 20px;
   }
 
-    /* ===== RASSEGNA ===== */
-    .news-item { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; margin-bottom:10px; display:flex; flex-direction:column; gap:6px; }
-    .news-caption { font-size:0.95rem; font-weight:700; color:#1e293b; }
-    .news-snippet { font-size:0.82rem; color:#475569; line-height:1.5; }
-    .news-footer { display:flex; align-items:center; gap:10px; margin-top:4px; }
-    .news-source { font-size:0.75rem; color:#94a3b8; }
-    .news-link { font-size:0.75rem; color:#6366f1; text-decoration:none; font-weight:600; }
-    .news-link:hover { text-decoration:underline; }
-    .news-date { font-size:0.72rem; color:#cbd5e1; margin-left:auto; }
+  /* ── EMPTY STATE ── */
+  .empty-state {
+    padding: 32px; text-align: center; color: var(--muted); font-size: 0.88rem;
+  }
+  .ei { font-size: 2rem; margin-bottom: 8px; }
 
-    </style>
+  /* ── FOOTER ── */
+  .footer { padding: 16px 28px; font-size: 0.75rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: auto; }
+
+  @media (max-width: 900px) {
+    .stats-row { grid-template-columns: repeat(2,1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
 
-
 <div id="zoom-wrap">
+
+<!-- ═══ SIDEBAR ═══ -->
 <aside class="sidebar">
   <div class="sidebar-logo">
     <div class="icon">🤖</div>
     <div>
       <div class="name">Ross AI</div>
       <div class="sub">Dashboard operativa</div>
-
-          <!-- RASSEGNA -->
-          <div class="section-card" id="rassegna-section">
-            <div class="section-header">
-              <span class="section-icon">📰</span>
-              <span class="section-title">Rassegna</span>
-              <span class="badge-count" id="news-count">0</span>
-            </div>
-            <div id="news-list">
-              <div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>
-            </div>
-          </div>
     </div>
   </div>
+
   <nav class="sidebar-nav">
-    <div class="nav-label">Principale</div>
-    <a class="nav-item active" href="#">
-      <span class="ico">📊</span> Panoramica
-    </a>
-    <a class="nav-item" href="https://t.me/TestHeyrossbot" target="_blank">
-      <span class="ico">💬</span> Nuova chat
-    </a>
-    <div class="nav-label">Contenuti</div>
-    <a class="nav-item" href="#">
-      <span class="ico">💬</span> Conversazioni
-    </a>
-    <a class="nav-item" href="#">
-      <span class="ico">📄</span> Documenti
-    </a>
-    <a class="nav-item" href="#">
-      <span class="ico">⏰</span> Task programmati
-    </a>
-  </nav>
-  <div class="sidebar-footer">
-    <div class="avatar">A</div>
-    <div class="user-info">
-      <div class="uname">Anto</div>
-      <div class="urole">Admin</div>
+    <div class="nav-label">Generale</div>
+    <div class="nav-item active" onclick="showPage('home',this)">
+      <span class="ico">🏠</span> Home
     </div>
-    <button class="logout-btn" onclick="doLogout()" title="Esci">⏻</button>
+    <div class="nav-item" onclick="showPage('conversations',this)">
+      <span class="ico">💬</span> Conversazioni
+      <span class="nav-badge" id="nb-conv">0</span>
+    </div>
+    <div class="nav-item" onclick="showPage('documents',this)">
+      <span class="ico">📄</span> Documenti
+      <span class="nav-badge" id="nb-docs">0</span>
+    </div>
+    <div class="nav-label">Aggiornamenti</div>
+    <div class="nav-item" onclick="showPage('rassegna',this)">
+      <span class="ico">📰</span> Rassegna
+      <span class="nav-badge" id="nb-news">0</span>
+    </div>
+    <div class="nav-label">Sistema</div>
+    <div class="nav-item" onclick="showPage('tasks',this)">
+      <span class="ico">⚙️</span> Task programmati
+    </div>
+    <div class="nav-item" onclick="showPage('chat',this)">
+      <span class="ico">✉️</span> Chat rapida
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="logout-btn" onclick="doLogout()">
+      <span>🚪</span> Esci
+    </div>
   </div>
 </aside>
 
+<!-- ═══ MAIN CONTENT ═══ -->
+<div style="flex:1; display:flex; flex-direction:column; min-height:100vh;">
 
-<div class="main-wrap">
+  <!-- TOPBAR -->
   <div class="topbar">
-    <h2>Panoramica</h2>
+    <div class="topbar-title" id="topbar-section-title">Home</div>
     <div class="topbar-right">
-      <span class="live-badge"><span class="live-dot"></span> Live</span>
-      <div class="zoom-bar">
-        <button class="zbtn" onclick="changeZoom(-0.1)" title="Riduci">−</button>
-        <span id="zoom-label">100%</span>
-        <button class="zbtn" onclick="changeZoom(+0.1)" title="Ingrandisci">+</button>
-        <button class="zbtn" onclick="resetZoom()" title="Reset" style="font-size:0.7rem;width:auto;padding:0 8px;">↺</button>
+      <div class="zoom-ctrl">
+        <button class="zoom-btn" onclick="changeZoom(-0.1)">−</button>
+        <span class="zoom-label" id="zoom-label">100%</span>
+        <button class="zoom-btn" onclick="changeZoom(0.1)">+</button>
+        <button class="zoom-btn" onclick="resetZoom()">↺</button>
       </div>
-      <div class="status-dot"></div>
-      <span class="topbar-date" id="topbar-date"></span>
+      <div class="live-dot"></div>
+      <span class="topbar-date" id="topbar-date">—</span>
     </div>
   </div>
 
-  <main>
-    
+
+  <!-- ═══ PAGE: HOME ═══ -->
+  <div class="page active" id="page-home">
     <div class="stats-row">
-      <div class="stat-card"><div class="stat-icon si-purple">💬</div><div class="stat-info"><div class="num c-purple" id="s-conv">—</div><div class="lbl">Conversazioni</div></div></div>
-      <div class="stat-card"><div class="stat-icon si-green">✅</div><div class="stat-info"><div class="num c-green" id="s-done">—</div><div class="lbl">Completate</div></div></div>
-      <div class="stat-card"><div class="stat-icon si-amber">⏰</div><div class="stat-info"><div class="num c-amber" id="s-tasks">—</div><div class="lbl">Task programmati</div></div></div>
-      <div class="stat-card"><div class="stat-icon si-cyan">📄</div><div class="stat-info"><div class="num c-cyan" id="s-docs">—</div><div class="lbl">Documenti</div></div></div>
+      <div class="stat-card">
+        <div class="stat-label">Conversazioni</div>
+        <div class="stat-value" id="s-conv">—</div>
+        <div class="stat-sub">totali con Ross</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Completate</div>
+        <div class="stat-value" id="s-done">—</div>
+        <div class="stat-sub">task risolti</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Documenti</div>
+        <div class="stat-value" id="s-docs">—</div>
+        <div class="stat-sub">generati</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Task attivi</div>
+        <div class="stat-value" id="s-tasks">—</div>
+        <div class="stat-sub">schedulati</div>
+      </div>
     </div>
 
-    
-    <div class="chat-card">
-      <div class="chat-info">
-        <h3>⚡ Chat Rapida con Ross</h3>
-        <p>Ross è online e risponde in pochi secondi. Apri la conversazione per continuare dove avevi lasciato.</p>
-      </div>
-      <div class="chat-btns">
-        <a class="cbtn cbtn-white" href="https://t.me/TestHeyrossbot" target="_blank">📱 Telegram App</a>
-        <a class="cbtn cbtn-outline" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🌐 Telegram Web</a>
-      </div>
-    </div>
-
-    
     <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><span>💬</span> Conversazioni recenti</div>
-        <div id="conv-list"><div class="empty-state"><div class="ei">⏳</div>Caricamento...</div></div>
+      <div class="section-card">
+        <div class="section-header">
+          <span class="section-icon">💬</span>
+          <span class="section-title">Ultime conversazioni</span>
+        </div>
+        <div class="section-body" id="home-conv-list">
+          <div class="empty-state"><div class="ei">💬</div>Nessuna conversazione.</div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title"><span>⏰</span> Task programmati</div>
-        <div id="tasks-list"><div class="empty-state"><div class="ei">🗓️</div>Caricamento...</div></div>
+      <div class="section-card">
+        <div class="section-header">
+          <span class="section-icon">📰</span>
+          <span class="section-title">Rassegna — ultime notizie</span>
+        </div>
+        <div class="section-body" id="home-news-list">
+          <div class="empty-state"><div class="ei">📰</div>Nessuna notizia.</div>
+        </div>
+        <div style="padding:10px 18px; border-top:1px solid var(--border);">
+          <span style="font-size:0.78rem; color:var(--accent); cursor:pointer; font-weight:600;"
+                onclick="showPage('rassegna', document.querySelector('[onclick*=rassegna]'))">
+            Tutte le notizie →
+          </span>
+        </div>
       </div>
     </div>
+  </div>
 
-    
-    <div class="card" style="margin-bottom:20px;">
-      <div class="card-title"><span>📄</span> Documenti generati</div>
-      <div id="docs-list"><div class="empty-state"><div class="ei">⏳</div>Caricamento...</div></div>
+  <!-- ═══ PAGE: CONVERSAZIONI ═══ -->
+  <div class="page" id="page-conversations" style="padding:28px;">
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-icon">💬</span>
+        <span class="section-title">Tutte le conversazioni</span>
+        <span class="badge-count" id="conv-count">0</span>
+      </div>
+      <div class="section-body" id="all-conv-list">
+        <div class="empty-state"><div class="ei">💬</div>Nessuna conversazione.</div>
+      </div>
     </div>
+  </div>
 
-  </main>
-  <footer>Ross AI · Dashboard · Powered by NextMindLab &nbsp;·&nbsp; <span id="footer-date"></span></footer>
+  <!-- ═══ PAGE: DOCUMENTI ═══ -->
+  <div class="page" id="page-documents" style="padding:28px;">
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-icon">📄</span>
+        <span class="section-title">Documenti generati</span>
+        <span class="badge-count" id="docs-count">0</span>
+      </div>
+      <div class="section-body" id="docs-list">
+        <div class="empty-state"><div class="ei">📄</div>Nessun documento.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE: RASSEGNA ═══ -->
+  <div class="page" id="page-rassegna" style="padding:28px;">
+    <div class="news-page-header">
+      <div>
+        <div class="news-page-title">📰 Rassegna</div>
+        <div class="news-page-sub">Notizie Telco · AI · Mobile · Innovation — ultimi 7 giorni</div>
+      </div>
+      <div class="news-week-label" id="news-week-range">—</div>
+    </div>
+    <div class="news-grid" id="news-list">
+      <div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE: TASK ═══ -->
+  <div class="page" id="page-tasks" style="padding:28px;">
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-icon">⚙️</span>
+        <span class="section-title">Task programmati</span>
+      </div>
+      <div class="section-body" id="tasks-list">
+        <div class="empty-state"><div class="ei">⚙️</div>Nessun task.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE: CHAT RAPIDA ═══ -->
+  <div class="page" id="page-chat" style="padding:28px;">
+    <div class="section-card" style="max-width:480px;">
+      <div class="section-header">
+        <span class="section-icon">✉️</span>
+        <span class="section-title">Chat rapida con Ross</span>
+      </div>
+      <div class="section-body">
+        <p style="font-size:0.85rem; color:var(--muted); margin-bottom:16px;">
+          Apri la chat direttamente su Telegram App o Telegram Web.
+        </p>
+        <div class="chat-btns">
+          <a class="chat-btn chat-btn-app" href="https://t.me/TestHeyrossbot" target="_blank">📱 Telegram App</a>
+          <a class="chat-btn chat-btn-web" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🌐 Telegram Web</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" id="footer-date">Dashboard Ross AI · NextMindLab</div>
 </div>
 
+</div><!-- end zoom-wrap -->
+
 <script>
+// ── AUTH CHECK (SECURITY FIX: nonce verification) ──────────────────────────
 function getCookie(n) {
-  const m = document.cookie.match('(?:^|; )'+n+'=([^;]*)');
-  return m ? m[1] : null;
-}
-function deleteCookie(n) {
-  document.cookie = n+'=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  const m = document.cookie.match('(?:^|; )' + n + '=([^;]*)');
+  return m ? decodeURIComponent(m[1]) : null;
 }
 function doLogout() {
-  deleteCookie('ross_session');
+  document.cookie = 'ross_session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Strict';
+  sessionStorage.removeItem('ross_nonce');
   window.location.href = 'login.html';
 }
 
-const DATA_URL = 'https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/data.json';
-const TG_URL   = 'https://web.telegram.org/k/#@TestHeyrossbot';
-
-const STATUS_MAP = {
-  done:   {cls:'b-green', label:'✓ Fatto'},
-  active: {cls:'b-blue',  label:'⟳ In corso'},
-  sched:  {cls:'b-amber', label:'⏳ Programmato'}
-};
-
-function renderConversations(convs) {
-  const el = document.getElementById('conv-list');
-  if (!convs || convs.length === 0) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">💬</div>Nessuna conversazione ancora.</div>';
-    return;
-  }
-  el.innerHTML = convs.map(c => {
-    const s = STATUS_MAP[c.status] || STATUS_MAP.active;
-    return `<div class="conv-item">
-      <div class="conv-top">
-        <a class="conv-link" href="${TG_URL}" target="_blank">${c.title}</a>
-        <span class="conv-date">${c.date_label}</span>
-        <span class="badge ${s.cls}">${s.label}</span>
-      </div>
-      <div class="conv-snippet">${c.snippet}</div>
-    </div>`;
-  }).join('');
+function checkAuth() {
+  const raw = getCookie('ross_session');
+  if (!raw) { window.location.href = 'login.html'; return false; }
+  try {
+    const session = JSON.parse(atob(raw));
+    // Verifica scadenza (24h)
+    if (!session.ts || Date.now() - session.ts > 86400000) {
+      doLogout(); return false;
+    }
+    // Verifica nonce (deve coincidere con quello salvato al login)
+    const storedNonce = sessionStorage.getItem('ross_nonce');
+    if (storedNonce && session.nonce !== storedNonce) {
+      doLogout(); return false;
+    }
+  } catch(e) { doLogout(); return false; }
+  return true;
 }
 
+// ── NAVIGATION ──────────────────────────────────────────────────────────────
+const pageTitles = {
+  home: 'Home', conversations: 'Conversazioni', documents: 'Documenti',
+  rassegna: 'Rassegna', tasks: 'Task programmati', chat: 'Chat rapida'
+};
 
-function renderRassegna(news) {
-  const el = document.getElementById('news-list');
-  const cnt = document.getElementById('news-count');
-  if (!news || news.length === 0) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>';
-    cnt.textContent = '0';
+function showPage(name, el) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const page = document.getElementById('page-' + name);
+  if (page) page.classList.add('active');
+  if (el) el.classList.add('active');
+  document.getElementById('topbar-section-title').textContent = pageTitles[name] || name;
+}
+
+// ── SAFE DOM HELPERS (XSS FIX) ──────────────────────────────────────────────
+function esc(str) {
+  const d = document.createElement('div');
+  d.textContent = String(str ?? '');
+  return d.innerHTML;
+}
+function safeAttr(str) {
+  return String(str ?? '').replace(/['"<>&]/g, c => ({'\'':'&#39;','"':'&quot;','<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+}
+
+// ── DATA FETCH ────────────────────────────────────────────────────────────────
+const DATA_URL = 'https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/data.json?_=' + Date.now();
+const TG_URL = 'https://web.telegram.org/k/#@TestHeyrossbot';
+
+async function fetchData() {
+  try {
+    const r = await fetch('https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/data.json?_=' + Date.now());
+    if (!r.ok) return;
+    const d = await r.json();
+
+    // Stats
+    document.getElementById('s-conv').textContent  = d.stats?.conversations ?? 0;
+    document.getElementById('s-done').textContent  = d.stats?.completed ?? 0;
+    document.getElementById('s-docs').textContent  = d.stats?.documents ?? 0;
+    document.getElementById('s-tasks').textContent = d.stats?.scheduled_tasks ?? 0;
+
+    // Nav badges
+    document.getElementById('nb-conv').textContent = (d.conversations || []).length;
+    document.getElementById('nb-docs').textContent = (d.documents || []).length;
+    document.getElementById('nb-news').textContent = (d.rassegna || []).length;
+
+    renderConversations(d.conversations || [], 'home-conv-list', 5);
+    renderConversations(d.conversations || [], 'all-conv-list', 100);
+    document.getElementById('conv-count').textContent = (d.conversations || []).length;
+
+    renderDocuments(d.documents || []);
+    renderRassegna(d.rassegna || []);
+    renderHomeNews(d.rassegna || []);
+    renderTasks(d.scheduled_tasks || []);
+
+    const lu = new Date(d.last_updated);
+    const fmt = lu.toLocaleString('it-IT', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    document.getElementById('topbar-date').textContent = fmt;
+    document.getElementById('footer-date').textContent = 'Aggiornato: ' + fmt + ' · Ross AI · NextMindLab';
+  } catch(e) { console.warn('Data fetch failed', e); }
+}
+
+// ── RENDER FUNCTIONS (XSS-safe: textContent + safeAttr) ───────────────────
+
+function renderConversations(convs, elId, limit) {
+  const el = document.getElementById(elId);
+  const list = convs.slice(0, limit);
+  if (!list.length) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">💬</div>Nessuna conversazione.</div>';
     return;
   }
-  cnt.textContent = news.length;
-  el.innerHTML = news.map(n => `
-    <div class="news-item">
-      <div class="news-caption">${n.caption}</div>
-      <div class="news-snippet">${n.snippet}</div>
-      <div class="news-footer">
-        <span class="news-source">${n.source}</span>
-        <a class="news-link" href="${n.url}" target="_blank">→ Leggi</a>
-        <span class="news-date">${n.date}</span>
-      </div>
-    </div>`).join('');
+  el.innerHTML = '';
+  list.forEach(c => {
+    const s = c.status === 'done' ? {cls:'badge-done',label:'✓ Completata'} : {cls:'badge-pend',label:'⏳ In corso'};
+    const item = document.createElement('div');
+    item.className = 'conv-item';
+
+    const top = document.createElement('div');
+    top.className = 'conv-top';
+
+    const link = document.createElement('a');
+    link.className = 'conv-link';
+    link.href = TG_URL;
+    link.target = '_blank';
+    link.textContent = c.title || '(senza titolo)';
+
+    const date = document.createElement('span');
+    date.className = 'conv-date';
+    date.textContent = c.date_label || '';
+
+    const badge = document.createElement('span');
+    badge.className = 'badge ' + s.cls;
+    badge.textContent = s.label;
+
+    top.appendChild(link);
+    top.appendChild(date);
+    top.appendChild(badge);
+
+    const snippet = document.createElement('div');
+    snippet.className = 'conv-snippet';
+    snippet.textContent = c.snippet || '';
+
+    item.appendChild(top);
+    item.appendChild(snippet);
+    el.appendChild(item);
+  });
 }
 
 function renderDocuments(docs) {
   const el = document.getElementById('docs-list');
-  if (!docs || docs.length === 0) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📄</div>Nessun documento generato ancora.</div>';
+  document.getElementById('docs-count').textContent = docs.length;
+  if (!docs.length) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">📄</div>Nessun documento.</div>';
     return;
   }
-  el.innerHTML = docs.map(d => `
-    <div class="doc-item">
-      <div class="doc-icon">${d.icon}</div>
-      <div>
-        <div class="doc-name">${d.title}</div>
-        <div class="doc-meta">${d.type} · ${d.pages} pagine · ${d.date_label}</div>
-      </div>
-      <a class="dl-btn" href="${d.url}" target="_blank" download>⬇ Scarica</a>
-    </div>`).join('');
+  el.innerHTML = '';
+  docs.forEach(d => {
+    const item = document.createElement('div');
+    item.className = 'doc-item';
+
+    const icon = document.createElement('div');
+    icon.className = 'doc-icon';
+    icon.textContent = d.icon || '📄';
+
+    const info = document.createElement('div');
+    const name = document.createElement('div');
+    name.className = 'doc-name';
+    name.textContent = d.title || d.name || '—';
+    const meta = document.createElement('div');
+    meta.className = 'doc-meta';
+    meta.textContent = (d.type || 'PDF') + (d.pages ? ' · ' + d.pages + ' pagine' : '') + (d.date_label ? ' · ' + d.date_label : (d.date ? ' · ' + d.date : ''));
+    info.appendChild(name);
+    info.appendChild(meta);
+
+    const btn = document.createElement('a');
+    btn.className = 'dl-btn';
+    btn.href = safeAttr(d.url || '#');
+    btn.target = '_blank';
+    btn.setAttribute('download', '');
+    btn.textContent = '⬇ Scarica';
+
+    item.appendChild(icon);
+    item.appendChild(info);
+    item.appendChild(btn);
+    el.appendChild(item);
+  });
+}
+
+function renderRassegna(news) {
+  const el = document.getElementById('news-list');
+  if (!news.length) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>';
+    return;
+  }
+  // Range date
+  const dates = news.map(n => n.date).filter(Boolean).sort();
+  if (dates.length) {
+    document.getElementById('news-week-range').textContent =
+      dates[0] + ' → ' + dates[dates.length-1];
+  }
+  el.innerHTML = '';
+  news.forEach(n => {
+    const card = document.createElement('div');
+    card.className = 'news-card';
+
+    const caption = document.createElement('div');
+    caption.className = 'news-caption';
+    caption.textContent = n.caption || '';
+
+    const dateBadge = document.createElement('div');
+    dateBadge.className = 'news-date-badge';
+    dateBadge.textContent = n.date || '';
+
+    const snippet = document.createElement('div');
+    snippet.className = 'news-snippet';
+    snippet.textContent = n.snippet || '';
+
+    const footer = document.createElement('div');
+    footer.className = 'news-footer';
+
+    const srcTag = document.createElement('span');
+    srcTag.className = 'news-source-tag';
+    srcTag.textContent = n.source || '';
+
+    const link = document.createElement('a');
+    link.className = 'news-link';
+    link.href = safeAttr(n.url || '#');
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = '→ Leggi l\'articolo';
+
+    footer.appendChild(srcTag);
+    footer.appendChild(link);
+
+    card.appendChild(caption);
+    card.appendChild(dateBadge);
+    card.appendChild(snippet);
+    card.appendChild(footer);
+    el.appendChild(card);
+  });
+}
+
+function renderHomeNews(news) {
+  const el = document.getElementById('home-news-list');
+  const list = news.slice(0, 3);
+  if (!list.length) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia.</div>';
+    return;
+  }
+  el.innerHTML = '';
+  list.forEach(n => {
+    const item = document.createElement('div');
+    item.style.cssText = 'padding:10px 0; border-bottom:1px solid #f3f4f6;';
+
+    const cap = document.createElement('div');
+    cap.style.cssText = 'font-size:0.88rem; font-weight:700; color:var(--text); margin-bottom:4px;';
+    cap.textContent = n.caption || '';
+
+    const snip = document.createElement('div');
+    snip.style.cssText = 'font-size:0.78rem; color:var(--muted); line-height:1.4;';
+    snip.textContent = (n.snippet || '').substring(0, 120) + ((n.snippet||'').length > 120 ? '…' : '');
+
+    item.appendChild(cap);
+    item.appendChild(snip);
+    el.appendChild(item);
+  });
 }
 
 function renderTasks(tasks) {
   const el = document.getElementById('tasks-list');
-  if (!tasks || tasks.length === 0) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">🗓️</div>Nessun task programmato.<br>Chiedi a Ross di impostare promemoria o task ricorrenti.</div>';
+  if (!tasks.length) {
+    el.innerHTML = '<div class="empty-state"><div class="ei">⚙️</div>Nessun task programmato.</div>';
     return;
   }
-  el.innerHTML = tasks.map(t => `
-    <div class="conv-item">
-      <div class="conv-top">
-        <span style="font-weight:600;font-size:0.95rem;">${t.icon || '⏰'} ${t.title}</span>
-        <span class="badge b-amber">⏳ ${t.schedule}</span>
-      </div>
-      <div class="conv-snippet">${t.description || ''}</div>
-    </div>`).join('');
+  el.innerHTML = '';
+  tasks.forEach(t => {
+    const item = document.createElement('div');
+    item.className = 'task-item';
+
+    const dot = document.createElement('div');
+    dot.className = 'task-dot ' + (t.status === 'active' ? 'active' : 'pending');
+
+    const info = document.createElement('div');
+    const name = document.createElement('div');
+    name.className = 'task-name';
+    name.textContent = t.name || '—';
+    const meta = document.createElement('div');
+    meta.className = 'task-meta';
+    meta.textContent = t.schedule || '';
+
+    info.appendChild(name);
+    info.appendChild(meta);
+    item.appendChild(dot);
+    item.appendChild(info);
+    el.appendChild(item);
+  });
 }
 
-let lastUpdated = null;
-async function fetchData() {
-  try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
-    if (!res.ok) return;
-    const d = await res.json();
-    if (d.last_updated === lastUpdated) return; // no change
-    lastUpdated = d.last_updated;
-
-    document.getElementById('s-conv').textContent  = d.stats.conversations;
-    document.getElementById('s-done').textContent  = d.stats.completed;
-    document.getElementById('s-tasks').textContent = d.stats.scheduled_tasks;
-    document.getElementById('s-docs').textContent  = d.stats.documents;
-
-    renderConversations(d.conversations);
-    renderDocuments(d.documents);
-    renderRassegna(d.rassegna || []);
-    renderTasks(d.scheduled_tasks);
-
-    const lu = new Date(d.last_updated);
-    document.getElementById('topbar-date').textContent =
-      lu.toLocaleString('it-IT',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-    document.getElementById('footer-date').textContent =
-      'Aggiornato: ' + lu.toLocaleString('it-IT',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  } catch(e) { console.warn('Data fetch failed', e); }
-}
-
-
+// ── ZOOM ──────────────────────────────────────────────────────────────────────
 let currentZoom = parseFloat(localStorage.getItem('ross_zoom') || '1');
 function applyZoom(z) {
   currentZoom = Math.min(2, Math.max(0.6, z));
@@ -508,16 +740,16 @@ function applyZoom(z) {
   document.getElementById('zoom-label').textContent = Math.round(currentZoom * 100) + '%';
   localStorage.setItem('ross_zoom', currentZoom);
 }
-function changeZoom(delta) { applyZoom(currentZoom + delta); }
+function changeZoom(d) { applyZoom(currentZoom + d); }
 function resetZoom() { applyZoom(1); }
 
+// ── BOOT ──────────────────────────────────────────────────────────────────────
 window.onload = function() {
-  if (!getCookie('ross_session')) { window.location.href = 'login.html'; return; }
+  if (!checkAuth()) return;
   applyZoom(currentZoom);
   fetchData();
-  setInterval(fetchData, 60000); // refresh every 60s
+  setInterval(fetchData, 60000);
 };
 </script>
-</div>
 </body>
 </html>
