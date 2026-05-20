@@ -109,6 +109,46 @@
   "scheduled_tasks": [],
   "rassegna": [
     {
+      "id": "google-io-2026-gemini-agents-smart-glasses",
+      "date": "2026-05-20",
+      "caption": "🔍 Google I/O 2026: Search diventa agente, arrivano gli smart glasses Android XR",
+      "snippet": "Al Google I/O 2026 il motore di ricerca si trasforma in un agente autonomo: information agent, booking agent e Gemini Spark operano in background anche mentre dormi. In arrivo smart glasses con Warby Parker e Gentle Monster (audio-only + display), Gemini Omni per video generativo e piano AI Ultra a $100/mese.",
+      "url": "https://www.wired.com/story/everything-google-announced-at-google-io-2026/",
+      "source": "WIRED"
+    },
+    {
+      "id": "google-search-agentic-io-2026",
+      "date": "2026-05-20",
+      "caption": "🤖 Google Search diventa agente: monitora, prenota e agisce per te",
+      "snippet": "Google ha annunciato al I/O 2026 la trasformazione di Search in piattaforma agente. Information agent personalizzati monitorano stock, sport e news 24/7; booking agent possono anche telefonare in tuo nome. Il modello default per AI Mode diventa Gemini 3.5 Flash. Le funzioni agentiche arrivano prima agli abbonati AI Pro e Ultra.",
+      "url": "https://www.wired.com/story/google-search-goes-agentic-and-doesnt-need-you-anymore/",
+      "source": "WIRED"
+    },
+    {
+      "id": "demis-hassabis-ai-job-cuts-deepmind-2026",
+      "date": "2026-05-20",
+      "caption": "💼 Hassabis (DeepMind): tagliare lavori per l AI e sbagliato facciamo 4x di piu",
+      "snippet": "Il CEO di Google DeepMind Demis Hassabis ha respinto la narrativa dei tagli di lavoro guidati dall'AI. Presentando Gemini 3.5 Flash al Google I/O, ha detto: se gli ingegneri sono 3-4x piu produttivi, vogliamo fare 3-4x di piu cose. Ha anche ammesso che l'AI non ha ancora prodotto un'app di successo senza aiuto umano.",
+      "url": "https://www.wired.com/story/demis-hassabis-ai-layoffs-deepmind-google-io/",
+      "source": "WIRED"
+    },
+    {
+      "id": "musk-openai-trial-dismissed-2026",
+      "date": "2026-05-20",
+      "caption": "⚖️ Tribunale USA: Musk perde la causa contro OpenAI e Sam Altman",
+      "snippet": "Una corte federale di Oakland ha respinto tutte le accuse di Elon Musk contro OpenAI e il CEO Sam Altman. La giuria ha ritenuto che Musk avesse superato il termine di prescrizione. Musk aveva investito 38 milioni nei primi anni di OpenAI, accusando poi Altman di aver tradito la missione no-profit per fare profitto.",
+      "url": "https://apnews.com/article/musk-openai-trial-verdict-0b9b0bfaffe96f2c930341f52dfe4f8c",
+      "source": "AP News"
+    },
+    {
+      "id": "acma-australia-spectrum-73b-telcos-2026",
+      "date": "2026-05-20",
+      "caption": "📡 Australia: Telstra, Optus e TPG devono pagare 7,3 mld per rinnovare lo spettro",
+      "snippet": "L'ACMA ha confermato la valutazione finale di 7,32 miliardi di dollari per il rinnovo delle licenze di spettro mobile, respingendo le richieste delle telco di ridurre la cifra. Telstra, Optus, TPG Telecom e NBN Co pagheranno per bande 700MHz-3.4GHz. La prima finestra di domande apre il 18 giugno.",
+      "url": "https://www.techbusinessnews.com.au/news/telcos-face-7-3bn-spectrum-bill-as-acma-rejects-industry-push-for-lower-fees/",
+      "source": "Tech Business News"
+    },
+    {
       "id": "telus-66b-canada-5g-ai",
       "date": "2026-05-19",
       "caption": "📡 TELUS investe 66 miliardi di dollari in 5G, fibra e AI in Canada",
