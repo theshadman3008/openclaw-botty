@@ -109,6 +109,46 @@
   "scheduled_tasks": [],
   "rassegna": [
     {
+      "id": "nvidia-q1-fy2027-record-revenue-81b",
+      "date": "2026-05-21",
+      "caption": "📈 Nvidia: ricavi record $81,6 mld nel Q1 FY2027, data center +92%",
+      "snippet": "Nvidia ha riportato ricavi totali record di $81,6 miliardi per il primo trimestre fiscale 2027 (feb-apr 2026), con il segmento data center a $75,2 miliardi (+92% anno su anno). La domanda di GPU per workload AI continua a trainare la crescita senza segnali di rallentamento.",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "source": "The Verge"
+    },
+    {
+      "id": "google-io-2026-ai-agents-gemini",
+      "date": "2026-05-21",
+      "caption": "🤖 Google I/O 2026: AI ovunque — agenti, Gemini e occhiali Android XR",
+      "snippet": "Google I/O 2026 ha presentato Gemini su ogni superficie: dagli occhiali Android XR XREAL Project Aura (in uscita entro il 2026) agli agenti AI autonomi integrati nella ricerca e nei prodotti consumer. Il CEO Sundar Pichai ha definito questo il momento in cui l'AI passa da strumento a co-pilota universale.",
+      "url": "https://9to5google.com/2026/05/20/xreals-android-xr-glasses-one-up-apples-wired-battery-with-a-controller-more-video/",
+      "source": "9to5Google"
+    },
+    {
+      "id": "spacex-ipo-2026-biggest-ever",
+      "date": "2026-05-21",
+      "caption": "🚀 SpaceX deposita i documenti per la più grande IPO di sempre",
+      "snippet": "SpaceX ha depositato la documentazione per la sua IPO pubblica, potenzialmente la più grande della storia. Il prospetto evidenzia la dipendenza dalla leadership di Elon Musk come fattore di rischio, e cita Tesla e xAI come potenziali competitor. La valutazione attesa supera i $350 miliardi.",
+      "url": "https://www.theverge.com/tech",
+      "source": "The Verge"
+    },
+    {
+      "id": "apple-music-ai-fair-music-policy",
+      "date": "2026-05-21",
+      "caption": "🎵 Apple Music: AI nella musica è opportunità, ma servono regole",
+      "snippet": "Apple Music ha pubblicato una lettera aperta alle label intitolata \"What We're Doing to Keep Music Fair\", impegnandosi a rendere obbligatorio il tagging dei contenuti AI. Nel 2025 ha escluso ~2 miliardi di stream manipolati mantenendo il tasso di frode sotto lo 0,5%. La musica AI è meno dell'1% degli ascolti totali.",
+      "url": "https://9to5mac.com/2026/05/20/apple-music-shares-what-it-is-doing-to-keep-music-fair-in-an-ai-world/",
+      "source": "9to5Mac"
+    },
+    {
+      "id": "telefonica-brasil-5g-device-cost-barrier",
+      "date": "2026-05-21",
+      "caption": "📡 Telefónica Brasil: il vero ostacolo al 5G è il costo dei device",
+      "snippet": "Il CEO Christian Gebara al Telebrasil Panel: il 5G copre già il 70% del Brasile, ma la crescita degli abbonati è frenata dall'alto costo dei terminali e dalla scarsa digital literacy — non dalla rete. Un segnale importante per le telco nei mercati emergenti.",
+      "url": "https://www.telecompaper.com/news/",
+      "source": "Telecompaper"
+    },
+    {
       "id": "google-io-2026-gemini-agents-smart-glasses",
       "date": "2026-05-20",
       "caption": "🔍 Google I/O 2026: Search diventa agente, arrivano gli smart glasses Android XR",
