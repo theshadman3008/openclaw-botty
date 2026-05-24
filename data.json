@@ -109,6 +109,46 @@
   "scheduled_tasks": [],
   "rassegna": [
     {
+      "id": "spacex-starship-v3-flight12-ipo",
+      "date": "2026-05-24",
+      "caption": "🚀 SpaceX lancia Starship V3 e annuncia la quotazione in borsa",
+      "snippet": "Il 23 maggio SpaceX ha effettuato il 12° test di Starship V3, il razzo più grande e potente mai costruito, con 20 satelliti Starlink simulati rilasciati a metà volo. Due giorni prima Elon Musk aveva annunciato la quotazione in borsa di SpaceX, in quella che sarebbe la più grande IPO della storia americana. NASA conta su Starship per portare astronauti sulla Luna.",
+      "url": "https://apnews.com/article/spacex-elon-musk-starship-rocket-launch-53eb1c43f870561788839b08c401bf8f",
+      "source": "AP News"
+    },
+    {
+      "id": "meta-layoffs-8000-ai-zuckerberg-2026",
+      "date": "2026-05-24",
+      "caption": "🤖 Meta licenzia 8.000 dipendenti: \"L'AI ridefinirà tutto\"",
+      "snippet": "Zuckerberg ha comunicato in un memo interno che il taglio del 10% della forza lavoro è necessario per competere nell'era dell'intelligenza artificiale: \"Le aziende che la guideranno definiranno la prossima generazione\". Meta si unisce a Intuit (3.000 tagli, -17%), Cisco (4.000) e Microsoft in una ondata di ristrutturazioni guidate dall'AI.",
+      "url": "https://www.cnbc.com/2026/05/20/meta-layoffs-zuckerberg-says-success-isnt-a-given-in-memo.html",
+      "source": "CNBC"
+    },
+    {
+      "id": "intuit-layoffs-17pct-ai-restructuring-2026",
+      "date": "2026-05-24",
+      "caption": "💼 Intuit taglia il 17% della workforce: l'AI accelera il reshaping del fintech",
+      "snippet": "Il maker di QuickBooks e TurboTax elimina oltre 3.000 posti e prevede $300-340M di oneri di ristrutturazione. Il CEO Sasan Goodarzi punta a un'organizzazione \"più snella e veloce\" per competere nell'AI. Il titolo ha perso oltre il 40% dall'inizio del 2026, segnale del timore degli investitori che l'AI eroda i prodotti SaaS tradizionali.",
+      "url": "https://www.cnbc.com/2026/05/20/intuit-intu-q3-earnings-report-2026-company-cutting-17percent-of-staff.html",
+      "source": "CNBC"
+    },
+    {
+      "id": "tech-layoffs-100k-2026-ai-wave",
+      "date": "2026-05-24",
+      "caption": "📉 Tech 2026: superata quota 100.000 licenziamenti, l'AI ridisegna il lavoro",
+      "snippet": "Il settore tecnologico ha già superato 100.000 tagli di posti di lavoro nel 2026, con Meta, Intuit, Cisco, Cloudflare e ZoomInfo che guidano l'ondata. Le aziende crescono in fatturato ma tagliano personale per riallocare investimenti verso l'AI. Un trend che ridisegna strutturalmente il profilo occupazionale dell'industria tech globale.",
+      "url": "https://techcrunch.com/",
+      "source": "TechCrunch"
+    },
+    {
+      "id": "starship-v3-nasa-artemis-moon-2026",
+      "date": "2026-05-24",
+      "caption": "🌌 Starship V3 debutta: il razzo più potente di sempre vola per NASA Artemis",
+      "snippet": "Con il volo 12, SpaceX ha debuttato Starship V3, versione più grande e potente che percorre metà globo prima di impattare nell'Oceano Indiano. NASA conta su questo razzo per le missioni Artemis con equipaggio sulla Luna. Parallelamente, Musk ha annunciato la prima IPO di SpaceX con una valutazione target da record.",
+      "url": "https://www.scientificamerican.com/article/spacex-launches-starship-v3-the-worlds-most-powerful-and-tallest-rocket-ever/",
+      "source": "Scientific American"
+    },
+    {
       "id": "nvidia-q1-fy2027-record-revenue-81b",
       "date": "2026-05-21",
       "caption": "📈 Nvidia: ricavi record $81,6 mld nel Q1 FY2027, data center +92%",
