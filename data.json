@@ -1,10 +1,11 @@
 {
-  "last_updated": "2026-05-14T08:38:00+02:00",
+  "last_updated": "2026-05-25T16:24:50+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
-    "documents": 8
+    "documents": 8,
+    "news": 30
   },
   "conversations": [
     {
@@ -152,6 +153,46 @@
       "snippet": "Una serie di fondatori e VC segnalano la diffusione di CARR (committed ARR) spacciato per ARR reale tra le startup AI, gonfiando le valutazioni. TechCrunch rivela come anche i top fund globali abbiano adottato questa pratica, creando multipli insostenibili nel mercato private.",
       "url": "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/",
       "source": "TechCrunch"
+    },
+    {
+      "id": "open-fiber-fibra-multicore-milano-2026",
+      "date": "2026-05-25",
+      "caption": "🔬 Open Fiber accende la fibra multicore su rete reale a Milano",
+      "snippet": "Open Fiber ha attivato il primo collegamento operativo con fibra multicore a quattro canali tra i PoP di Baggio e Galvani a Milano (2,1 km). La tecnologia quadruplica la capacità trasmissiva a parità di infrastruttura fisica, aprendo una nuova fase per la scalabilità delle reti italiane. Il direttore Technology Nicola Grassi: «costruiamo una rete più efficiente e sostenibile».",
+      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga/fibra-multicore-open-fiber-la-testa-sulla-rete-reale-perche-puo-cambiare-la-scala-delle-infrastrutture/",
+      "tag": "Telco"
+    },
+    {
+      "id": "telco-europee-ricavi-mediobanca-2026",
+      "date": "2026-05-25",
+      "caption": "📊 Telco italiane: ricavi in ripresa ma redditività ai minimi storici",
+      "snippet": "Il report annuale Mediobanca sulle maggiori telco mondiali evidenzia che gli operatori italiani sono cresciuti dell'1,6% nel primo semestre 2025, ma l'EBIT margin si ferma all'1,8% contro il 16,5% dell'area EMEA. Gli investimenti europei in 5G e fibra sono in calo dello 0,4%, mentre Asia e USA guidano la crescita. L'AI emerge come leva per nuove linee di business, con KT che punta a triplicare i ricavi AI/IT entro il 2028.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "gsma-europa-5g-gap-200mld-assurdo-2026",
+      "date": "2026-05-25",
+      "caption": "📡 GSMA chiede 200 mld per il 5G europeo: Light Reading smonta la tesi",
+      "snippet": "La GSMA ha pubblicato un report che denuncia un gap di investimento di 200 miliardi di euro nel 5G europeo rispetto agli USA. Light Reading contesta l'analisi: le tariffe europee sono comparabili in termini di affordability e il settore ha mantenuto rendimenti positivi e alti dividendi nell'ultimo decennio secondo il CEPR. La narrativa del ritardo europeo sul 5G viene messa in discussione con dati concreti.",
+      "url": "https://www.lightreading.com/5g/hoping-europe-will-find-an-extra-200b-for-5g-is-absurd",
+      "tag": "Telco"
+    },
+    {
+      "id": "spacex-ipo-s1-ai-chips-data-center-2026",
+      "date": "2026-05-25",
+      "caption": "🚀 SpaceX deposita S-1: punta su AI, data center spaziali e IPO da $75 mld",
+      "snippet": "SpaceX ha reso pubblico il filing S-1 per la quotazione su Nasdaq (ticker SPCX), prospettando la più grande IPO della storia con una raccolta attesa di circa 75 miliardi di dollari. Il documento rivela investimenti massicci in AI e data center orbitali capaci di 100 terawatt di compute/anno. Elon Musk manterrà CEO, CTO e chairman con il 93,6% delle azioni di Classe B e il compenso legato alla creazione di una colonia su Marte.",
+      "url": "https://techcrunch.com/2026/05/20/the-spacex-ipo-filing-ai-bets-starship-dreams-elon-musk/",
+      "tag": "Innovation"
+    },
+    {
+      "id": "white-house-9-miliardi-chip-ai-cia-nsa-2026",
+      "date": "2026-05-25",
+      "caption": "🔐 Casa Bianca chiede $9 mld in chip AI per CIA e NSA",
+      "snippet": "La Casa Bianca ha approvato una richiesta da 9 miliardi di dollari al Congresso per dotare CIA e NSA di chip Nvidia Grace Blackwell e infrastrutture per i modelli AI più avanzati. Secondo il New York Times, le agenzie di intelligence americane mancano attualmente della capacità computazionale necessaria per sfruttare i modelli LLM più recenti. La misura segna una svolta nell'adozione istituzionale dell'AI sovrana.",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/936907/the-white-house-is-asking-for-9-billion-to-buy-ai-chips-for-spies",
+      "tag": "AI"
     },
     {
       "id": "spacex-starship-v3-flight12-ipo",
