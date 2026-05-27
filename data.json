@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-26T08:04:43+02:00",
+  "last_updated": "2026-05-27T08:02:43+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "tiscali-tessellis-cessione-b2c-canarbino-2026-05-27",
+      "date": "2026-05-27",
+      "caption": "📡 Tiscali cede ramo B2C a Canarbino: polo energy-TLC da 1,5M clienti",
+      "snippet": "Il Ministero delle Imprese ha confermato la cessione del ramo consumer di Tiscali-Tessellis al Gruppo Canarbino tramite la controllata Smeraldo, operativa dal 1° giugno. L'operazione coinvolge 563 lavoratori e punta a creare un operatore convergente tra energia e telecomunicazioni. I marchi Tiscali e Linkem rientreranno nel perimetro di una successiva acquisizione.",
+      "url": "https://www.corrierecomunicazioni.it/telco/tiscali-tessellis-via-libera-alla-cessione-del-ramo-b2c-a-canarbino/",
+      "tag": "Telco"
+    },
+    {
+      "id": "telco-ricavi-mediobanca-5g-investimenti-calo-2026-05-27",
+      "date": "2026-05-27",
+      "caption": "📊 Telco EU: ricavi in timida ripresa ma investimenti 5G in calo",
+      "snippet": "Il report Mediobanca sulle principali telco mondiali mostra ricavi mondiali in crescita del 2,9% nel primo semestre 2025, ma l'Europa resta indietro (+1,1%) con gli investimenti in calo dello 0,4%. L'Italia perde 14 miliardi di giro d'affari dal 2010 e l'EBIT margin è all'1,8%, contro il 16,5% delle grandi EMEA. L'AI emerge come nuova leva di business: KT Korea punta a triplicare i ricavi AI/ICT entro il 2028.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "duckduckgo-installazioni-google-ai-search-backlash-2026-05-27",
+      "date": "2026-05-27",
+      "caption": "🔍 DuckDuckGo +30%: utenti fuggono da Google AI Search",
+      "snippet": "Dopo l'annuncio di Google al I/O di sostituire i link tradizionali con un agente AI, le installazioni di DuckDuckGo sono cresciute del 30% in una settimana. Gli utenti citano la perdita di controllo e la 'forzatura' dell'AI come motivazione principale del passaggio. DuckDuckGo offre Duck.ai con accesso a modelli multipli (Claude 4.5, GPT-5 mini, Llama 4) preservando la privacy degli utenti.",
+      "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+      "tag": "AI"
+    },
+    {
+      "id": "starlink-american-airlines-contratto-500-aerei-2026-05-27",
+      "date": "2026-05-27",
+      "caption": "🛰️ Starlink conquista American Airlines: Wi-Fi su 500 aerei Airbus",
+      "snippet": "American Airlines ha annunciato l'installazione di Starlink su oltre 500 aeromobili narrow-body Airbus a partire dal 2027, battendo la concorrenza di Amazon LEO e Viasat. Il contratto rafforza ulteriormente la posizione di SpaceX in vista dell'IPO previsto il mese prossimo, potenzialmente il più grande della storia americana. Già United, Southwest, Lufthansa e British Airways hanno adottato Starlink.",
+      "url": "https://techcrunch.com/2026/05/26/spacexs-starlink-nabs-american-airlines-contract-another-win-for-its-ipo/",
+      "tag": "Mobile"
+    },
+    {
+      "id": "openrouter-serie-b-113m-capitalg-alphabet-ai-gateway-2026-05-27",
+      "date": "2026-05-27",
+      "caption": "🤖 OpenRouter vale 1,3 mld$: il gateway AI multi-modello esplode",
+      "snippet": "OpenRouter ha chiuso un round Series B da 113 milioni di dollari guidato da CapitalG (Alphabet), raggiungendo una valutazione di 1,3 miliardi, oltre il doppio rispetto a un anno fa. La piattaforma offre accesso a oltre 400 modelli AI (Anthropic, OpenAI, Google, xAI, DeepSeek) e processa 100 trilioni di token al mese — 5x rispetto a 6 mesi fa. La crescita segnala che il futuro enterprise sarà multi-modello, senza lock-in su un singolo vendor.",
+      "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
+      "tag": "AI"
+    },
     {
       "id": "sinfi-gemello-digitale-sottosuolo-2026",
       "date": "2026-05-26",
@@ -345,46 +385,6 @@
       "snippet": "L'ACMA ha confermato la valutazione finale di 7,32 miliardi di dollari per il rinnovo delle licenze di spettro mobile, respingendo le richieste delle telco di ridurre la cifra. Telstra, Optus, TPG Telecom e NBN Co pagheranno per bande 700MHz-3.4GHz. La prima finestra di domande apre il 18 giugno.",
       "url": "https://www.techbusinessnews.com.au/news/telcos-face-7-3bn-spectrum-bill-as-acma-rejects-industry-push-for-lower-fees/",
       "source": "Tech Business News"
-    },
-    {
-      "id": "telus-66b-canada-5g-ai",
-      "date": "2026-05-19",
-      "caption": "📡 TELUS investe 66 miliardi di dollari in 5G, fibra e AI in Canada",
-      "snippet": "Il carrier canadese TELUS ha annunciato oggi un piano da $66 miliardi fino al 2030 per espandere 5G e fibra, potenziare il supercomputer AI nazionale e trasformare edifici corporate in residenziale. Un segnale chiaro: le telco si riposizionano da operatori di rete a pilastri dell'infrastruttura AI nazionale.",
-      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202605190945CANADANWCANADAPR_C3102-1",
-      "source": "FT Markets / CNW"
-    },
-    {
-      "id": "google-io-2026-gemini35-android-xr",
-      "date": "2026-05-19",
-      "caption": "🤖 Google I/O 2026: Gemini 3.5 Flash live, occhiali XR e Halo su Android",
-      "snippet": "Google lancia oggi Gemini 3.5 Flash (4x più veloce dei modelli frontier attuali) e Gemini Omni, che genera video da testo e audio. Annunciati anche gli occhiali Android XR firmati Samsung/Qualcomm in arrivo in autunno, e Android Halo: un overlay che mostra in tempo reale cosa sta facendo l'agente AI sul tuo telefono.",
-      "url": "https://9to5google.com/2026/05/19/google-io-2026-news/",
-      "source": "9to5Google"
-    },
-    {
-      "id": "google-blackstone-5b-ai-cloud",
-      "date": "2026-05-19",
-      "caption": "💰 Google e Blackstone lanciano una joint venture da $5 miliardi per l'AI cloud",
-      "snippet": "Google e Blackstone hanno annunciato oggi una joint venture per costruire infrastruttura AI as-a-service: data center, TPU Google e 500 MW online entro il 2027. L'operazione sfida direttamente il dominio di Nvidia nel mercato del compute AI e segnala un cambio di modello: dall'hardware alla capacità computazionale venduta come utility.",
-      "url": "https://techstartups.com/2026/05/19/top-tech-news-today-may-19-2026/",
-      "source": "TechStartups"
-    },
-    {
-      "id": "meta-layoffs-10pct-ai-pivot",
-      "date": "2026-05-19",
-      "caption": "🔁 Meta taglia 8.000 posti (10%) per finanziare la corsa all'AI",
-      "snippet": "Meta ha avviato oggi un round di licenziamenti da ~8.000 persone (10% del personale), con ulteriori tagli previsti ad agosto e autunno. I risparmi finanziano l'accelerazione AI. Un pattern che si vede su tutto il Big Tech: headcount giù, budget compute su.",
-      "url": "https://techstartups.com/2026/05/19/top-tech-news-today-may-19-2026/",
-      "source": "TechStartups"
-    },
-    {
-      "id": "mistral-emmi-ai-physics-acquisition",
-      "date": "2026-05-19",
-      "caption": "🇪🇺 Mistral acquisisce la startup austriaca Emmi AI: l'Europa punta sull'AI industriale",
-      "snippet": "Mistral AI ha comprato Emmi AI (Linz), specializzata in simulazioni fisiche per aerospazio, automotive e semiconduttori. È la prima grande acquisizione europea nell'AI industriale del 2026 e consolida la strategia di Mistral per differenziarsi dai modelli generalisti americani con applicazioni B2B verticali.",
-      "url": "https://techstartups.com/2026/05/19/top-tech-news-today-may-19-2026/",
-      "source": "TechStartups"
     }
   ]
 }
