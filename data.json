@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-27T08:02:43+02:00",
+  "last_updated": "2026-05-28T08:06:39+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "bei-fibercop-1-miliardo-ftth-2026",
+      "date": "2026-05-28",
+      "caption": "🏦 BEI finanzia FiberCop con 1 miliardo per la fibra FTTH",
+      "snippet": "La Banca Europea per gli Investimenti ha accordato un finanziamento fino a 1 miliardo di euro a FiberCop per accelerare lo sviluppo della banda ultralarga FTTH in Italia. L'operazione punta a raggiungere i target nazionali ed europei di connettività gigabit, rafforzando l'infrastruttura digitale del Paese in un momento in cui gli investimenti europei in fibra segnano il passo.",
+      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga-maxi-finanziamento-bei-a-fibercop-1-miliardo-per-spingere-la-rete-ftth/",
+      "tag": "Telco"
+    },
+    {
+      "id": "5g-standalone-ericsson-monetizzazione-2026",
+      "date": "2026-05-28",
+      "caption": "📡 5G SA Ericsson: monetizzare con connettività differenziata",
+      "snippet": "Al Core Network Summit 2026 di Roma (organizzato con TIM), Monica Zethzon di Ericsson ha illustrato come gli operatori possano trasformare il 5G Standalone in ricavi concreti: accesso preferenziale alla rete, servizi enterprise garantiti e AI per reti più resilienti. La fase del 'cantiere' è finita, ora si passa al banco di prova del business.",
+      "url": "https://www.corrierecomunicazioni.it/telco/5g/5g-standalone-zethzon-ericsson-la-monetizzazione-passa-dalla-connettivita-differenziata/",
+      "tag": "Telco"
+    },
+    {
+      "id": "leone-xiv-enciclica-ai-monopoli-2026",
+      "date": "2026-05-28",
+      "caption": "⛪ Leone XIV: l'AI va sottratta ai monopoli privati",
+      "snippet": "Con l'enciclica 'Magnifica humanitas', Papa Leone XIV affronta la rivoluzione dell'intelligenza artificiale chiedendo governance capace di evitare che dati, piattaforme e calcolo restino in mano a pochi attori privati. Alla presentazione ha partecipato anche Christopher Olah di Anthropic, segnalando l'apertura di un confronto diretto tra Vaticano e Big Tech.",
+      "url": "https://www.corrierecomunicazioni.it/digital-economy/intelligenza-artificiale-leone-xiv-va-sottratta-ai-monopoli/",
+      "tag": "AI"
+    },
+    {
+      "id": "google-io-search-agentica-fine-web-2026",
+      "date": "2026-05-28",
+      "caption": "🔍 Google I/O: Search agentica, fine della ricerca neutrale",
+      "snippet": "Al Google I/O 2026, il colosso di Mountain View ha presentato la nuova Search agentica che anticipa le necessità informative dell'utente senza che questi debba cercare. L'AI interpreta le intenzioni, sintetizza fonti e avvia azioni in autonomia. La mossa ridisegna l'accesso all'informazione e mette sotto pressione editori, brand e regolatori che finora costruivano strategie sul traffico organico.",
+      "url": "https://www.agendadigitale.eu/cultura-digitale/google-ecco-la-search-che-si-sbarazza-di-noi-umani/",
+      "tag": "AI"
+    },
+    {
+      "id": "tiscali-tessellis-cessione-b2c-canarbino-2026",
+      "date": "2026-05-28",
+      "caption": "🔄 Tiscali-Tessellis: ramo B2C ceduto a Canarbino",
+      "snippet": "Il Ministero delle Imprese ha confermato la cessione del ramo B2C di Tiscali-Tessellis al Gruppo Canarbino (via controllata Smeraldo), operativa dal 1° giugno, con 563 lavoratori coinvolti. L'operazione segna un nuovo riassetto del mercato italiano dei servizi di connettività consumer e apre alla nascita di un polo convergente energia-telecomunicazioni.",
+      "url": "https://www.corrierecomunicazioni.it/telco/tiscali-tessellis-via-libera-alla-cessione-del-ramo-b2c-a-canarbino/",
+      "tag": "Telco"
+    },
     {
       "id": "tiscali-tessellis-cessione-b2c-canarbino-2026-05-27",
       "date": "2026-05-27",
@@ -345,46 +385,6 @@
       "snippet": "Il CEO Christian Gebara al Telebrasil Panel: il 5G copre già il 70% del Brasile, ma la crescita degli abbonati è frenata dall'alto costo dei terminali e dalla scarsa digital literacy — non dalla rete. Un segnale importante per le telco nei mercati emergenti.",
       "url": "https://www.telecompaper.com/news/",
       "source": "Telecompaper"
-    },
-    {
-      "id": "google-io-2026-gemini-agents-smart-glasses",
-      "date": "2026-05-20",
-      "caption": "🔍 Google I/O 2026: Search diventa agente, arrivano gli smart glasses Android XR",
-      "snippet": "Al Google I/O 2026 il motore di ricerca si trasforma in un agente autonomo: information agent, booking agent e Gemini Spark operano in background anche mentre dormi. In arrivo smart glasses con Warby Parker e Gentle Monster (audio-only + display), Gemini Omni per video generativo e piano AI Ultra a $100/mese.",
-      "url": "https://www.wired.com/story/everything-google-announced-at-google-io-2026/",
-      "source": "WIRED"
-    },
-    {
-      "id": "google-search-agentic-io-2026",
-      "date": "2026-05-20",
-      "caption": "🤖 Google Search diventa agente: monitora, prenota e agisce per te",
-      "snippet": "Google ha annunciato al I/O 2026 la trasformazione di Search in piattaforma agente. Information agent personalizzati monitorano stock, sport e news 24/7; booking agent possono anche telefonare in tuo nome. Il modello default per AI Mode diventa Gemini 3.5 Flash. Le funzioni agentiche arrivano prima agli abbonati AI Pro e Ultra.",
-      "url": "https://www.wired.com/story/google-search-goes-agentic-and-doesnt-need-you-anymore/",
-      "source": "WIRED"
-    },
-    {
-      "id": "demis-hassabis-ai-job-cuts-deepmind-2026",
-      "date": "2026-05-20",
-      "caption": "💼 Hassabis (DeepMind): tagliare lavori per l AI e sbagliato facciamo 4x di piu",
-      "snippet": "Il CEO di Google DeepMind Demis Hassabis ha respinto la narrativa dei tagli di lavoro guidati dall'AI. Presentando Gemini 3.5 Flash al Google I/O, ha detto: se gli ingegneri sono 3-4x piu produttivi, vogliamo fare 3-4x di piu cose. Ha anche ammesso che l'AI non ha ancora prodotto un'app di successo senza aiuto umano.",
-      "url": "https://www.wired.com/story/demis-hassabis-ai-layoffs-deepmind-google-io/",
-      "source": "WIRED"
-    },
-    {
-      "id": "musk-openai-trial-dismissed-2026",
-      "date": "2026-05-20",
-      "caption": "⚖️ Tribunale USA: Musk perde la causa contro OpenAI e Sam Altman",
-      "snippet": "Una corte federale di Oakland ha respinto tutte le accuse di Elon Musk contro OpenAI e il CEO Sam Altman. La giuria ha ritenuto che Musk avesse superato il termine di prescrizione. Musk aveva investito 38 milioni nei primi anni di OpenAI, accusando poi Altman di aver tradito la missione no-profit per fare profitto.",
-      "url": "https://apnews.com/article/musk-openai-trial-verdict-0b9b0bfaffe96f2c930341f52dfe4f8c",
-      "source": "AP News"
-    },
-    {
-      "id": "acma-australia-spectrum-73b-telcos-2026",
-      "date": "2026-05-20",
-      "caption": "📡 Australia: Telstra, Optus e TPG devono pagare 7,3 mld per rinnovare lo spettro",
-      "snippet": "L'ACMA ha confermato la valutazione finale di 7,32 miliardi di dollari per il rinnovo delle licenze di spettro mobile, respingendo le richieste delle telco di ridurre la cifra. Telstra, Optus, TPG Telecom e NBN Co pagheranno per bande 700MHz-3.4GHz. La prima finestra di domande apre il 18 giugno.",
-      "url": "https://www.techbusinessnews.com.au/news/telcos-face-7-3bn-spectrum-bill-as-acma-rejects-industry-push-for-lower-fees/",
-      "source": "Tech Business News"
     }
   ]
 }
