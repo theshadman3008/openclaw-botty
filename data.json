@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-28T09:16:41+02:00",
+  "last_updated": "2026-05-29T09:15:03+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "anthropic-965b-serie-h-2026",
+      "date": "2026-05-29",
+      "caption": "🤖 Anthropic supera OpenAI: valutazione a $965 miliardi",
+      "snippet": "Anthropic ha chiuso un round Serie H da 65 miliardi di dollari, raggiungendo una valutazione di 965 miliardi. L'azienda supera così OpenAI (852 miliardi) e dichiara un run rate di ricavi annualizzati pari a 47 miliardi, trainato da Claude Code. Contestualmente ha rilasciato Claude Opus 4.8, più veloce e ottimizzato per workflow agentici di larga scala.",
+      "url": "https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html",
+      "tag": "AI"
+    },
+    {
+      "id": "claude-opus-48-agentic-2026",
+      "date": "2026-05-29",
+      "caption": "🧠 Claude Opus 4.8: dynamic workflows e fast mode a -3x costo",
+      "snippet": "Anthropic ha lanciato Claude Opus 4.8 con 'dynamic workflows' in Claude Code per task su larga scala e un fast mode 2.5x più rapido, ora tre volte meno costoso. Il prezzo standard rimane invariato: $5/M token input, $25/M output. In parallelo prosegue il progetto Glasswing per Claude Mythos, con capacità avanzate di cybersecurity destinate al rilascio generale nelle prossime settimane.",
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "tag": "AI"
+    },
+    {
+      "id": "spacex-starship-faa-grounded-2026",
+      "date": "2026-05-29",
+      "caption": "🚀 FAA stoppa Starship V3 dopo mishap nel volo Flight 12",
+      "snippet": "La FAA ha messo a terra Starship V3 di SpaceX dopo che il booster Super Heavy del Flight 12 ha perso controllo nel rientro, cadendo incontrollato nel Golfo del Messico. Il razzo da 124 metri è il più potente mai costruito, centrale per i piani NASA di allunaggio entro il 2028. L'incidente arriva a pochi giorni dalla presentazione dell'IPO di SpaceX alla SEC.",
+      "url": "https://apnews.com/article/spacex-starship-faa-investigation-7bc8ecccd1f32fa2b1d2ea204f2b785b",
+      "tag": "Innovation"
+    },
+    {
+      "id": "amazon-leaderboard-ai-agents-chiuso-2026",
+      "date": "2026-05-29",
+      "caption": "🏢 Amazon chiude classifica AI: agenti usati per scalare ranking",
+      "snippet": "Amazon ha eliminato la classifica interna sull'utilizzo di AI da parte dei dipendenti, dopo che alcuni lavoratori avevano iniziato ad assegnare AI agent a compiti fittizi per scalare la graduatoria. L'exec Dave Treadwell ha dichiarato: 'Non usate l'AI solo per usarla'. Il caso accende il dibattito sui KPI legati all'adozione AI e sui rischi di gamification dell'innovazione enterprise.",
+      "url": "https://www.theverge.com/ai",
+      "tag": "AI"
+    },
+    {
+      "id": "llm-api-attacks-theregister-2026",
+      "date": "2026-05-29",
+      "caption": "🔐 LLM e API: gli attacchi cyber entrano nell'era AI-assisted",
+      "snippet": "The Register segnala come le applicazioni moderne, API-driven e spesso sovra-permesse, siano diventate bersaglio ideale per attacchi assistiti da LLM. I modelli linguistici abbassano la soglia tecnica per reconnaissance e privilege escalation. Per il settore Telco e cloud, ripensare la sicurezza API in chiave AI è diventato urgente.",
+      "url": "https://www.theregister.com/",
+      "tag": "Cybersecurity"
+    },
     {
       "id": "bei-fibercop-1-miliardo-ftth-2026",
       "date": "2026-05-28",
@@ -385,46 +425,6 @@
       "snippet": "Con il volo 12, SpaceX ha debuttato Starship V3, versione più grande e potente che percorre metà globo prima di impattare nell'Oceano Indiano. NASA conta su questo razzo per le missioni Artemis con equipaggio sulla Luna. Parallelamente, Musk ha annunciato la prima IPO di SpaceX con una valutazione target da record.",
       "url": "https://www.scientificamerican.com/article/spacex-launches-starship-v3-the-worlds-most-powerful-and-tallest-rocket-ever/",
       "source": "Scientific American"
-    },
-    {
-      "id": "nvidia-q1-fy2027-record-revenue-81b",
-      "date": "2026-05-21",
-      "caption": "📈 Nvidia: ricavi record $81,6 mld nel Q1 FY2027, data center +92%",
-      "snippet": "Nvidia ha riportato ricavi totali record di $81,6 miliardi per il primo trimestre fiscale 2027 (feb-apr 2026), con il segmento data center a $75,2 miliardi (+92% anno su anno). La domanda di GPU per workload AI continua a trainare la crescita senza segnali di rallentamento.",
-      "url": "https://www.theverge.com/ai-artificial-intelligence",
-      "source": "The Verge"
-    },
-    {
-      "id": "google-io-2026-ai-agents-gemini",
-      "date": "2026-05-21",
-      "caption": "🤖 Google I/O 2026: AI ovunque — agenti, Gemini e occhiali Android XR",
-      "snippet": "Google I/O 2026 ha presentato Gemini su ogni superficie: dagli occhiali Android XR XREAL Project Aura (in uscita entro il 2026) agli agenti AI autonomi integrati nella ricerca e nei prodotti consumer. Il CEO Sundar Pichai ha definito questo il momento in cui l'AI passa da strumento a co-pilota universale.",
-      "url": "https://9to5google.com/2026/05/20/xreals-android-xr-glasses-one-up-apples-wired-battery-with-a-controller-more-video/",
-      "source": "9to5Google"
-    },
-    {
-      "id": "spacex-ipo-2026-biggest-ever",
-      "date": "2026-05-21",
-      "caption": "🚀 SpaceX deposita i documenti per la più grande IPO di sempre",
-      "snippet": "SpaceX ha depositato la documentazione per la sua IPO pubblica, potenzialmente la più grande della storia. Il prospetto evidenzia la dipendenza dalla leadership di Elon Musk come fattore di rischio, e cita Tesla e xAI come potenziali competitor. La valutazione attesa supera i $350 miliardi.",
-      "url": "https://www.theverge.com/tech",
-      "source": "The Verge"
-    },
-    {
-      "id": "apple-music-ai-fair-music-policy",
-      "date": "2026-05-21",
-      "caption": "🎵 Apple Music: AI nella musica è opportunità, ma servono regole",
-      "snippet": "Apple Music ha pubblicato una lettera aperta alle label intitolata \"What We're Doing to Keep Music Fair\", impegnandosi a rendere obbligatorio il tagging dei contenuti AI. Nel 2025 ha escluso ~2 miliardi di stream manipolati mantenendo il tasso di frode sotto lo 0,5%. La musica AI è meno dell'1% degli ascolti totali.",
-      "url": "https://9to5mac.com/2026/05/20/apple-music-shares-what-it-is-doing-to-keep-music-fair-in-an-ai-world/",
-      "source": "9to5Mac"
-    },
-    {
-      "id": "telefonica-brasil-5g-device-cost-barrier",
-      "date": "2026-05-21",
-      "caption": "📡 Telefónica Brasil: il vero ostacolo al 5G è il costo dei device",
-      "snippet": "Il CEO Christian Gebara al Telebrasil Panel: il 5G copre già il 70% del Brasile, ma la crescita degli abbonati è frenata dall'alto costo dei terminali e dalla scarsa digital literacy — non dalla rete. Un segnale importante per le telco nei mercati emergenti.",
-      "url": "https://www.telecompaper.com/news/",
-      "source": "Telecompaper"
     }
   ]
 }
