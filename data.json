@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-29T09:15:03+02:00",
+  "last_updated": "2026-05-31T08:03:13+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 39
+    "news": 44
   },
   "conversations": [
     {
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "blue-origin-new-glenn-explodes-amazon-leo-2026-05-31",
+      "date": "2026-05-31",
+      "caption": "🚀 Esplode il razzo New Glenn: ritardi per Amazon Leo e D2D",
+      "snippet": "Il razzo Blue Origin New Glenn è esploso giovedì sera sul pad di Cape Canaveral durante un test pre-lancio di routine. L'incidente ritarderà di diversi mesi i lanci del satellite broadband Amazon Leo e il servizio direct-to-device di AST SpaceMobile. Blue Origin punta a costruire una costellazione di oltre 51.000 satelliti per data center orbitali.",
+      "url": "https://www.lightreading.com/satellite/blue-origin-s-new-glenn-rocket-explodes-during-prelaunch-test",
+      "tag": "Innovation"
+    },
+    {
+      "id": "openrouter-series-b-113m-1-3b-valuation-2026-05-31",
+      "date": "2026-05-31",
+      "caption": "🤖 OpenRouter raccoglie $113M: il futuro è multi-modello",
+      "snippet": "OpenRouter ha chiuso un Series B da $113 milioni guidato da CapitalG (Google Alphabet), raggiungendo una valutazione di $1,3 miliardi — più del doppio rispetto a un anno fa. Il gateway AI serve 8 milioni di utenti globali con accesso a oltre 400 modelli e processa 100 trilioni di token al mese (+5x in sei mesi). Il dato segnala che le aziende non intendono legarsi a un unico vendor di AI.",
+      "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
+      "tag": "AI"
+    },
+    {
+      "id": "tech7-g7-digital-declaration-paris-2026-05-31",
+      "date": "2026-05-31",
+      "caption": "🌐 Tech7: industria digitale G7 chiede regole comuni a governi",
+      "snippet": "A Parigi, le associazioni digitali dei Paesi G7 (inclusa l'Italia) hanno presentato la dichiarazione congiunta TECH7 2026, chiedendo ai governi cooperazione rafforzata su AI, cybersecurity, cloud, quantum e governance dei dati. Il ministro italiano Urso ha spinto per 'accelerare sull'autonomia digitale europea'. L'Italia ospiterà il prossimo vertice TECH7 nel 2027 insieme agli USA.",
+      "url": "https://www.itic.org/news-events/news-releases/iti-tech7-partners-urge-g7-governments-to-strengthen-digital-cooperation",
+      "tag": "Digital Transformation"
+    },
+    {
+      "id": "vodafonethree-workforce-12-percent-cut-ericsson-nokia-2026-05-31",
+      "date": "2026-05-31",
+      "caption": "📉 VodafoneThree taglia il 12% del personale dopo la fusione",
+      "snippet": "L'annual report di Vodafone mostra che il personale di VodafoneThree è sceso del 12% rispetto ai 14.132 dipendenti pre-fusione, con l'eliminazione di interi dipartimenti. L'operatore ha scelto Ericsson e Nokia per il 5G escludendo l'Open RAN: 'erano gli unici a garantire la velocità e i volumi necessari'. Il risparmio target della fusione è di £700 milioni.",
+      "url": "https://www.lightreading.com/5g/vodafonethree-shrank-workforce-as-it-leaned-into-ericsson-and-nokia",
+      "tag": "Telco"
+    },
+    {
+      "id": "proximus-nxt-ai-governance-lag-survey-2026-05-31",
+      "date": "2026-05-31",
+      "caption": "🔐 AI senza governance: 81% usa AI, solo 29% ha policy formale",
+      "snippet": "Il Proximus NXT Cybersecurity Survey 2026 su oltre 400 organizzazioni belghe rivela che l'81% permette ai dipendenti di usare strumenti AI, ma solo il 29% ha una policy formale e meno del 37% ha attivato formazione sui rischi. La maggioranza percepisce l'AI più come un fattore di rischio che come opportunità di sicurezza — un dato che rispecchia una tendenza europea più ampia.",
+      "url": "https://www.telecompaper.com/news/proximus-nxt-survey-finds-ai-governance-lagging-adoption--1572562",
+      "tag": "Cybersecurity"
+    },
     {
       "id": "anthropic-965b-serie-h-2026",
       "date": "2026-05-29",
