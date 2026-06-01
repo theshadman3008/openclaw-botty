@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-31T08:03:13+02:00",
+  "last_updated": "2026-06-01T08:07:24+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "blue-origin-new-glenn-esplosione-satellite-2026",
+      "date": "2026-06-01",
+      "caption": "Razzo New Glenn di Blue Origin esplode sul pad, ritardo satellite Amazon",
+      "snippet": "Il razzo New Glenn di Blue Origin e' esploso sul launch pad al Cape Canaveral Space Force Station il 28 maggio durante un hotfire test dei motori BE-4, in vista del lancio di 48 satelliti broadband Leo di Amazon. Il veicolo da 320 piedi e' stato distrutto, impattando anche il programma AST SpaceMobile (lancio precedente su orbita sbagliata il 19 aprile). Il programma Artemis della NASA subisce potenziali ritardi: il prossimo volo era atteso per giugno.",
+      "url": "https://www.usatoday.com/story/news/nation/2026/05/28/blue-origin-jeff-bezos-new-glenn-rocket-explosion/90305635007/",
+      "tag": "Innovation"
+    },
+    {
+      "id": "digital-networks-act-switch-off-rame-illegittimo-2026",
+      "date": "2026-06-01",
+      "caption": "DNA: switch-off rame 2035 illegittimo, parere legale UE",
+      "snippet": "Connect Europe ha commissionato un parere legale al prof. Roberto Mastroianni (Universita' Federico II di Napoli, ex giudice del Tribunale UE) sul Digital Networks Act: l'obbligo di switch-off del rame entro il 2035 e il passaggio obbligatorio all'FTTH e' incompatibile con il diritto primario UE, configurando un'espropriazione illecita. Il parere, rilasciato il 1 giugno 2026, cambia le carte in tavola nel negoziato europeo.",
+      "url": "https://www.corrierecomunicazioni.it/whitepaper/telco-whitepaper/switch-off-del-rame-connect-europe-il-digital-networks-act-rischia-di-essere-illegittimo/",
+      "tag": "Telco"
+    },
+    {
+      "id": "telco-mediobanca-ricavi-europa-italia-2026",
+      "date": "2026-06-01",
+      "caption": "Telco mondiali: ricavi +2,9%, Italia perde 14 mld dal 2010",
+      "snippet": "Il report Mediobanca sulle 34 maggiori telco mondiali (dati 1H 2025) mostra ricavi globali +2,9%, con Usa +3,6% e Asia +3,2% in testa. Le telco europee segnano solo +1,1%, italiane +1,6%. L'Italia ha perso 14 miliardi di giro d'affari dal 2010 (-2,7% medio annuo). Il margine EBIT italiano e' all'1,8% nel 2024, contro il 16,5% delle grandi telco EMEA. Gli investimenti in 5G e fibra calano in Europa.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "netflix-headroom-ai-token-ottimizzazione-open-source-2026",
+      "date": "2026-06-01",
+      "caption": "Netflix open-source Headroom: taglia fino al 90% i token AI",
+      "snippet": "Tejas Chopra, senior engineer di Netflix, ha sviluppato e open-sourcato Project Headroom, uno strumento che ottimizza le istruzioni agli agenti AI riducendo fino al 90% i token ridondanti. Presentato all'Open Source Summit, ha gia' risparmiato 700.000 dollari in costi cloud. Risponde al problema esploso in aziende come Uber (budget AI bruciato in 4 mesi) e Microsoft, dove i costi degli agenti hanno azzerato i risparmi sui tagli al personale.",
+      "url": "https://www.theregister.com/ai-ml/2026/05/31/netflix-wiz-creates-app-to-slash-ai-bills-then-open-sources-it/5248702",
+      "tag": "AI"
+    },
+    {
+      "id": "okta-ai-agent-identity-governance-rogue-2026",
+      "date": "2026-06-01",
+      "caption": "Okta: 92% imprese usa agenti AI, solo il 22% li governa",
+      "snippet": "Secondo la ricerca Okta, il 92% dei dirigenti aziendali usa agenti AI autonomi, ma solo il 22% ha assegnato loro un'identita' tracciabile. Okta ha lanciato Okta for AI Agents (con ServiceNow, Salesforce e AWS Bedrock AgentCore) per identity governance e la capacita' di disattivare agenti non autorizzati. Il CEO McKinnon cita questa come l'esposizione piu' critica per le enterprise nel 2026.",
+      "url": "https://www.theregister.com/ai-ml/2026/05/29/okta-writes-its-own-license-to-kill-rogue-ai-agents/5248766",
+      "tag": "Cybersecurity"
+    },
     {
       "id": "blue-origin-new-glenn-explodes-amazon-leo-2026-05-31",
       "date": "2026-05-31",
@@ -425,46 +465,6 @@
       "snippet": "La Casa Bianca ha approvato una richiesta da 9 miliardi di dollari al Congresso per dotare CIA e NSA di chip Nvidia Grace Blackwell e infrastrutture per i modelli AI più avanzati. Secondo il New York Times, le agenzie di intelligence americane mancano attualmente della capacità computazionale necessaria per sfruttare i modelli LLM più recenti. La misura segna una svolta nell'adozione istituzionale dell'AI sovrana.",
       "url": "https://www.theverge.com/ai-artificial-intelligence/936907/the-white-house-is-asking-for-9-billion-to-buy-ai-chips-for-spies",
       "tag": "AI"
-    },
-    {
-      "id": "spacex-starship-v3-flight12-ipo",
-      "date": "2026-05-24",
-      "caption": "🚀 SpaceX lancia Starship V3 e annuncia la quotazione in borsa",
-      "snippet": "Il 23 maggio SpaceX ha effettuato il 12° test di Starship V3, il razzo più grande e potente mai costruito, con 20 satelliti Starlink simulati rilasciati a metà volo. Due giorni prima Elon Musk aveva annunciato la quotazione in borsa di SpaceX, in quella che sarebbe la più grande IPO della storia americana. NASA conta su Starship per portare astronauti sulla Luna.",
-      "url": "https://apnews.com/article/spacex-elon-musk-starship-rocket-launch-53eb1c43f870561788839b08c401bf8f",
-      "source": "AP News"
-    },
-    {
-      "id": "meta-layoffs-8000-ai-zuckerberg-2026",
-      "date": "2026-05-24",
-      "caption": "🤖 Meta licenzia 8.000 dipendenti: \"L'AI ridefinirà tutto\"",
-      "snippet": "Zuckerberg ha comunicato in un memo interno che il taglio del 10% della forza lavoro è necessario per competere nell'era dell'intelligenza artificiale: \"Le aziende che la guideranno definiranno la prossima generazione\". Meta si unisce a Intuit (3.000 tagli, -17%), Cisco (4.000) e Microsoft in una ondata di ristrutturazioni guidate dall'AI.",
-      "url": "https://www.cnbc.com/2026/05/20/meta-layoffs-zuckerberg-says-success-isnt-a-given-in-memo.html",
-      "source": "CNBC"
-    },
-    {
-      "id": "intuit-layoffs-17pct-ai-restructuring-2026",
-      "date": "2026-05-24",
-      "caption": "💼 Intuit taglia il 17% della workforce: l'AI accelera il reshaping del fintech",
-      "snippet": "Il maker di QuickBooks e TurboTax elimina oltre 3.000 posti e prevede $300-340M di oneri di ristrutturazione. Il CEO Sasan Goodarzi punta a un'organizzazione \"più snella e veloce\" per competere nell'AI. Il titolo ha perso oltre il 40% dall'inizio del 2026, segnale del timore degli investitori che l'AI eroda i prodotti SaaS tradizionali.",
-      "url": "https://www.cnbc.com/2026/05/20/intuit-intu-q3-earnings-report-2026-company-cutting-17percent-of-staff.html",
-      "source": "CNBC"
-    },
-    {
-      "id": "tech-layoffs-100k-2026-ai-wave",
-      "date": "2026-05-24",
-      "caption": "📉 Tech 2026: superata quota 100.000 licenziamenti, l'AI ridisegna il lavoro",
-      "snippet": "Il settore tecnologico ha già superato 100.000 tagli di posti di lavoro nel 2026, con Meta, Intuit, Cisco, Cloudflare e ZoomInfo che guidano l'ondata. Le aziende crescono in fatturato ma tagliano personale per riallocare investimenti verso l'AI. Un trend che ridisegna strutturalmente il profilo occupazionale dell'industria tech globale.",
-      "url": "https://techcrunch.com/",
-      "source": "TechCrunch"
-    },
-    {
-      "id": "starship-v3-nasa-artemis-moon-2026",
-      "date": "2026-05-24",
-      "caption": "🌌 Starship V3 debutta: il razzo più potente di sempre vola per NASA Artemis",
-      "snippet": "Con il volo 12, SpaceX ha debuttato Starship V3, versione più grande e potente che percorre metà globo prima di impattare nell'Oceano Indiano. NASA conta su questo razzo per le missioni Artemis con equipaggio sulla Luna. Parallelamente, Musk ha annunciato la prima IPO di SpaceX con una valutazione target da record.",
-      "url": "https://www.scientificamerican.com/article/spacex-launches-starship-v3-the-worlds-most-powerful-and-tallest-rocket-ever/",
-      "source": "Scientific American"
     }
   ]
 }
