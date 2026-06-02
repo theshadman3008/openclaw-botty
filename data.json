@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-01T08:07:24+02:00",
+  "last_updated": "2026-06-02T08:03:26+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 44
+    "news": 39
   },
   "conversations": [
     {
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "anthropic-ipo-s1-sec-2026",
+      "date": "2026-06-02",
+      "caption": "🚀 Anthropic presenta S-1 alla SEC: in arrivo la più grande IPO AI",
+      "snippet": "Anthropic ha depositato confidenzialmente il modulo S-1 presso la SEC il 1° giugno 2026, aprendo la strada alla sua IPO — prima ancora di OpenAI e con una valutazione che ha appena superato quella del rivale. Il Wall Street Journal riferisce che la società è prossima al primo trimestre di utile operativo. La quotazione potrebbe essere il primo stress test reale sui conti delle big AI, finora opachi al mercato.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753",
+      "tag": "AI"
+    },
+    {
+      "id": "github-copilot-metered-billing-revolt-2026",
+      "date": "2026-06-02",
+      "caption": "💸 GitHub Copilot: fatturazione a consumo scatena rivolta degli sviluppatori",
+      "snippet": "Da giugno 2026 Microsoft ha attivato il billing a uso per GitHub Copilot Pro+: alcuni utenti segnalano di aver bruciato il 16% del credito mensile (7.000 unità) in poche ore. Forum e Reddit si riempiono di minacce di abbandono verso OpenRouter, LM Studio e servizi concorrenti. Il caso evidenzia il rischio di churn nei modelli SaaS AI con pricing a consumo.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/06/02/github-copilot-users-threaten-exit-as-metered-billing-kicks-in/5249826",
+      "tag": "New Business"
+    },
+    {
+      "id": "shai-hulud-malware-redhat-npm-supply-chain-2026",
+      "date": "2026-06-02",
+      "caption": "🦠 Supply chain attack: malware Shai-Hulud infetta pacchetti npm Red Hat",
+      "snippet": "Ricercatori Wiz hanno individuato 32 versioni di pacchetti npm Red Hat Cloud Services infettate dal worm Mini Shai-Hulud, scaricati ~80.000 volte a settimana. Il malware — variante del toolkit TeamPCP reso open source — ruba credenziali GCP e Azure e genera payload crittografati unici per ogni infezione, rendendo inutili i classici IoC basati su hash. Wiz classifica la minaccia come 'live'.",
+      "url": "https://www.theregister.com/security/2026/06/01/shai-hulud-malware-infects-red-hat-npm-packages-downloaded-80k-times-weekly/5249803",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "telco-italia-ricavi-mediobanca-2026",
+      "date": "2026-06-02",
+      "caption": "📉 Telco italiane: ricavi +1,6% ma EBIT margin crolla all'1,8%",
+      "snippet": "L'indagine annuale Area Studi Mediobanca sulle 34 maggiori telco mondiali fotografa un settore italiano in chiaroscuro: ricavi in leggera ripresa (+1,6% nel 1° semestre 2025) ma reddività operativa ai minimi storici — EBIT margin all'1,8% contro 16,5% delle grandi telco EMEA. Gli investimenti in 5G e fibra scendono dello 0,4% in Europa, con l'Italia che ha perso 14 miliardi di ricavi dal 2010.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "mobilita-connessa-italia-3-7-miliardi-polimi-2026",
+      "date": "2026-06-02",
+      "caption": "🚗 Mobilità connessa a +14%: vale 3,7 mld in Italia, 18,8M auto smart",
+      "snippet": "L'Osservatorio Connected Vehicle del Politecnico di Milano certifica che il mercato italiano della mobilità connessa ha raggiunto 3,7 miliardi di euro (+14% YoY), con 18,8 milioni di veicoli connessi in circolazione (oltre il 40% del parco auto). Il 61% dei comuni italiani ha avviato progetti di smart mobility negli ultimi 3 anni. La guida autonoma potrebbe eliminare 900.000 auto private e 41.000 feriti entro il 2050, con un costo sociale evitato di 5,9 miliardi.",
+      "url": "https://www.corrierecomunicazioni.it/digital-economy/mobilita-connessa-a-14-traino-da-servizi-e-smart-road-connettivita-chiave-del-fleet-management/",
+      "tag": "Innovation"
+    },
     {
       "id": "blue-origin-new-glenn-esplosione-satellite-2026",
       "date": "2026-06-01",
@@ -379,91 +419,6 @@
       "caption": "🕊️ Papa Leone XIV: enciclica sull'AI e dignità umana",
       "snippet": "Papa Leone XIV ha pubblicato 'Magnifica Humanitas', la prima enciclica papale dedicata all'intelligenza artificiale (42.000 parole). Il documento chiede di 'disarmare' l'AI — sia in senso militare che economico — e di porre la dignità umana al centro della governance tecnologica. Rappresentanti di Amazon, Meta, Google e Anthropic hanno incontrato il Vaticano prima della pubblicazione.",
       "url": "https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare",
-      "tag": "AI"
-    },
-    {
-      "id": "gsma-mobile-ai-initiative-telco-cinesi",
-      "date": "2026-05-25",
-      "category": "Telco",
-      "caption": "📡 GSMA lancia la Mobile AI Innovation Initiative con le big telco cinesi",
-      "snippet": "GSMA, China Mobile, China Telecom e China Unicom hanno annunciato al MWC 2026 una piattaforma congiunta per integrare intelligenza artificiale e reti 5G-Advanced. Il progetto ridefinisce gli standard operativi globali del mobile, portando l'AI al centro dell'infrastruttura di rete distribuita.",
-      "url": "https://www.corrierecomunicazioni.it/telco/ai-e-5g-advanced-la-gsma-si-allea-con-le-big-telco-cinesi/",
-      "source": "CorCom"
-    },
-    {
-      "id": "google-cloud-ai-security-shadow-ai",
-      "date": "2026-05-25",
-      "category": "AI",
-      "caption": "🔐 AI e sicurezza: Google Cloud avverte sul \"shadow AI\" in azienda",
-      "snippet": "Francis de Souza, COO di Google Cloud, mette in guardia le imprese contro il \"shadow AI\" — dipendenti che usano strumenti AI non autorizzati. Nel frattempo emerge un bug: le API key di Gemini revocate restano attive fino a 23 minuti, con rischi di data exfiltration già documentati da Aikido.",
-      "url": "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/",
-      "source": "TechCrunch"
-    },
-    {
-      "id": "xreal-aura-smartglasses-google-io-2026",
-      "date": "2026-05-25",
-      "category": "Mobile",
-      "caption": "🥽 Xreal Project Aura: i smartglasses XR di Google I/O 2026 puntano al profitto",
-      "snippet": "Al Google I/O 2026, Xreal ha presentato Project Aura, occhiali XR con grafica olografica e hand tracking. Il CEO Chi Xu annuncia breakeven atteso nel 2027 e un IPO entro fine anno. L'industria degli smart glasses vale miliardi ma ancora nessun player è profittabile.",
-      "url": "https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/",
-      "source": "TechCrunch"
-    },
-    {
-      "id": "truecaller-esim-telco-diversification",
-      "date": "2026-05-25",
-      "category": "Telco / Mobile",
-      "caption": "📲 Truecaller entra nel mercato eSIM: telco-diversification in azione",
-      "snippet": "Truecaller lancia servizi eSIM per viaggiatori in 29 Paesi (Italia inclusa), lavorando con Telna e Telness Tech. La mossa arriva dopo un calo del 27% nel fatturato e -44% nelle revenue pubblicitarie: l'app caller ID si trasforma in mobile operator virtuale.",
-      "url": "https://techcrunch.com/2026/05/20/truecaller-gets-into-the-esim-business-to-diversify-its-revenue-streams/",
-      "source": "TechCrunch"
-    },
-    {
-      "id": "ai-startup-arr-inflated-metric-new-business",
-      "date": "2026-05-25",
-      "category": "New Business / Innovation",
-      "caption": "💸 L'ARR gonfiato delle AI startup: la nuova bolla dei numeri nel venture capital",
-      "snippet": "Una serie di fondatori e VC segnalano la diffusione di CARR (committed ARR) spacciato per ARR reale tra le startup AI, gonfiando le valutazioni. TechCrunch rivela come anche i top fund globali abbiano adottato questa pratica, creando multipli insostenibili nel mercato private.",
-      "url": "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/",
-      "source": "TechCrunch"
-    },
-    {
-      "id": "open-fiber-fibra-multicore-milano-2026",
-      "date": "2026-05-25",
-      "caption": "🔬 Open Fiber accende la fibra multicore su rete reale a Milano",
-      "snippet": "Open Fiber ha attivato il primo collegamento operativo con fibra multicore a quattro canali tra i PoP di Baggio e Galvani a Milano (2,1 km). La tecnologia quadruplica la capacità trasmissiva a parità di infrastruttura fisica, aprendo una nuova fase per la scalabilità delle reti italiane. Il direttore Technology Nicola Grassi: «costruiamo una rete più efficiente e sostenibile».",
-      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga/fibra-multicore-open-fiber-la-testa-sulla-rete-reale-perche-puo-cambiare-la-scala-delle-infrastrutture/",
-      "tag": "Telco"
-    },
-    {
-      "id": "telco-europee-ricavi-mediobanca-2026",
-      "date": "2026-05-25",
-      "caption": "📊 Telco italiane: ricavi in ripresa ma redditività ai minimi storici",
-      "snippet": "Il report annuale Mediobanca sulle maggiori telco mondiali evidenzia che gli operatori italiani sono cresciuti dell'1,6% nel primo semestre 2025, ma l'EBIT margin si ferma all'1,8% contro il 16,5% dell'area EMEA. Gli investimenti europei in 5G e fibra sono in calo dello 0,4%, mentre Asia e USA guidano la crescita. L'AI emerge come leva per nuove linee di business, con KT che punta a triplicare i ricavi AI/IT entro il 2028.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "gsma-europa-5g-gap-200mld-assurdo-2026",
-      "date": "2026-05-25",
-      "caption": "📡 GSMA chiede 200 mld per il 5G europeo: Light Reading smonta la tesi",
-      "snippet": "La GSMA ha pubblicato un report che denuncia un gap di investimento di 200 miliardi di euro nel 5G europeo rispetto agli USA. Light Reading contesta l'analisi: le tariffe europee sono comparabili in termini di affordability e il settore ha mantenuto rendimenti positivi e alti dividendi nell'ultimo decennio secondo il CEPR. La narrativa del ritardo europeo sul 5G viene messa in discussione con dati concreti.",
-      "url": "https://www.lightreading.com/5g/hoping-europe-will-find-an-extra-200b-for-5g-is-absurd",
-      "tag": "Telco"
-    },
-    {
-      "id": "spacex-ipo-s1-ai-chips-data-center-2026",
-      "date": "2026-05-25",
-      "caption": "🚀 SpaceX deposita S-1: punta su AI, data center spaziali e IPO da $75 mld",
-      "snippet": "SpaceX ha reso pubblico il filing S-1 per la quotazione su Nasdaq (ticker SPCX), prospettando la più grande IPO della storia con una raccolta attesa di circa 75 miliardi di dollari. Il documento rivela investimenti massicci in AI e data center orbitali capaci di 100 terawatt di compute/anno. Elon Musk manterrà CEO, CTO e chairman con il 93,6% delle azioni di Classe B e il compenso legato alla creazione di una colonia su Marte.",
-      "url": "https://techcrunch.com/2026/05/20/the-spacex-ipo-filing-ai-bets-starship-dreams-elon-musk/",
-      "tag": "Innovation"
-    },
-    {
-      "id": "white-house-9-miliardi-chip-ai-cia-nsa-2026",
-      "date": "2026-05-25",
-      "caption": "🔐 Casa Bianca chiede $9 mld in chip AI per CIA e NSA",
-      "snippet": "La Casa Bianca ha approvato una richiesta da 9 miliardi di dollari al Congresso per dotare CIA e NSA di chip Nvidia Grace Blackwell e infrastrutture per i modelli AI più avanzati. Secondo il New York Times, le agenzie di intelligence americane mancano attualmente della capacità computazionale necessaria per sfruttare i modelli LLM più recenti. La misura segna una svolta nell'adozione istituzionale dell'AI sovrana.",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/936907/the-white-house-is-asking-for-9-billion-to-buy-ai-chips-for-spies",
       "tag": "AI"
     }
   ]
