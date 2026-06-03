@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-02T08:03:26+02:00",
+  "last_updated": "2026-06-03T08:07:11+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 39
+    "news": 40
   },
   "conversations": [
     {
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "digital-networks-act-rame-fibra-illegittimo-2026",
+      "date": "2026-06-03",
+      "caption": "📡 Digital Networks Act: switch-off rame rischia illegittimità UE",
+      "snippet": "Connect Europe ha commissionato un parere legale al prof. Mastroianni (Federico II / ex giudice UE) sul Digital Networks Act: l'obbligo di passaggio dal rame alla fibra fino a casa potrebbe violare il diritto primario europeo. Il documento, diffuso il 1° giugno, apre un fronte giuridico inedito che potrebbe rallentare i piani di migrazione FTTH in tutta Europa e complicare la roadmap del Gigabit Infrastructure Act.",
+      "url": "https://www.corrierecomunicazioni.it/whitepaper/telco-whitepaper/switch-off-del-rame-connect-europe-il-digital-networks-act-rischia-di-essere-illegittimo/",
+      "tag": "Telco"
+    },
+    {
+      "id": "telco-mediobanca-ricavi-ripresa-italia-5g-2026",
+      "date": "2026-06-03",
+      "caption": "📊 Telco: ricavi mondiali +2,9%, Italia perde terreno su 5G e fibra",
+      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali mostra ricavi globali +2,9% nel primo semestre 2025, con Usa (+3,6%) e Asia che guidano. Gli operatori italiani crescono solo dell'1,6% e hanno perso 14 miliardi di euro di giro d'affari dal 2010. L'ebit margin italiano è all'1,8% contro il 16,5% delle big EMEA: la transizione verso modelli AICT company è la sola via d'uscita.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "panetta-bankitalia-ai-produttivita-italia-2026",
+      "date": "2026-06-03",
+      "caption": "🏦 Panetta (Banca d'Italia): AI leva decisiva per la produttività",
+      "snippet": "Nelle Considerazioni Finali 2026, Fabio Panetta ha indicato l'AI come 'terreno decisivo' per non restare schiacciati tra Usa e Cina. L'invecchiamento demografico rende indispensabile aumentare il contributo di ogni lavoratore con l'IA; Panetta avverte che i benefici rischiano di concentrarsi su chi ha competenze elevate, accentuando le disuguaglianze, e chiede investimenti pubblici in formazione.",
+      "url": "https://www.corriere.it/economia/finanza/26_maggio_29/panetta-ai-leva-decisiva-per-la-produttivita-italiana-intervento-pubblico-decisivo-8b15d411-53f7-4cdf-8355-875835cf4xlk.shtml",
+      "tag": "Economy"
+    },
+    {
+      "id": "palantir-uk-unacceptable-weakness-government-2026",
+      "date": "2026-06-03",
+      "caption": "🔒 UK: la dipendenza da Palantir è debolezza inaccettabile del governo",
+      "snippet": "Un comitato parlamentare britannico ha bollato la crescente dipendenza del governo UK da Palantir come 'an unacceptable point of weakness'. Il report punta il dito sulla concentrazione di dati critici (NHS incluso) in mano a un singolo vendor americano, aprendo il dibattito sulla sovranità digitale e sulla necessità di strategie multi-fornitore per i governi europei.",
+      "url": "https://www.wired.com/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "ai-triplica-capacita-rete-cisco-live-2026",
+      "date": "2026-06-03",
+      "caption": "📶 AI triplicherà la domanda di rete in 3 anni: opportunità per le telco",
+      "snippet": "Al Cisco Live 2026 executive di operatori e vendor hanno quantificato l'impatto dell'AI sulle infrastrutture: la domanda di capacità di rete triplicerà almeno nei prossimi tre anni. Per le telco si apre una finestra di revenue oltre la connettività di base verso servizi gestiti e edge computing, ma la pressione sui capitali per upgradare le reti sarà enorme.",
+      "url": "https://www.fierce-network.com/",
+      "tag": "Telco"
+    },
     {
       "id": "anthropic-ipo-s1-sec-2026",
       "date": "2026-06-02",
@@ -387,38 +427,6 @@
       "caption": "🤖 OpenRouter vale 1,3 mld$: il gateway AI multi-modello esplode",
       "snippet": "OpenRouter ha chiuso un round Series B da 113 milioni di dollari guidato da CapitalG (Alphabet), raggiungendo una valutazione di 1,3 miliardi, oltre il doppio rispetto a un anno fa. La piattaforma offre accesso a oltre 400 modelli AI (Anthropic, OpenAI, Google, xAI, DeepSeek) e processa 100 trilioni di token al mese — 5x rispetto a 6 mesi fa. La crescita segnala che il futuro enterprise sarà multi-modello, senza lock-in su un singolo vendor.",
       "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
-      "tag": "AI"
-    },
-    {
-      "id": "sinfi-gemello-digitale-sottosuolo-2026",
-      "date": "2026-05-26",
-      "caption": "🌐 SINFI diventa gemello digitale del sottosuolo: 70M€",
-      "snippet": "MIMIT, DTD e Infratel hanno presentato l'evoluzione del SINFI come Banca Dati di Interesse Nazionale: un piano da 69,9 milioni per trasformarlo nel gemello digitale del sottosuolo italiano. Il progetto integra Geo Intelligence e AI per pianificare reti, ridurre costi di scavo e prevenire danni alle infrastrutture. Il modello è candidato all'export in Africa nel quadro del Piano Mattei.",
-      "url": "https://www.corrierecomunicazioni.it/telco/il-sinfi-si-evolve-70-milioni-per-l-gemello-digitale-del-sottosuolo/",
-      "tag": "Telco"
-    },
-    {
-      "id": "tar-lazio-sospende-tassa-cloud-copia-privata-2026",
-      "date": "2026-05-26",
-      "caption": "⚖️ TAR Lazio sospende la \"tassa\" cloud su copia privata",
-      "snippet": "Il TAR del Lazio ha sospeso fino a metà giugno il decreto Giuli che estendeva ai cloud provider (AWS, IBM e altri) il pagamento dell'equo compenso per copia privata. I giudici hanno accolto i ricorsi citando le difficoltà operative e tecnologiche per l'adeguamento. La decisione è temporanea: l'udienza collegiale è fissata per il 16 giugno 2026.",
-      "url": "https://www.key4biz.it/copia-privata-il-tar-del-lazio-sospende-la-tassa-sul-cloud-accolti-i-ricorsi-fra-gli-altri-di-aws-e-ibm/573444/",
-      "tag": "Innovation"
-    },
-    {
-      "id": "bt-mass-layoffs-27500-jobs-2030",
-      "date": "2026-05-26",
-      "caption": "✂️ BT taglia altri 27.500 posti entro il 2030",
-      "snippet": "BT ha annunciato un piano di riduzione dell'organico che porterà la forza lavoro tra 75.000 e 80.000 dipendenti entro il 2030, rispetto agli attuali ~130.000 (inclusi contractor). Complessivamente il taglio decennale raggiungerà il 38% dell'organico originario. L'automazione AI e la razionalizzazione delle reti in rame sono i driver principali: i risparmi cumulativi attesi salgono a 6,7 miliardi di sterline.",
-      "url": "https://www.lightreading.com/fttx/bt-plans-mass-layoffs-after-cutting-8-500-jobs-in-last-year",
-      "tag": "Telco"
-    },
-    {
-      "id": "papa-leone-enciclica-ai-magnifica-humanitas-2026",
-      "date": "2026-05-26",
-      "caption": "🕊️ Papa Leone XIV: enciclica sull'AI e dignità umana",
-      "snippet": "Papa Leone XIV ha pubblicato 'Magnifica Humanitas', la prima enciclica papale dedicata all'intelligenza artificiale (42.000 parole). Il documento chiede di 'disarmare' l'AI — sia in senso militare che economico — e di porre la dignità umana al centro della governance tecnologica. Rappresentanti di Amazon, Meta, Google e Anthropic hanno incontrato il Vaticano prima della pubblicazione.",
-      "url": "https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare",
       "tag": "AI"
     }
   ]
