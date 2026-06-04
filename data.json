@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-03T08:07:11+02:00",
+  "last_updated": "2026-06-04T08:02:49+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "spacex-ipo-starlink-mno-2026-06-04",
+      "date": "2026-06-04",
+      "caption": "🚀 SpaceX IPO: l'S-1 dice wholesale, ma la strategia punta a diventare MNO",
+      "snippet": "SpaceX ha depositato il Form S-1 per la quotazione in borsa, prevista nelle prossime settimane con una valutazione stimata tra 1,75 e 2 trilioni di dollari. Il documento si posiziona come fornitore wholesale di connettività satellite agli operatori mobili (MNO), ma l'analisi degli asset accumulati — 65 MHz di spettro nationwide, 7.500 satelliti Direct-to-Cell approvati, accordi device — suggerisce un'ambizione da operatore diretto. Un elemento dirompente per l'industria telco globale.",
+      "url": "https://www.lightreading.com/satellite/starlink-s-s-1-says-wholesale-the-pattern-says-mno-",
+      "tag": "Telco"
+    },
+    {
+      "id": "gigabit-infrastructure-act-accesso-ue-2026-06-04",
+      "date": "2026-06-04",
+      "caption": "🇪🇺 Gigabit Infrastructure Act: accesso e prezzi dividono il mercato UE",
+      "snippet": "La Commissione europea ha pubblicato il report della consultazione sull'art. 3 del Gigabit Infrastructure Act, con 74 contributi da 24 Paesi. Operatori, tower company e autorità divergono su prezzi orientati ai costi vs. contratti commerciali per l'accesso agli asset pubblici (cavidotti, tetti, pali). Le linee guida attese saranno un test politico-industriale per accelerare fibra e 5G senza bloccare gli investimenti privati.",
+      "url": "https://www.corrierecomunicazioni.it/europa/gigabit-infrastructure-act-prezzi-e-accesso-dividono-operatori-tower-company-e-autorita/",
+      "tag": "Telco"
+    },
+    {
+      "id": "digital-networks-act-switch-off-rame-2026-06-04",
+      "date": "2026-06-04",
+      "caption": "📡 Digital Networks Act: sei profili di illegittimità nello switch-off del rame",
+      "snippet": "Il DNA della Commissione UE (proposto il 21 gennaio 2026) impone lo spegnimento delle reti in rame entro il 31 dicembre 2035. Un parere legale commissionato da Connect Europe identifica sei possibili vizi di illegittimità UE: assenza di indennizzo agli operatori, mancata proporzionalità e rischio di rinvii alla Corte di Giustizia. Se il testo fosse impugnato, l'iter normativo si blocca rallentando la transizione alla fibra invece di accelerarla.",
+      "url": "https://www.agendadigitale.eu/infrastrutture/digital-networks-act-sei-dubbi-giuridici-sullo-switch-off-del-rame/",
+      "tag": "Telco"
+    },
+    {
+      "id": "palantir-nhs-uk-vendor-lock-in-2026-06-04",
+      "date": "2026-06-04",
+      "caption": "🏥 UK: il Parlamento chiede di tagliare Palantir dall'NHS",
+      "snippet": "Il Comitato Scienza e Tecnologia della House of Commons ha pubblicato un report in cui chiede al governo di rescindere il contratto con Palantir per la Federated Data Platform dell'NHS. I deputati contestano il rischio di vendor lock-in su un fornitore statunitense in aree critiche come sanità e difesa, e chiedono di privilegiare alternative europee e domestiche attraverso procurement più consapevole.",
+      "url": "https://www.theregister.com/software/2026/06/03/uk-lawmakers-call-on-government-to-ditch-palantir-nhs-contract/5250150",
+      "tag": "Digital Transformation"
+    },
+    {
+      "id": "trump-ai-eo-safety-testing-doge-2026-06-04",
+      "date": "2026-06-04",
+      "caption": "🤖 EO AI di Trump: test obbligatori sui modelli frontier ma DOGE ha svuotato i team",
+      "snippet": "Trump ha firmato un Executive Order che istituisce test di sicurezza obbligatori (volontari nella sostanza) per i modelli AI frontier. Gli esperti segnalano un problema strutturale: i tagli operati da DOGE hanno ridotto drasticamente i team governativi di cybersecurity in grado di valutare i modelli. Senza trasparenza dei lab e capacità tecnica pubblica, il rischio è che il processo diventi una validazione formale più che un filtro reale.",
+      "url": "https://arstechnica.com/tech-policy/2026/06/trumps-ai-executive-order-may-not-prevent-dangerous-deployments/",
+      "tag": "AI"
+    },
     {
       "id": "digital-networks-act-rame-fibra-illegittimo-2026",
       "date": "2026-06-03",
@@ -388,46 +428,6 @@
       "snippet": "La startup comasca Leaf Space (fondata al Politecnico di Milano) ha lanciato TreeNet, una tecnologia che trasforma cluster di satelliti in reti mesh orbitali condivise, eliminando i colli di bottiglia di connettività e abilitando un accesso da terra 'sempre attivo'. È un passaggio dal modello one-to-one al Ground Segment as-a-Service distribuito.",
       "url": "https://www.corrierecomunicazioni.it/space-economy/connettivita-satellitare-leaf-space-lancia-il-sistema-treenet/",
       "tag": "Innovation"
-    },
-    {
-      "id": "tiscali-tessellis-cessione-b2c-canarbino-2026-05-27",
-      "date": "2026-05-27",
-      "caption": "📡 Tiscali cede ramo B2C a Canarbino: polo energy-TLC da 1,5M clienti",
-      "snippet": "Il Ministero delle Imprese ha confermato la cessione del ramo consumer di Tiscali-Tessellis al Gruppo Canarbino tramite la controllata Smeraldo, operativa dal 1° giugno. L'operazione coinvolge 563 lavoratori e punta a creare un operatore convergente tra energia e telecomunicazioni. I marchi Tiscali e Linkem rientreranno nel perimetro di una successiva acquisizione.",
-      "url": "https://www.corrierecomunicazioni.it/telco/tiscali-tessellis-via-libera-alla-cessione-del-ramo-b2c-a-canarbino/",
-      "tag": "Telco"
-    },
-    {
-      "id": "telco-ricavi-mediobanca-5g-investimenti-calo-2026-05-27",
-      "date": "2026-05-27",
-      "caption": "📊 Telco EU: ricavi in timida ripresa ma investimenti 5G in calo",
-      "snippet": "Il report Mediobanca sulle principali telco mondiali mostra ricavi mondiali in crescita del 2,9% nel primo semestre 2025, ma l'Europa resta indietro (+1,1%) con gli investimenti in calo dello 0,4%. L'Italia perde 14 miliardi di giro d'affari dal 2010 e l'EBIT margin è all'1,8%, contro il 16,5% delle grandi EMEA. L'AI emerge come nuova leva di business: KT Korea punta a triplicare i ricavi AI/ICT entro il 2028.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "duckduckgo-installazioni-google-ai-search-backlash-2026-05-27",
-      "date": "2026-05-27",
-      "caption": "🔍 DuckDuckGo +30%: utenti fuggono da Google AI Search",
-      "snippet": "Dopo l'annuncio di Google al I/O di sostituire i link tradizionali con un agente AI, le installazioni di DuckDuckGo sono cresciute del 30% in una settimana. Gli utenti citano la perdita di controllo e la 'forzatura' dell'AI come motivazione principale del passaggio. DuckDuckGo offre Duck.ai con accesso a modelli multipli (Claude 4.5, GPT-5 mini, Llama 4) preservando la privacy degli utenti.",
-      "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
-      "tag": "AI"
-    },
-    {
-      "id": "starlink-american-airlines-contratto-500-aerei-2026-05-27",
-      "date": "2026-05-27",
-      "caption": "🛰️ Starlink conquista American Airlines: Wi-Fi su 500 aerei Airbus",
-      "snippet": "American Airlines ha annunciato l'installazione di Starlink su oltre 500 aeromobili narrow-body Airbus a partire dal 2027, battendo la concorrenza di Amazon LEO e Viasat. Il contratto rafforza ulteriormente la posizione di SpaceX in vista dell'IPO previsto il mese prossimo, potenzialmente il più grande della storia americana. Già United, Southwest, Lufthansa e British Airways hanno adottato Starlink.",
-      "url": "https://techcrunch.com/2026/05/26/spacexs-starlink-nabs-american-airlines-contract-another-win-for-its-ipo/",
-      "tag": "Mobile"
-    },
-    {
-      "id": "openrouter-serie-b-113m-capitalg-alphabet-ai-gateway-2026-05-27",
-      "date": "2026-05-27",
-      "caption": "🤖 OpenRouter vale 1,3 mld$: il gateway AI multi-modello esplode",
-      "snippet": "OpenRouter ha chiuso un round Series B da 113 milioni di dollari guidato da CapitalG (Alphabet), raggiungendo una valutazione di 1,3 miliardi, oltre il doppio rispetto a un anno fa. La piattaforma offre accesso a oltre 400 modelli AI (Anthropic, OpenAI, Google, xAI, DeepSeek) e processa 100 trilioni di token al mese — 5x rispetto a 6 mesi fa. La crescita segnala che il futuro enterprise sarà multi-modello, senza lock-in su un singolo vendor.",
-      "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
-      "tag": "AI"
     }
   ]
 }
