@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-04T08:02:49+02:00",
+  "last_updated": "2026-06-05T08:41:27+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 40
+    "news": 35
   },
   "conversations": [
     {
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "fibercop-bei-1mld-ftth-2026-06-05",
+      "date": "2026-06-05",
+      "caption": "🇮🇹 BEI finanzia FiberCop con 1 miliardo per la fibra FTTH",
+      "snippet": "La Banca Europea per gli Investimenti ha sottoscritto un finanziamento fino a 1 miliardo di euro per FiberCop, con una prima tranche già erogata di 500 milioni, garantita dal programma InvestEU. L'obiettivo è estendere la rete FTTH a ulteriori 5,8 milioni di unità immobiliari, portando connettività fino a 10 Gbps. Un'iniezione di capitali a lungo termine cruciale per accelerare la transizione dell'Italia verso reti full-fibre.",
+      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga-maxi-finanziamento-bei-a-fibercop-1-miliardo-per-spingere-la-rete-ftth/",
+      "tag": "Telco"
+    },
+    {
+      "id": "ngmn-6g-no-5g-mistakes-2026-06-05",
+      "date": "2026-06-05",
+      "caption": "📡 NGMN a 3GPP: sul 6G non ripetete gli errori del 5G",
+      "snippet": "La Next Generation Mobile Networks Alliance ha pubblicato due report in vista del plenary 3GPP chiedendo un approccio di standardizzazione radicalmente diverso per il 6G: migrazione graduale, riduzione della complessità operativa e ritorni sostenibili per gli operatori. Il board chairman di NGMN e CTO di Orange Laurent Leboucher avverte: 'non affrettiamo le decisioni, altrimenti rischieremo sfide di lungo periodo'. L'ipotesi di slittare la Release 21 è sul tavolo.",
+      "url": "https://www.theregister.com/networks/2026/06/03/dont-repeat-5g-mistakes-with-6g-plead-mobile-operators/5250572",
+      "tag": "Mobile"
+    },
+    {
+      "id": "ai-worm-llm-enterprise-toronto-2026-06-05",
+      "date": "2026-06-05",
+      "caption": "🐛 LLM open source crea worm che si propaga in reti enterprise",
+      "snippet": "Ricercatori dell'Università di Toronto hanno sviluppato un worm auto-propagante usando un modello open-weight pubblico e gratuito, eseguibile su una singola GPU. Il codice si adatta in tempo reale per identificare vulnerabilità note e si muove lateralmente in reti enterprise, stabilisce persistenza e condivide credenziali tra repliche attive. Il messaggio per il settore: le minacce AI non arrivano solo dai modelli frontier da miliardi di dollari.",
+      "url": "https://www.theregister.com/research/2026/06/04/free-ai-model-powers-self-spreading-worm-in-enterprise-test-network/5250918",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "cavi-sottomarini-golfo-persico-rischio-2026-06-05",
+      "date": "2026-06-05",
+      "caption": "🌊 Cavi sottomarini: Golfo Persico area critica, +13 mld investimenti 2025-27",
+      "snippet": "Il report 2026 di Starboard Maritime Intelligence classifica 5 delle 25 principali aree di approdo mondiali a rischio estremo, con il Golfo Persico in cima alla lista per frizioni geopolitiche e traffico marittimo. Tra il 2025 e il 2027 sono previsti oltre 13 miliardi di dollari di nuovi progetti infrastrutturali sottomarini, quasi il doppio del triennio precedente. L'86% dei guasti è attribuito a pesca e ancore, spostando il focus sulla sorveglianza predittiva.",
+      "url": "https://www.corrierecomunicazioni.it/telco/cavi-sottomarini-il-golfo-persico-e-larea-piu-a-rischio-nel-2026/",
+      "tag": "Telco"
+    },
+    {
+      "id": "d2c-satellite-juniper-underwhelm-2026-06-05",
+      "date": "2026-06-05",
+      "caption": "🛰️ Direct-to-cell: crescita reale, ma adozione deluderà le attese",
+      "snippet": "Juniper Research prevede che gli utenti mensili attivi D2C passeranno da 17,4 milioni nel 2026 a 133 milioni nel 2031, ma avverte che l'adozione reale deluderà le aspettative dell'industria: il 40% degli abbonati non vuole pagare nulla di più per la copertura satellitare, il servizio non funziona al chiuso e resta limitato a SMS ed emergenze. T-Mobile/Starlink guidano il mercato, mentre in Europa VodafoneThree si prepara ai trial estivi.",
+      "url": "https://www.theregister.com/networks/2026/06/02/satellite-phone-dreams-orbit-reality-as-direct-to-cell-usage-set-to-underwhelm/5249696",
+      "tag": "Mobile"
+    },
     {
       "id": "spacex-ipo-starlink-mno-2026-06-04",
       "date": "2026-06-04",
@@ -348,86 +388,6 @@
       "snippet": "The Register segnala come le applicazioni moderne, API-driven e spesso sovra-permesse, siano diventate bersaglio ideale per attacchi assistiti da LLM. I modelli linguistici abbassano la soglia tecnica per reconnaissance e privilege escalation. Per il settore Telco e cloud, ripensare la sicurezza API in chiave AI è diventato urgente.",
       "url": "https://www.theregister.com/",
       "tag": "Cybersecurity"
-    },
-    {
-      "id": "bei-fibercop-1-miliardo-ftth-2026",
-      "date": "2026-05-28",
-      "caption": "🏦 BEI finanzia FiberCop con 1 miliardo per la fibra FTTH",
-      "snippet": "La Banca Europea per gli Investimenti ha accordato un finanziamento fino a 1 miliardo di euro a FiberCop per accelerare lo sviluppo della banda ultralarga FTTH in Italia. L'operazione punta a raggiungere i target nazionali ed europei di connettività gigabit, rafforzando l'infrastruttura digitale del Paese in un momento in cui gli investimenti europei in fibra segnano il passo.",
-      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga-maxi-finanziamento-bei-a-fibercop-1-miliardo-per-spingere-la-rete-ftth/",
-      "tag": "Telco"
-    },
-    {
-      "id": "5g-standalone-ericsson-monetizzazione-2026",
-      "date": "2026-05-28",
-      "caption": "📡 5G SA Ericsson: monetizzare con connettività differenziata",
-      "snippet": "Al Core Network Summit 2026 di Roma (organizzato con TIM), Monica Zethzon di Ericsson ha illustrato come gli operatori possano trasformare il 5G Standalone in ricavi concreti: accesso preferenziale alla rete, servizi enterprise garantiti e AI per reti più resilienti. La fase del 'cantiere' è finita, ora si passa al banco di prova del business.",
-      "url": "https://www.corrierecomunicazioni.it/telco/5g/5g-standalone-zethzon-ericsson-la-monetizzazione-passa-dalla-connettivita-differenziata/",
-      "tag": "Telco"
-    },
-    {
-      "id": "leone-xiv-enciclica-ai-monopoli-2026",
-      "date": "2026-05-28",
-      "caption": "⛪ Leone XIV: l'AI va sottratta ai monopoli privati",
-      "snippet": "Con l'enciclica 'Magnifica humanitas', Papa Leone XIV affronta la rivoluzione dell'intelligenza artificiale chiedendo governance capace di evitare che dati, piattaforme e calcolo restino in mano a pochi attori privati. Alla presentazione ha partecipato anche Christopher Olah di Anthropic, segnalando l'apertura di un confronto diretto tra Vaticano e Big Tech.",
-      "url": "https://www.corrierecomunicazioni.it/digital-economy/intelligenza-artificiale-leone-xiv-va-sottratta-ai-monopoli/",
-      "tag": "AI"
-    },
-    {
-      "id": "google-io-search-agentica-fine-web-2026",
-      "date": "2026-05-28",
-      "caption": "🔍 Google I/O: Search agentica, fine della ricerca neutrale",
-      "snippet": "Al Google I/O 2026, il colosso di Mountain View ha presentato la nuova Search agentica che anticipa le necessità informative dell'utente senza che questi debba cercare. L'AI interpreta le intenzioni, sintetizza fonti e avvia azioni in autonomia. La mossa ridisegna l'accesso all'informazione e mette sotto pressione editori, brand e regolatori che finora costruivano strategie sul traffico organico.",
-      "url": "https://www.agendadigitale.eu/cultura-digitale/google-ecco-la-search-che-si-sbarazza-di-noi-umani/",
-      "tag": "AI"
-    },
-    {
-      "id": "tiscali-tessellis-cessione-b2c-canarbino-2026",
-      "date": "2026-05-28",
-      "caption": "🔄 Tiscali-Tessellis: ramo B2C ceduto a Canarbino",
-      "snippet": "Il Ministero delle Imprese ha confermato la cessione del ramo B2C di Tiscali-Tessellis al Gruppo Canarbino (via controllata Smeraldo), operativa dal 1° giugno, con 563 lavoratori coinvolti. L'operazione segna un nuovo riassetto del mercato italiano dei servizi di connettività consumer e apre alla nascita di un polo convergente energia-telecomunicazioni.",
-      "url": "https://www.corrierecomunicazioni.it/telco/tiscali-tessellis-via-libera-alla-cessione-del-ramo-b2c-a-canarbino/",
-      "tag": "Telco"
-    },
-    {
-      "id": "illinois-ai-safety-bill-sb315-2026",
-      "date": "2026-05-28",
-      "caption": "🏛️ Illinois approva la legge AI più severa d'America",
-      "snippet": "L'Illinois ha approvato SB 315, che obbliga i grandi lab AI (OpenAI, Anthropic, Google DeepMind) ad audit di terze parti sulle loro pratiche di sicurezza. Il governatore Pritzker ha annunciato la firma. È la prima legge statale USA a imporre controlli strutturati sull'AI frontier, riempiendo il vuoto normativo federale.",
-      "url": "https://www.wired.com/story/illinois-pass-major-ai-safety-law-pritzker/",
-      "tag": "AI"
-    },
-    {
-      "id": "gartner-genai-hype-cycle-2026-bust",
-      "date": "2026-05-28",
-      "caption": "📉 Gartner: metà dei progetti GenAI sforerà il budget",
-      "snippet": "Nel nuovo Hype Cycle for Generative AI 2026, Gartner stima che almeno il 50% dei progetti GenAI supererà i costi preventivati per scelte architetturali sbagliate, e la maggior parte dei tentativi di costruire modelli custom verrà abbandonata. Nessuna delle 30 tecnologie AI analizzate ha ancora raggiunto il 'plateau of productivity'.",
-      "url": "https://www.theregister.com/ai-ml/2026/05/28/most-generative-ai-and-custom-model-projects-will-be-a-bust-gartner/5247633",
-      "tag": "AI"
-    },
-    {
-      "id": "cisco-sonic-nexus9000-enterprise-2026",
-      "date": "2026-05-28",
-      "caption": "🔌 Cisco porta SONiC agli switch enterprise Nexus 9000",
-      "snippet": "Cisco ha annunciato il supporto imminente di SONiC (Software for Open Networking in the Cloud) sugli switch Nexus 9000 Series, estendendo il sistema operativo open-source già usato dagli hyperscaler alle reti datacenter enterprise. Il supporto include hardening Cisco TAC e integrazione con Nexus Dashboard per topologie AI/ML.",
-      "url": "https://www.theregister.com/networks/2026/05/27/cisco-making-sonic-available-to-all-customers-not-just-hyperscalers/5246733",
-      "tag": "Innovation"
-    },
-    {
-      "id": "fibercop-prezzi-diversificati-operatori-2026",
-      "date": "2026-05-28",
-      "caption": "📡 FiberCop alza i prezzi dove Open Fiber non c'è",
-      "snippet": "Da quando AGCOM le ha riconosciuto lo status di operatore wholesale-only, FiberCop (70% KKR) applica una politica di prezzi differenziata: tariffe più basse nelle zone competitive con Open Fiber, più alte dove è sola. Gli operatori contestano anche gli aumenti sulla fibra spenta. Il dibattito tocca la sostenibilità degli investimenti in FTTH in Italia.",
-      "url": "https://www.key4biz.it/tlc-perche-le-politiche-di-prezzo-diversificate-di-fibercop-scontentano-gli-operatori/573566/",
-      "tag": "Telco"
-    },
-    {
-      "id": "leaf-space-treenet-satelliti-mesh-2026",
-      "date": "2026-05-28",
-      "caption": "🛰️ Leaf Space lancia TreeNet: mesh orbitale per satelliti",
-      "snippet": "La startup comasca Leaf Space (fondata al Politecnico di Milano) ha lanciato TreeNet, una tecnologia che trasforma cluster di satelliti in reti mesh orbitali condivise, eliminando i colli di bottiglia di connettività e abilitando un accesso da terra 'sempre attivo'. È un passaggio dal modello one-to-one al Ground Segment as-a-Service distribuito.",
-      "url": "https://www.corrierecomunicazioni.it/space-economy/connettivita-satellitare-leaf-space-lancia-il-sistema-treenet/",
-      "tag": "Innovation"
     }
   ]
 }
