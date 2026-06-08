@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-05T08:41:27+02:00",
+  "last_updated": "2026-06-08T08:03:38+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 35
+    "news": 30
   },
   "conversations": [
     {
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "mediobanca-telco-europa-ricavi-2026",
+      "date": "2026-06-08",
+      "caption": "📉 Telco Europa: ricavi +1,1% ma investimenti 5G in calo",
+      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali rileva che nel primo semestre 2025 gli operatori europei crescono dell'1,1% mentre quelli italiani dell'1,6%, ben sotto USA (+3,6%) e Asia (+3,2%). Il dato più critico: gli investimenti europei in reti sono calati dello 0,4%, con l'EBIT margin italiano all'1,8% rispetto al 16,5% EMEA. Il modello AICT (telco + AI) emerge come strada obbligata: KT Korea punta a triplicare i ricavi AI/IT entro il 2028.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "nvidia-nemotron-35-content-safety-enterprise-2026",
+      "date": "2026-06-08",
+      "caption": "🛡️ NVIDIA lancia Nemotron 3.5 Content Safety per enterprise AI",
+      "snippet": "NVIDIA ha rilasciato il 4 giugno 2026 Nemotron 3.5 Content Safety, modello multimodale personalizzabile per la sicurezza AI in contesti enterprise globali. Copre testo, immagine e audio con latenza bassa per applicazioni real-time, ed è pronto per GDPR, CCPA e i nuovi framework regolatori sull'AI. Il lancio si inserisce in una settimana densa: Microsoft ha presentato la famiglia MAI (7 modelli), Google Gemma 4 12B e NVIDIA stessa Nemotron 3 Ultra 550B open-weight.",
+      "url": "https://dev.to/vjswamy/latest-ai-model-releases-june-2026-roundup-49j5",
+      "tag": "AI"
+    },
+    {
+      "id": "tmobile-global-tech-centre-india-2026",
+      "date": "2026-06-08",
+      "caption": "🌐 T-Mobile US apre primo Global Tech Centre in India a Hyderabad",
+      "snippet": "T-Mobile US ha inaugurato il suo primo Global Technology Centre (GTC) fuori dagli Stati Uniti, a Hyderabad, India. La struttura di 250.000 piedi quadrati (circa 23.000 m²) si concentrerà su engineering, AI, DevOps e cybersecurity e punta ad assumere fino a 1.000 dipendenti entro il 2027. La mossa segnala come i grandi carrier USA stiano delocalizzando capacità tecnologica avanzata per accelerare l'integrazione AI nelle reti.",
+      "url": "https://www.telecompaper.com/",
+      "tag": "Digital Transformation"
+    },
+    {
+      "id": "sec-regulation-sp-breach-notification-deadline-2026",
+      "date": "2026-06-08",
+      "caption": "⚖️ SEC Regulation S-P: scadenza 3 giugno, nuove regole breach per RIA",
+      "snippet": "Dal 3 giugno 2026 anche i registered investment adviser (RIA) con AUM inferiore a 1,5 miliardi di dollari devono rispettare le nuove norme SEC Regulation S-P, che impongono notifica agli utenti entro 30 giorni da una violazione di dati sensibili e inventario completo dei sistemi, inclusi dispositivi personali dei dipendenti. Le istituzioni più grandi erano già obbligate dal dicembre 2025. La normativa estende il perimetro di responsabilità cyber al settore finanziario USA.",
+      "url": "https://advisorlawllc.com/regulation-s-p-june-2026-deadline/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "italia-assente-global-tech-ecosystem-index-2026",
+      "date": "2026-06-08",
+      "caption": "🗺️ Tech Ecosystem Index 2026: Italia fuori dai radar dell'innovazione",
+      "snippet": "Il Global Tech Ecosystem Index 2026 fotografa una nuova geografia dell'innovazione in cui l'Italia risulta assente tra i protagonisti. L'analisi, pubblicata da Agenda Digitale il 4 giugno 2026, evidenzia come la redistribuzione globale degli ecosistemi tech stia penalizzando i paesi privi di investimenti strutturali in startup, capitale di rischio e infrastrutture digitali. Il divario con hub come USA, Cina, UK e Singapore si allarga ulteriormente.",
+      "url": "https://www.agendadigitale.eu/industry-4-0/",
+      "tag": "Innovation"
+    },
     {
       "id": "fibercop-bei-1mld-ftth-2026-06-05",
       "date": "2026-06-05",
@@ -307,86 +347,6 @@
       "caption": "Okta: 92% imprese usa agenti AI, solo il 22% li governa",
       "snippet": "Secondo la ricerca Okta, il 92% dei dirigenti aziendali usa agenti AI autonomi, ma solo il 22% ha assegnato loro un'identita' tracciabile. Okta ha lanciato Okta for AI Agents (con ServiceNow, Salesforce e AWS Bedrock AgentCore) per identity governance e la capacita' di disattivare agenti non autorizzati. Il CEO McKinnon cita questa come l'esposizione piu' critica per le enterprise nel 2026.",
       "url": "https://www.theregister.com/ai-ml/2026/05/29/okta-writes-its-own-license-to-kill-rogue-ai-agents/5248766",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "blue-origin-new-glenn-explodes-amazon-leo-2026-05-31",
-      "date": "2026-05-31",
-      "caption": "🚀 Esplode il razzo New Glenn: ritardi per Amazon Leo e D2D",
-      "snippet": "Il razzo Blue Origin New Glenn è esploso giovedì sera sul pad di Cape Canaveral durante un test pre-lancio di routine. L'incidente ritarderà di diversi mesi i lanci del satellite broadband Amazon Leo e il servizio direct-to-device di AST SpaceMobile. Blue Origin punta a costruire una costellazione di oltre 51.000 satelliti per data center orbitali.",
-      "url": "https://www.lightreading.com/satellite/blue-origin-s-new-glenn-rocket-explodes-during-prelaunch-test",
-      "tag": "Innovation"
-    },
-    {
-      "id": "openrouter-series-b-113m-1-3b-valuation-2026-05-31",
-      "date": "2026-05-31",
-      "caption": "🤖 OpenRouter raccoglie $113M: il futuro è multi-modello",
-      "snippet": "OpenRouter ha chiuso un Series B da $113 milioni guidato da CapitalG (Google Alphabet), raggiungendo una valutazione di $1,3 miliardi — più del doppio rispetto a un anno fa. Il gateway AI serve 8 milioni di utenti globali con accesso a oltre 400 modelli e processa 100 trilioni di token al mese (+5x in sei mesi). Il dato segnala che le aziende non intendono legarsi a un unico vendor di AI.",
-      "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
-      "tag": "AI"
-    },
-    {
-      "id": "tech7-g7-digital-declaration-paris-2026-05-31",
-      "date": "2026-05-31",
-      "caption": "🌐 Tech7: industria digitale G7 chiede regole comuni a governi",
-      "snippet": "A Parigi, le associazioni digitali dei Paesi G7 (inclusa l'Italia) hanno presentato la dichiarazione congiunta TECH7 2026, chiedendo ai governi cooperazione rafforzata su AI, cybersecurity, cloud, quantum e governance dei dati. Il ministro italiano Urso ha spinto per 'accelerare sull'autonomia digitale europea'. L'Italia ospiterà il prossimo vertice TECH7 nel 2027 insieme agli USA.",
-      "url": "https://www.itic.org/news-events/news-releases/iti-tech7-partners-urge-g7-governments-to-strengthen-digital-cooperation",
-      "tag": "Digital Transformation"
-    },
-    {
-      "id": "vodafonethree-workforce-12-percent-cut-ericsson-nokia-2026-05-31",
-      "date": "2026-05-31",
-      "caption": "📉 VodafoneThree taglia il 12% del personale dopo la fusione",
-      "snippet": "L'annual report di Vodafone mostra che il personale di VodafoneThree è sceso del 12% rispetto ai 14.132 dipendenti pre-fusione, con l'eliminazione di interi dipartimenti. L'operatore ha scelto Ericsson e Nokia per il 5G escludendo l'Open RAN: 'erano gli unici a garantire la velocità e i volumi necessari'. Il risparmio target della fusione è di £700 milioni.",
-      "url": "https://www.lightreading.com/5g/vodafonethree-shrank-workforce-as-it-leaned-into-ericsson-and-nokia",
-      "tag": "Telco"
-    },
-    {
-      "id": "proximus-nxt-ai-governance-lag-survey-2026-05-31",
-      "date": "2026-05-31",
-      "caption": "🔐 AI senza governance: 81% usa AI, solo 29% ha policy formale",
-      "snippet": "Il Proximus NXT Cybersecurity Survey 2026 su oltre 400 organizzazioni belghe rivela che l'81% permette ai dipendenti di usare strumenti AI, ma solo il 29% ha una policy formale e meno del 37% ha attivato formazione sui rischi. La maggioranza percepisce l'AI più come un fattore di rischio che come opportunità di sicurezza — un dato che rispecchia una tendenza europea più ampia.",
-      "url": "https://www.telecompaper.com/news/proximus-nxt-survey-finds-ai-governance-lagging-adoption--1572562",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "anthropic-965b-serie-h-2026",
-      "date": "2026-05-29",
-      "caption": "🤖 Anthropic supera OpenAI: valutazione a $965 miliardi",
-      "snippet": "Anthropic ha chiuso un round Serie H da 65 miliardi di dollari, raggiungendo una valutazione di 965 miliardi. L'azienda supera così OpenAI (852 miliardi) e dichiara un run rate di ricavi annualizzati pari a 47 miliardi, trainato da Claude Code. Contestualmente ha rilasciato Claude Opus 4.8, più veloce e ottimizzato per workflow agentici di larga scala.",
-      "url": "https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html",
-      "tag": "AI"
-    },
-    {
-      "id": "claude-opus-48-agentic-2026",
-      "date": "2026-05-29",
-      "caption": "🧠 Claude Opus 4.8: dynamic workflows e fast mode a -3x costo",
-      "snippet": "Anthropic ha lanciato Claude Opus 4.8 con 'dynamic workflows' in Claude Code per task su larga scala e un fast mode 2.5x più rapido, ora tre volte meno costoso. Il prezzo standard rimane invariato: $5/M token input, $25/M output. In parallelo prosegue il progetto Glasswing per Claude Mythos, con capacità avanzate di cybersecurity destinate al rilascio generale nelle prossime settimane.",
-      "url": "https://www.anthropic.com/news/claude-opus-4-8",
-      "tag": "AI"
-    },
-    {
-      "id": "spacex-starship-faa-grounded-2026",
-      "date": "2026-05-29",
-      "caption": "🚀 FAA stoppa Starship V3 dopo mishap nel volo Flight 12",
-      "snippet": "La FAA ha messo a terra Starship V3 di SpaceX dopo che il booster Super Heavy del Flight 12 ha perso controllo nel rientro, cadendo incontrollato nel Golfo del Messico. Il razzo da 124 metri è il più potente mai costruito, centrale per i piani NASA di allunaggio entro il 2028. L'incidente arriva a pochi giorni dalla presentazione dell'IPO di SpaceX alla SEC.",
-      "url": "https://apnews.com/article/spacex-starship-faa-investigation-7bc8ecccd1f32fa2b1d2ea204f2b785b",
-      "tag": "Innovation"
-    },
-    {
-      "id": "amazon-leaderboard-ai-agents-chiuso-2026",
-      "date": "2026-05-29",
-      "caption": "🏢 Amazon chiude classifica AI: agenti usati per scalare ranking",
-      "snippet": "Amazon ha eliminato la classifica interna sull'utilizzo di AI da parte dei dipendenti, dopo che alcuni lavoratori avevano iniziato ad assegnare AI agent a compiti fittizi per scalare la graduatoria. L'exec Dave Treadwell ha dichiarato: 'Non usate l'AI solo per usarla'. Il caso accende il dibattito sui KPI legati all'adozione AI e sui rischi di gamification dell'innovazione enterprise.",
-      "url": "https://www.theverge.com/ai",
-      "tag": "AI"
-    },
-    {
-      "id": "llm-api-attacks-theregister-2026",
-      "date": "2026-05-29",
-      "caption": "🔐 LLM e API: gli attacchi cyber entrano nell'era AI-assisted",
-      "snippet": "The Register segnala come le applicazioni moderne, API-driven e spesso sovra-permesse, siano diventate bersaglio ideale per attacchi assistiti da LLM. I modelli linguistici abbassano la soglia tecnica per reconnaissance e privilege escalation. Per il settore Telco e cloud, ripensare la sicurezza API in chiave AI è diventato urgente.",
-      "url": "https://www.theregister.com/",
       "tag": "Cybersecurity"
     }
   ]
