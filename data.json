@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T08:03:38+02:00",
+  "last_updated": "2026-06-09T08:05:55+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,46 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "infratel-pnrr-target-giugno-2026",
+      "date": "2026-06-09",
+      "caption": "🏗️ Infratel: tutti i target PNRR completati entro il 30 giugno",
+      "snippet": "Pietro Piccinetti, AD di Infratel, conferma il completamento dei piani PNRR sulle reti (Italia 1 Giga, Sanità connessa, Scuola) entro la scadenza del 30 giugno 2026. L'azienda punta ora a diventare partner tecnico stabile per gestione e manutenzione delle infrastrutture digitali, con ricavi diretti arrivati a 50 milioni e copertura dei costi garantita fino al 2030-2031. Il SINFI viene indicato come strumento nazionale per coordinare reti, territori e investimenti.",
+      "url": "https://www.corrierecomunicazioni.it/telco/piccinetti-target-pnrr-centrati-a-giugno-2026-infratel-pronta-a-diventare-regista-delle-reti/",
+      "tag": "Telco"
+    },
+    {
+      "id": "github-miasma-worm-microsoft-repos-2026",
+      "date": "2026-06-09",
+      "caption": "🐛 Worm Miasma colpisce 73 repo Microsoft su GitHub",
+      "snippet": "Il 5 giugno 2026, GitHub ha disabilitato 73 repository Microsoft in 105 secondi dopo la rilevazione del worm Miasma, evoluzione del Mini Shai Hulud che aveva già colpito npm. L'attacco è partito da un account contributor compromesso che ha inserito codice malevolo in Azure/durabletask, innescando RCE su chi apriva il repo in IDE o tool AI come Claude Code, Gemini CLI e Cursor. Il worm ha colpito anche oltre 50 pacchetti npm incluso un SDK Vapi.ai con 408.000 download mensili.",
+      "url": "https://www.theregister.com/security/2026/06/08/github-nukes-70-microsoft-repos-amid-suspected-worm-attack/5252169",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "ai-frodi-assicurative-aviva-2026",
+      "date": "2026-06-09",
+      "caption": "🤖 AI usata per falsificare sinistri: Aviva denuncia 18.400 frodi",
+      "snippet": "L'assicuratore britannico Aviva ha registrato 18.400+ richieste di risarcimento fraudolente nel 2025, supportate da documenti, immagini e scene di incidenti generate con AI per un valore potenziale di 233 milioni di sterline (circa 638.000 sterline al giorno). Le frodi sui sinistri auto sono cresciute del 39% in valore, quelle di responsabilità civile del 32%. Il fenomeno segna un cambio strutturale: da incidenti pilotati fisicamente a frodi digitali scalabili con AI generativa.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/06/08/motor-insurance-frausters-abusing-ai-to-exaggerate-claims/5252024",
+      "tag": "AI"
+    },
+    {
+      "id": "ue-fondo-sovrano-50mld-scomparso-pacchetto-tech-2026",
+      "date": "2026-06-09",
+      "caption": "🇪🇺 Sovranità tech UE: scomparso il fondo da 50 miliardi",
+      "snippet": "La Commissione europea ha presentato il pacchetto sulla sovranità tecnologica senza il fondo sovrano da 50 miliardi di euro inizialmente annunciato come motore dell'indipendenza digitale europea. L'europarlamentare Brando Benifei (S&D) ha annunciato un'interrogazione parlamentare anche sulla nomina di Jim Hagemann Snabe (presidente Siemens) come inviato speciale UE per l'AI industriale, denunciando un conflitto d'interesse e accesso privilegiato di un incumbent a scelte strategiche su cloud, chip e appalti.",
+      "url": "https://www.key4biz.it/indipendenza-digitale-ue-giallo-sul-fondo-sovrano-da-50-miliardi-benifei-prima-annunciato-ma-poi-non-inserito-nel-pacchetto-presentero-interrogazione-sullinviato-speciale-per-lai/574315/",
+      "tag": "Digital Transformation"
+    },
+    {
+      "id": "ue-rinnovabili-piano-italia-23mld-2026",
+      "date": "2026-06-09",
+      "caption": "⚡ UE approva piano italiano da 23 mld per le rinnovabili",
+      "snippet": "La Commissione europea ha dato il via libera al regime italiano di aiuti di Stato da 23 miliardi di euro per la produzione di energia elettrica da fonti rinnovabili, nell'ambito del Clean Industrial Deal adottato a giugno 2025. L'approvazione punta a ridurre la dipendenza dalle importazioni fossili e abbassare il costo dell'energia per famiglie e imprese. La sfida ora è accelerare autorizzazioni, connessioni alla rete e realizzazione delle infrastrutture.",
+      "url": "https://www.key4biz.it/rinnovabili-via-libera-ue-al-piano-italiano-da-23-miliardi/574462/",
+      "tag": "Economy"
+    },
     {
       "id": "mediobanca-telco-europa-ricavi-2026",
       "date": "2026-06-08",
@@ -308,46 +348,6 @@
       "snippet": "L'Osservatorio Connected Vehicle del Politecnico di Milano certifica che il mercato italiano della mobilità connessa ha raggiunto 3,7 miliardi di euro (+14% YoY), con 18,8 milioni di veicoli connessi in circolazione (oltre il 40% del parco auto). Il 61% dei comuni italiani ha avviato progetti di smart mobility negli ultimi 3 anni. La guida autonoma potrebbe eliminare 900.000 auto private e 41.000 feriti entro il 2050, con un costo sociale evitato di 5,9 miliardi.",
       "url": "https://www.corrierecomunicazioni.it/digital-economy/mobilita-connessa-a-14-traino-da-servizi-e-smart-road-connettivita-chiave-del-fleet-management/",
       "tag": "Innovation"
-    },
-    {
-      "id": "blue-origin-new-glenn-esplosione-satellite-2026",
-      "date": "2026-06-01",
-      "caption": "Razzo New Glenn di Blue Origin esplode sul pad, ritardo satellite Amazon",
-      "snippet": "Il razzo New Glenn di Blue Origin e' esploso sul launch pad al Cape Canaveral Space Force Station il 28 maggio durante un hotfire test dei motori BE-4, in vista del lancio di 48 satelliti broadband Leo di Amazon. Il veicolo da 320 piedi e' stato distrutto, impattando anche il programma AST SpaceMobile (lancio precedente su orbita sbagliata il 19 aprile). Il programma Artemis della NASA subisce potenziali ritardi: il prossimo volo era atteso per giugno.",
-      "url": "https://www.usatoday.com/story/news/nation/2026/05/28/blue-origin-jeff-bezos-new-glenn-rocket-explosion/90305635007/",
-      "tag": "Innovation"
-    },
-    {
-      "id": "digital-networks-act-switch-off-rame-illegittimo-2026",
-      "date": "2026-06-01",
-      "caption": "DNA: switch-off rame 2035 illegittimo, parere legale UE",
-      "snippet": "Connect Europe ha commissionato un parere legale al prof. Roberto Mastroianni (Universita' Federico II di Napoli, ex giudice del Tribunale UE) sul Digital Networks Act: l'obbligo di switch-off del rame entro il 2035 e il passaggio obbligatorio all'FTTH e' incompatibile con il diritto primario UE, configurando un'espropriazione illecita. Il parere, rilasciato il 1 giugno 2026, cambia le carte in tavola nel negoziato europeo.",
-      "url": "https://www.corrierecomunicazioni.it/whitepaper/telco-whitepaper/switch-off-del-rame-connect-europe-il-digital-networks-act-rischia-di-essere-illegittimo/",
-      "tag": "Telco"
-    },
-    {
-      "id": "telco-mediobanca-ricavi-europa-italia-2026",
-      "date": "2026-06-01",
-      "caption": "Telco mondiali: ricavi +2,9%, Italia perde 14 mld dal 2010",
-      "snippet": "Il report Mediobanca sulle 34 maggiori telco mondiali (dati 1H 2025) mostra ricavi globali +2,9%, con Usa +3,6% e Asia +3,2% in testa. Le telco europee segnano solo +1,1%, italiane +1,6%. L'Italia ha perso 14 miliardi di giro d'affari dal 2010 (-2,7% medio annuo). Il margine EBIT italiano e' all'1,8% nel 2024, contro il 16,5% delle grandi telco EMEA. Gli investimenti in 5G e fibra calano in Europa.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "netflix-headroom-ai-token-ottimizzazione-open-source-2026",
-      "date": "2026-06-01",
-      "caption": "Netflix open-source Headroom: taglia fino al 90% i token AI",
-      "snippet": "Tejas Chopra, senior engineer di Netflix, ha sviluppato e open-sourcato Project Headroom, uno strumento che ottimizza le istruzioni agli agenti AI riducendo fino al 90% i token ridondanti. Presentato all'Open Source Summit, ha gia' risparmiato 700.000 dollari in costi cloud. Risponde al problema esploso in aziende come Uber (budget AI bruciato in 4 mesi) e Microsoft, dove i costi degli agenti hanno azzerato i risparmi sui tagli al personale.",
-      "url": "https://www.theregister.com/ai-ml/2026/05/31/netflix-wiz-creates-app-to-slash-ai-bills-then-open-sources-it/5248702",
-      "tag": "AI"
-    },
-    {
-      "id": "okta-ai-agent-identity-governance-rogue-2026",
-      "date": "2026-06-01",
-      "caption": "Okta: 92% imprese usa agenti AI, solo il 22% li governa",
-      "snippet": "Secondo la ricerca Okta, il 92% dei dirigenti aziendali usa agenti AI autonomi, ma solo il 22% ha assegnato loro un'identita' tracciabile. Okta ha lanciato Okta for AI Agents (con ServiceNow, Salesforce e AWS Bedrock AgentCore) per identity governance e la capacita' di disattivare agenti non autorizzati. Il CEO McKinnon cita questa come l'esposizione piu' critica per le enterprise nel 2026.",
-      "url": "https://www.theregister.com/ai-ml/2026/05/29/okta-writes-its-own-license-to-kill-rogue-ai-agents/5248766",
-      "tag": "Cybersecurity"
     }
   ]
 }
