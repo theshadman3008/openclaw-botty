@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-09T08:05:55+02:00",
+  "last_updated": "2026-06-09T09:11:11+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 30
+    "news": 40
   },
   "conversations": [
     {
@@ -148,6 +148,86 @@
       "snippet": "La Commissione europea ha dato il via libera al regime italiano di aiuti di Stato da 23 miliardi di euro per la produzione di energia elettrica da fonti rinnovabili, nell'ambito del Clean Industrial Deal adottato a giugno 2025. L'approvazione punta a ridurre la dipendenza dalle importazioni fossili e abbassare il costo dell'energia per famiglie e imprese. La sfida ora è accelerare autorizzazioni, connessioni alla rete e realizzazione delle infrastrutture.",
       "url": "https://www.key4biz.it/rinnovabili-via-libera-ue-al-piano-italiano-da-23-miliardi/574462/",
       "tag": "Economy"
+    },
+    {
+      "id": "fibercop-plenitude-fibra-accordo-2026",
+      "date": "2026-06-09",
+      "caption": "🔌 FiberCop apre la rete a Plenitude: fibra fino a 10 Gbit in tutta Italia",
+      "snippet": "FiberCop ha siglato un accordo strategico con Plenitude (ENI) per mettere a disposizione dei clienti dell'azienda energetica la propria rete in fibra ottica a Banda Ultra Larga (sia FTTC che FTTH). L'accordo si inserisce nel piano da circa 10 miliardi di investimenti previsti tra luglio 2024 e 2027, con l'obiettivo di collegare in fibra oltre 20 milioni di abitazioni entro il 2027 (gia' raggiunte ~15 milioni). La partnership allarga il mercato delle utility che diventano ISP sfruttando infrastrutture wholesale di terzi, con offerte fino a 10 Gbit/s.",
+      "url": "https://www.corrierecomunicazioni.it/telco/fibercop-apre-la-rete-a-plenitude-fibra-fino-a-10-gigabit-per-i-clienti/",
+      "tag": "Telco"
+    },
+    {
+      "id": "apple-siri-ai-dma-eu-delay-2026",
+      "date": "2026-06-09",
+      "caption": "🍎 Apple blocca Siri AI nell'UE: la nuova Siri non arriva in Europa con iOS 27",
+      "snippet": "Apple ha annunciato al WWDC 2026 che Siri AI - la nuova versione di Siri potenziata da Apple Intelligence - non sara' disponibile nell'Unione Europea con il lancio di iOS 27 e iPadOS 27. La causa e' il Digital Markets Act (DMA): la Commissione europea non ha accettato nessuna delle proposte di Apple (tra cui 'Trusted System Agent', un intermediario di privacy), richiedendo che qualsiasi assistente virtuale abbia accesso quasi illimitato ai dati e al dispositivo dell'utente. Craig Federighi: 'Profondamente delusi'. Nessuna data prevista per il rollout UE.",
+      "url": "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/",
+      "tag": "Regolazione"
+    },
+    {
+      "id": "github-worm-miasma-microsoft-repos-2026",
+      "date": "2026-06-09",
+      "caption": "🐛 Il worm Miasma colpisce 73 repo Microsoft su GitHub: CI/CD pipeline in tilt",
+      "snippet": "GitHub ha disabilitato 73 repository Microsoft in 105 secondi dopo aver rilevato il worm Miasma - discendente del Mini Shai Hulud - che si propagava tramite un commit malevolo su Azure/durabletask. Il worm eseguiva codice remoto quando uno sviluppatore apriva il repo in IDE o tool AI (Claude Code, Gemini CLI, Cursor). Il gruppo TeamPCP aveva open-sourcato Mini Shai Hulud a maggio 2026. Lo stesso worm aveva gia' compromesso oltre 50 pacchetti npm incluso un Vapi.ai SDK con 408.000 download mensili.",
+      "url": "https://www.theregister.com/security/2026/06/08/github-nukes-70-microsoft-repos-amid-suspected-worm-attack/5252169",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "spacex-ipo-75-miliardi-nasdaq-2026",
+      "date": "2026-06-09",
+      "caption": "🚀 SpaceX IPO: 75 miliardi di dollari, debutto su Nasdaq come 'SPCX'",
+      "snippet": "SpaceX ha ufficializzato la sua IPO: vuole raccogliere fino a 75 miliardi di dollari collocando 555,6 milioni di azioni a 135 dollari l'una, superando il record Saudi Aramco (26 miliardi nel 2019). La valutazione implicita e' di 1,77 trilioni di dollari. Elon Musk avra' l'82,4% dei diritti di voto (5,22 miliardi di azioni Class B). Il debutto su Nasdaq con simbolo 'SPCX' e' atteso entro fine giugno 2026. Anche Anthropic ha depositato un S-1 riservato alla SEC - IPO AI che segue SpaceX.",
+      "url": "https://apnews.com/article/spacex-tesla-elon-musk-ipo-public-offering-6490112997adcbc47235479685a89b72",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "anthropic-ipo-sec-s1-2026",
+      "date": "2026-06-09",
+      "caption": "🤖 Anthropic deposita S-1 riservato alla SEC: in arrivo la quotazione in Borsa",
+      "snippet": "Anthropic (maker di Claude) ha depositato in forma riservata la documentazione S-1 presso la SEC per la propria IPO, potenzialmente il piu' grande debutto mai visto nel settore AI. La valutazione implicita supera i 965 miliardi di dollari dopo un round da 65 miliardi a maggio 2026. L'azienda paga SpaceX 1,25 miliardi/mese per capacita' di calcolo al data center Colossus di Memphis fino al 2029. OpenAI si prepara a una propria IPO. Tre mega-quotazioni tech nell'arco di settimane trasformano il panorama finanziario dell'AI.",
+      "url": "https://www.wired.it/article/anthropic-ipo-debutto-in-borsa/",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "amazon-kuiper-fcc-waiver-deadline-2026",
+      "date": "2026-06-09",
+      "caption": "🛰️ FCC concede deroga ad Amazon Kuiper: via la scadenza luglio 2026 per 1.616 satelliti",
+      "snippet": "La FCC ha eliminato il requisito per Amazon Leo (ex Project Kuiper) di lanciare meta' della costellazione (1.616 su 3.232 satelliti) entro il 30 luglio 2026. La deroga e' motivata dall'interesse pubblico: SpaceX e' l'unico operatore che fornisce broadband da LEO ai consumatori americani, e Amazon ha investito oltre 10 miliardi di dollari nel sistema. Resta la scadenza del luglio 2029 per l'intera costellazione. La notizia rafforza il duopolio Starlink-Kuiper nel broadband satellitare.",
+      "url": "https://arstechnica.com/space/2026/06/fcc-lifts-looming-deadline-with-amazon-leo-satellite-broadband-constellation/",
+      "tag": "Telco"
+    },
+    {
+      "id": "hpe-juniper-record-quarter-ai-networking-2026",
+      "date": "2026-06-09",
+      "caption": "📊 HPE: trimestre record a 10,7 miliardi (+40%), AI systems orders a 1,8 miliardi",
+      "snippet": "Hewlett Packard Enterprise ha registrato il suo miglior risultato trimestrale dal 2018: ricavi di 10,7 miliardi di dollari (+40% year-over-year), networking revenue a 2,7 miliardi e ordini AI systems a 1,8 miliardi. CEO Neri ha definito l'acquisizione Juniper (14 miliardi) un 'home run'. HPE anticipa il raggiungimento dei target finanziari previsti per il 2028 gia' entro il 2026. Internamente: 1.200 use case AI sviluppati, 52 sistemi agentic gia' deployati dalla CFO.",
+      "url": "https://www.theregister.com/on-prem/2026/06/02/hpe-declares-juniper-deal-a-home-run-as-ai-and-networking-fuel-record-quarter/5250021",
+      "tag": "Business/Digital Transformation"
+    },
+    {
+      "id": "ue-piano-rinnovabili-italia-23-miliardi-2026",
+      "date": "2026-06-09",
+      "caption": "⚡ UE approva piano rinnovabili Italia da 23 miliardi: +37 GW di capacita' verde",
+      "snippet": "La Commissione europea ha dato il via libera al regime italiano di aiuti di Stato da 23 miliardi di euro per sostenere la produzione di energia da fonti rinnovabili, nell'ambito del Clean Industrial Deal di Bruxelles (giugno 2025). Il piano punta ad aggiungere oltre 37 gigawatt di nuova capacita' produttiva, ridurre la dipendenza da combustibili fossili e colmare il ritardo italiano nella transizione energetica. Ora la sfida passa all'attuazione: autorizzazioni, connessioni alla rete e infrastrutture.",
+      "url": "https://www.key4biz.it/rinnovabili-via-libera-ue-al-piano-italiano-da-23-miliardi/574462/",
+      "tag": "Energy"
+    },
+    {
+      "id": "telemarketing-energia-decreto-bollette-agendadigitale-2026",
+      "date": "2026-06-09",
+      "caption": "📵 Decreto Bollette: dal 19 giugno stop al telemarketing per luce e gas - ma le critiche non mancano",
+      "snippet": "Dal 19 giugno 2026 entra in vigore il divieto di concludere contratti telefonici per luce e gas tramite chiamate commerciali non richieste, introdotto con emendamento al Decreto Bollette (n. 21/2026). Secondo AgendaDigitale, la norma - approvata senza previa consultazione con le categorie - rischia di colpire soprattutto gli operatori regolari, creando incertezza applicativa e possibili incompatibilita' con il diritto europeo. Il settore energy telemarketing vale miliardi di euro di contratti annui.",
+      "url": "https://www.agendadigitale.eu/infrastrutture/telemarketing-energia-tanti-danni-dal-decreto-bollette-ecco-perche/",
+      "tag": "Regolazione"
+    },
+    {
+      "id": "apple-wwdc-siri-ai-do-or-die-register-2026",
+      "date": "2026-06-09",
+      "caption": "🔮 WWDC 2026: Apple punta tutto su Siri AI - analisti divisi tra ottimismo e scetticismo",
+      "snippet": "Al WWDC 2026 Apple ha presentato Siri AI e una revisione profonda di Apple Intelligence dopo due anni di risultati deludenti che avevano portato a una class action. La nuova Siri, basata su on-device processing e Private Cloud Compute, punta a integrarsi in modo invisibile nell'ecosistema Apple. Gli analisti IDC e Insider Intelligence lodano la strategia incentrata su privacy e utilita' pratica, ma sottolineano il rischio: 'ogni promessa e' seguita dalla parola if'. Developer beta iOS/iPadOS/macOS gia' disponibili.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/06/08/its-do-or-die-for-apple-ai/5252479",
+      "tag": "AI/LLM"
     },
     {
       "id": "mediobanca-telco-europa-ricavi-2026",
