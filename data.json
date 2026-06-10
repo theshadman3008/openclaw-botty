@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-09T09:11:11+02:00",
+  "last_updated": "2026-06-10T08:05:59+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 40
+    "news": 45
   },
   "conversations": [
     {
@@ -230,6 +230,38 @@
       "tag": "AI/LLM"
     },
     {
+      "id": "ftth-italia-77-percent-copertura-30-utilizzo-2026",
+      "date": "2026-06-09",
+      "caption": "📡 FTTH Italia 2026: copertura al 77,19% ma solo il 30% delle famiglie la usa",
+      "snippet": "In Italia nel 2026 la rete FTTH (Fiber To The Home) copre il 77,19% dei nuclei familiari, ma l'utilizzo effettivo si ferma al 30%. Palermo guida la classifica delle citta' con copertura al 95%, seguita da Bari (94%) e Barletta-Andria-Trani (93%); Milano e' nella top 10 con il 90%. La Sardegna e' la regione con la maggiore crescita annua (+25,43%), mentre la Liguria e' l'unica in calo (-0,71%). Il dato evidenzia un gap strutturale tra infrastruttura disponibile e adozione reale, segnale di una sfida ancora aperta sul fronte della domanda digitale.",
+      "url": "https://www.reportonline.it/2026/06/09/scienze-e-tecnologie/fibra-ottica-in-italia-copertura-al-77",
+      "tag": "Telco"
+    },
+    {
+      "id": "mediobanca-telco-ricavi-europa-italia-2026",
+      "date": "2026-06-09",
+      "caption": "📊 Mediobanca: telco europee in ripresa timida, ma Italia perde 14 mld dal 2010",
+      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali mostra che nel 1° semestre 2025 i ricavi globali sono cresciuti del 2,9%, con USA (+3,6%) e Asia (+3,2%) davanti all'Europa (+1,1%). L'Italia segna +1,6% ma ha perso 14 miliardi di euro di giro d'affari dal 2010 (CAGR -2,7%). L'EBIT margin italiano e' risalito all'1,8% nel 2024 (era 8,8% nel 2020), contro il 16,5% delle grandi telco EMEA. I player globali piu' avanzati (come KT coreana) stanno evolvendo verso il modello AICT company: KT genera gia' il 40% dei ricavi da attivita' extra-telco e punta a triplicare l'AI/IT entro il 2028.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "cisco-network-supercycle-agentic-ai-2026",
+      "date": "2026-06-09",
+      "caption": "🤖 Cisco: l'AI agentiva innesca un 'Network Supercycle', traffico x3 in 3 anni",
+      "snippet": "Al Cisco Live di Las Vegas, il president Jeetu Patel ha dichiarato che l'ascesa dell'AI agentiva sta innescando un 'Network Supercycle': il traffico di rete legato all'AI e' atteso triplicare nei prossimi tre anni. Gli agenti AI, potenzialmente trilioni di entita' virtuali, richiedono nuove architetture a bassa latenza, sicurezza distribuita e capacita' ottica. Il CEO Chuck Robbins ha aggiunto che Cisco ha usato AI per scansionare 1,8 miliardi di righe di codice in 8 settimane (operazione che avrebbe richiesto 8 anni senza AI). Per gli operatori telecom il messaggio e' chiaro: chi non adegua l'infrastruttura rischia di diventare irrilevante.",
+      "url": "https://www.lightreading.com/ai-machine-learning/cisco-ai-driving-a-network-supercycle-",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "llm-api-attacks-theregister-prompt-exploit-2026",
+      "date": "2026-06-09",
+      "caption": "🔐 LLM e sicurezza API: i modelli cambiano il profilo degli attacchi alle imprese",
+      "snippet": "Secondo un'analisi pubblicata da The Register, l'adozione degli LLM sta trasformando radicalmente il profilo degli attacchi alle API aziendali. Le applicazioni moderne sono API-driven, interconnesse e spesso over-permissioned: terreno fertile per attacchi AI-assisted che sfruttano i modelli linguistici per automatizzare la scoperta di vulnerabilita', generare payload personalizzati e aggirare i controlli tradizionali. Il fenomeno 'From Prompt to Exploit' rappresenta una nuova frontiera della cybersicurezza enterprise, con implicazioni per ogni organizzazione che espone API a sistemi basati su AI.",
+      "url": "https://www.theregister.com/security/",
+      "tag": "Cybersecurity"
+    },
+    {
       "id": "mediobanca-telco-europa-ricavi-2026",
       "date": "2026-06-08",
       "caption": "📉 Telco Europa: ricavi +1,1% ma investimenti 5G in calo",
@@ -268,6 +300,30 @@
       "snippet": "Il Global Tech Ecosystem Index 2026 fotografa una nuova geografia dell'innovazione in cui l'Italia risulta assente tra i protagonisti. L'analisi, pubblicata da Agenda Digitale il 4 giugno 2026, evidenzia come la redistribuzione globale degli ecosistemi tech stia penalizzando i paesi privi di investimenti strutturali in startup, capitale di rischio e infrastrutture digitali. Il divario con hub come USA, Cina, UK e Singapore si allarga ulteriormente.",
       "url": "https://www.agendadigitale.eu/industry-4-0/",
       "tag": "Innovation"
+    },
+    {
+      "id": "fibercop-plenitude-accordo-fibra-10gbps-2026",
+      "date": "2026-06-08",
+      "caption": "🔌 FiberCop apre la rete a Plenitude (ENI): fibra fino a 10 Gbit in tutta Italia",
+      "snippet": "FiberCop e Plenitude (ENI) hanno siglato un accordo strategico per portare la fibra a Banda Ultra Larga ai clienti dell'azienda energetica, con velocita' fino a 10 Gbps su tutto il territorio nazionale. FiberCop mette a disposizione 28 milioni di km di fibra e prevede di collegare oltre 20 milioni di abitazioni entro il 2027 (gia' 15 milioni raggiunte). A fine giugno FiberCop concludera' anche tutti i lavori del Piano Italia 1 Giga (2,3 miliardi di euro PNRR, oltre 1,2 milioni di civici in 10 regioni). L'accordo consolida il modello open-access della rete e punta a servizi di AI, cloud, robotica ed edge computing.",
+      "url": "https://www.teleborsa.it/News/2026/06/08/fibercop-accordo-con-plenitude-per-connettivita-in-fibra-ottica-in-tutta-italia-155.html",
+      "tag": "Telco"
+    },
+    {
+      "id": "ieee-comsoc-agentic-ai-telecom-datacenter-2026",
+      "date": "2026-06-08",
+      "caption": "🌐 IEEE ComSoc: l'AI agentiva ridisegna data center, reti e l'intero ecosistema telecom",
+      "snippet": "Un'analisi IEEE ComSoc di giugno 2026 evidenzia come la rapida ascesa dell'AI agentiva stia per generare cambiamenti materiali nei data center, nelle reti degli operatori e nell'intero ecosistema telecom. Il passaggio da chatbot a agenti digitali autonomi modifica i profili di traffico, aumenta le esigenze di latenza ultra-bassa, sicurezza avanzata e orchestrazione distribuita. La transizione impone agli operatori di ripensare l'architettura di rete non piu' come mera infrastruttura di connettivita', ma come piattaforma per interazioni macchina-macchina su scala massiva.",
+      "url": "https://techblog.comsoc.org/2026/06/",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "no-fibra-disinformazione-digitale-vandalismi-2026",
+      "date": "2026-06-08",
+      "caption": "📢 Nasce il movimento 'No Fibra': disinformazione digitale porta a vandalismi sulle infrastrutture",
+      "snippet": "Sull'onda dei movimenti 'No 5G', in Italia sta emergendo il fenomeno dei 'No Fibra': gruppi sui social che diffondono teorie infondate sui rischi della fibra ottica, con effetti concreti come vandalismi agli impianti, disservizi e crescente sfiducia nella tecnologia. Il fenomeno, documentato da Newsroom24, e' parte di un trend piu' ampio di disinformazione tech che colpisce le infrastrutture digitali critiche del Paese. La fibra FTTH copre ormai il 77% delle famiglie italiane, ma la polarizzazione social frena ulteriormente l'adozione reale.",
+      "url": "https://newsroom24.it/notizia/2026/06/08/arrivano-i-no-fibra-lultima-frontiera-dellignoranza-che-dilaga-sui-social",
+      "tag": "Economia digitale"
     },
     {
       "id": "fibercop-bei-1mld-ftth-2026-06-05",
@@ -390,44 +446,28 @@
       "tag": "Telco"
     },
     {
-      "id": "anthropic-ipo-s1-sec-2026",
-      "date": "2026-06-02",
-      "caption": "🚀 Anthropic presenta S-1 alla SEC: in arrivo la più grande IPO AI",
-      "snippet": "Anthropic ha depositato confidenzialmente il modulo S-1 presso la SEC il 1° giugno 2026, aprendo la strada alla sua IPO — prima ancora di OpenAI e con una valutazione che ha appena superato quella del rivale. Il Wall Street Journal riferisce che la società è prossima al primo trimestre di utile operativo. La quotazione potrebbe essere il primo stress test reale sui conti delle big AI, finora opachi al mercato.",
-      "url": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753",
-      "tag": "AI"
+      "id": "trump-ordine-esecutivo-ai-cybersicurezza-giugno-2026",
+      "date": "2026-06-03",
+      "caption": "🏛️ Trump firma ordine esecutivo su AI e cybersicurezza: versione ridotta rispetto alle bozze",
+      "snippet": "Il presidente Donald Trump ha firmato un ordine esecutivo sull'AI e la cybersicurezza, in forma ridotta rispetto alle bozze circolate nelle settimane precedenti. Il provvedimento pone l'accento sulla sicurezza nazionale delle infrastrutture digitali e sull'adozione dell'AI nelle agenzie federali, in un contesto in cui l'amministrazione ha gia' vietato l'uso di Anthropic e si confronta con la rapida crescita di agenti AI. L'ordine arriva in parallelo a Microsoft Build 2026, dove Redmond ha presentato Project Solara, piattaforma 'agent-first' basata su Android.",
+      "url": "https://www.smartphonology.it/le-notizie-tech-del-3-giugno-2026-trump-firma-un-ordine-sullai-e-la-cybersicurezza-microsoft-presenta-la-sua-nuova-strategia-agentica-a-build",
+      "tag": "Regolazione"
     },
     {
-      "id": "github-copilot-metered-billing-revolt-2026",
-      "date": "2026-06-02",
-      "caption": "💸 GitHub Copilot: fatturazione a consumo scatena rivolta degli sviluppatori",
-      "snippet": "Da giugno 2026 Microsoft ha attivato il billing a uso per GitHub Copilot Pro+: alcuni utenti segnalano di aver bruciato il 16% del credito mensile (7.000 unità) in poche ore. Forum e Reddit si riempiono di minacce di abbandono verso OpenRouter, LM Studio e servizi concorrenti. Il caso evidenzia il rischio di churn nei modelli SaaS AI con pricing a consumo.",
-      "url": "https://www.theregister.com/ai-and-ml/2026/06/02/github-copilot-users-threaten-exit-as-metered-billing-kicks-in/5249826",
-      "tag": "New Business"
+      "id": "anthropic-ipo-sec-filing-confidential-giugno-2026",
+      "date": "2026-06-01",
+      "caption": "💰 Anthropic deposita in via confidenziale il prospetto IPO alla SEC: valutazione $965 miliardi",
+      "snippet": "Anthropic ha depositato in via confidenziale il suo prospetto IPO alla SEC, potenzialmente l'operazione di borsa piu' rilevante del settore AI. La societa', co-fondata da ex ricercatori di OpenAI, e' stata valutata $965 miliardi nell'ultimo round da $65 miliardi (maggio 2026). Anthropic paga $1,25 miliardi al mese a SpaceX per capacita' di calcolo nel data center Colossus 1 di Memphis. L'IPO arriva mentre la societa' e' in lite legale con l'amministrazione Trump (che ha vietato l'uso alle agenzie federali) e mentre il suo modello Claude ha scalato al primo posto su Apple App Store USA.",
+      "url": "https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html",
+      "tag": "Market Disruption"
     },
     {
-      "id": "shai-hulud-malware-redhat-npm-supply-chain-2026",
-      "date": "2026-06-02",
-      "caption": "🦠 Supply chain attack: malware Shai-Hulud infetta pacchetti npm Red Hat",
-      "snippet": "Ricercatori Wiz hanno individuato 32 versioni di pacchetti npm Red Hat Cloud Services infettate dal worm Mini Shai-Hulud, scaricati ~80.000 volte a settimana. Il malware — variante del toolkit TeamPCP reso open source — ruba credenziali GCP e Azure e genera payload crittografati unici per ogni infezione, rendendo inutili i classici IoC basati su hash. Wiz classifica la minaccia come 'live'.",
-      "url": "https://www.theregister.com/security/2026/06/01/shai-hulud-malware-infects-red-hat-npm-packages-downloaded-80k-times-weekly/5249803",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "telco-italia-ricavi-mediobanca-2026",
-      "date": "2026-06-02",
-      "caption": "📉 Telco italiane: ricavi +1,6% ma EBIT margin crolla all'1,8%",
-      "snippet": "L'indagine annuale Area Studi Mediobanca sulle 34 maggiori telco mondiali fotografa un settore italiano in chiaroscuro: ricavi in leggera ripresa (+1,6% nel 1° semestre 2025) ma reddività operativa ai minimi storici — EBIT margin all'1,8% contro 16,5% delle grandi telco EMEA. Gli investimenti in 5G e fibra scendono dello 0,4% in Europa, con l'Italia che ha perso 14 miliardi di ricavi dal 2010.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "mobilita-connessa-italia-3-7-miliardi-polimi-2026",
-      "date": "2026-06-02",
-      "caption": "🚗 Mobilità connessa a +14%: vale 3,7 mld in Italia, 18,8M auto smart",
-      "snippet": "L'Osservatorio Connected Vehicle del Politecnico di Milano certifica che il mercato italiano della mobilità connessa ha raggiunto 3,7 miliardi di euro (+14% YoY), con 18,8 milioni di veicoli connessi in circolazione (oltre il 40% del parco auto). Il 61% dei comuni italiani ha avviato progetti di smart mobility negli ultimi 3 anni. La guida autonoma potrebbe eliminare 900.000 auto private e 41.000 feriti entro il 2050, con un costo sociale evitato di 5,9 miliardi.",
-      "url": "https://www.corrierecomunicazioni.it/digital-economy/mobilita-connessa-a-14-traino-da-servizi-e-smart-road-connettivita-chiave-del-fleet-management/",
-      "tag": "Innovation"
+      "id": "spacex-ipo-prospectus-tam-28-trilioni-2026",
+      "date": "2026-05-20",
+      "caption": "🚀 SpaceX in Borsa: mercato indirizzabile da 28,5 trilioni di dollari, Starlink da $870 mld",
+      "snippet": "SpaceX ha presentato il suo prospetto IPO ufficiale, indicando un mercato indirizzabile totale di 28,5 trilioni di dollari: 870 miliardi per Starlink broadband, 740 miliardi per Starlink mobile, 2,4 trilioni per AI infrastructure e 22,7 trilioni per enterprise applications. La societa' sta sviluppando Macrohard, un agente AI per emulare lavoro digitale e creare un'azienda software gestita da AI, in collaborazione con Tesla. Il roadshow IPO era in corso a fine maggio 2026, con quotazione attesa nella settimana successiva.",
+      "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+      "tag": "Space Economy"
     }
   ]
 }
