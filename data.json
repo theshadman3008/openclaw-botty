@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-10T08:05:59+02:00",
+  "last_updated": "2026-06-10T11:47:46+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 45
+    "news": 53
   },
   "conversations": [
     {
@@ -109,6 +109,86 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "openai-ipo-confidential-s1-trillion-2026",
+      "date": "2026-06-10",
+      "caption": "🚀 OpenAI deposita l'S-1 confidenziale: IPO fino a $1 trilione di valutazione",
+      "snippet": "OpenAI ha depositato in via confidenziale il modulo S-1 presso la SEC l'8 giugno 2026, avviando l'iter per quella che potrebbe diventare la più grande IPO tecnologica della storia, con una valutazione target fino a $1 trilione. L'operazione segue di una settimana il deposito di Anthropic (1° giugno, valutazione $965 miliardi) e precede di due giorni il debutto in borsa di SpaceX su Nasdaq (12 giugno, $1,77 trilioni). OpenAI ha raccolto $122 miliardi in round privati solo a marzo 2026 e registra oggi un revenue run rate di $2 miliardi mensili. L'IPO potrebbe avvenire già a settembre 2026. La settimana segna l'inizio di una corsa alle quotazioni senza precedenti nel settore AI.",
+      "url": "https://www.wired.com/story/openai-confidentially-files-for-ipo/",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "anthropic-claude-fable5-mythos-public-launch-2026",
+      "date": "2026-06-10",
+      "caption": "🤖 Anthropic lancia Claude Fable 5: il modello Mythos-class ora accessibile al pubblico",
+      "snippet": "Il 9 giugno 2026 Anthropic ha reso disponibile al pubblico Claude Fable 5, prima versione pubblica del suo modello Mythos-class, con capacità superiori in software engineering, knowledge work e vision. Il modello integra guardrail che bloccano risposte in aree ad alto rischio (cybersecurity, biologia, chimica). Il prezzo è $10 per milione di token in input e $50 per milione in output, il doppio di Opus 4.8. L'accesso via subscription sarà graduale: fino al 22 giugno solo per Claude Max e Team; successivamente per gli altri tier. Contestualmente Anthropic ha lanciato Claude Mythos 5 in accesso ristretto trusted per infrastrutture critiche in 15 paesi.",
+      "url": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "tim-cyber-security-report-ransomware-42-2026",
+      "date": "2026-06-10",
+      "caption": "🔐 TIM Cyber Security Report 2026: ransomware +42% nel mondo, +14% in Italia",
+      "snippet": "Il 9 giugno 2026, presentato alla Camera dei Deputati il secondo Cyber Security Report di TIM e Cyber Security Foundation: nel 2025 gli attacchi ransomware globali hanno superato 7.400 rivendicazioni (+42% sul 2024). In Italia i casi sono stati 166 (+14%), con la Lombardia che concentra oltre il 30% del totale nazionale. L'intelligenza artificiale accelera velocità e scala degli attacchi, riducendo drasticamente i tempi tra scoperta di una vulnerabilità e sfruttamento. Il rapporto, presentato con la partecipazione dell'ACN (Agenzia per la Cybersicurezza Nazionale), sottolinea come la cybersecurity sia diventata priorità strategica di sicurezza nazionale.",
+      "url": "https://www.firstonline.info/cybersecurity-report-tim-ransomware-42-ai-e-geopolitica-alzano-il-rischio-cyber/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "microsoft-patch-tuesday-record-206-cve-june2026",
+      "date": "2026-06-10",
+      "caption": "🛡️ Microsoft Patch Tuesday record: 206 CVE in un mese, AI accelera le vulnerabilità",
+      "snippet": "Il 9 giugno 2026, Microsoft ha rilasciato il Patch Tuesday più grande della sua storia: 206 vulnerabilità risolte, di cui 39 critiche e 56 RCE (Remote Code Execution). Tre zero-day attivamente sfruttati includono CVE-2026-41091 (Microsoft Defender) e CVE-2026-11645 (Chrome). La CISA ha aggiunto SolarWinds Serv-U (CVE-2026-28318) alla lista KEV con scadenza federale. Esperti di Tenable e Trend Micro attribuiscono il record all'AI-assisted vulnerability discovery: 'il numero di CVE del 2026 supera già l'intero 2018'. Il ransomware Nightspire e Qilin hanno rivendicato nuove vittime nella stessa finestra temporale.",
+      "url": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "spacex-ipo-nasdaq-177-trillion-june2026",
+      "date": "2026-06-10",
+      "caption": "🛸 SpaceX debutta su Nasdaq il 12 giugno: la più grande IPO della storia a $1,77 trilioni",
+      "snippet": "SpaceX è pronta al debutto su Nasdaq il 12 giugno 2026 sotto il ticker SPCX, al prezzo di $135 per azione per una raccolta di circa $75 miliardi e una valutazione di $1,77 trilioni — la più grande IPO nella storia dei mercati, superando Saudi Aramco 2019. Collegata all'IPO, c'è un'opzione da $60 miliardi per acquisire Cursor, il leader nell'AI coding. Nel 2025 SpaceX ha registrato una perdita di $4,94 miliardi, ma genera ricavi crescenti da Starlink (200+ milioni di utenti stimati nel 2026). La quotazione catalizza l'onda di IPO tech AI del 2026 con Anthropic e OpenAI in coda.",
+      "url": "https://faq.com.tw/en/startups/2026-06-07-spacex-ipo-nasdaq-spcx-history-en/",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "eu-ai-act-enforcement-august-2026-7percent",
+      "date": "2026-06-10",
+      "caption": "⚖️ EU AI Act: enforcement completo il 2 agosto 2026, multe fino al 7% del fatturato",
+      "snippet": "Il 2 agosto 2026 entrerà in vigore l'enforcement completo dell'EU AI Act, la prima regolamentazione vincolante globale sull'intelligenza artificiale. Per i sistemi AI ad alto rischio (biometria, infrastrutture critiche, occupazione, servizi essenziali) scatteranno obblighi stringenti con sanzioni fino a €35 milioni o il 7% del fatturato globale annuo — più severe del GDPR. L'EU AI Office acquisirà pieni poteri sanzionatori sui General Purpose AI (GPAI) con fines fino a €15 milioni o il 3% del turnover. Le aziende non-UE sono ugualmente soggette se operano nel mercato europeo. Mancano meno di 60 giorni alla scadenza.",
+      "url": "https://informedclearly.com/en/ai/54690/eu-ai-act-enforcement-august-2026",
+      "tag": "Regolazione"
+    },
+    {
+      "id": "proximus-5g-slicing-belgium-red-devils-2026",
+      "date": "2026-06-10",
+      "caption": "📡 Prima belga: Proximus attiva 3 slice 5G simultanee allo stadio per medici, media e pagamenti",
+      "snippet": "In occasione dell'ultima amichevole dei Red Devils prima dei Mondiali (Belgio-Tunisia, vinta 5-0), Proximus ha attivato per la prima volta in Belgio tre slice 5G simultanee al King Baudouin Stadium di Bruxelles: uno slice mission-critical per l'assistenza medica (collegamento UZ Brussels), uno broadcasting per DPG Media, uno event-critical per i pagamenti mobili. La rete si basa sulla 5G Standalone di Proximus con core 5G completamente indipendente. L'esperimento dimostra la maturità commerciale del network slicing in contesti con alta densità di traffico, ponendo le basi per deployment enterprise su larga scala.",
+      "url": "https://www.proximus.com/news/2026/202606-proximus-5g-slicing-red-devils-match.html",
+      "tag": "Telco"
+    },
+    {
+      "id": "eutelsat-voimatel-leo-finland-lightreading-2026",
+      "date": "2026-06-10",
+      "caption": "🛰️ Eutelsat-Voimatel: accordo LEO per connettività satellitare in Finlandia e Artide",
+      "snippet": "Eutelsat ha siglato un accordo strategico con Voimatel, operatore finlandese di reti fisse e wireless, per integrare i servizi LEO del satellite europeo nelle infrastrutture critiche della Finlandia, incluse le regioni artiche a copertura terrestre limitata. Voimatel combinerà connettività satellitare e terrestre per clienti enterprise e pubblica amministrazione. In parallelo, Finnair è in trattative con Starlink e Amazon Leo per il Wi-Fi in volo (Bloomberg). L'UE ha segnalato che i bandi S-band potrebbero sfavorire Starlink a vantaggio di operatori europei come Eutelsat, nel quadro della sovranità tecnologica.",
+      "url": "https://www.lightreading.com/satellite/eurobites-voimatel-hooks-up-with-eutelsat-to-reach-high-north",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "ericsson-epiroc-private5g-mining-alliance-2026",
+      "date": "2026-06-10",
+      "caption": "⛏️ Ericsson ed Epiroc espandono l'alleanza: 5G privato per l'automazione mineraria globale",
+      "snippet": "Ericsson ed Epiroc (leader globale in attrezzature minerarie) hanno annunciato il 9 giugno 2026 l'espansione della loro alleanza strategica, avviata nel 2018: Epiroc integrerà le soluzioni LTE e 5G Private di Ericsson nel proprio portfolio digitale per miniere di superficie e sotterranee a livello globale. I sensori su ogni macchina (temperatura motore, pressione idraulica, usura bit) streameranno dati in real-time per predictive maintenance e remote control. L'accordo accelera l'automazione industriale nelle mining operations, consolidando il 5G come infrastruttura critica per l'industria estrattiva.",
+      "url": "https://www.telecoms.com/5g-6g/ericsson-and-epiroc-team-up-for-mining-push",
+      "tag": "Business/Digital Transformation"
+    },
+    {
+      "id": "wef-technology-pioneers-2026-ai-infrastructure-100startups",
+      "date": "2026-06-10",
+      "caption": "🌐 WEF Technology Pioneers 2026: 100 startup costruiscono l'infrastruttura per l'AI autonoma",
+      "snippet": "Il 10 giugno 2026, il World Economic Forum ha annunciato i 100 Technology Pioneers 2026, selezionati tra 23 paesi: il tratto comune è la costruzione di infrastrutture software e fisiche per sistemi AI autonomi scalabili. Le aree chiave includono AI, quantum computing, biotecnologia, clima, space ed advanced manufacturing. Record di 9 aziende dall'India e forte presenza dalla Corea. La coorte sarà protagonista dell'Annual Meeting of the New Champions 2026. Il WEF segnala come la creazione di infrastruttura AI sia diventata il principale driver di innovazione globale, con capitale concentrato su layer infrastrutturali piuttosto che su applicazioni.",
+      "url": "https://www.weforum.org/press/2026/06/new-technology-pioneers-are-building-the-infrastructure-for-the-next-era-of-ai-96a8d3e248/",
+      "tag": "AI/LLM"
+    },
     {
       "id": "infratel-pnrr-target-giugno-2026",
       "date": "2026-06-09",
@@ -452,22 +532,6 @@
       "snippet": "Il presidente Donald Trump ha firmato un ordine esecutivo sull'AI e la cybersicurezza, in forma ridotta rispetto alle bozze circolate nelle settimane precedenti. Il provvedimento pone l'accento sulla sicurezza nazionale delle infrastrutture digitali e sull'adozione dell'AI nelle agenzie federali, in un contesto in cui l'amministrazione ha gia' vietato l'uso di Anthropic e si confronta con la rapida crescita di agenti AI. L'ordine arriva in parallelo a Microsoft Build 2026, dove Redmond ha presentato Project Solara, piattaforma 'agent-first' basata su Android.",
       "url": "https://www.smartphonology.it/le-notizie-tech-del-3-giugno-2026-trump-firma-un-ordine-sullai-e-la-cybersicurezza-microsoft-presenta-la-sua-nuova-strategia-agentica-a-build",
       "tag": "Regolazione"
-    },
-    {
-      "id": "anthropic-ipo-sec-filing-confidential-giugno-2026",
-      "date": "2026-06-01",
-      "caption": "💰 Anthropic deposita in via confidenziale il prospetto IPO alla SEC: valutazione $965 miliardi",
-      "snippet": "Anthropic ha depositato in via confidenziale il suo prospetto IPO alla SEC, potenzialmente l'operazione di borsa piu' rilevante del settore AI. La societa', co-fondata da ex ricercatori di OpenAI, e' stata valutata $965 miliardi nell'ultimo round da $65 miliardi (maggio 2026). Anthropic paga $1,25 miliardi al mese a SpaceX per capacita' di calcolo nel data center Colossus 1 di Memphis. L'IPO arriva mentre la societa' e' in lite legale con l'amministrazione Trump (che ha vietato l'uso alle agenzie federali) e mentre il suo modello Claude ha scalato al primo posto su Apple App Store USA.",
-      "url": "https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html",
-      "tag": "Market Disruption"
-    },
-    {
-      "id": "spacex-ipo-prospectus-tam-28-trilioni-2026",
-      "date": "2026-05-20",
-      "caption": "🚀 SpaceX in Borsa: mercato indirizzabile da 28,5 trilioni di dollari, Starlink da $870 mld",
-      "snippet": "SpaceX ha presentato il suo prospetto IPO ufficiale, indicando un mercato indirizzabile totale di 28,5 trilioni di dollari: 870 miliardi per Starlink broadband, 740 miliardi per Starlink mobile, 2,4 trilioni per AI infrastructure e 22,7 trilioni per enterprise applications. La societa' sta sviluppando Macrohard, un agente AI per emulare lavoro digitale e creare un'azienda software gestita da AI, in collaborazione con Tesla. Il roadshow IPO era in corso a fine maggio 2026, con quotazione attesa nella settimana successiva.",
-      "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
-      "tag": "Space Economy"
     }
   ]
 }
