@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-10T11:47:46+02:00",
+  "last_updated": "2026-06-11T08:04:57+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 53
+    "news": 57
   },
   "conversations": [
     {
@@ -110,6 +110,30 @@
   "scheduled_tasks": [],
   "rassegna": [
     {
+      "id": "openai-anthropic-ipo-filing-june-2026",
+      "date": "2026-06-11",
+      "caption": "🏦 OpenAI e Anthropic depositano entrambe l'S-1 per l'IPO: corsa a Wall Street dell'AI",
+      "snippet": "OpenAI ha depositato in via riservata la documentazione S-1 presso la SEC l'8 giugno, pochi giorni dopo Anthropic (1° giugno). La valutazione target di OpenAI supera gli 850 miliardi di dollari, con ambizioni fino a 1 trilione secondo Reuters. SpaceX — che ha già assorbito xAI di Musk — punta a quotarsi a 1,75 trilioni, la più grande IPO della storia. Il CFO di OpenAI Sarah Friar ha dichiarato che il debutto potrebbe avvenire nel Q4 2026 ma 'non ci sono date definitive'. La settimana del 8-12 giugno 2026 segna di fatto la prima ondata di quotazioni del settore AI puro su mercati pubblici, dopo anni di capitali privati che hanno gonfiato le valutazioni.",
+      "url": "https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "anthropic-claude-fable5-mythos-june-2026",
+      "date": "2026-06-11",
+      "caption": "🤖 Anthropic lancia Claude Fable 5: il primo modello Mythos aperto al pubblico",
+      "snippet": "Anthropic ha rilasciato Claude Fable 5, il primo modello della classe Mythos accessibile commercialmente. Supera tutti i benchmark precedenti su ingegneria del software, ricerca scientifica e visione. Le capacità sono così avanzate da richiedere safeguard integrati: le query su cybersecurity vengono reindirizzate a Claude Opus 4.8 (<5% dei casi). Stripe ha dichiarato che Fable 5 ha compresso mesi di engineering in giorni. Il modello ha 26 miliardi di parametri (3,8B attivi in inferenza), costo API $10/M token input e $50/M output. Contestualmente Anthropic ha depositato l'S-1 per l'IPO la stessa settimana, facendo della nuova release il biglietto da visita verso Wall Street.",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "italia-frequenze-tlc-5g-standalone-butti-saccone-2026",
+      "date": "2026-06-11",
+      "caption": "📡 Frequenze TLC: Butti punta al 5G standalone come leva industriale, Saccone (CGIL) concorda",
+      "snippet": "Il sottosegretario Alessio Butti ha dichiarato al Consiglio UE Telecomunicazioni che le aste per lo spettro radio devono diventare leve di politica industriale, accompagnando la trasformazione delle telco da fornitori di connettività a piattaforme digitali con edge computing e cloud distribuito. Il segretario SLC-CGIL Riccardo Saccone ha espresso convergenza ma ha chiesto che il cambio di paradigma sia accompagnato da investimenti infrastrutturali e programmi di upskilling per i lavoratori. L'evento 'Telco per l'Italia – Da TelCo a TechCo' si è tenuto a Roma l'11 giugno 2026, organizzato da CorCom e Nextwork360.",
+      "url": "https://www.corrierecomunicazioni.it/telco/frequenze-tlc-saccone-a-butti-siano-una-leva-per-investimenti-e-competenze/",
+      "tag": "Telco"
+    },
+    {
       "id": "openai-ipo-confidential-s1-trillion-2026",
       "date": "2026-06-10",
       "caption": "🚀 OpenAI deposita l'S-1 confidenziale: IPO fino a $1 trilione di valutazione",
@@ -188,6 +212,22 @@
       "snippet": "Il 10 giugno 2026, il World Economic Forum ha annunciato i 100 Technology Pioneers 2026, selezionati tra 23 paesi: il tratto comune è la costruzione di infrastrutture software e fisiche per sistemi AI autonomi scalabili. Le aree chiave includono AI, quantum computing, biotecnologia, clima, space ed advanced manufacturing. Record di 9 aziende dall'India e forte presenza dalla Corea. La coorte sarà protagonista dell'Annual Meeting of the New Champions 2026. Il WEF segnala come la creazione di infrastruttura AI sia diventata il principale driver di innovazione globale, con capitale concentrato su layer infrastrutturali piuttosto che su applicazioni.",
       "url": "https://www.weforum.org/press/2026/06/new-technology-pioneers-are-building-the-infrastructure-for-the-next-era-of-ai-96a8d3e248/",
       "tag": "AI/LLM"
+    },
+    {
+      "id": "google-diffusiongemma-4x-speed-june-2026",
+      "date": "2026-06-10",
+      "caption": "⚡ Google lancia DiffusionGemma: inferenza AI 4x più veloce con architettura diffusion",
+      "snippet": "Google DeepMind ha rilasciato DiffusionGemma, un modello open della famiglia Gemma 4 con architettura diffusion (non autoregressive). Genera 256 token in parallelo invece che uno alla volta, raggiungendo 700 token/sec su RTX 5090 e 1.000+ token/sec su H100 — circa 4 volte la velocità dei modelli Gemma autogressivi equivalenti. Il modello MoE ha 26B parametri totali (3,8B attivi), fitting in 18GB di VRAM. Eccelle in task non lineari come editing in-line, sequenziamento molecolare e problem-solving matematico (es. Sudoku). Il codice è open source su GitHub.",
+      "url": "https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model-comes-with-a-4x-speed-boost/",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "vodafonethree-workforce-cut-ericsson-nokia-2026",
+      "date": "2026-06-10",
+      "caption": "📉 VodafoneThree: -12% del personale post-merger, reti affidate a Ericsson e Nokia",
+      "snippet": "L'annual report Vodafone pubblicato a giugno 2026 rivela che VodafoneThree (merger completato 12 mesi fa) ha già ridotto il personale del 12% rispetto alla base combinata pre-fusione: da circa 14.132 dipendenti totali a circa 12.400. La scelta operativa ha penalizzato Open RAN: il CEO Margherita Della Valle ha scelto Ericsson e Nokia per 'velocità e volumi di delivery'. Il CNO Andrea Dona ha dichiarato di aver 'rimosso interi dipartimenti'. I tagli si concentrano su ruoli duplicati in head office, senza (per ora) impatti retail.",
+      "url": "https://www.lightreading.com/5g/vodafonethree-shrank-workforce-as-it-leaned-into-ericsson-and-nokia",
+      "tag": "Telco"
     },
     {
       "id": "infratel-pnrr-target-giugno-2026",
@@ -342,6 +382,38 @@
       "tag": "Cybersecurity"
     },
     {
+      "id": "tim-cyber-security-report-2026-ransomware",
+      "date": "2026-06-09",
+      "caption": "🔐 TIM-CSF: ransomware +42% globale nel 2025, Italia +14%. Presentato alla Camera",
+      "snippet": "Il 9 giugno 2026 TIM e Cyber Security Foundation hanno presentato alla Camera dei Deputati il Cyber Security Report 2026 (dati 2025). I ransomware hanno superato le 7.400 rivendicazioni globali (+42% sul 2024); in Italia i casi sono stati 166 (+14%), con oltre il 30% concentrati in Lombardia. Il direttore ACN Gianluca Galasso ha dichiarato che 'l'AI sta riducendo drasticamente il tempo tra scoperta di una vulnerabilità e il suo sfruttamento'. La cybersecurity non è più un rischio episodico ma una 'variabile permanente per sicurezza nazionale e competitività'.",
+      "url": "https://www.corrierecomunicazioni.it/cyber-security/cybersecurity-ai-e-geopolitica-spingono-il-ransomware-42-in-tutto-il-mondo/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "five-eyes-cina-linkedin-spie-2026",
+      "date": "2026-06-09",
+      "caption": "🕵️ Five Eyes: la Cina recluta spie su LinkedIn. Primo bollettino congiunto in 80 anni",
+      "snippet": "Il 3 giugno 2026 FBI, MI5, ASIO, CSIS e NZSIS (Five Eyes) hanno pubblicato congiuntamente il bollettino 'Safeguarding Our Secrets': la prima volta in quasi 80 anni di storia dell'alleanza che tutte e cinque le agenzie firmano un documento pubblico su una singola minaccia. L'intelligence militare cinese (PLA) usa LinkedIn come vettore HUMINT scalabile per reclutare target nelle organizzazioni difesa, tech e pubblica amministrazione dei paesi occidentali. Il bollettino descrive tecniche di social engineering, falsi recruiter e approcci a basso costo/alta copertura geografica.",
+      "url": "https://www.agendadigitale.eu/sicurezza/five-eyes-cosi-la-cina-recluta-spie-su-linkedin-le-tecniche-e-come-tutelarsi/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "eu-ai-act-omnibus-high-risk-delay-2026",
+      "date": "2026-06-09",
+      "caption": "⚖️ AI Act Omnibus UE: rinviati al 2027-28 gli obblighi per i sistemi ad alto rischio",
+      "snippet": "Il 7 maggio 2026, dopo una sessione di trilogi di 9 ore, Consiglio UE e Parlamento europeo hanno raggiunto un accordo provvisorio sull'Omnibus VII Digital: gli obblighi per i sistemi AI ad alto rischio — previsti per agosto 2026 — vengono posticipati al 2027-2028. L'accordo introduce anche nuove regole di watermarking per i contenuti generativi e vieta esplicitamente la generazione di immagini CSAM con AI. La struttura core dell'AI Act rimane invariata. L'adozione formale è attesa prima del 2 agosto 2026.",
+      "url": "https://www.hoganlovells.com/en/publications/eu-legislators-agree-to-delay-for-highrisk-ai-rules",
+      "tag": "Regolazione"
+    },
+    {
+      "id": "telco-mediobanca-europa-ricavi-investimenti-5g-2026",
+      "date": "2026-06-09",
+      "caption": "📊 Mediobanca: telco europee +1,1% ricavi ma investimenti 5G in calo. Italia EBIT all'1,8%",
+      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali (dati H1 2025) mostra una ripresa modesta in Europa (+1,1%) contro USA (+3,6%) e Asia (+3,2%). La Germania guida l'Europa con 58,4 miliardi (+3,7%), l'Italia si piazza quinta con un EBIT margin risalito all'1,8% (era l'8,8% nel 2020), lontano dal 16,5% EMEA. Gli investimenti europei nelle reti sono calati dello 0,4%. Il modello AICT emerge come strategia obbligata: KT Korea già genera il 40% dei ricavi da attività extra-telco e punta a triplicare il contributo AI/IT entro il 2028.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
       "id": "mediobanca-telco-europa-ricavi-2026",
       "date": "2026-06-08",
       "caption": "📉 Telco Europa: ricavi +1,1% ma investimenti 5G in calo",
@@ -404,6 +476,14 @@
       "snippet": "Sull'onda dei movimenti 'No 5G', in Italia sta emergendo il fenomeno dei 'No Fibra': gruppi sui social che diffondono teorie infondate sui rischi della fibra ottica, con effetti concreti come vandalismi agli impianti, disservizi e crescente sfiducia nella tecnologia. Il fenomeno, documentato da Newsroom24, e' parte di un trend piu' ampio di disinformazione tech che colpisce le infrastrutture digitali critiche del Paese. La fibra FTTH copre ormai il 77% delle famiglie italiane, ma la polarizzazione social frena ulteriormente l'adozione reale.",
       "url": "https://newsroom24.it/notizia/2026/06/08/arrivano-i-no-fibra-lultima-frontiera-dellignoranza-che-dilaga-sui-social",
       "tag": "Economia digitale"
+    },
+    {
+      "id": "apple-wwdc-2026-ios27-siri-ai-gemini",
+      "date": "2026-06-08",
+      "caption": "🍎 WWDC 2026: Apple lancia iOS 27 con Siri AI potenziata da Google Gemini",
+      "snippet": "All'ultima WWDC guidata da Tim Cook come CEO (8-12 giugno, Apple Park), Apple ha annunciato iOS 27, macOS Golden Gate, watchOS 27 e visionOS 27. Il centro di tutto è Siri AI, costruita su Apple Foundation Models con integrazione del modello Gemini di Google per le richieste più complesse via Private Cloud Compute. L'elaborazione avviene on-device per le funzioni core; i task avanzati passano per server Google. Craig Federighi ha indicato i tre assi: miglioramenti piattaforma, trust & safety, Apple Intelligence. Il rilascio pubblico è atteso a settembre con iPhone 18.",
+      "url": "https://www.wired.it/article/wwdc-2026-ios-27-nuovo-siri-annunci-conferenza-sviluppatori-apple/",
+      "tag": "AI/LLM"
     },
     {
       "id": "fibercop-bei-1mld-ftth-2026-06-05",
@@ -484,54 +564,6 @@
       "snippet": "Trump ha firmato un Executive Order che istituisce test di sicurezza obbligatori (volontari nella sostanza) per i modelli AI frontier. Gli esperti segnalano un problema strutturale: i tagli operati da DOGE hanno ridotto drasticamente i team governativi di cybersecurity in grado di valutare i modelli. Senza trasparenza dei lab e capacità tecnica pubblica, il rischio è che il processo diventi una validazione formale più che un filtro reale.",
       "url": "https://arstechnica.com/tech-policy/2026/06/trumps-ai-executive-order-may-not-prevent-dangerous-deployments/",
       "tag": "AI"
-    },
-    {
-      "id": "digital-networks-act-rame-fibra-illegittimo-2026",
-      "date": "2026-06-03",
-      "caption": "📡 Digital Networks Act: switch-off rame rischia illegittimità UE",
-      "snippet": "Connect Europe ha commissionato un parere legale al prof. Mastroianni (Federico II / ex giudice UE) sul Digital Networks Act: l'obbligo di passaggio dal rame alla fibra fino a casa potrebbe violare il diritto primario europeo. Il documento, diffuso il 1° giugno, apre un fronte giuridico inedito che potrebbe rallentare i piani di migrazione FTTH in tutta Europa e complicare la roadmap del Gigabit Infrastructure Act.",
-      "url": "https://www.corrierecomunicazioni.it/whitepaper/telco-whitepaper/switch-off-del-rame-connect-europe-il-digital-networks-act-rischia-di-essere-illegittimo/",
-      "tag": "Telco"
-    },
-    {
-      "id": "telco-mediobanca-ricavi-ripresa-italia-5g-2026",
-      "date": "2026-06-03",
-      "caption": "📊 Telco: ricavi mondiali +2,9%, Italia perde terreno su 5G e fibra",
-      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali mostra ricavi globali +2,9% nel primo semestre 2025, con Usa (+3,6%) e Asia che guidano. Gli operatori italiani crescono solo dell'1,6% e hanno perso 14 miliardi di euro di giro d'affari dal 2010. L'ebit margin italiano è all'1,8% contro il 16,5% delle big EMEA: la transizione verso modelli AICT company è la sola via d'uscita.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "panetta-bankitalia-ai-produttivita-italia-2026",
-      "date": "2026-06-03",
-      "caption": "🏦 Panetta (Banca d'Italia): AI leva decisiva per la produttività",
-      "snippet": "Nelle Considerazioni Finali 2026, Fabio Panetta ha indicato l'AI come 'terreno decisivo' per non restare schiacciati tra Usa e Cina. L'invecchiamento demografico rende indispensabile aumentare il contributo di ogni lavoratore con l'IA; Panetta avverte che i benefici rischiano di concentrarsi su chi ha competenze elevate, accentuando le disuguaglianze, e chiede investimenti pubblici in formazione.",
-      "url": "https://www.corriere.it/economia/finanza/26_maggio_29/panetta-ai-leva-decisiva-per-la-produttivita-italiana-intervento-pubblico-decisivo-8b15d411-53f7-4cdf-8355-875835cf4xlk.shtml",
-      "tag": "Economy"
-    },
-    {
-      "id": "palantir-uk-unacceptable-weakness-government-2026",
-      "date": "2026-06-03",
-      "caption": "🔒 UK: la dipendenza da Palantir è debolezza inaccettabile del governo",
-      "snippet": "Un comitato parlamentare britannico ha bollato la crescente dipendenza del governo UK da Palantir come 'an unacceptable point of weakness'. Il report punta il dito sulla concentrazione di dati critici (NHS incluso) in mano a un singolo vendor americano, aprendo il dibattito sulla sovranità digitale e sulla necessità di strategie multi-fornitore per i governi europei.",
-      "url": "https://www.wired.com/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "ai-triplica-capacita-rete-cisco-live-2026",
-      "date": "2026-06-03",
-      "caption": "📶 AI triplicherà la domanda di rete in 3 anni: opportunità per le telco",
-      "snippet": "Al Cisco Live 2026 executive di operatori e vendor hanno quantificato l'impatto dell'AI sulle infrastrutture: la domanda di capacità di rete triplicerà almeno nei prossimi tre anni. Per le telco si apre una finestra di revenue oltre la connettività di base verso servizi gestiti e edge computing, ma la pressione sui capitali per upgradare le reti sarà enorme.",
-      "url": "https://www.fierce-network.com/",
-      "tag": "Telco"
-    },
-    {
-      "id": "trump-ordine-esecutivo-ai-cybersicurezza-giugno-2026",
-      "date": "2026-06-03",
-      "caption": "🏛️ Trump firma ordine esecutivo su AI e cybersicurezza: versione ridotta rispetto alle bozze",
-      "snippet": "Il presidente Donald Trump ha firmato un ordine esecutivo sull'AI e la cybersicurezza, in forma ridotta rispetto alle bozze circolate nelle settimane precedenti. Il provvedimento pone l'accento sulla sicurezza nazionale delle infrastrutture digitali e sull'adozione dell'AI nelle agenzie federali, in un contesto in cui l'amministrazione ha gia' vietato l'uso di Anthropic e si confronta con la rapida crescita di agenti AI. L'ordine arriva in parallelo a Microsoft Build 2026, dove Redmond ha presentato Project Solara, piattaforma 'agent-first' basata su Android.",
-      "url": "https://www.smartphonology.it/le-notizie-tech-del-3-giugno-2026-trump-firma-un-ordine-sullai-e-la-cybersicurezza-microsoft-presenta-la-sua-nuova-strategia-agentica-a-build",
-      "tag": "Regolazione"
     }
   ]
 }
