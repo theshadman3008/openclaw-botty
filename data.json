@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T08:04:57+02:00",
+  "last_updated": "2026-06-14T08:05:06+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
@@ -109,6 +109,86 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "spacex-ipo-nasdaq-75mld-record-2026",
+      "date": "2026-06-14",
+      "caption": "🚀 SpaceX debutta al Nasdaq con l'IPO più grande della storia: 75 miliardi, capitalizzazione 2.100 miliardi",
+      "snippet": "Il 12 giugno SpaceX ha completato la quotazione al Nasdaq (simbolo SPCX) con un prezzo IPO di 135 dollari per azione, apertura a 150 e chiusura a 161 dollari (+19,22%). Raccolta di 75 miliardi di dollari, capitalizzazione finale di circa 2.100 miliardi, la più grande IPO della storia dei mercati finanziari. Il 2025 si è chiuso con ricavi di 18,7 miliardi ma perdita netta di 4,9 miliardi (spese in AI, Starship, data center). Musk mantiene oltre l'80% dei voti grazie al meccanismo dual-class. SpaceX ha acquisito xAI all'inizio dell'anno, integrando Starlink, Starship e il segmento AI in un'unica infrastruttura hardware/software.",
+      "url": "https://www.wired.it/article/spacex-wall-street-debutto-nasdaq/",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "italia-decreti-attuativi-ia-legge132-2026",
+      "date": "2026-06-14",
+      "caption": "🏛️ Italia prima nazione con normativa organica sull'IA: approvati i decreti attuativi della legge 132",
+      "snippet": "Il Consiglio dei Ministri italiano ha approvato i decreti attuativi della legge 132/2025 sull'intelligenza artificiale, rendendo l'Italia 'la prima nazione a dotarsi di una normativa nazionale organica in materia' (Mantovano). I decreti introducono responsabilità civile per danni da IA, istituiscono una governance ACN-AGID con supervisione di Bankitalia, Consob, Ivass e Garante Privacy. Stanziato 1 miliardo di euro complessivo. Previsto il reato di deepfake (art. 26) e 300 milioni per la formazione AI nella scuola. I testi passeranno ora al vaglio delle commissioni parlamentari.",
+      "url": "https://www.ansa.it/canale_tecnologia/notizie/cybersecurity/2026/06/10/il-governo-accelera-sullia-litalia-prima-ad-avere-normativa-organica_c1cc107c-bef2-4c66-a262-65029628e449.html",
+      "tag": "Regolazione"
+    },
+    {
+      "id": "apple-wwdc2026-siri-gemini-timcook-2026",
+      "date": "2026-06-14",
+      "caption": "🍎 WWDC 2026: Apple integra Gemini in Siri, Tim Cook si congeda e passa il timone a John Ternus",
+      "snippet": "Alla WWDC 2026 Apple ha presentato una Siri completamente rinnovata grazie ad Apple Intelligence: più contestuale, multi-app, con integrazione storica dei modelli Gemini di Google. Privacy garantita da elaborazione on-device e Private Cloud Compute. Tim Cook ha tenuto il suo ultimo keynote da CEO: dal 1° settembre il testimone passa a John Ternus, attuale responsabile hardware. La nuova Siri sarà disponibile in beta nei prossimi mesi. La collaborazione Apple-Google segnala un cambio epocale nell'ecosistema AI mobile.",
+      "url": "https://www.ilmessaggero.it/tecnologia/news/apple_rilancia_siri_con_l_ia_e_apre_a_google_gemini-9582610.html",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "microsoft-build2026-mai-models-majorana2-2026",
+      "date": "2026-06-14",
+      "caption": "🤖 Microsoft Build 2026: modelli MAI proprietari, chip quantistico Majorana 2 e la svolta agentica",
+      "snippet": "Al Build 2026 il CEO Satya Nadella ha annunciato la famiglia di modelli MAI (MAI Image-2.5, Voice-2, Transcribe-1.5), il primo reasoning model proprietario sviluppato senza distillazione da modelli esterni, e il chip quantistico Majorana 2 con qubit topologici 1.000 volte più affidabili della versione precedente con vita media di 20 secondi. L'obiettivo: arrivare a 1 milione di qubit nel palmo di una mano entro il 2029. Microsoft consolida il controllo verticale su tutta la catena del valore AI, riducendo la dipendenza da OpenAI e altri fornitori terzi.",
+      "url": "https://en.ilsole24ore.com/art/build-2026-proprietary-models-never-chip-majorana-2-microsoft-accelerates-agents-ai-AITPTORD",
+      "tag": "AI/LLM"
+    },
+    {
+      "id": "tim-scorporo-rete-kkr-serviceco-consolidamento-2026",
+      "date": "2026-06-14",
+      "caption": "📡 TIM post-scorporo: la nuova ServiceCo affronta la sfida di Fastweb+Vodafone e il consolidamento TLC",
+      "snippet": "Dopo la cessione della rete fissa (NetCo) al fondo KKR, TIM si è trasformata in una ServiceCo su tre pilastri: Consumer, Enterprise (cloud/cybersecurity/IoT per PA e aziende) e TIM Brasil. Il mercato italiano TLC è ora dominato dalla competizione tra TIM e il nuovo polo Fastweb+Vodafone (Swisscom), che a gennaio 2026 ha siglato un accordo di network-sharing 5G con TIM per coprire 15.500 siti nelle aree con meno di 35.000 abitanti entro il 2028. WindTre e Iliad continuano la guerra dei prezzi nel mobile. Il consolidamento promette meno player ma strutturalmente più solidi per gli investimenti in 5G e AI.",
+      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga/siotto-fibreconnect-per-la-fibra-serve-piu-sinergia-non-reti-parallele/",
+      "tag": "Telco"
+    },
+    {
+      "id": "ai-act-digital-omnibus-scadenze-rinvio-2027-2026",
+      "date": "2026-06-14",
+      "caption": "⚖️ UE rinvia l'AI Act high-risk: Digital Omnibus sposta gli obblighi al 2027-2028",
+      "snippet": "Il 7 maggio 2026, dopo una notte di negoziati, Parlamento europeo e Consiglio UE hanno raggiunto un accordo provvisorio sul Digital Omnibus on AI: le scadenze per i sistemi AI ad alto rischio (allegato III) slittano al 2 dicembre 2027 (stand-alone) e al 2 agosto 2028 (componenti embedded). Confermati i divieti dell'Art. 5 (già in vigore) e l'obbligo di trasparenza su contenuti AI-generated entro dicembre 2026. L'accordo deve ancora essere votato in plenaria e adottato formalmente dal Consiglio. Industria e PMI avevano segnalato l'impossibilità di completare i percorsi di conformità entro agosto 2026.",
+      "url": "https://www.noze.it/insights/ai-act-digital-omnibus-2026/",
+      "tag": "Regolazione"
+    },
+    {
+      "id": "coupang-data-breach-multa-409mln-corea-2026",
+      "date": "2026-06-14",
+      "caption": "🔐 Coupang: multa record da 409 milioni per data breach su 33 milioni di clienti",
+      "snippet": "La Corea del Sud ha comminato a Coupang (e-commerce quotato a NY) una sanzione di 625 miliardi di won (409,3 milioni di dollari, pari all'1,4% del fatturato 2025 da 45.000 mld KRW) per la violazione dei dati personali di oltre 33 milioni di clienti avvenuta nel 2025. Il caso si è aggravato perché l'azienda non ha rilevato la violazione entro le 72 ore previste dalla legge. La Commissione per la protezione dei dati personali di Seoul ha dichiarato che l'incidente è stato causato da mancanza di misure di sicurezza adeguate. Massima sanzione mai inflitta in Corea del Sud per data breach.",
+      "url": "https://www.cybersecitalia.it/attacco-cyber-contro-coupang-in-arrivo-una-multa-record-da-40930-milioni-di-dollari/65777/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "fibreconnect-fibra-zone-industriali-sinergia-2026",
+      "date": "2026-06-14",
+      "caption": "🏭 FibreConnect: serve più sinergia e meno reti parallele per portare la fibra nelle zone industriali italiane",
+      "snippet": "Fulvio Siotto (DG FibreConnect) lancia un appello al settore: smettere di scavare reti parallele dove la fibra esiste già e puntare sulla condivisione infrastrutturale. Molte aree produttive italiane restano ai margini della banda ultra larga per un problema di modello industriale: costo certo degli investimenti vs. valore percepito. La fibra non è più accessorio ma abilitatore di cloud, AI, automazione e cybersecurity. La competizione va spostata dal piano infrastrutturale a quello commerciale, come già avviene in altri Paesi UE. FibreConnect opera nelle aree industriali e artigianali italiane.",
+      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga/siotto-fibreconnect-per-la-fibra-serve-piu-sinergia-non-reti-parallele/",
+      "tag": "Telco"
+    },
+    {
+      "id": "telco-mediobanca-ricavi-europa-italia-2026",
+      "date": "2026-06-14",
+      "caption": "📊 Mediobanca: telco mondiali crescono del 2,9%, ma l'Italia perde 14 miliardi dal 2010 e la redditività crolla",
+      "snippet": "Secondo lo studio annuale Area Studi Mediobanca, nel primo semestre 2025 i ricavi delle principali telco mondiali sono aumentati del 2,9%, con Usa (+3,6%) e Giappone (+3,2%) in testa. Gli operatori europei crescono solo del +1,1%, quelli italiani +1,6%. La Germania guida il mercato europeo con 61,1 miliardi di euro (+2,2%). L'Italia si posiziona quinta ma ha perso 14 miliardi di giro d'affari dal 2010 (contrazione media -2,7% annua). L'ebit margin italiano è risalito all'1,8% nel 2024 (era 8,8% nel 2020) ma resta lontanissimo dal 16,5% delle grandi telco EMEA. Investimenti in 5G e fibra calano dello 0,4% in Europa.",
+      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
+      "tag": "Telco"
+    },
+    {
+      "id": "europa-ai-cybersecurity-competitivita-agenda-digitale-2026",
+      "date": "2026-06-14",
+      "caption": "🇪🇺 Europa AI e Cybersecurity: la competitività dipende da NIS2, AI Act e investimenti in sovranità digitale",
+      "snippet": "Rita Forsi su Agenda Digitale: la competitività europea dipende sempre più dalla capacità di integrare AI, cybersecurity e digital sovereignty. I Rapporti Draghi e Letta tracciano la direzione ma la geopolitica complica tutto: crisi energetica, nuovi conflitti, accelerazione tecnologica. NIS2 e AI Act vanno coordinati per PA, sanità, energia e infrastrutture digitali. L'AI non va gestita solo come strumento produttivo ma come elemento di resilienza del 'Sistema Paese'. Urge investire in competenze tecniche e potenziare la sicurezza degli asset strategici, con piena consapevolezza che stiamo vivendo una trasformazione epocale.",
+      "url": "https://www.agendadigitale.eu/mercati-digitali/tra-ai-e-cybersecurity-leuropa-cerca-la-strada-per-restare-competitiva/",
+      "tag": "Economia digitale"
+    },
     {
       "id": "openai-anthropic-ipo-filing-june-2026",
       "date": "2026-06-11",
@@ -484,86 +564,6 @@
       "snippet": "All'ultima WWDC guidata da Tim Cook come CEO (8-12 giugno, Apple Park), Apple ha annunciato iOS 27, macOS Golden Gate, watchOS 27 e visionOS 27. Il centro di tutto è Siri AI, costruita su Apple Foundation Models con integrazione del modello Gemini di Google per le richieste più complesse via Private Cloud Compute. L'elaborazione avviene on-device per le funzioni core; i task avanzati passano per server Google. Craig Federighi ha indicato i tre assi: miglioramenti piattaforma, trust & safety, Apple Intelligence. Il rilascio pubblico è atteso a settembre con iPhone 18.",
       "url": "https://www.wired.it/article/wwdc-2026-ios-27-nuovo-siri-annunci-conferenza-sviluppatori-apple/",
       "tag": "AI/LLM"
-    },
-    {
-      "id": "fibercop-bei-1mld-ftth-2026-06-05",
-      "date": "2026-06-05",
-      "caption": "🇮🇹 BEI finanzia FiberCop con 1 miliardo per la fibra FTTH",
-      "snippet": "La Banca Europea per gli Investimenti ha sottoscritto un finanziamento fino a 1 miliardo di euro per FiberCop, con una prima tranche già erogata di 500 milioni, garantita dal programma InvestEU. L'obiettivo è estendere la rete FTTH a ulteriori 5,8 milioni di unità immobiliari, portando connettività fino a 10 Gbps. Un'iniezione di capitali a lungo termine cruciale per accelerare la transizione dell'Italia verso reti full-fibre.",
-      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga-maxi-finanziamento-bei-a-fibercop-1-miliardo-per-spingere-la-rete-ftth/",
-      "tag": "Telco"
-    },
-    {
-      "id": "ngmn-6g-no-5g-mistakes-2026-06-05",
-      "date": "2026-06-05",
-      "caption": "📡 NGMN a 3GPP: sul 6G non ripetete gli errori del 5G",
-      "snippet": "La Next Generation Mobile Networks Alliance ha pubblicato due report in vista del plenary 3GPP chiedendo un approccio di standardizzazione radicalmente diverso per il 6G: migrazione graduale, riduzione della complessità operativa e ritorni sostenibili per gli operatori. Il board chairman di NGMN e CTO di Orange Laurent Leboucher avverte: 'non affrettiamo le decisioni, altrimenti rischieremo sfide di lungo periodo'. L'ipotesi di slittare la Release 21 è sul tavolo.",
-      "url": "https://www.theregister.com/networks/2026/06/03/dont-repeat-5g-mistakes-with-6g-plead-mobile-operators/5250572",
-      "tag": "Mobile"
-    },
-    {
-      "id": "ai-worm-llm-enterprise-toronto-2026-06-05",
-      "date": "2026-06-05",
-      "caption": "🐛 LLM open source crea worm che si propaga in reti enterprise",
-      "snippet": "Ricercatori dell'Università di Toronto hanno sviluppato un worm auto-propagante usando un modello open-weight pubblico e gratuito, eseguibile su una singola GPU. Il codice si adatta in tempo reale per identificare vulnerabilità note e si muove lateralmente in reti enterprise, stabilisce persistenza e condivide credenziali tra repliche attive. Il messaggio per il settore: le minacce AI non arrivano solo dai modelli frontier da miliardi di dollari.",
-      "url": "https://www.theregister.com/research/2026/06/04/free-ai-model-powers-self-spreading-worm-in-enterprise-test-network/5250918",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "cavi-sottomarini-golfo-persico-rischio-2026-06-05",
-      "date": "2026-06-05",
-      "caption": "🌊 Cavi sottomarini: Golfo Persico area critica, +13 mld investimenti 2025-27",
-      "snippet": "Il report 2026 di Starboard Maritime Intelligence classifica 5 delle 25 principali aree di approdo mondiali a rischio estremo, con il Golfo Persico in cima alla lista per frizioni geopolitiche e traffico marittimo. Tra il 2025 e il 2027 sono previsti oltre 13 miliardi di dollari di nuovi progetti infrastrutturali sottomarini, quasi il doppio del triennio precedente. L'86% dei guasti è attribuito a pesca e ancore, spostando il focus sulla sorveglianza predittiva.",
-      "url": "https://www.corrierecomunicazioni.it/telco/cavi-sottomarini-il-golfo-persico-e-larea-piu-a-rischio-nel-2026/",
-      "tag": "Telco"
-    },
-    {
-      "id": "d2c-satellite-juniper-underwhelm-2026-06-05",
-      "date": "2026-06-05",
-      "caption": "🛰️ Direct-to-cell: crescita reale, ma adozione deluderà le attese",
-      "snippet": "Juniper Research prevede che gli utenti mensili attivi D2C passeranno da 17,4 milioni nel 2026 a 133 milioni nel 2031, ma avverte che l'adozione reale deluderà le aspettative dell'industria: il 40% degli abbonati non vuole pagare nulla di più per la copertura satellitare, il servizio non funziona al chiuso e resta limitato a SMS ed emergenze. T-Mobile/Starlink guidano il mercato, mentre in Europa VodafoneThree si prepara ai trial estivi.",
-      "url": "https://www.theregister.com/networks/2026/06/02/satellite-phone-dreams-orbit-reality-as-direct-to-cell-usage-set-to-underwhelm/5249696",
-      "tag": "Mobile"
-    },
-    {
-      "id": "spacex-ipo-starlink-mno-2026-06-04",
-      "date": "2026-06-04",
-      "caption": "🚀 SpaceX IPO: l'S-1 dice wholesale, ma la strategia punta a diventare MNO",
-      "snippet": "SpaceX ha depositato il Form S-1 per la quotazione in borsa, prevista nelle prossime settimane con una valutazione stimata tra 1,75 e 2 trilioni di dollari. Il documento si posiziona come fornitore wholesale di connettività satellite agli operatori mobili (MNO), ma l'analisi degli asset accumulati — 65 MHz di spettro nationwide, 7.500 satelliti Direct-to-Cell approvati, accordi device — suggerisce un'ambizione da operatore diretto. Un elemento dirompente per l'industria telco globale.",
-      "url": "https://www.lightreading.com/satellite/starlink-s-s-1-says-wholesale-the-pattern-says-mno-",
-      "tag": "Telco"
-    },
-    {
-      "id": "gigabit-infrastructure-act-accesso-ue-2026-06-04",
-      "date": "2026-06-04",
-      "caption": "🇪🇺 Gigabit Infrastructure Act: accesso e prezzi dividono il mercato UE",
-      "snippet": "La Commissione europea ha pubblicato il report della consultazione sull'art. 3 del Gigabit Infrastructure Act, con 74 contributi da 24 Paesi. Operatori, tower company e autorità divergono su prezzi orientati ai costi vs. contratti commerciali per l'accesso agli asset pubblici (cavidotti, tetti, pali). Le linee guida attese saranno un test politico-industriale per accelerare fibra e 5G senza bloccare gli investimenti privati.",
-      "url": "https://www.corrierecomunicazioni.it/europa/gigabit-infrastructure-act-prezzi-e-accesso-dividono-operatori-tower-company-e-autorita/",
-      "tag": "Telco"
-    },
-    {
-      "id": "digital-networks-act-switch-off-rame-2026-06-04",
-      "date": "2026-06-04",
-      "caption": "📡 Digital Networks Act: sei profili di illegittimità nello switch-off del rame",
-      "snippet": "Il DNA della Commissione UE (proposto il 21 gennaio 2026) impone lo spegnimento delle reti in rame entro il 31 dicembre 2035. Un parere legale commissionato da Connect Europe identifica sei possibili vizi di illegittimità UE: assenza di indennizzo agli operatori, mancata proporzionalità e rischio di rinvii alla Corte di Giustizia. Se il testo fosse impugnato, l'iter normativo si blocca rallentando la transizione alla fibra invece di accelerarla.",
-      "url": "https://www.agendadigitale.eu/infrastrutture/digital-networks-act-sei-dubbi-giuridici-sullo-switch-off-del-rame/",
-      "tag": "Telco"
-    },
-    {
-      "id": "palantir-nhs-uk-vendor-lock-in-2026-06-04",
-      "date": "2026-06-04",
-      "caption": "🏥 UK: il Parlamento chiede di tagliare Palantir dall'NHS",
-      "snippet": "Il Comitato Scienza e Tecnologia della House of Commons ha pubblicato un report in cui chiede al governo di rescindere il contratto con Palantir per la Federated Data Platform dell'NHS. I deputati contestano il rischio di vendor lock-in su un fornitore statunitense in aree critiche come sanità e difesa, e chiedono di privilegiare alternative europee e domestiche attraverso procurement più consapevole.",
-      "url": "https://www.theregister.com/software/2026/06/03/uk-lawmakers-call-on-government-to-ditch-palantir-nhs-contract/5250150",
-      "tag": "Digital Transformation"
-    },
-    {
-      "id": "trump-ai-eo-safety-testing-doge-2026-06-04",
-      "date": "2026-06-04",
-      "caption": "🤖 EO AI di Trump: test obbligatori sui modelli frontier ma DOGE ha svuotato i team",
-      "snippet": "Trump ha firmato un Executive Order che istituisce test di sicurezza obbligatori (volontari nella sostanza) per i modelli AI frontier. Gli esperti segnalano un problema strutturale: i tagli operati da DOGE hanno ridotto drasticamente i team governativi di cybersecurity in grado di valutare i modelli. Senza trasparenza dei lab e capacità tecnica pubblica, il rischio è che il processo diventi una validazione formale più che un filtro reale.",
-      "url": "https://arstechnica.com/tech-policy/2026/06/trumps-ai-executive-order-may-not-prevent-dangerous-deployments/",
-      "tag": "AI"
     }
   ]
 }
