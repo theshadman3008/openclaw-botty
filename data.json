@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-14T08:05:06+02:00",
+  "last_updated": "2026-06-15T08:06:23+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 57
+    "news": 67
   },
   "conversations": [
     {
@@ -190,6 +190,70 @@
       "tag": "Economia digitale"
     },
     {
+      "id": "uk-ban-social-media-under-16-starmer-20260614",
+      "date": "2026-06-14",
+      "caption": "📵 Il UK vieta i social media ai minori di 16 anni: Starmer annuncia la legge",
+      "snippet": "Il premier britannico Keir Starmer ha annunciato il divieto d'accesso ai social media (TikTok, YouTube, Instagram, Facebook, X, Reddit, Snapchat, Twitch) per i minori di 16 anni, sul modello australiano. La norma vieta anche l'accesso agli under 18 ai chatbot romantici/sessuali e restringe lo scroll notturno. Il governo potrebbe usare poteri regolatori esistenti, ma per alcune misure sarà necessaria legislazione. Critici avvertono che la verifica dell'età minaccia la privacy degli utenti.",
+      "url": "https://techcrunch.com/2026/06/14/uk-may-ban-social-media-for-children-under-16/",
+      "tag": "Digital Policy"
+    },
+    {
+      "id": "xai-colossus-latency-datacenter-ai-training-20260614",
+      "date": "2026-06-14",
+      "caption": "⚡ xAI di Musk ferma il supercluster Colossus: problemi di latenza tra data center bloccano l'addestramento AI",
+      "snippet": "Secondo The Verge, xAI (ora parte di SpaceX) ha incontrato gravi problemi di latenza nel collegare il cluster Colossus 1 con altri due siti a oltre 16 km di distanza, aggravati da infrastrutture di rete obsolete. Il piano era addestrare i modelli AI frontier su tre campus collegati, ma i ritardi tecnici stanno ostacolando lo sviluppo. La notizia arriva mentre SpaceX è appena diventata pubblica e gli investitori attendono progressi concreti sull'AI.",
+      "url": "https://www.theverge.com/",
+      "tag": "AI"
+    },
+    {
+      "id": "anthropic-india-ai-autonomia-strategica-20260613",
+      "date": "2026-06-13",
+      "caption": "🌍 Stop AI Anthropic in India: il blocco riaccende il dibattito sull'autonomia strategica nell'AI",
+      "snippet": "La sospensione di Claude Fable 5 e Mythos 5 per tutti gli stranieri ha colpito anche l'India, uno dei più grandi mercati AI mondiali, che aveva appena siglato una partnership Anthropic-TCS per l'AI enterprise. L'episodio ha rilanciato il dibattito sulla dipendenza da LLM americani: 'Non esiste un modello AI geopoliticamente neutro', ha dichiarato l'esperto di policy Prasanto Roy. L'India starebbe valutando incentivi per sviluppare modelli frontier autonomi.",
+      "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
+      "tag": "AI"
+    },
+    {
+      "id": "fbi-kinetic-cyber-range-replica-town-20260613",
+      "date": "2026-06-13",
+      "caption": "🔐 L'FBI ha costruito una città replica da 22.000 mq per simulare cyberattacchi reali",
+      "snippet": "L'FBI ha svelato il 'Kinetic Cyber Range', una città artificiale di 22.000 mq ad Huntsville, Alabama, aperta a febbraio 2025, con case, hotel, ospedale, tribunale, stazione di benzina e centro dati con oltre 200 server fisici. Serve a formare investigatori su scenari reali di attacco informatico — ransomware, forensica digitale, breach su infrastrutture critiche. Dal 2025, il cybercrime USA ha generato perdite record di 20,9 miliardi di dollari (+26% anno su anno), con il ransomware come minaccia primaria.",
+      "url": "https://techcrunch.com/2026/06/13/the-fbi-built-its-own-replica-small-town-to-simulate-real-world-cyberattacks/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "anthropic-fable5-mythos-shutdown-us-gov-20260612",
+      "date": "2026-06-12",
+      "caption": "🤖 Il governo USA ordina ad Anthropic di spegnere Claude Fable 5 e Mythos 5 per tutti gli utenti",
+      "snippet": "Venerdì 12 giugno il governo statunitense ha ordinato ad Anthropic di sospendere immediatamente l'accesso a Claude Fable 5 e Mythos 5, i suoi modelli AI più potenti, per tutti gli utenti mondiali — inclusi i cittadini non statunitensi — citando ragioni di sicurezza nazionale. Anthropic ha ottemperato ma ha dichiarato pubblicamente di ritenere l'ordine sbagliato. Il modello Mythos era già stato tenuto in accesso ristretto per mesi a causa delle sue capacità in ambito cybersecurity, biologia e chimica. L'episodio riaccende il dibattito globale sulla dipendenza dai grandi modelli AI controllati da soggetti privati americani.",
+      "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
+      "tag": "AI"
+    },
+    {
+      "id": "spacex-ipo-nasdaq-trillionaire-musk-20260612",
+      "date": "2026-06-12",
+      "caption": "🚀 SpaceX quota al Nasdaq: IPO da 75 mld, Musk diventa il primo triliardario della storia",
+      "snippet": "Il 12 giugno SpaceX ha debuttato al Nasdaq (SPCX) a 150 dollari per azione, il 19% sopra il prezzo IPO di 135 dollari, raccogliendo 75 miliardi di dollari nella più grande IPO della storia. La capitalizzazione di mercato ha toccato 2.100 miliardi. Elon Musk, con circa 1.100 miliardi di dollari netti tra SpaceX e Tesla, è diventato il primo triliardario al mondo. Robinhood ha registrato traffico record nella giornata. SpaceX è la prima di tre mega-IPO attese nel 2026, seguita da Anthropic e OpenAI.",
+      "url": "https://apnews.com/article/musk-spacex-tesla-ipo-trillionaire-billionaire-worth-rockets-7723f82b6063a9a17c194e25982cd66d",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "robinhood-spacex-ipo-record-traffic-fintech-20260612",
+      "date": "2026-06-12",
+      "caption": "📈 Robinhood: traffico record nel giorno dell'IPO SpaceX — il fintech retail batte ogni storico",
+      "snippet": "Nel giorno del debutto SpaceX al Nasdaq, Robinhood ha registrato traffico record sulla sua piattaforma, con alcuni utenti che hanno segnalato latenze e interruzioni intermittenti. In un'ora dalla apertura delle negoziazioni, 263 milioni di azioni sono cambiate di mano per circa 42 miliardi di dollari. L'evento segna il più grande test di stress per le piattaforme di trading retail della storia recente e ridisegna i flussi tra fintech e mercati istituzionali.",
+      "url": "https://techcrunch.com/2026/06/12/robinhood-sees-record-breaking-traffic-after-spacex-stock-debuts/",
+      "tag": "Fintech"
+    },
+    {
+      "id": "mangos-faang-new-acronym-ai-ipo-2026",
+      "date": "2026-06-12",
+      "caption": "💹 MANGOS supera FAANG: nasce il nuovo acronimo dell'era AI con Meta, Anthropic, Nvidia, Google, OpenAI, SpaceX",
+      "snippet": "Con le IPO di SpaceX (e presto Anthropic e OpenAI), il mercato sta ridefinendo i propri benchmark: il vecchio acronimo FAANG (Facebook, Apple, Amazon, Netflix, Google) cede il passo a MANGOS — Meta (o Microsoft), Anthropic, Nvidia, Google, OpenAI, SpaceX. Queste sei aziende rappresentano oggi la nuova frontiera della capitalizzazione tech globale nell'era dell'AI, trainata da infrastrutture di compute, modelli fondazionali e satellite broadband.",
+      "url": "https://techcrunch.com/",
+      "tag": "Economia Digitale"
+    },
+    {
       "id": "openai-anthropic-ipo-filing-june-2026",
       "date": "2026-06-11",
       "caption": "🏦 OpenAI e Anthropic depositano entrambe l'S-1 per l'IPO: corsa a Wall Street dell'AI",
@@ -212,6 +276,14 @@
       "snippet": "Il sottosegretario Alessio Butti ha dichiarato al Consiglio UE Telecomunicazioni che le aste per lo spettro radio devono diventare leve di politica industriale, accompagnando la trasformazione delle telco da fornitori di connettività a piattaforme digitali con edge computing e cloud distribuito. Il segretario SLC-CGIL Riccardo Saccone ha espresso convergenza ma ha chiesto che il cambio di paradigma sia accompagnato da investimenti infrastrutturali e programmi di upskilling per i lavoratori. L'evento 'Telco per l'Italia – Da TelCo a TechCo' si è tenuto a Roma l'11 giugno 2026, organizzato da CorCom e Nextwork360.",
       "url": "https://www.corrierecomunicazioni.it/telco/frequenze-tlc-saccone-a-butti-siano-una-leva-per-investimenti-e-competenze/",
       "tag": "Telco"
+    },
+    {
+      "id": "prometheus-bezos-ai-12mld-engineer-fisico-20260611",
+      "date": "2026-06-11",
+      "caption": "🏗️ Jeff Bezos raccoglie 12 mld per Prometheus: AI per progettare e costruire il mondo fisico",
+      "snippet": "La startup AI Prometheus, co-fondata da Jeff Bezos con Vik Bajaj (ex Verily/Alphabet), ha chiuso un round da 12 miliardi di dollari che valuta l'azienda 41 miliardi — era a 6,2 mld a novembre 2025. Prometheus sviluppa modelli AI per supportare ingegneri nella progettazione e produzione di prodotti fisici, incluso il drug design. Bezos ha dichiarato che gran parte dei fondi servirà ad acquistare compute per l'addestramento dei modelli. Il team è composto da ex OpenAI, Google DeepMind e Nvidia.",
+      "url": "https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html",
+      "tag": "AI"
     },
     {
       "id": "openai-ipo-confidential-s1-trillion-2026",
@@ -492,6 +564,14 @@
       "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali (dati H1 2025) mostra una ripresa modesta in Europa (+1,1%) contro USA (+3,6%) e Asia (+3,2%). La Germania guida l'Europa con 58,4 miliardi (+3,7%), l'Italia si piazza quinta con un EBIT margin risalito all'1,8% (era l'8,8% nel 2020), lontano dal 16,5% EMEA. Gli investimenti europei nelle reti sono calati dello 0,4%. Il modello AICT emerge come strategia obbligata: KT Korea già genera il 40% dei ricavi da attività extra-telco e punta a triplicare il contributo AI/IT entro il 2028.",
       "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
       "tag": "Telco"
+    },
+    {
+      "id": "anthropic-fable5-pubblico-cybersecurity-guardrails-20260609",
+      "date": "2026-06-09",
+      "caption": "🧠 Anthropic lancia Claude Fable 5 al pubblico: il modello Mythos con guardrail di sicurezza",
+      "snippet": "Il 9 giugno Anthropic ha reso disponibile Claude Fable 5 — versione pubblica di Mythos — tramite API e piani Enterprise a consumo. Il modello eccelle in software engineering, knowledge work e vision, ma blocca le risposte in ambiti ad alto rischio (cybersecurity, biologia, chimica) fallback su Claude Opus 4.8. Il prezzo è 10 dollari/milione di token in input e 50 dollari/milione in output, il doppio di Opus 4.8. L'accesso su abbonamento sarà rilasciato in fasi fino al 22 giugno.",
+      "url": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
+      "tag": "AI"
     },
     {
       "id": "mediobanca-telco-europa-ricavi-2026",
