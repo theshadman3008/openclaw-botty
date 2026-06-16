@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-15T08:06:23+02:00",
+  "last_updated": "2026-06-16T08:02:08+02:00",
   "stats": {
     "conversations": 4,
     "completed": 3,
     "scheduled_tasks": 0,
     "documents": 8,
-    "news": 67
+    "news": 68
   },
   "conversations": [
     {
@@ -109,6 +109,86 @@
   ],
   "scheduled_tasks": [],
   "rassegna": [
+    {
+      "id": "eu-shield-6g-8m-ai-security-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "🛡️ UE lancia progetto Shield-6G: 8 milioni € per sicurezza AI nelle reti 6G",
+      "snippet": "L'Unione Europea ha assegnato all'University College Dublin il progetto Shield-6G da 8 milioni €, finanziato da Horizon Europe. Obiettivo: creare linee guida fondamentali per sicurezza, affidabilità e resilienza delle reti 6G, con piattaforma AI-driven per cyber threat intelligence. Il progetto mira a stabilire standard di resilienza sistemica prima del rollout commerciale del 6G, previsto con investimenti superiori a 500 miliardi $ nei primi 6 anni.",
+      "url": "https://capacityglobal.com/news/eu-shield-6g-project-ai-network-security/",
+      "tag": "Telco"
+    },
+    {
+      "id": "eu-mobile-economy-1-15tn-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "📱 Industria mobile UE vale 1.150 miliardi €: +14% nel 2025, 6,1% del PIL",
+      "snippet": "Il report GSMA 'Mobile Economy Europe 2026' rivela che l'impatto dell'industria mobile sull'economia UE è cresciuto del 14% nel 2025, raggiungendo 1.150 miliardi € (0.9 trilioni €). Il settore rappresenta ora il 6,1% del PIL europeo, in crescita dal 5,5% del 2024. 820 miliardi € derivano da guadagni di produttività. Previsto superamento di 1.600 miliardi € entro il 2030, con traffico dati in aumento del 75% guidato dall'AI.",
+      "url": "https://www.advanced-television.com/2026/06/15/report-europes-e1tn-mobile-industry-at-a-crossroad/",
+      "tag": "Telco"
+    },
+    {
+      "id": "private-5g-2000-organizzazioni-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "🏢 Oltre 2.000 organizzazioni globali usano reti mobili private 5G/LTE",
+      "snippet": "Uno studio GSA rivela che oltre 2.003 organizzazioni worldwide hanno deployato reti mobili private LTE o 5G entro Q1 2026, con valore contrattuale in crescita. I customer references crescono al CAGR del 37% dal 2019. Il 5G rappresenta oltre metà dei deploy annunciati dal 2022. USA, Germania e UK guidano geograficamente. Forte correlazione tra adozione e disponibilità di spettro dedicato o condiviso.",
+      "url": "https://www.computerweekly.com/news/366644379/More-than-2000-global-organisations-deploy-private-mobile-networks",
+      "tag": "Telco"
+    },
+    {
+      "id": "oracle-shinyhunters-breach-education-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "💥 Cyberattacco a Oracle PeopleSoft: esposti dati di università e college",
+      "snippet": "Per la seconda volta in due mesi, il gruppo di estorsione dati ShinyHunters ha colpito Oracle PeopleSoft. Codice malevolo ha infiltrato le applicazioni tra il 27 maggio e il 9 giugno 2026. Il 68% delle oltre 100 organizzazioni compromesse appartiene al settore higher-education. Oracle conta oltre 13.000 college e università come clienti. Google Threat Intelligence Group e Mandiant hanno emesso alert. Oracle ha rilasciato security alert CVE-2026-35273 il 10 giugno.",
+      "url": "https://www.govtech.com/education/higher-ed/cyber-attack-on-oracle-exposes-data-of-higher-ed-clients",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "irhythm-health-data-breach-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "🏥 iRhythm: breach cybersecurity espone dati sanitari pazienti",
+      "snippet": "iRhythm Technologies (Nasdaq:IRTC) ha disclosed il 15 giugno un'attività non autorizzata su applicazioni business di terze parti. Identificata l'8 giugno, la breach ha esposto dati proprietari, protected health information (PHI) e informazioni personali di pazienti. Un threat actor ha richiesto pagamento per non divulgare i dati. iRhythm ha attivato il piano di risposta cybersecurity con esperti esterni. È l'ultima di una serie di breach nel medtech: Stryker (marzo), Intuitive Surgical e Medtronic (aprile 2026).",
+      "url": "https://www.massdevice.com/irhythm-reports-cybersecurity-breach-health-data/",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "italy-ai-5g-broadcast-funding-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "🇮🇹 Italia: 14 milioni € per broadcaster su AI, 5G Broadcast e DAB+",
+      "snippet": "L'Italia ha aperto le domande per finanziamenti a broadcaster per investimenti in AI, 5G Broadcast, radio digitale DAB e infrastrutture cloud media. Dal 30 giugno al 29 luglio 2026, radio broadcaster possono accedere a 4 milioni €, televisioni locali a 10 milioni €. I grant coprono fino al 70% dei costi eleggibili. Progetti eleggibili includono tecnologie AI per produzione contenuti, equipment DAB, cybersecurity, sistemi warning emergenza e automazione workflow editoriali.",
+      "url": "https://www.redtech.pro/italy-broadcast-technology-funding-ai-5g-broadcast-dab/",
+      "tag": "ICT"
+    },
+    {
+      "id": "esa-esdi-switzerland-deeptech-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "🛰️ ESA inaugura centro ESDI in Svizzera: hub per space deep-tech",
+      "snippet": "L'Agenzia Spaziale Europea (ESA) ha inaugurato l'European Space Deep-Tech Innovation Centre (ESDI), prima presenza ESA in Svizzera, in collaborazione con il Paul Scherrer Institute. Situato a Villigen, ESDI accelera l'adozione commerciale di deep-tech in robotica, nanotecnologia, quantum computing, AI e biotecnologia per applicazioni space. Firmato MoU con Deep Tech Nation Switzerland Foundation per stimolare sinergie tra settore spaziale ed ecosistema deep-tech svizzero.",
+      "url": "https://www.esa.int/About_Us/Business_with_ESA/Inauguration_of_the_European_Space_Deep-Tech_Innovation_Centre_ESDI_first_ESA_presence_in_Switzerland",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "esa-proba3-extend-2028-belgium-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "☀️ ESA estende missione Proba-3 al 2028: Belgio leader con 66 milioni €",
+      "snippet": "ESA ha esteso la missione Proba-3 fino ad agosto 2028 dopo i primi successi nello studio della corona solare. Lanciata a dicembre 2024 con due satelliti costruiti in Belgio, la missione crea eclissi solari artificiali volando a 144 metri di distanza. Il Belgio ha contribuito con 66 milioni € su 166 milioni € totali, supervisionando operazioni scientifiche chiave. ESA finanzierà completamente l'estensione. La missione produce già dati scientifici di alta qualità per migliorare forecast di solar storms.",
+      "url": "https://www.belganewsagency.eu/esa-extends-belgian-led-proba-3-space-mission-until-2028",
+      "tag": "Space Economy"
+    },
+    {
+      "id": "riv-digital-micar-consob-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "💶 RIV Digital ottiene licenza MiCAR da Consob: crypto-asset services in Italia",
+      "snippet": "RIV-Digital, subsidiary italiana di RIV Capital Group, ha ricevuto da Consob e Banca d'Italia l'autorizzazione come Crypto-Asset Service Provider (CASP) sotto regolamento MiCAR (EU 2023/1114). Può ora fornire in Italia servizi di scambio crypto-funds, crypto-crypto e placement di crypto-asset, con possibilità di estensione ad altri Stati UE. RIV Capital punta a creare un bridge regolamentato tra finanza istituzionale e DeFi. Studio Legale LX20 ha assistito il processo.",
+      "url": "https://bebeez.eu/2026/06/15/riv-digital-receives-the-micar-license-from-consob-and-keeps-bridging-traditional-finance-with-defi/",
+      "tag": "Fintech"
+    },
+    {
+      "id": "paymove-satispay-fintech-funding-2026-06-15",
+      "date": "2026-06-15",
+      "caption": "💳 Fintech: paymove raccoglie 2,12M €, Satispay pianifica aumento da 120M €",
+      "snippet": "paymove ha secured 2,12 milioni € per espandere l'infrastruttura di pagamento AI in Europa. L'italiana Satispay ha pianificato un aumento di capitale da 120 milioni € per costruire una piattaforma finanziaria completa. Le stablecoin sono sempre più utilizzate come 'money in motion' per pagamenti cross-border veloci e disbursements automatizzati sotto il framework MiCA. Banche europee stanno pilotando iniziative blockchain e stablecoin.",
+      "url": "https://michelemattei.substack.com/p/weekly-update-136",
+      "tag": "Fintech"
+    },
     {
       "id": "spacex-ipo-nasdaq-75mld-record-2026",
       "date": "2026-06-14",
@@ -572,78 +652,6 @@
       "snippet": "Il 9 giugno Anthropic ha reso disponibile Claude Fable 5 — versione pubblica di Mythos — tramite API e piani Enterprise a consumo. Il modello eccelle in software engineering, knowledge work e vision, ma blocca le risposte in ambiti ad alto rischio (cybersecurity, biologia, chimica) fallback su Claude Opus 4.8. Il prezzo è 10 dollari/milione di token in input e 50 dollari/milione in output, il doppio di Opus 4.8. L'accesso su abbonamento sarà rilasciato in fasi fino al 22 giugno.",
       "url": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
       "tag": "AI"
-    },
-    {
-      "id": "mediobanca-telco-europa-ricavi-2026",
-      "date": "2026-06-08",
-      "caption": "📉 Telco Europa: ricavi +1,1% ma investimenti 5G in calo",
-      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali rileva che nel primo semestre 2025 gli operatori europei crescono dell'1,1% mentre quelli italiani dell'1,6%, ben sotto USA (+3,6%) e Asia (+3,2%). Il dato più critico: gli investimenti europei in reti sono calati dello 0,4%, con l'EBIT margin italiano all'1,8% rispetto al 16,5% EMEA. Il modello AICT (telco + AI) emerge come strada obbligata: KT Korea punta a triplicare i ricavi AI/IT entro il 2028.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "nvidia-nemotron-35-content-safety-enterprise-2026",
-      "date": "2026-06-08",
-      "caption": "🛡️ NVIDIA lancia Nemotron 3.5 Content Safety per enterprise AI",
-      "snippet": "NVIDIA ha rilasciato il 4 giugno 2026 Nemotron 3.5 Content Safety, modello multimodale personalizzabile per la sicurezza AI in contesti enterprise globali. Copre testo, immagine e audio con latenza bassa per applicazioni real-time, ed è pronto per GDPR, CCPA e i nuovi framework regolatori sull'AI. Il lancio si inserisce in una settimana densa: Microsoft ha presentato la famiglia MAI (7 modelli), Google Gemma 4 12B e NVIDIA stessa Nemotron 3 Ultra 550B open-weight.",
-      "url": "https://dev.to/vjswamy/latest-ai-model-releases-june-2026-roundup-49j5",
-      "tag": "AI"
-    },
-    {
-      "id": "tmobile-global-tech-centre-india-2026",
-      "date": "2026-06-08",
-      "caption": "🌐 T-Mobile US apre primo Global Tech Centre in India a Hyderabad",
-      "snippet": "T-Mobile US ha inaugurato il suo primo Global Technology Centre (GTC) fuori dagli Stati Uniti, a Hyderabad, India. La struttura di 250.000 piedi quadrati (circa 23.000 m²) si concentrerà su engineering, AI, DevOps e cybersecurity e punta ad assumere fino a 1.000 dipendenti entro il 2027. La mossa segnala come i grandi carrier USA stiano delocalizzando capacità tecnologica avanzata per accelerare l'integrazione AI nelle reti.",
-      "url": "https://www.telecompaper.com/",
-      "tag": "Digital Transformation"
-    },
-    {
-      "id": "sec-regulation-sp-breach-notification-deadline-2026",
-      "date": "2026-06-08",
-      "caption": "⚖️ SEC Regulation S-P: scadenza 3 giugno, nuove regole breach per RIA",
-      "snippet": "Dal 3 giugno 2026 anche i registered investment adviser (RIA) con AUM inferiore a 1,5 miliardi di dollari devono rispettare le nuove norme SEC Regulation S-P, che impongono notifica agli utenti entro 30 giorni da una violazione di dati sensibili e inventario completo dei sistemi, inclusi dispositivi personali dei dipendenti. Le istituzioni più grandi erano già obbligate dal dicembre 2025. La normativa estende il perimetro di responsabilità cyber al settore finanziario USA.",
-      "url": "https://advisorlawllc.com/regulation-s-p-june-2026-deadline/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "italia-assente-global-tech-ecosystem-index-2026",
-      "date": "2026-06-08",
-      "caption": "🗺️ Tech Ecosystem Index 2026: Italia fuori dai radar dell'innovazione",
-      "snippet": "Il Global Tech Ecosystem Index 2026 fotografa una nuova geografia dell'innovazione in cui l'Italia risulta assente tra i protagonisti. L'analisi, pubblicata da Agenda Digitale il 4 giugno 2026, evidenzia come la redistribuzione globale degli ecosistemi tech stia penalizzando i paesi privi di investimenti strutturali in startup, capitale di rischio e infrastrutture digitali. Il divario con hub come USA, Cina, UK e Singapore si allarga ulteriormente.",
-      "url": "https://www.agendadigitale.eu/industry-4-0/",
-      "tag": "Innovation"
-    },
-    {
-      "id": "fibercop-plenitude-accordo-fibra-10gbps-2026",
-      "date": "2026-06-08",
-      "caption": "🔌 FiberCop apre la rete a Plenitude (ENI): fibra fino a 10 Gbit in tutta Italia",
-      "snippet": "FiberCop e Plenitude (ENI) hanno siglato un accordo strategico per portare la fibra a Banda Ultra Larga ai clienti dell'azienda energetica, con velocita' fino a 10 Gbps su tutto il territorio nazionale. FiberCop mette a disposizione 28 milioni di km di fibra e prevede di collegare oltre 20 milioni di abitazioni entro il 2027 (gia' 15 milioni raggiunte). A fine giugno FiberCop concludera' anche tutti i lavori del Piano Italia 1 Giga (2,3 miliardi di euro PNRR, oltre 1,2 milioni di civici in 10 regioni). L'accordo consolida il modello open-access della rete e punta a servizi di AI, cloud, robotica ed edge computing.",
-      "url": "https://www.teleborsa.it/News/2026/06/08/fibercop-accordo-con-plenitude-per-connettivita-in-fibra-ottica-in-tutta-italia-155.html",
-      "tag": "Telco"
-    },
-    {
-      "id": "ieee-comsoc-agentic-ai-telecom-datacenter-2026",
-      "date": "2026-06-08",
-      "caption": "🌐 IEEE ComSoc: l'AI agentiva ridisegna data center, reti e l'intero ecosistema telecom",
-      "snippet": "Un'analisi IEEE ComSoc di giugno 2026 evidenzia come la rapida ascesa dell'AI agentiva stia per generare cambiamenti materiali nei data center, nelle reti degli operatori e nell'intero ecosistema telecom. Il passaggio da chatbot a agenti digitali autonomi modifica i profili di traffico, aumenta le esigenze di latenza ultra-bassa, sicurezza avanzata e orchestrazione distribuita. La transizione impone agli operatori di ripensare l'architettura di rete non piu' come mera infrastruttura di connettivita', ma come piattaforma per interazioni macchina-macchina su scala massiva.",
-      "url": "https://techblog.comsoc.org/2026/06/",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "no-fibra-disinformazione-digitale-vandalismi-2026",
-      "date": "2026-06-08",
-      "caption": "📢 Nasce il movimento 'No Fibra': disinformazione digitale porta a vandalismi sulle infrastrutture",
-      "snippet": "Sull'onda dei movimenti 'No 5G', in Italia sta emergendo il fenomeno dei 'No Fibra': gruppi sui social che diffondono teorie infondate sui rischi della fibra ottica, con effetti concreti come vandalismi agli impianti, disservizi e crescente sfiducia nella tecnologia. Il fenomeno, documentato da Newsroom24, e' parte di un trend piu' ampio di disinformazione tech che colpisce le infrastrutture digitali critiche del Paese. La fibra FTTH copre ormai il 77% delle famiglie italiane, ma la polarizzazione social frena ulteriormente l'adozione reale.",
-      "url": "https://newsroom24.it/notizia/2026/06/08/arrivano-i-no-fibra-lultima-frontiera-dellignoranza-che-dilaga-sui-social",
-      "tag": "Economia digitale"
-    },
-    {
-      "id": "apple-wwdc-2026-ios27-siri-ai-gemini",
-      "date": "2026-06-08",
-      "caption": "🍎 WWDC 2026: Apple lancia iOS 27 con Siri AI potenziata da Google Gemini",
-      "snippet": "All'ultima WWDC guidata da Tim Cook come CEO (8-12 giugno, Apple Park), Apple ha annunciato iOS 27, macOS Golden Gate, watchOS 27 e visionOS 27. Il centro di tutto è Siri AI, costruita su Apple Foundation Models con integrazione del modello Gemini di Google per le richieste più complesse via Private Cloud Compute. L'elaborazione avviene on-device per le funzioni core; i task avanzati passano per server Google. Craig Federighi ha indicato i tre assi: miglioramenti piattaforma, trust & safety, Apple Intelligence. Il rilascio pubblico è atteso a settembre con iPhone 18.",
-      "url": "https://www.wired.it/article/wwdc-2026-ios-27-nuovo-siri-annunci-conferenza-sviluppatori-apple/",
-      "tag": "AI/LLM"
     }
   ]
 }
