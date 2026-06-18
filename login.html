@@ -158,11 +158,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
     
-    <script src="firebase-config.js"></script>
+    <!-- Firebase Config -->
+    <script src="firebase-config-inline.js"></script>
     
     <script>
-        // Inizializza Firebase
-        firebase.initializeApp(firebaseConfig);
+        // Firebase già inizializzato in firebase-config-inline.js
         const auth = firebase.auth();
 
         // Controlla se utente è già loggato
