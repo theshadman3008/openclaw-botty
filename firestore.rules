@@ -1,0 +1,12 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Solo utenti autenticati possono leggere
+    match /{document=**} {
+      allow read: if request.auth != null;
+      
+      // Solo scrittura per email specifiche
+      allow write: if request.auth != null && request.auth.token.email == 'tua@email.com';
+    }
+  }
+}
