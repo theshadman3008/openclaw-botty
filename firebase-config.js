@@ -1,8 +1,4 @@
-// ============================================================================
-// CONFIGURAZIONE FIREBASE - Ross AI Dashboard
-// Progetto: rossdb
-// ============================================================================
-
+// Firebase Config - Ross AI Dashboard
 const firebaseConfig = {
     apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
     authDomain: "rossdb.firebaseapp.com",
@@ -14,7 +10,3 @@ const firebaseConfig = {
 
 // Inizializza Firebase
 firebase.initializeApp(firebaseConfig);
-
-// Inizializza servizi
-const auth = firebase.auth();
-const db = firebase.firestore();
