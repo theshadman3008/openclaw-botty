@@ -1,189 +1,224 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ross AI · Accedi</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    min-height: 100vh;
-    background: #f0f2f5;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-  }
-  body::before {
-    content: '';
-    position: fixed; inset: 0; z-index: 0;
-    background:
-      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(99,102,241,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 80% 90%, rgba(14,165,233,0.07) 0%, transparent 60%),
-      #f0f2f5;
-  }
-  .card {
-    position: relative; z-index: 1;
-    background: #fff;
-    border: 1px solid #e2e4ea;
-    border-radius: 20px;
-    padding: 48px 44px;
-    width: 420px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-  }
-  .logo-wrap { text-align: center; margin-bottom: 32px; }
-  .logo-icon {
-    width: 68px; height: 68px; border-radius: 18px;
-    background: linear-gradient(135deg, #6366f1, #06b6d4);
-    display: inline-flex; align-items: center; justify-content: center;
-    font-size: 2rem; margin-bottom: 12px;
-  }
-  .logo-title { font-size: 1.5rem; font-weight: 800; color: #111827; }
-  .logo-sub { font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
-  label { display: block; font-size: 0.82rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
-  input {
-    width: 100%; padding: 12px 14px; border-radius: 10px;
-    border: 1.5px solid #e5e7eb; font-size: 0.95rem;
-    outline: none; transition: border-color 0.2s;
-    font-family: inherit; margin-bottom: 16px;
-  }
-  input:focus { border-color: #6366f1; }
-  .btn {
-    width: 100%; padding: 13px; border-radius: 10px;
-    background: linear-gradient(135deg, #6366f1, #06b6d4);
-    color: #fff; font-size: 1rem; font-weight: 700;
-    border: none; cursor: pointer; transition: opacity 0.2s;
-    font-family: inherit;
-  }
-  .btn:hover { opacity: 0.92; }
-  .btn:disabled { opacity: 0.6; cursor: not-allowed; }
-  .err { display:none; color:#ef4444; font-size:0.84rem; margin-top:10px; text-align:center; }
-  .footer-note { font-size:0.75rem; color:#9ca3af; text-align:center; margin-top:20px; }
-  .lockout-msg { display:none; color:#f59e0b; font-size:0.83rem; text-align:center; margin-top:10px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ross AI Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 48px;
+            width: 100%;
+            max-width: 420px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .logo-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .logo p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .btn-login {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+        .loading-spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 13px;
+            color: #888;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-<div class="card">
-  <div class="logo-wrap">
-    <div class="logo-icon">🤖</div>
-    <div class="logo-title">Ross AI</div>
-    <div class="logo-sub">Dashboard operativa · NextMindLab</div>
-  </div>
-  <label for="u">Username</label>
-  <input type="text" id="u" autocomplete="username" placeholder="Username">
-  <label for="p">Password</label>
-  <input type="password" id="p" autocomplete="current-password" placeholder="Password">
-  <button class="btn" id="login-btn" onclick="doLogin()">Accedi</button>
-  <div class="err" id="err">Credenziali errate. Riprova.</div>
-  <div class="lockout-msg" id="lockout-msg"></div>
-  <div class="footer-note">Sessione valida 24 ore · Powered by NextMindLab</div>
-</div>
+    <div class="login-container">
+        <div class="logo">
+            <div class="logo-icon">🤖</div>
+            <h1>Ross AI Dashboard</h1>
+            <p>Accedi per visualizzare la tua dashboard</p>
+        </div>
 
-<script>
-// --- SECURITY FIX: nessun hash hardcodato nel sorgente.
-// La verifica avviene confrontando hash di ciò che l'utente digita
-// con il valore atteso derivato da una chiave nota solo a runtime.
-// Poiché siamo su GitHub Pages (statico), usiamo un approccio a doppio hash
-// con salt derivato dall'hostname per rendere il valore inutilizzabile
-// se copiato su un altro dominio.
+        <div id="errorMessage" class="error-message"></div>
 
-const EXPECTED = '78992df2da06d36ffb4153228396937976d7223f128d3b6b772a3872813b08fe';
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="tua@email.com" required autocomplete="email">
+            </div>
 
-async function sha256(s) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
-}
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required autocomplete="current-password">
+            </div>
 
-// Genera nonce di sessione casuale (firma del cookie)
-function genNonce(len) {
-  const arr = new Uint8Array(len);
-  crypto.getRandomValues(arr);
-  return Array.from(arr).map(b => b.toString(16).padStart(2,'0')).join('');
-}
+            <button type="submit" id="loginBtn" class="btn-login">
+                Accedi
+            </button>
+        </form>
 
-function setCookie(n, v, hours) {
-  const e = new Date(Date.now() + hours * 3600000).toUTCString();
-  // Secure flag solo se HTTPS; SameSite=Strict sempre
-  const secure = location.protocol === 'https:' ? '; Secure' : '';
-  document.cookie = n + '=' + v + '; expires=' + e + '; path=/' + secure + '; SameSite=Strict';
-}
-function getCookie(n) {
-  const m = document.cookie.match('(?:^|; )' + n + '=([^;]*)');
-  return m ? decodeURIComponent(m[1]) : null;
-}
+        <div class="footer">
+            <p>Protetto da Firebase Authentication</p>
+        </div>
+    </div>
 
-// Lockout state (client-side throttle — deterrente base)
-let attempts = 0;
-let lockedUntil = 0;
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    
+    <script>
+        // Inizializza Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
 
-async function doLogin() {
-  const now = Date.now();
-  if (now < lockedUntil) {
-    const secs = Math.ceil((lockedUntil - now) / 1000);
-    showLockout('Troppi tentativi. Attendi ' + secs + ' secondi.');
-    return;
-  }
+        // Controlla se utente è già loggato
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                window.location.href = 'index.html';
+            }
+        });
 
-  const u = document.getElementById('u').value.trim();
-  const p = document.getElementById('p').value;
-  if (!u || !p) return;
+        // Gestione login form
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+        const errorMessage = document.getElementById('errorMessage');
 
-  const btn = document.getElementById('login-btn');
-  btn.disabled = true;
-  btn.textContent = 'Verifica...';
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
 
-  // Salt basato su hostname (hash non riutilizzabile su altri domini)
-  const salt = await sha256(location.hostname + '::ross-dashboard-v2');
-  const combined = await sha256(u + ':' + p + ':' + salt);
+            // UI loading state
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = '<span class="loading-spinner"></span>Accesso in corso...';
+            errorMessage.style.display = 'none';
 
-  // Confronto in tempo costante (evita timing attack)
-  const match = combined.length === EXPECTED.length &&
-    combined.split('').every((c, i) => c === EXPECTED[i]);
+            try {
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                console.log('Login riuscito:', userCredential.user.email);
+                
+                // Salvataggio sessione (opzionale, Firebase gestisce già)
+                localStorage.setItem('ross_session', 'active');
+                
+                // Redirect alla dashboard
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Errore login:', error.code, error.message);
+                
+                let errorMsg = 'Accesso fallito. Riprova.';
+                if (error.code === 'auth/user-not-found') {
+                    errorMsg = 'Utente non trovato.';
+                } else if (error.code === 'auth/wrong-password') {
+                    errorMsg = 'Password errata.';
+                } else if (error.code === 'auth/invalid-email') {
+                    errorMsg = 'Email non valida.';
+                } else if (error.code === 'auth/too-many-requests') {
+                    errorMsg = 'Troppi tentativi. Riprova più tardi.';
+                }
 
-  if (match) {
-    attempts = 0;
-    const nonce = genNonce(32);
-    const ts = Date.now();
-    // Il cookie contiene ts + nonce — non riproducibile senza conoscere il nonce
-    setCookie('ross_session', btoa(JSON.stringify({ts, nonce})), 24);
-    // Salva nonce in sessionStorage per verifica lato dashboard
-    sessionStorage.setItem('ross_nonce', nonce);
-    window.location.href = 'index.html';
-  } else {
-    attempts++;
-    btn.disabled = false;
-    btn.textContent = 'Accedi';
-    document.getElementById('err').style.display = 'block';
-    setTimeout(() => { document.getElementById('err').style.display = 'none'; }, 3000);
-    // Lockout progressivo: 3 tentativi → 30s, 5 → 120s, 7+ → 300s
-    if (attempts >= 7) { lockedUntil = Date.now() + 300000; showLockout('Account bloccato per 5 minuti.'); }
-    else if (attempts >= 5) { lockedUntil = Date.now() + 120000; showLockout('Bloccato per 2 minuti.'); }
-    else if (attempts >= 3) { lockedUntil = Date.now() + 30000; showLockout('Bloccato per 30 secondi.'); }
-  }
-}
-
-function showLockout(msg) {
-  const el = document.getElementById('lockout-msg');
-  el.textContent = msg;
-  el.style.display = 'block';
-  document.getElementById('login-btn').disabled = true;
-  const iv = setInterval(() => {
-    if (Date.now() >= lockedUntil) {
-      el.style.display = 'none';
-      document.getElementById('login-btn').disabled = false;
-      document.getElementById('login-btn').textContent = 'Accedi';
-      clearInterval(iv);
-    } else {
-      const secs = Math.ceil((lockedUntil - Date.now()) / 1000);
-      el.textContent = msg.replace(/\d+ (second|minut)/, secs + ' sec');
-    }
-  }, 1000);
-}
-
-document.addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
-
-window.onload = function() {
-  if (getCookie('ross_session')) window.location.href = 'index.html';
-};
-</script>
+                errorMessage.textContent = errorMsg;
+                errorMessage.style.display = 'block';
+                
+                // Reset button
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = 'Accedi';
+            }
+        });
+    </script>
 </body>
 </html>
