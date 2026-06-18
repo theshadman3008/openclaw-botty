@@ -1,980 +1,647 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ross AI · Dashboard</title>
-<style>
-  :root {
-    --bg: #f0f2f5; --surface: #ffffff; --border: #e5e7eb;
-    --accent: #6366f1; --accent2: #06b6d4;
-    --green: #10b981; --amber: #f59e0b; --red: #ef4444;
-    --text: #111827; --text2: #374151; --muted: #6b7280;
-    --sidebar: #1e1e2e; --sidebar-text: #e2e8f0; --sidebar-muted: #94a3b8;
-    --sidebar-hover: rgba(255,255,255,0.07); --sidebar-active: rgba(99,102,241,0.25);
-    --grad: linear-gradient(135deg, #6366f1, #06b6d4);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg); color: var(--text);
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    min-height: 100vh; display: flex; font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ross AI · Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --accent: #00d4ff;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-muted: #6c757d;
+            --border: #e9ecef;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --danger: #f44336;
+        }
 
-  /* ── SIDEBAR ── */
-  .sidebar {
-    width: 230px; min-height: 100vh; flex-shrink: 0;
-    background: var(--sidebar);
-    display: flex; flex-direction: column;
-    position: fixed; top: 0; left: 0; bottom: 0; z-index: 20;
-  }
-  .sidebar-logo {
-    padding: 22px 18px 16px;
-    display: flex; align-items: center; gap: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
-  .sidebar-logo .icon {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: var(--grad);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem; flex-shrink: 0;
-  }
-  .sidebar-logo .name { font-size: 1rem; font-weight: 700; color: var(--sidebar-text); }
-  .sidebar-logo .sub { font-size: 0.72rem; color: var(--sidebar-muted); margin-top: 1px; }
-  .sidebar-nav { padding: 12px 8px; flex: 1; overflow-y: auto; }
-  .nav-label {
-    font-size: 0.68rem; font-weight: 700; color: var(--sidebar-muted);
-    text-transform: uppercase; letter-spacing: 0.1em;
-    padding: 0 10px; margin: 14px 0 4px;
-  }
-  .nav-item {
-    display: flex; align-items: center; gap: 10px;
-    padding: 9px 10px; border-radius: 8px; cursor: pointer;
-    color: var(--sidebar-muted); font-size: 0.88rem;
-    transition: background 0.15s, color 0.15s;
-    text-decoration: none; margin-bottom: 2px; user-select: none;
-  }
-  .nav-item:hover { background: var(--sidebar-hover); color: var(--sidebar-text); }
-  .nav-item.active { background: var(--sidebar-active); color: #a5b4fc; }
-  .nav-item .ico { font-size: 0.95rem; width: 20px; text-align: center; flex-shrink: 0; }
-  .nav-badge {
-    margin-left: auto; background: var(--accent); color: #fff;
-    font-size: 0.65rem; font-weight: 700;
-    padding: 1px 6px; border-radius: 10px; min-width: 18px; text-align: center;
-  }
-  .sidebar-footer {
-    padding: 12px 14px; border-top: 1px solid rgba(255,255,255,0.07);
-  }
-  .logout-btn {
-    display: flex; align-items: center; gap: 8px;
-    color: var(--sidebar-muted); font-size: 0.82rem; cursor: pointer;
-    padding: 7px 8px; border-radius: 8px;
-    transition: background 0.15s, color 0.15s;
-  }
-  .logout-btn:hover { background: rgba(239,68,68,0.12); color: #fca5a5; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* ── MAIN ── */
-  #zoom-wrap { margin-left: 230px; flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
-  .topbar {
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    padding: 0 28px; height: 56px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 10;
-  }
-  .topbar-title { font-size: 1rem; font-weight: 700; color: var(--text); }
-  .topbar-right { display: flex; align-items: center; gap: 12px; }
-  .topbar-date { font-size: 0.78rem; color: var(--muted); }
-  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
-  .zoom-ctrl { display: flex; align-items: center; gap: 4px; }
-  .zoom-btn {
-    background: #f3f4f6; border: 1px solid var(--border); border-radius: 6px;
-    padding: 3px 8px; font-size: 0.8rem; cursor: pointer; color: var(--text2);
-  }
-  .zoom-btn:hover { background: #e5e7eb; }
-  .zoom-label { font-size: 0.78rem; color: var(--muted); min-width: 36px; text-align: center; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-  /* ── PAGES ── */
-  .page { display: none; padding: 28px; }
-  .page.active { display: block; }
+        /* Header */
+        .header {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
 
-  /* ── STATS ── */
-  .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 24px; }
-  .stat-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 18px 20px; display: flex; flex-direction: column; gap: 6px;
-  }
-  .stat-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-  .stat-value { font-size: 2rem; font-weight: 800; color: var(--text); line-height: 1; }
-  .stat-sub { font-size: 0.75rem; color: var(--muted); }
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  /* ── GRID ── */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-  /* ── SECTION CARD ── */
-  .section-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; overflow: hidden;
-  }
-  .section-header {
-    display: flex; align-items: center; gap: 10px;
-    padding: 14px 18px; border-bottom: 1px solid var(--border);
-    background: #fafafa;
-  }
-  .section-icon { font-size: 1rem; }
-  .section-title { font-size: 0.92rem; font-weight: 700; color: var(--text); flex: 1; }
-  .badge-count {
-    background: var(--accent); color: #fff;
-    font-size: 0.7rem; font-weight: 700;
-    padding: 2px 8px; border-radius: 10px;
-  }
-  .section-body { padding: 14px 18px; }
+        .logo-icon {
+            font-size: 28px;
+        }
 
-  /* ── CONVERSATIONS ── */
-  .conv-item {
-    padding: 11px 0; border-bottom: 1px solid #f3f4f6;
-    display: flex; flex-direction: column; gap: 4px;
-  }
-  .conv-item:last-child { border-bottom: none; }
-  .conv-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .conv-link { font-size: 0.88rem; font-weight: 600; color: var(--accent); text-decoration: none; flex: 1; }
-  .conv-link:hover { text-decoration: underline; }
-  .conv-date { font-size: 0.72rem; color: var(--muted); }
-  .badge { font-size: 0.68rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
-  .badge-done { background: #d1fae5; color: #065f46; }
-  .badge-pend { background: #fef3c7; color: #92400e; }
-  .conv-snippet { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+        .logo h1 {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  /* ── DOCUMENTS ── */
-  .doc-item {
-    display: flex; align-items: center; gap: 14px;
-    padding: 11px 0; border-bottom: 1px solid #f3f4f6;
-  }
-  .doc-item:last-child { border-bottom: none; }
-  .doc-icon { font-size: 1.4rem; flex-shrink: 0; }
-  .doc-name { font-size: 0.88rem; font-weight: 600; color: var(--text); }
-  .doc-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
-  .dl-btn {
-    margin-left: auto; padding: 5px 12px; border-radius: 8px;
-    background: #f0f0ff; color: var(--accent); font-size: 0.78rem; font-weight: 600;
-    text-decoration: none; white-space: nowrap; flex-shrink: 0;
-    transition: background 0.15s;
-  }
-  .dl-btn:hover { background: #e0e0ff; }
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
 
-  /* ── TASKS ── */
-  .task-item {
-    display: flex; align-items: flex-start; gap: 12px;
-    padding: 11px 0; border-bottom: 1px solid #f3f4f6;
-  }
-  .task-item:last-child { border-bottom: none; }
-  .task-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
-  .task-dot.active { background: var(--green); }
-  .task-dot.pending { background: var(--amber); }
-  .task-name { font-size: 0.88rem; font-weight: 600; color: var(--text); }
-  .task-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+        .user-email {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
 
-  /* ── CHAT RAPIDA ── */
-  .chat-btns { display: flex; gap: 10px; margin-top: 4px; }
-  .chat-btn {
-    flex: 1; padding: 11px; border-radius: 10px; text-align: center;
-    font-size: 0.85rem; font-weight: 600; text-decoration: none;
-    transition: opacity 0.15s;
-  }
-  .chat-btn:hover { opacity: 0.88; }
-  .chat-btn-app { background: var(--grad); color: #fff; }
-  .chat-btn-web { background: #f0f0ff; color: var(--accent); }
+        .btn-logout {
+            padding: 8px 16px;
+            background: var(--danger);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
 
-  /* ── RASSEGNA (pagina dedicata) ── */
-  .news-grid { display: flex; flex-direction: column; gap: 14px; }
-  .news-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 18px 20px;
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 4px 16px; transition: box-shadow 0.15s;
-  }
-  .news-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
-  .news-caption {
-    font-size: 0.97rem; font-weight: 700; color: var(--text);
-    grid-column: 1; line-height: 1.3;
-  }
-  .news-date-badge {
-    grid-column: 2; grid-row: 1;
-    font-size: 0.7rem; color: var(--muted); white-space: nowrap;
-    align-self: start; padding-top: 2px;
-  }
-  .news-snippet {
-    font-size: 0.84rem; color: var(--text2); line-height: 1.55;
-    grid-column: 1 / -1; margin-top: 6px;
-  }
-  .news-footer {
-    grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; margin-top: 8px;
-  }
-  .news-source-tag {
-    font-size: 0.72rem; font-weight: 600; color: #fff;
-    background: var(--accent); padding: 2px 9px; border-radius: 20px;
-  }
-  .news-link {
-    font-size: 0.78rem; color: var(--accent); text-decoration: none; font-weight: 600;
-  }
-  .news-link:hover { text-decoration: underline; }
-  .news-page-header {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  .news-page-title { font-size: 1.3rem; font-weight: 800; color: var(--text); }
-  .news-page-sub { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
-  .news-week-label {
-    font-size: 0.75rem; color: var(--muted); padding: 4px 12px;
-    background: #f3f4f6; border-radius: 20px;
-  }
+        .btn-logout:hover {
+            background: #d32f2f;
+        }
 
-  /* ── TAG FILTER BAR ── */
-  .tag-filter-bar {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-bottom: 20px;
-  }
-  .tag-pill {
-    font-size: 0.78rem; font-weight: 600;
-    padding: 5px 14px; border-radius: 20px; cursor: pointer;
-    border: 1.5px solid transparent; transition: all 0.15s;
-    user-select: none;
-  }
-  .tag-pill.all    { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .tag-pill.all.inactive { background: #f3f4f6; color: var(--muted); border-color: #e5e7eb; }
-  .tag-pill.inactive { background: #f3f4f6; color: var(--muted); border-color: #e5e7eb; }
-  .tag-pill.active  { color: #fff; }
-  .tag-pill[data-tag="AI"].active        { background: #6366f1; border-color: #6366f1; }
-  .tag-pill[data-tag="Telco"].active     { background: #06b6d4; border-color: #06b6d4; }
-  .tag-pill[data-tag="Mobile"].active    { background: #10b981; border-color: #10b981; }
-  .tag-pill[data-tag="Innovation"].active{ background: #f59e0b; border-color: #f59e0b; }
-  .tag-pill[data-tag="New Business"].active { background: #ef4444; border-color: #ef4444; }
+        /* Main Content */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
 
-  /* ── NEWS TAG BADGES (in-card) ── */
-  .news-tags { display: flex; flex-wrap: wrap; gap: 5px; grid-column: 1 / -1; margin-top: 6px; }
-  .news-tag {
-    font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 10px;
-    letter-spacing: 0.03em;
-  }
-  .news-tag-AI        { background: #eef2ff; color: #6366f1; }
-  .news-tag-Telco     { background: #ecfeff; color: #0891b2; }
-  .news-tag-Mobile    { background: #d1fae5; color: #065f46; }
-  .news-tag-Innovation{ background: #fef3c7; color: #92400e; }
-  .news-tag-NewBusiness{ background: #fee2e2; color: #991b1b; }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
 
-  /* ── EMPTY STATE ── */
-  .empty-state {
-    padding: 32px; text-align: center; color: var(--muted); font-size: 0.88rem;
-  }
-  .ei { font-size: 2rem; margin-bottom: 8px; }
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-  /* ── FOOTER ── */
-  .footer { padding: 16px 28px; font-size: 0.75rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: auto; }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
 
-  /* ══════════════════════════════════════════════════════════
-     RESPONSIVE — TABLET  ≤ 900px
-     Sidebar si riduce a icone+tooltip, label sezione sparisce
-  ══════════════════════════════════════════════════════════ */
-  @media (max-width: 900px) {
-    .stats-row { grid-template-columns: repeat(2,1fr); }
-    .grid-2 { grid-template-columns: 1fr; }
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-    .sidebar { width: 62px; }
-    .sidebar-logo .name,
-    .sidebar-logo .sub { display: none; }
-    .sidebar-logo { padding: 14px 10px; justify-content: center; }
-    .sidebar-logo .icon { margin: 0; }
-    .nav-label { display: none; }
-    .nav-item { justify-content: center; padding: 10px 0; }
-    .nav-item span:not(.ico):not(.nav-badge) { display: none; }
-    .nav-badge { display: none; }
-    .logout-btn span:last-child { display: none; }
-    .logout-btn { justify-content: center; }
-    #zoom-wrap { margin-left: 62px; }
-    .topbar { padding: 0 16px; }
-    .page { padding: 18px 14px; }
-  }
+        .card-body {
+            padding: 20px;
+        }
 
-  /* ══════════════════════════════════════════════════════════
-     RESPONSIVE — MOBILE  ≤ 600px
-     Sidebar nascosta; bottom nav bar con 6 icone
-  ══════════════════════════════════════════════════════════ */
-  @media (max-width: 600px) {
-    .sidebar { display: none; }
-    #zoom-wrap { margin-left: 0; padding-bottom: 64px; }
+        /* Section Titles */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    /* Bottom nav */
-    .bottom-nav {
-      display: flex !important;
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
-      background: var(--sidebar); border-top: 1px solid rgba(255,255,255,0.08);
-      height: 60px;
-    }
-    .bottom-nav-item {
-      flex: 1; display: flex; flex-direction: column; align-items: center;
-      justify-content: center; gap: 2px;
-      color: var(--sidebar-muted); font-size: 0.58rem; font-weight: 600;
-      cursor: pointer; padding: 6px 0; transition: color 0.15s;
-      position: relative; user-select: none;
-    }
-    .bottom-nav-item .bni-ico { font-size: 1.25rem; line-height: 1; }
-    .bottom-nav-item.active { color: #a5b4fc; }
-    .bottom-nav-item .bnbadge {
-      position: absolute; top: 4px; right: calc(50% - 16px);
-      background: var(--accent); color: #fff;
-      font-size: 0.55rem; font-weight: 700;
-      padding: 1px 4px; border-radius: 8px; min-width: 14px; text-align: center;
-    }
+        /* List Items */
+        .list-item {
+            padding: 14px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
 
-    .topbar { padding: 0 14px; height: 50px; }
-    .topbar-right .zoom-ctrl { display: none; }
-    .topbar-date { font-size: 0.7rem; }
-    .live-dot { width: 7px; height: 7px; }
+        .list-item:last-child {
+            border-bottom: none;
+        }
 
-    .stats-row { grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 16px; }
-    .stat-card { padding: 12px 14px; }
-    .stat-value { font-size: 1.6rem; }
+        .list-item:hover {
+            background: #f8f9fa;
+        }
 
-    .page { padding: 14px 12px; }
-    .news-page-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .news-card { grid-template-columns: 1fr; }
-    .news-date-badge { grid-column: 1; grid-row: unset; }
-    .tag-filter-bar { gap: 6px; }
-    .tag-pill { padding: 4px 10px; font-size: 0.72rem; }
+        .item-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
 
-    .chat-btns { flex-direction: column; }
-  }
+        .item-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
 
-  /* Bottom nav oculta di default — appare solo su ≤600px */
-  .bottom-nav { display: none; }
-</style>
+        .item-snippet {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .item-tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--text-muted);
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        /* Impact Badge */
+        .impact-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+
+        .impact-high {
+            background: #ffebee;
+            color: var(--danger);
+        }
+
+        .impact-medium {
+            background: #fff3e0;
+            color: var(--warning);
+        }
+
+        .impact-low {
+            background: #e8f5e9;
+            color: var(--success);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .user-menu {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* Chat Rapida Section */
+        .chat-rapida-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .chat-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px;
+            background: linear-gradient(135deg, #0088cc, #0066aa);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .chat-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
+        }
+
+        .chat-btn-icon {
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
-
-<div id="zoom-wrap">
-
-<!-- ═══ SIDEBAR ═══ -->
-<aside class="sidebar">
-  <div class="sidebar-logo">
-    <div class="icon">🤖</div>
-    <div>
-      <div class="name">Ross AI</div>
-      <div class="sub">Dashboard operativa</div>
-    </div>
-  </div>
-
-  <nav class="sidebar-nav">
-    <div class="nav-label">Generale</div>
-    <div class="nav-item active" onclick="showPage('home',this)">
-      <span class="ico">🏠</span> Home
-    </div>
-    <div class="nav-item" onclick="showPage('conversations',this)">
-      <span class="ico">💬</span> Conversazioni
-      <span class="nav-badge" id="nb-conv">0</span>
-    </div>
-    <div class="nav-item" onclick="showPage('documents',this)">
-      <span class="ico">📄</span> Documenti
-      <span class="nav-badge" id="nb-docs">0</span>
-    </div>
-    <div class="nav-label">Aggiornamenti</div>
-    <div class="nav-item" onclick="showPage('rassegna',this)">
-      <span class="ico">📰</span> Rassegna
-      <span class="nav-badge" id="nb-news">0</span>
-    </div>
-    <div class="nav-label">Sistema</div>
-    <div class="nav-item" onclick="showPage('tasks',this)">
-      <span class="ico">⚙️</span> Task programmati
-    </div>
-    <div class="nav-item" onclick="showPage('chat',this)">
-      <span class="ico">✉️</span> Chat rapida
-    </div>
-  </nav>
-
-  <div class="sidebar-footer">
-    <div class="logout-btn" onclick="doLogout()">
-      <span>🚪</span> Esci
-    </div>
-  </div>
-</aside>
-
-<!-- ═══ MAIN CONTENT ═══ -->
-<div style="flex:1; display:flex; flex-direction:column; min-height:100vh;">
-
-  <!-- BOTTOM NAV (mobile only) -->
-  <nav class="bottom-nav" id="bottom-nav">
-    <div class="bottom-nav-item active" onclick="showPage('home',this)" data-page="home">
-      <span class="bni-ico">🏠</span><span>Home</span>
-    </div>
-    <div class="bottom-nav-item" onclick="showPage('conversations',this)" data-page="conversations">
-      <span class="bni-ico">💬</span><span>Chat</span>
-      <span class="bnbadge" id="bnb-conv"></span>
-    </div>
-    <div class="bottom-nav-item" onclick="showPage('documents',this)" data-page="documents">
-      <span class="bni-ico">📄</span><span>Docs</span>
-      <span class="bnbadge" id="bnb-docs"></span>
-    </div>
-    <div class="bottom-nav-item" onclick="showPage('rassegna',this)" data-page="rassegna">
-      <span class="bni-ico">📰</span><span>News</span>
-      <span class="bnbadge" id="bnb-news"></span>
-    </div>
-    <div class="bottom-nav-item" onclick="showPage('tasks',this)" data-page="tasks">
-      <span class="bni-ico">⚙️</span><span>Task</span>
-    </div>
-    <div class="bottom-nav-item" onclick="doLogout()" data-page="">
-      <span class="bni-ico">🚪</span><span>Esci</span>
-    </div>
-  </nav>
-
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="topbar-title" id="topbar-section-title">Home</div>
-    <div class="topbar-right">
-      <div class="zoom-ctrl">
-        <button class="zoom-btn" onclick="changeZoom(-0.1)">−</button>
-        <span class="zoom-label" id="zoom-label">100%</span>
-        <button class="zoom-btn" onclick="changeZoom(0.1)">+</button>
-        <button class="zoom-btn" onclick="resetZoom()">↺</button>
-      </div>
-      <div class="live-dot"></div>
-      <span class="topbar-date" id="topbar-date">—</span>
-    </div>
-  </div>
-
-
-  <!-- ═══ PAGE: HOME ═══ -->
-  <div class="page active" id="page-home">
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-label">Conversazioni</div>
-        <div class="stat-value" id="s-conv">—</div>
-        <div class="stat-sub">totali con Ross</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Completate</div>
-        <div class="stat-value" id="s-done">—</div>
-        <div class="stat-sub">task risolti</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Documenti</div>
-        <div class="stat-value" id="s-docs">—</div>
-        <div class="stat-sub">generati</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Task attivi</div>
-        <div class="stat-value" id="s-tasks">—</div>
-        <div class="stat-sub">schedulati</div>
-      </div>
-    </div>
-
-    <div class="grid-2">
-      <div class="section-card">
-        <div class="section-header">
-          <span class="section-icon">💬</span>
-          <span class="section-title">Ultime conversazioni</span>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <h1>Ross AI Dashboard</h1>
+            </div>
+            <div class="user-menu">
+                <span class="user-email" id="userEmail">Caricamento...</span>
+                <button class="btn-logout" onclick="handleLogout()">Logout</button>
+            </div>
         </div>
-        <div class="section-body" id="home-conv-list">
-          <div class="empty-state"><div class="ei">💬</div>Nessuna conversazione.</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="dashboard-grid">
+            
+            <!-- Conversazioni -->
+            <div class="card">
+                <div class="card-header">
+                    💬 Conversazioni Recenti
+                </div>
+                <div class="card-body" id="conversazioniList">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Caricamento conversazioni...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rassegna Stampa -->
+            <div class="card">
+                <div class="card-header">
+                    📰 Rassegna Stampa
+                </div>
+                <div class="card-body" id="rassegnaList">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Caricamento rassegna...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documenti -->
+            <div class="card">
+                <div class="card-header">
+                    📄 Documenti
+                </div>
+                <div class="card-body" id="documentiList">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Caricamento documenti...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Rapida -->
+            <div class="card">
+                <div class="card-header">
+                    ⚡ Chat Rapida
+                </div>
+                <div class="card-body">
+                    <div class="chat-rapida-grid">
+                        <a href="https://t.me/TestHeyrossbot" class="chat-btn" target="_blank">
+                            <span class="chat-btn-icon">📱</span>
+                            Telegram App
+                        </a>
+                        <a href="https://web.telegram.org/k/#@TestHeyrossbot" class="chat-btn" target="_blank">
+                            <span class="chat-btn-icon">🌐</span>
+                            Telegram Web
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <div class="section-card">
-        <div class="section-header">
-          <span class="section-icon">📰</span>
-          <span class="section-title">Rassegna — ultime notizie</span>
-        </div>
-        <div class="section-body" id="home-news-list">
-          <div class="empty-state"><div class="ei">📰</div>Nessuna notizia.</div>
-        </div>
-        <div style="padding:10px 18px; border-top:1px solid var(--border);">
-          <span style="font-size:0.78rem; color:var(--accent); cursor:pointer; font-weight:600;"
-                onclick="showPage('rassegna', document.querySelector('[onclick*=rassegna]'))">
-            Tutte le notizie →
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
+    </main>
 
-  <!-- ═══ PAGE: CONVERSAZIONI ═══ -->
-  <div class="page" id="page-conversations" style="padding:28px;">
-    <div class="section-card">
-      <div class="section-header">
-        <span class="section-icon">💬</span>
-        <span class="section-title">Tutte le conversazioni</span>
-        <span class="badge-count" id="conv-count">0</span>
-      </div>
-      <div class="section-body" id="all-conv-list">
-        <div class="empty-state"><div class="ei">💬</div>Nessuna conversazione.</div>
-      </div>
-    </div>
-  </div>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    
+    <script>
+        // Inizializza Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
 
-  <!-- ═══ PAGE: DOCUMENTI ═══ -->
-  <div class="page" id="page-documents" style="padding:28px;">
-    <div class="section-card">
-      <div class="section-header">
-        <span class="section-icon">📄</span>
-        <span class="section-title">Documenti generati</span>
-        <span class="badge-count" id="docs-count">0</span>
-      </div>
-      <div class="section-body" id="docs-list">
-        <div class="empty-state"><div class="ei">📄</div>Nessun documento.</div>
-      </div>
-    </div>
-  </div>
+        // Verifica autenticazione
+        auth.onAuthStateChanged(user => {
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+            document.getElementById('userEmail').textContent = user.email;
+            
+            // Carica dati
+            loadConversazioni();
+            loadRassegna();
+            loadDocumenti();
+        });
 
-  <!-- ═══ PAGE: RASSEGNA ═══ -->
-  <div class="page" id="page-rassegna" style="padding:28px;">
-    <div class="news-page-header">
-      <div>
-        <div class="news-page-title">📰 Rassegna</div>
-        <div class="news-page-sub">Notizie Telco · AI · Mobile · Innovation — ultimi 7 giorni</div>
-      </div>
-      <div class="news-week-label" id="news-week-range">—</div>
-    </div>
-    <div class="tag-filter-bar" id="tag-filter-bar"></div>
-    <div class="news-grid" id="news-list">
-      <div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>
-    </div>
-  </div>
+        // Logout handler
+        function handleLogout() {
+            auth.signOut().then(() => {
+                localStorage.removeItem('ross_session');
+                window.location.href = 'login.html';
+            });
+        }
 
-  <!-- ═══ PAGE: TASK ═══ -->
-  <div class="page" id="page-tasks" style="padding:28px;">
-    <div class="section-card">
-      <div class="section-header">
-        <span class="section-icon">⚙️</span>
-        <span class="section-title">Task programmati</span>
-      </div>
-      <div class="section-body" id="tasks-list">
-        <div class="empty-state"><div class="ei">⚙️</div>Nessun task.</div>
-      </div>
-    </div>
-  </div>
+        // Carica conversazioni
+        function loadConversazioni() {
+            db.collection('conversazioni')
+                .orderBy('timestamp', 'desc')
+                .limit(10)
+                .get()
+                .then(snapshot => {
+                    const container = document.getElementById('conversazioniList');
+                    
+                    if (snapshot.empty) {
+                        container.innerHTML = `
+                            <div class="empty-state">
+                                <div class="empty-icon">💭</div>
+                                <p>Nessuna conversazione recente</p>
+                            </div>
+                        `;
+                        return;
+                    }
 
-  <!-- ═══ PAGE: CHAT RAPIDA ═══ -->
-  <div class="page" id="page-chat" style="padding:28px;">
-    <div class="section-card" style="max-width:480px;">
-      <div class="section-header">
-        <span class="section-icon">✉️</span>
-        <span class="section-title">Chat rapida con Ross</span>
-      </div>
-      <div class="section-body">
-        <p style="font-size:0.85rem; color:var(--muted); margin-bottom:16px;">
-          Apri la chat direttamente su Telegram App o Telegram Web.
-        </p>
-        <div class="chat-btns">
-          <a class="chat-btn chat-btn-app" href="https://t.me/TestHeyrossbot" target="_blank">📱 Telegram App</a>
-          <a class="chat-btn chat-btn-web" href="https://web.telegram.org/k/#@TestHeyrossbot" target="_blank">🌐 Telegram Web</a>
-        </div>
-      </div>
-    </div>
-  </div>
+                    let html = '';
+                    snapshot.forEach(doc => {
+                        const data = doc.data();
+                        const tags = data.tags || [];
+                        const tagHtml = tags.map(t => `<span class="tag">${t}</span>`).join('');
+                        
+                        html += `
+                            <div class="list-item">
+                                <div class="item-title">${data.topic || 'Senza titolo'}</div>
+                                <div class="item-meta">${formatDate(data.timestamp)} • ${data.categoria || 'Generale'}</div>
+                                <div class="item-snippet">${data.snippet || ''}</div>
+                                ${tagHtml ? `<div class="item-tags">${tagHtml}</div>` : ''}
+                                <div class="btn-group">
+                                    <a href="${data.telegramLink || '#'}" class="btn" target="_blank">Apri su Telegram</a>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    container.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Errore caricamento conversazioni:', error);
+                    document.getElementById('conversazioniList').innerHTML = `
+                        <div class="empty-state">
+                            <p>Errore nel caricamento: ${error.message}</p>
+                        </div>
+                    `;
+                });
+        }
 
-  <div class="footer" id="footer-date">Dashboard Ross AI · NextMindLab</div>
-</div>
+        // Carica rassegna stampa
+        function loadRassegna() {
+            db.collection('rassegna')
+                .orderBy('publishedAt', 'desc')
+                .limit(5)
+                .get()
+                .then(snapshot => {
+                    const container = document.getElementById('rassegnaList');
+                    
+                    if (snapshot.empty) {
+                        container.innerHTML = `
+                            <div class="empty-state">
+                                <div class="empty-icon">📰</div>
+                                <p>Nessuna rassegna pubblicata</p>
+                            </div>
+                        `;
+                        return;
+                    }
 
-</div><!-- end zoom-wrap -->
+                    let html = '';
+                    snapshot.forEach(doc => {
+                        const data = doc.data();
+                        const notizie = data.notizie || [];
+                        const impactClass = getImpactClass(data.avgImpact || 5);
+                        
+                        html += `
+                            <div class="list-item">
+                                <div class="item-title">
+                                    ${data.data || 'Data non disponibile'}
+                                    <span class="impact-badge ${impactClass}">Impact: ${data.avgImpact || 0}/10</span>
+                                </div>
+                                <div class="item-meta">${notizie.length} notizie • Pubblicato ${formatDate(data.publishedAt)}</div>
+                                ${notizie.slice(0, 2).map(n => `
+                                    <div style="margin: 8px 0; padding: 8px; background: #f8f9fa; border-radius: 6px;">
+                                        <strong>${n.titolo || 'Senza titolo'}</strong>
+                                        <div style="font-size: 12px; color: #666; margin-top: 4px;">${n.source || ''}</div>
+                                    </div>
+                                `).join('')}
+                                <div class="btn-group">
+                                    ${data.pdfUrl ? `<a href="${data.pdfUrl}" class="btn" target="_blank">📄 Download PDF</a>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    container.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Errore caricamento rassegna:', error);
+                    document.getElementById('rassegnaList').innerHTML = `
+                        <div class="empty-state">
+                            <p>Errore nel caricamento: ${error.message}</p>
+                        </div>
+                    `;
+                });
+        }
 
-<script>
-// ── AUTH CHECK (SECURITY FIX: nonce verification) ──────────────────────────
-function getCookie(n) {
-  const m = document.cookie.match('(?:^|; )' + n + '=([^;]*)');
-  return m ? decodeURIComponent(m[1]) : null;
-}
-function doLogout() {
-  document.cookie = 'ross_session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Strict';
-  sessionStorage.removeItem('ross_nonce');
-  window.location.href = 'login.html';
-}
+        // Carica documenti
+        function loadDocumenti() {
+            db.collection('documenti')
+                .orderBy('uploadDate', 'desc')
+                .limit(10)
+                .get()
+                .then(snapshot => {
+                    const container = document.getElementById('documentiList');
+                    
+                    if (snapshot.empty) {
+                        container.innerHTML = `
+                            <div class="empty-state">
+                                <div class="empty-icon">📄</div>
+                                <p>Nessun documento caricato</p>
+                            </div>
+                        `;
+                        return;
+                    }
 
-function checkAuth() {
-  const raw = getCookie('ross_session');
-  if (!raw) { window.location.href = 'login.html'; return false; }
-  try {
-    const session = JSON.parse(atob(raw));
-    // Verifica scadenza (24h)
-    if (!session.ts || Date.now() - session.ts > 86400000) {
-      doLogout(); return false;
-    }
-    // Verifica nonce (deve coincidere con quello salvato al login)
-    const storedNonce = sessionStorage.getItem('ross_nonce');
-    if (storedNonce && session.nonce !== storedNonce) {
-      doLogout(); return false;
-    }
-  } catch(e) { doLogout(); return false; }
-  return true;
-}
+                    let html = '';
+                    snapshot.forEach(doc => {
+                        const data = doc.data();
+                        
+                        html += `
+                            <div class="list-item">
+                                <div class="item-title">${data.titolo || 'Senza titolo'}</div>
+                                <div class="item-meta">${data.tipo || 'PDF'} • Caricato ${formatDate(data.uploadDate)}</div>
+                                <div class="btn-group">
+                                    ${data.githubUrl ? `<a href="${data.githubUrl}" class="btn" target="_blank">📥 Download</a>` : ''}
+                                    ${data.firebaseUrl ? `<a href="${data.firebaseUrl}" class="btn btn-secondary" target="_blank">🔗 Firebase</a>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    container.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Errore caricamento documenti:', error);
+                    document.getElementById('documentiList').innerHTML = `
+                        <div class="empty-state">
+                            <p>Errore nel caricamento: ${error.message}</p>
+                        </div>
+                    `;
+                });
+        }
 
-// ── NAVIGATION ──────────────────────────────────────────────────────────────
-const pageTitles = {
-  home: 'Home', conversations: 'Conversazioni', documents: 'Documenti',
-  rassegna: 'Rassegna', tasks: 'Task programmati', chat: 'Chat rapida'
-};
+        // Utility: Formatta data
+        function formatDate(timestamp) {
+            if (!timestamp) return 'Data non disponibile';
+            
+            let date;
+            if (timestamp.toDate) {
+                date = timestamp.toDate();
+            } else if (typeof timestamp === 'string') {
+                date = new Date(timestamp);
+            } else {
+                return 'Data non disponibile';
+            }
+            
+            return date.toLocaleDateString('it-IT', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
 
-function showPage(name, el) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.querySelectorAll('.bottom-nav-item').forEach(n => n.classList.remove('active'));
-  const page = document.getElementById('page-' + name);
-  if (page) page.classList.add('active');
-  if (el) el.classList.add('active');
-  // Sync bottom nav active state
-  document.querySelectorAll('.bottom-nav-item[data-page="' + name + '"]').forEach(n => n.classList.add('active'));
-  document.getElementById('topbar-section-title').textContent = pageTitles[name] || name;
-}
-
-// ── SAFE DOM HELPERS (XSS FIX) ──────────────────────────────────────────────
-function esc(str) {
-  const d = document.createElement('div');
-  d.textContent = String(str ?? '');
-  return d.innerHTML;
-}
-function safeAttr(str) {
-  return String(str ?? '').replace(/['"<>&]/g, c => ({'\'':'&#39;','"':'&quot;','<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-}
-
-// ── DATA FETCH ────────────────────────────────────────────────────────────────
-const DATA_URL = 'https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/data.json?_=' + Date.now();
-const TG_URL = 'https://web.telegram.org/k/#@TestHeyrossbot';
-
-async function fetchData() {
-  try {
-    const r = await fetch('https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/data.json?_=' + Date.now());
-    if (!r.ok) return;
-    const d = await r.json();
-
-    // Stats
-    document.getElementById('s-conv').textContent  = d.stats?.conversations ?? 0;
-    document.getElementById('s-done').textContent  = d.stats?.completed ?? 0;
-    document.getElementById('s-docs').textContent  = d.stats?.documents ?? 0;
-    document.getElementById('s-tasks').textContent = d.stats?.scheduled_tasks ?? 0;
-
-    // Nav badges (sidebar + bottom nav)
-    const convN = (d.conversations || []).length;
-    const docsN = (d.documents || []).length;
-    const newsN = (d.rassegna || []).length;
-    document.getElementById('nb-conv').textContent = convN;
-    document.getElementById('nb-docs').textContent = docsN;
-    document.getElementById('nb-news').textContent = newsN;
-    // Bottom nav badges
-    const bnConv = document.getElementById('bnb-conv');
-    const bnDocs = document.getElementById('bnb-docs');
-    const bnNews = document.getElementById('bnb-news');
-    if (bnConv) bnConv.textContent = convN > 0 ? convN : '';
-    if (bnDocs) bnDocs.textContent = docsN > 0 ? docsN : '';
-    if (bnNews) bnNews.textContent = newsN > 0 ? newsN : '';
-
-    renderConversations(d.conversations || [], 'home-conv-list', 5);
-    renderConversations(d.conversations || [], 'all-conv-list', 100);
-    document.getElementById('conv-count').textContent = (d.conversations || []).length;
-
-    renderDocuments(d.documents || []);
-    renderRassegna(d.rassegna || []);
-    renderHomeNews(d.rassegna || []);
-    renderTasks(d.scheduled_tasks || []);
-
-    const lu = new Date(d.last_updated);
-    const fmt = lu.toLocaleString('it-IT', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-    document.getElementById('topbar-date').textContent = fmt;
-    document.getElementById('footer-date').textContent = 'Aggiornato: ' + fmt + ' · Ross AI · NextMindLab';
-  } catch(e) { console.warn('Data fetch failed', e); }
-}
-
-// ── RENDER FUNCTIONS (XSS-safe: textContent + safeAttr) ───────────────────
-
-function renderConversations(convs, elId, limit) {
-  const el = document.getElementById(elId);
-  const list = convs.slice(0, limit);
-  if (!list.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">💬</div>Nessuna conversazione.</div>';
-    return;
-  }
-  el.innerHTML = '';
-  list.forEach(c => {
-    const s = c.status === 'done' ? {cls:'badge-done',label:'✓ Completata'} : {cls:'badge-pend',label:'⏳ In corso'};
-    const item = document.createElement('div');
-    item.className = 'conv-item';
-
-    const top = document.createElement('div');
-    top.className = 'conv-top';
-
-    const link = document.createElement('a');
-    link.className = 'conv-link';
-    link.href = TG_URL;
-    link.target = '_blank';
-    link.textContent = c.title || '(senza titolo)';
-
-    const date = document.createElement('span');
-    date.className = 'conv-date';
-    date.textContent = c.date_label || '';
-
-    const badge = document.createElement('span');
-    badge.className = 'badge ' + s.cls;
-    badge.textContent = s.label;
-
-    top.appendChild(link);
-    top.appendChild(date);
-    top.appendChild(badge);
-
-    const snippet = document.createElement('div');
-    snippet.className = 'conv-snippet';
-    snippet.textContent = c.snippet || '';
-
-    item.appendChild(top);
-    item.appendChild(snippet);
-    el.appendChild(item);
-  });
-}
-
-function renderDocuments(docs) {
-  const el = document.getElementById('docs-list');
-  document.getElementById('docs-count').textContent = docs.length;
-  if (!docs.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📄</div>Nessun documento.</div>';
-    return;
-  }
-  el.innerHTML = '';
-  docs.forEach(d => {
-    const item = document.createElement('div');
-    item.className = 'doc-item';
-
-    const icon = document.createElement('div');
-    icon.className = 'doc-icon';
-    icon.textContent = d.icon || '📄';
-
-    const info = document.createElement('div');
-    const name = document.createElement('div');
-    name.className = 'doc-name';
-    name.textContent = d.title || d.name || '—';
-    const meta = document.createElement('div');
-    meta.className = 'doc-meta';
-    meta.textContent = (d.type || 'PDF') + (d.pages ? ' · ' + d.pages + ' pagine' : '') + (d.date_label ? ' · ' + d.date_label : (d.date ? ' · ' + d.date : ''));
-    info.appendChild(name);
-    info.appendChild(meta);
-
-    const btn = document.createElement('a');
-    btn.className = 'dl-btn';
-    btn.href = safeAttr(d.url || '#');
-    btn.target = '_blank';
-    btn.setAttribute('download', '');
-    btn.textContent = '⬇ Scarica';
-
-    item.appendChild(icon);
-    item.appendChild(info);
-    item.appendChild(btn);
-    el.appendChild(item);
-  });
-}
-
-// ── TAG LOGIC ─────────────────────────────────────────────────────────────────
-const TAG_KEYWORDS = {
-  'AI':          ['ai', 'artificial intelligence', 'intelligenza artificiale', 'machine learning', 'llm', 'gpt', 'gemini', 'openai', 'mistral', 'claude', 'chatgpt', 'deep learning', 'neural', 'modello', 'hassabis', 'agents', 'agent', 'copilot', 'automation', 'automatiz'],
-  'Telco':       ['telco', 'telecom', 'telecomunicaz', 'vodafone', 'tim', 'iliad', 'fastweb', 'wind', '5g', 'fibra', 'banda larga', 'broadband', 'operatore', 'rete mobile', 'telus', 'globalstar', 'satellite', 'spectrum'],
-  'Mobile':      ['mobile', 'smartphone', 'iphone', 'android', 'app store', 'google play', 'ios', 'tablet', 'wearable', 'apple', 'samsung', 'pixel', 'device', 'handset'],
-  'Innovation':  ['innovation', 'innovazione', 'startup', 'ricerca', 'research', 'quantum', 'xr', 'ar', 'vr', 'mixed reality', 'robotics', 'drone', 'space', 'spazio', 'biotech', 'climate tech', 'greentech', 'io 2026', 'google i/o'],
-  'New Business':['business', 'revenue', 'acquisition', 'acquisizione', 'merger', 'invest', 'investimento', 'ipo', 'valuation', 'deal', 'partnership', 'lancio', 'launch', 'market', 'mercato', 'billion', 'miliard']
-};
-
-function inferTags(n) {
-  if (n.tags && Array.isArray(n.tags) && n.tags.length) return n.tags;
-  const hay = ((n.caption || '') + ' ' + (n.snippet || '') + ' ' + (n.source || '')).toLowerCase();
-  const found = [];
-  for (const [tag, kws] of Object.entries(TAG_KEYWORDS)) {
-    if (kws.some(k => hay.includes(k))) found.push(tag);
-  }
-  return found.length ? found : ['Innovation'];
-}
-
-let allNews = [];
-let activeTag = null; // null = tutte
-
-function buildTagFilterBar(news) {
-  const bar = document.getElementById('tag-filter-bar');
-  bar.innerHTML = '';
-  // raccolta tag presenti
-  const tagSet = new Set();
-  news.forEach(n => inferTags(n).forEach(t => tagSet.add(t)));
-  const tags = ['AI','Telco','Mobile','Innovation','New Business'].filter(t => tagSet.has(t));
-
-  // pill "Tutte"
-  const all = document.createElement('span');
-  all.className = 'tag-pill all' + (activeTag === null ? '' : ' inactive');
-  all.textContent = 'Tutte (' + news.length + ')';
-  all.addEventListener('click', () => { activeTag = null; renderFilteredNews(); buildTagFilterBar(allNews); });
-  bar.appendChild(all);
-
-  tags.forEach(tag => {
-    const count = news.filter(n => inferTags(n).includes(tag)).length;
-    const pill = document.createElement('span');
-    pill.className = 'tag-pill' + (activeTag === tag ? ' active' : ' inactive');
-    pill.setAttribute('data-tag', tag);
-    pill.textContent = tag + ' (' + count + ')';
-    pill.addEventListener('click', () => {
-      activeTag = (activeTag === tag) ? null : tag;
-      renderFilteredNews();
-      buildTagFilterBar(allNews);
-    });
-    bar.appendChild(pill);
-  });
-}
-
-function renderFilteredNews() {
-  const filtered = activeTag ? allNews.filter(n => inferTags(n).includes(activeTag)) : allNews;
-  renderNewsCards(filtered);
-}
-
-function renderNewsCards(news) {
-  const el = document.getElementById('news-list');
-  if (!news.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia per questo tag.</div>';
-    return;
-  }
-  el.innerHTML = '';
-  news.forEach(n => {
-    const card = document.createElement('div');
-    card.className = 'news-card';
-
-    const caption = document.createElement('div');
-    caption.className = 'news-caption';
-    caption.textContent = n.caption || '';
-
-    const dateBadge = document.createElement('div');
-    dateBadge.className = 'news-date-badge';
-    dateBadge.textContent = n.date || '';
-
-    const snippet = document.createElement('div');
-    snippet.className = 'news-snippet';
-    snippet.textContent = n.snippet || '';
-
-    // Tag badges in-card
-    const tagsDiv = document.createElement('div');
-    tagsDiv.className = 'news-tags';
-    inferTags(n).forEach(tag => {
-      const tb = document.createElement('span');
-      tb.className = 'news-tag news-tag-' + tag.replace(' ', '');
-      tb.textContent = tag;
-      tagsDiv.appendChild(tb);
-    });
-
-    const footer = document.createElement('div');
-    footer.className = 'news-footer';
-
-    const srcTag = document.createElement('span');
-    srcTag.className = 'news-source-tag';
-    srcTag.textContent = n.source || '';
-
-    const link = document.createElement('a');
-    link.className = 'news-link';
-    link.href = safeAttr(n.url || '#');
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.textContent = '→ Leggi l\'articolo';
-
-    footer.appendChild(srcTag);
-    footer.appendChild(link);
-
-    card.appendChild(caption);
-    card.appendChild(dateBadge);
-    card.appendChild(snippet);
-    card.appendChild(tagsDiv);
-    card.appendChild(footer);
-    el.appendChild(card);
-  });
-}
-
-function renderRassegna(news) {
-  allNews = news;
-  activeTag = null;
-  const el = document.getElementById('news-list');
-  if (!news.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia disponibile.</div>';
-    document.getElementById('tag-filter-bar').innerHTML = '';
-    return;
-  }
-  // Range date
-  const dates = news.map(n => n.date).filter(Boolean).sort();
-  if (dates.length) {
-    document.getElementById('news-week-range').textContent =
-      dates[0] + ' → ' + dates[dates.length-1];
-  }
-  buildTagFilterBar(news);
-  renderNewsCards(news);
-}
-
-function renderHomeNews(news) {
-  const el = document.getElementById('home-news-list');
-  const list = news.slice(0, 3);
-  if (!list.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">📰</div>Nessuna notizia.</div>';
-    return;
-  }
-  el.innerHTML = '';
-  list.forEach(n => {
-    const item = document.createElement('div');
-    item.style.cssText = 'padding:10px 0; border-bottom:1px solid #f3f4f6;';
-
-    const cap = document.createElement('div');
-    cap.style.cssText = 'font-size:0.88rem; font-weight:700; color:var(--text); margin-bottom:4px;';
-    cap.textContent = n.caption || '';
-
-    const snip = document.createElement('div');
-    snip.style.cssText = 'font-size:0.78rem; color:var(--muted); line-height:1.4;';
-    snip.textContent = (n.snippet || '').substring(0, 120) + ((n.snippet||'').length > 120 ? '…' : '');
-
-    item.appendChild(cap);
-    item.appendChild(snip);
-    el.appendChild(item);
-  });
-}
-
-function renderTasks(tasks) {
-  const el = document.getElementById('tasks-list');
-  if (!tasks.length) {
-    el.innerHTML = '<div class="empty-state"><div class="ei">⚙️</div>Nessun task programmato.</div>';
-    return;
-  }
-  el.innerHTML = '';
-  tasks.forEach(t => {
-    const item = document.createElement('div');
-    item.className = 'task-item';
-
-    const dot = document.createElement('div');
-    dot.className = 'task-dot ' + (t.status === 'active' ? 'active' : 'pending');
-
-    const info = document.createElement('div');
-    const name = document.createElement('div');
-    name.className = 'task-name';
-    name.textContent = t.name || '—';
-    const meta = document.createElement('div');
-    meta.className = 'task-meta';
-    meta.textContent = t.schedule || '';
-
-    info.appendChild(name);
-    info.appendChild(meta);
-    item.appendChild(dot);
-    item.appendChild(info);
-    el.appendChild(item);
-  });
-}
-
-// ── ZOOM ──────────────────────────────────────────────────────────────────────
-let currentZoom = parseFloat(localStorage.getItem('ross_zoom') || '1');
-function applyZoom(z) {
-  currentZoom = Math.min(2, Math.max(0.6, z));
-  document.getElementById('zoom-wrap').style.zoom = currentZoom;
-  document.getElementById('zoom-label').textContent = Math.round(currentZoom * 100) + '%';
-  localStorage.setItem('ross_zoom', currentZoom);
-}
-function changeZoom(d) { applyZoom(currentZoom + d); }
-function resetZoom() { applyZoom(1); }
-
-// ── BOOT ──────────────────────────────────────────────────────────────────────
-window.onload = function() {
-  if (!checkAuth()) return;
-  applyZoom(currentZoom);
-  fetchData();
-  setInterval(fetchData, 60000);
-};
-</script>
+        // Utility: Classe impact
+        function getImpactClass(score) {
+            if (score >= 7) return 'impact-high';
+            if (score >= 4) return 'impact-medium';
+            return 'impact-low';
+        }
+    </script>
 </body>
 </html>
