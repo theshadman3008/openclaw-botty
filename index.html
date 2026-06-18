@@ -11,7 +11,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
     
     <!-- Firebase Config -->
-    <script src="firebase-config-inline.js"></script>
+    <script src="firebase-config.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,42 +47,27 @@
 
         /* Header */
         .header {
-            background: var(--card-bg);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 24px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 24px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .header-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            font-size: 28px;
-        }
-
-        .logo h1 {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
-        .user-menu {
+        .user-info {
             display: flex;
             align-items: center;
             gap: 16px;
@@ -90,523 +75,270 @@
 
         .user-email {
             font-size: 14px;
-            color: var(--text-muted);
+            opacity: 0.9;
         }
 
         .btn-logout {
-            padding: 8px 16px;
-            background: var(--danger);
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
             color: white;
-            border: none;
+            padding: 8px 16px;
             border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s;
+            font-size: 14px;
+            transition: background 0.3s;
         }
 
         .btn-logout:hover {
-            background: #d32f2f;
+            background: rgba(255,255,255,0.3);
         }
 
-        /* Main Content */
-        .main {
-            max-width: 1400px;
+        /* Main Container */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 40px 20px;
         }
 
-        .dashboard-grid {
+        /* Stats Grid */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
-            margin-top: 24px;
+            margin-bottom: 40px;
         }
 
-        /* Cards */
-        .card {
+        .stat-card {
             background: var(--card-bg);
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary);
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        .card-header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 16px 20px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* List Items */
-        .list-item {
-            padding: 14px;
-            border-bottom: 1px solid var(--border);
-            transition: background 0.2s;
-        }
-
-        .list-item:last-child {
-            border-bottom: none;
-        }
-
-        .list-item:hover {
-            background: #f8f9fa;
-        }
-
-        .item-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 6px;
-        }
-
-        .item-meta {
-            font-size: 13px;
+        .stat-label {
+            font-size: 14px;
             color: var(--text-muted);
             margin-bottom: 8px;
         }
 
-        .item-snippet {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text);
         }
 
-        .item-tags {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            color: var(--primary);
-            padding: 4px 10px;
+        /* Section */
+        .section {
+            background: var(--card-bg);
             border-radius: 12px;
-            font-size: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            font-size: 20px;
             font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 10px 18px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.2s;
-        }
-
-        .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: var(--text-muted);
-        }
-
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-
-        .btn-group {
+        /* Documenti List */
+        .documenti-list {
             display: flex;
-            gap: 8px;
-            margin-top: 12px;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        /* Loading */
-        .loading {
-            text-align: center;
-            padding: 40px;
+        .documento-card {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .documento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .documento-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .documento-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .documento-meta {
+            font-size: 13px;
             color: var(--text-muted);
         }
 
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid var(--border);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 16px;
+        .documento-content {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 12px;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .impact-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
-        /* Empty State */
+        .impact-high {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .impact-medium {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .impact-low {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
         .empty-state {
             text-align: center;
             padding: 40px;
             color: var(--text-muted);
         }
 
-        .empty-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-            opacity: 0.5;
-        }
-
-        /* Impact Badge */
-        .impact-badge {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-left: 8px;
-        }
-
-        .impact-high {
-            background: #ffebee;
-            color: var(--danger);
-        }
-
-        .impact-medium {
-            background: #fff3e0;
-            color: var(--warning);
-        }
-
-        .impact-low {
-            background: #e8f5e9;
-            color: var(--success);
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .header-content {
                 flex-direction: column;
-                gap: 12px;
+                gap: 16px;
             }
             
-            .user-menu {
-                flex-direction: column;
-                gap: 8px;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
-        }
-
-        /* Chat Rapida Section */
-        .chat-rapida-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .chat-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px;
-            background: linear-gradient(135deg, #0088cc, #0066aa);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .chat-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
-        }
-
-        .chat-btn-icon {
-            font-size: 24px;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <div class="header">
         <div class="header-content">
-            <div class="logo">
-                <span class="logo-icon">🤖</span>
-                <h1>Ross AI Dashboard</h1>
-            </div>
-            <div class="user-menu">
+            <div class="logo">🤖 Ross AI Dashboard</div>
+            <div class="user-info">
                 <span class="user-email" id="userEmail">Caricamento...</span>
-                <button class="btn-logout" onclick="handleLogout()">Logout</button>
+                <button class="btn-logout" onclick="logout()">Logout</button>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Main Content -->
-    <main class="main">
-        <div class="dashboard-grid">
-            
-            <!-- Conversazioni -->
-            <div class="card">
-                <div class="card-header">
-                    💬 Conversazioni Recenti
-                </div>
-                <div class="card-body" id="conversazioniList">
-                    <div class="loading">
-                        <div class="spinner"></div>
-                        <p>Caricamento conversazioni...</p>
-                    </div>
-                </div>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Documenti Totali</div>
+                <div class="stat-value" id="statTotal">-</div>
             </div>
-
-            <!-- Rassegna Stampa -->
-            <div class="card">
-                <div class="card-header">
-                    📰 Rassegna Stampa
-                </div>
-                <div class="card-body" id="rassegnaList">
-                    <div class="loading">
-                        <div class="spinner"></div>
-                        <p>Caricamento rassegna...</p>
-                    </div>
-                </div>
+            <div class="stat-card">
+                <div class="stat-label">High Impact</div>
+                <div class="stat-value" id="statHigh">-</div>
             </div>
-
-            <!-- Documenti -->
-            <div class="card">
-                <div class="card-header">
-                    📄 Documenti
-                </div>
-                <div class="card-body" id="documentiList">
-                    <div class="loading">
-                        <div class="spinner"></div>
-                        <p>Caricamento documenti...</p>
-                    </div>
-                </div>
+            <div class="stat-card">
+                <div class="stat-label">Medium Impact</div>
+                <div class="stat-value" id="statMedium">-</div>
             </div>
-
-            <!-- Chat Rapida -->
-            <div class="card">
-                <div class="card-header">
-                    ⚡ Chat Rapida
-                </div>
-                <div class="card-body">
-                    <div class="chat-rapida-grid">
-                        <a href="https://t.me/TestHeyrossbot" class="chat-btn" target="_blank">
-                            <span class="chat-btn-icon">📱</span>
-                            Telegram App
-                        </a>
-                        <a href="https://web.telegram.org/k/#@TestHeyrossbot" class="chat-btn" target="_blank">
-                            <span class="chat-btn-icon">🌐</span>
-                            Telegram Web
-                        </a>
-                    </div>
-                </div>
+            <div class="stat-card">
+                <div class="stat-label">Low Impact</div>
+                <div class="stat-value" id="statLow">-</div>
             </div>
-
         </div>
-    </main>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
-    
+        <!-- Documenti Section -->
+        <div class="section">
+            <h2 class="section-title">📄 Documenti</h2>
+            <div id="documentiList" class="documenti-list">
+                <div class="loading">Caricamento documenti...</div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Firebase già inizializzato in firebase-config-inline.js
-
-        // Verifica autenticazione
-        auth.onAuthStateChanged(user => {
+        // Controlla autenticazione
+        firebase.auth().onAuthStateChanged(function(user) {
             if (!user) {
                 window.location.href = 'login.html';
                 return;
             }
-            document.getElementById('userEmail').textContent = user.email;
             
-            // Carica dati
-            loadConversazioni();
-            loadRassegna();
+            document.getElementById('userEmail').textContent = user.email;
             loadDocumenti();
+            updateStats();
         });
 
-        // Logout handler
-        function handleLogout() {
-            auth.signOut().then(() => {
-                localStorage.removeItem('ross_session');
+        // Logout
+        function logout() {
+            firebase.auth().signOut().then(() => {
                 window.location.href = 'login.html';
             });
         }
 
-        // Carica conversazioni
-        function loadConversazioni() {
-            db.collection('conversazioni')
-                .orderBy('timestamp', 'desc')
-                .limit(10)
-                .get()
-                .then(snapshot => {
-                    const container = document.getElementById('conversazioniList');
-                    
-                    if (snapshot.empty) {
-                        container.innerHTML = `
-                            <div class="empty-state">
-                                <div class="empty-icon">💭</div>
-                                <p>Nessuna conversazione recente</p>
-                            </div>
-                        `;
-                        return;
-                    }
-
-                    let html = '';
-                    snapshot.forEach(doc => {
-                        const data = doc.data();
-                        const tags = data.tags || [];
-                        const tagHtml = tags.map(t => `<span class="tag">${t}</span>`).join('');
-                        
-                        html += `
-                            <div class="list-item">
-                                <div class="item-title">${data.topic || 'Senza titolo'}</div>
-                                <div class="item-meta">${formatDate(data.timestamp)} • ${data.categoria || 'Generale'}</div>
-                                <div class="item-snippet">${data.snippet || ''}</div>
-                                ${tagHtml ? `<div class="item-tags">${tagHtml}</div>` : ''}
-                                <div class="btn-group">
-                                    <a href="${data.telegramLink || '#'}" class="btn" target="_blank">Apri su Telegram</a>
-                                </div>
-                            </div>
-                        `;
-                    });
-                    
-                    container.innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Errore caricamento conversazioni:', error);
-                    document.getElementById('conversazioniList').innerHTML = `
-                        <div class="empty-state">
-                            <p>Errore nel caricamento: ${error.message}</p>
-                        </div>
-                    `;
-                });
-        }
-
-        // Carica rassegna stampa
-        function loadRassegna() {
-            db.collection('rassegna')
-                .orderBy('publishedAt', 'desc')
-                .limit(5)
-                .get()
-                .then(snapshot => {
-                    const container = document.getElementById('rassegnaList');
-                    
-                    if (snapshot.empty) {
-                        container.innerHTML = `
-                            <div class="empty-state">
-                                <div class="empty-icon">📰</div>
-                                <p>Nessuna rassegna pubblicata</p>
-                            </div>
-                        `;
-                        return;
-                    }
-
-                    let html = '';
-                    snapshot.forEach(doc => {
-                        const data = doc.data();
-                        const notizie = data.notizie || [];
-                        const impactClass = getImpactClass(data.avgImpact || 5);
-                        
-                        html += `
-                            <div class="list-item">
-                                <div class="item-title">
-                                    ${data.data || 'Data non disponibile'}
-                                    <span class="impact-badge ${impactClass}">Impact: ${data.avgImpact || 0}/10</span>
-                                </div>
-                                <div class="item-meta">${notizie.length} notizie • Pubblicato ${formatDate(data.publishedAt)}</div>
-                                ${notizie.slice(0, 2).map(n => `
-                                    <div style="margin: 8px 0; padding: 8px; background: #f8f9fa; border-radius: 6px;">
-                                        <strong>${n.titolo || 'Senza titolo'}</strong>
-                                        <div style="font-size: 12px; color: #666; margin-top: 4px;">${n.source || ''}</div>
-                                    </div>
-                                `).join('')}
-                                <div class="btn-group">
-                                    ${data.pdfUrl ? `<a href="${data.pdfUrl}" class="btn" target="_blank">📄 Download PDF</a>` : ''}
-                                </div>
-                            </div>
-                        `;
-                    });
-                    
-                    container.innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Errore caricamento rassegna:', error);
-                    document.getElementById('rassegnaList').innerHTML = `
-                        <div class="empty-state">
-                            <p>Errore nel caricamento: ${error.message}</p>
-                        </div>
-                    `;
-                });
-        }
-
         // Carica documenti
         function loadDocumenti() {
-            db.collection('documenti')
-                .orderBy('uploadDate', 'desc')
-                .limit(10)
+            firebase.firestore().collection('documenti')
+                .orderBy('timestamp', 'desc')
                 .get()
                 .then(snapshot => {
-                    const container = document.getElementById('documentiList');
+                    const list = document.getElementById('documentiList');
                     
                     if (snapshot.empty) {
-                        container.innerHTML = `
-                            <div class="empty-state">
-                                <div class="empty-icon">📄</div>
-                                <p>Nessun documento caricato</p>
-                            </div>
-                        `;
+                        list.innerHTML = '<div class="empty-state">Nessun documento presente.</div>';
                         return;
                     }
 
                     let html = '';
                     snapshot.forEach(doc => {
                         const data = doc.data();
+                        const impactClass = getImpactClass(data.impact_score || 0);
+                        const impactLabel = data.impact_score >= 7 ? 'HIGH' : (data.impact_score >= 4 ? 'MEDIUM' : 'LOW');
                         
                         html += `
-                            <div class="list-item">
-                                <div class="item-title">${data.titolo || 'Senza titolo'}</div>
-                                <div class="item-meta">${data.tipo || 'PDF'} • Caricato ${formatDate(data.uploadDate)}</div>
-                                <div class="btn-group">
-                                    ${data.githubUrl ? `<a href="${data.githubUrl}" class="btn" target="_blank">📥 Download</a>` : ''}
-                                    ${data.firebaseUrl ? `<a href="${data.firebaseUrl}" class="btn btn-secondary" target="_blank">🔗 Firebase</a>` : ''}
+                            <div class="documento-card">
+                                <div class="documento-header">
+                                    <div class="documento-title">${escapeHtml(data.title || 'Senza titolo')}</div>
+                                    <span class="impact-tag ${impactClass}">${impactLabel}</span>
+                                </div>
+                                <div class="documento-meta">
+                                    📅 ${formatDate(data.timestamp)} | 📊 Impact: ${data.impact_score || 0}
+                                </div>
+                                <div class="documento-content">
+                                    ${escapeHtml(data.summary || 'Nessun riassunto disponibile.')}
                                 </div>
                             </div>
                         `;
                     });
                     
-                    container.innerHTML = html;
+                    list.innerHTML = html;
                 })
                 .catch(error => {
                     console.error('Errore caricamento documenti:', error);
@@ -616,6 +348,26 @@
                         </div>
                     `;
                 });
+        }
+
+        // Update stats
+        function updateStats() {
+            firebase.firestore().collection('documenti').get().then(snapshot => {
+                let total = snapshot.size;
+                let high = 0, medium = 0, low = 0;
+                
+                snapshot.forEach(doc => {
+                    const score = doc.data().impact_score || 0;
+                    if (score >= 7) high++;
+                    else if (score >= 4) medium++;
+                    else low++;
+                });
+                
+                document.getElementById('statTotal').textContent = total;
+                document.getElementById('statHigh').textContent = high;
+                document.getElementById('statMedium').textContent = medium;
+                document.getElementById('statLow').textContent = low;
+            });
         }
 
         // Utility: Formatta data
@@ -645,6 +397,14 @@
             if (score >= 7) return 'impact-high';
             if (score >= 4) return 'impact-medium';
             return 'impact-low';
+        }
+
+        // Utility: Escape HTML
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
     </script>
 </body>
