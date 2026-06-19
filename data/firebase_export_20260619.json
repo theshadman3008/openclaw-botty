@@ -1,0 +1,76 @@
+{
+  "rassegne": {
+    "rassegna_2026-06-19": {
+      "data": "2026-06-19",
+      "pdfUrl": "https://theshadman3008.github.io/openclaw-botty/docs/rassegna_20260619.pdf",
+      "avgImpactScore": 8.0,
+      "notizie": [
+        {
+          "titolo": "Fastweb e Vodafone insieme nel TM Forum: reti autonome e IA",
+          "categoria": "Telco & AI",
+          "source": "Corriere delle Comunicazioni",
+          "summary": "I due operatori italiani lanciano un progetto congiunto per l'automazione delle reti basata su intelligenza artificiale.",
+          "url": "https://www.corrierecomunicazioni.it/digital-convergence/fastweb-vodafone-insieme-tm-forum-reti-autonome-ia/",
+          "snippet": "Fastweb e Vodafone Italia uniscono le forze per accelerare la trasformazione delle telecomunicazioni attraverso l'adozione di reti autonome guidate dall'IA.",
+          "impactScore": 9
+        },
+        {
+          "titolo": "Decreti attuativi IA: l'Italia approva le prime norme per l'AI Act",
+          "categoria": "Normativa",
+          "source": "Agenda Digitale",
+          "summary": "Il Consiglio dei Ministri ha approvato i primi decreti attuativi per l'implementazione dell'European AI Act in Italia.",
+          "url": "https://www.agendadigitale.eu/documenti/decreti-attuativi-ia-italia-approva-norme-ai-act/",
+          "snippet": "L'Italia diventa uno dei primi paesi europei a dotarsi di un quadro normativo operativo per l'IA.",
+          "impactScore": 9
+        },
+        {
+          "titolo": "AI Week 2026: NextMindLab presente a Milano",
+          "categoria": "Eventi",
+          "source": "NextMindLab",
+          "summary": "L'evento di riferimento per l'intelligenza artificiale in Italia torna a Milano con workshop e case study.",
+          "url": "https://www.aiweek.it/",
+          "snippet": "AI Week 2026 riunisce a Milano esperti, aziende e istituzioni per due giorni di approfondimento sull'impatto dell'IA.",
+          "impactScore": 6
+        }
+      ],
+      "totaleNotizie": 3,
+      "createdAt": "2026-06-19T06:54:57.264241"
+    }
+  },
+  "linkedin_post": {
+    "post_2026-06-19": {
+      "data": "2026-06-19",
+      "titolo": "Post LinkedIn - Telco & AI",
+      "testo": "🚀 L'IA che Trasforma le Telco Italiane\n\nFastweb e Vodafone Italia uniscono le forze per accelerare la trasformazione delle telecomunicazioni attraverso l'adozione di reti autonome guidate dall'IA.\n\n💡 Perché è importante:\n• Le reti autonome riducono i costi operativi del 25-40%\n• Il provisioning passa da giorni a minuti\n• L'uptime di rete supera il 99.9%\n\n📊 Il progetto Fastweb+Vodafone nel TM Forum dimostra che la collaborazione accelera l'innovazione.\n\n🇮🇹 L'Italia ha appena approvato i decreti attuativi dell'AI Act.\n\n👉 Cosa fare oggi:\n1. Audit dei processi manuali\n2. Identifica use case ad alto ROI\n3. Forma il team su AI & automazione\n\n#IntelligenzaArtificiale #Telco #Fastweb #Vodafone #Innovazione #AIAct",
+      "notiziaTitolo": "Fastweb e Vodafone insieme nel TM Forum: reti autonome e IA",
+      "notiziaUrl": "https://www.corrierecomunicazioni.it/digital-convergence/fastweb-vodafone-insieme-tm-forum-reti-autonome-ia/",
+      "notiziaSource": "Corriere delle Comunicazioni",
+      "carouselUrl": "https://theshadman3008.github.io/openclaw-botty/docs/linkedin_carousel_20260619_v2.pdf",
+      "hashtags": [
+        "#IntelligenzaArtificiale",
+        "#Telco",
+        "#Fastweb",
+        "#Vodafone",
+        "#Innovazione"
+      ],
+      "status": "draft",
+      "createdAt": "2026-06-19T06:54:57.264248"
+    }
+  },
+  "documenti": [
+    {
+      "titolo": "Rassegna Stampa AI - 2026-06-19",
+      "tipo": "pdf",
+      "githubUrl": "https://theshadman3008.github.io/openclaw-botty/docs/rassegna_20260619.pdf",
+      "categoria": "rassegna",
+      "dataCaricamento": "2026-06-19T06:54:57.264251"
+    },
+    {
+      "titolo": "Carousel LinkedIn - 2026-06-19",
+      "tipo": "pdf",
+      "githubUrl": "https://theshadman3008.github.io/openclaw-botty/docs/linkedin_carousel_20260619_v2.pdf",
+      "categoria": "linkedin",
+      "dataCaricamento": "2026-06-19T06:54:57.264254"
+    }
+  ]
+}
