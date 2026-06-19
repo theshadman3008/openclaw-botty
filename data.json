@@ -1,11 +1,10 @@
 {
-  "last_updated": "2026-06-16T08:02:08+02:00",
+  "last_updated": "2026-06-19T08:30:00+02:00",
   "stats": {
-    "conversations": 4,
-    "completed": 3,
-    "scheduled_tasks": 0,
-    "documents": 8,
-    "news": 68
+    "conversations": 8,
+    "completed": 6,
+    "scheduled_tasks": 1,
+    "documents": 5
   },
   "conversations": [
     {
@@ -37,621 +36,128 @@
       "title": "🔄 Dashboard aggiornamento real-time",
       "date": "2026-05-14",
       "date_label": "14 mag",
-      "status": "active",
+      "status": "done",
       "snippet": "Aggiornamento automatico della dashboard via JSON + GitHub API: i dati si aggiornano in tempo reale ad ogni nuova conversazione o documento generato."
+    },
+    {
+      "id": "conv_005",
+      "title": "🏠 Daikin Madoka WiFi upgrade",
+      "date": "2026-06-18",
+      "date_label": "18 giu",
+      "status": "done",
+      "snippet": "Analisi adattatore WiFi Daikin BRP069A61 per controllo remoto AC. Installazione tecnica necessaria, costo ~€150-200 totale."
+    },
+    {
+      "id": "conv_006",
+      "title": "📊 Rassegna Stampa AI - 19 giugno 2026",
+      "date": "2026-06-19",
+      "date_label": "19 giu",
+      "status": "active",
+      "snippet": "Rassegna stampa quotidiana su AI e telecomunicazioni: Fastweb+Vodafone nel TM Forum, decreti attuativi IA approvati, AI Week Milano 19-20 maggio."
+    },
+    {
+      "id": "conv_007",
+      "title": "📱 Dashboard Firebase migration",
+      "date": "2026-06-18",
+      "date_label": "18 giu",
+      "status": "done",
+      "snippet": "Migrazione dashboard da JSON statico a Firebase Firestore. Fix duplicazione script, upload file su GitHub Pages."
+    },
+    {
+      "id": "conv_008",
+      "title": "💼 LinkedIn Article + Carousel",
+      "date": "2026-06-19",
+      "date_label": "19 giu",
+      "status": "pending",
+      "snippet": "Preparazione articolo LinkedIn su AI nelle telecomunicazioni italiane + carousel 10 slide per engagement."
     }
   ],
   "documents": [
     {
-      "icon": "📊",
-      "title": "Voli Bari → Londra agosto 2026",
+      "id": "doc_001",
+      "title": "Viaggio Londra — Famiglia Digioia · Agosto 2026",
+      "icon": "🇬🇧",
       "type": "PDF",
-      "pages": 1,
-      "date_label": "18 mag 2026",
-      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/voli_bari_londra.pdf"
-    },
-    {
-      "icon": "🤖",
-      "title": "Agenti AI — Sintesi 5 fonti",
-      "type": "PDF",
-      "pages": 5,
-      "date_label": "15 mag 2026",
-      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/agents_v3.pdf"
-    },
-    {
-      "icon": "🏖️",
-      "title": "Offerte vacanze famiglia",
-      "type": "PDF",
-      "pages": 3,
-      "date_label": "15 mag 2026",
-      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/offerte_famiglia_v3.pdf"
-    },
-    {
-      "icon": "🏃",
-      "title": "Piano corsa",
-      "type": "PDF",
-      "pages": 2,
-      "date_label": "14 mag 2026",
-      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/piano_corsa.pdf"
-    },
-    {
-      "icon": "📰",
-      "title": "Analisi RCS",
-      "type": "PDF",
-      "pages": 2,
-      "date_label": "14 mag 2026",
-      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/rcs_analisi.pdf"
-    },
-    {
-      "icon": "✈️",
-      "title": "Londra — Viaggio",
-      "type": "PDF",
-      "pages": 3,
-      "date_label": "13 mag 2026",
+      "date": "2026-05-12",
+      "date_label": "12 mag 2026",
+      "pages": 10,
       "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/londra_viaggio.pdf"
     },
     {
-      "icon": "📋",
-      "title": "Fastweb — AI Strategy",
+      "id": "doc_002",
+      "title": "Fastweb AI Strategy — C-Level Document",
+      "icon": "🔴",
       "type": "PDF",
-      "pages": 4,
-      "date_label": "12 mag 2026",
+      "date": "2026-05-13",
+      "date_label": "13 mag 2026",
+      "pages": 23,
       "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/fastweb_ai_strategy.pdf"
     },
     {
-      "icon": "🌞",
-      "title": "Vacanze agosto — piano",
+      "id": "doc_003",
+      "title": "Rassegna Stampa AI — 19 Giugno 2026",
+      "icon": "📰",
       "type": "PDF",
-      "pages": 2,
-      "date_label": "9 mag 2026",
-      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/vacanze_agosto.pdf"
+      "date": "2026-06-19",
+      "date_label": "19 giu 2026",
+      "pages": 8,
+      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/rassegna_20260619.pdf"
+    },
+    {
+      "id": "doc_004",
+      "title": "LinkedIn Article — AI nelle Telco Italiane",
+      "icon": "💼",
+      "type": "PDF",
+      "date": "2026-06-19",
+      "date_label": "19 giu 2026",
+      "pages": 3,
+      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/linkedin_article_20260619.pdf"
+    },
+    {
+      "id": "doc_005",
+      "title": "LinkedIn Carousel — AI & Telecomunicazioni",
+      "icon": "📊",
+      "type": "PDF",
+      "date": "2026-06-19",
+      "date_label": "19 giu 2026",
+      "pages": 10,
+      "url": "https://raw.githubusercontent.com/theshadman3008/openclaw-botty/main/docs/linkedin_carousel_20260619.pdf"
     }
   ],
-  "scheduled_tasks": [],
-  "rassegna": [
-    {
-      "id": "eu-shield-6g-8m-ai-security-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "🛡️ UE lancia progetto Shield-6G: 8 milioni € per sicurezza AI nelle reti 6G",
-      "snippet": "L'Unione Europea ha assegnato all'University College Dublin il progetto Shield-6G da 8 milioni €, finanziato da Horizon Europe. Obiettivo: creare linee guida fondamentali per sicurezza, affidabilità e resilienza delle reti 6G, con piattaforma AI-driven per cyber threat intelligence. Il progetto mira a stabilire standard di resilienza sistemica prima del rollout commerciale del 6G, previsto con investimenti superiori a 500 miliardi $ nei primi 6 anni.",
-      "url": "https://capacityglobal.com/news/eu-shield-6g-project-ai-network-security/",
-      "tag": "Telco"
-    },
-    {
-      "id": "eu-mobile-economy-1-15tn-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "📱 Industria mobile UE vale 1.150 miliardi €: +14% nel 2025, 6,1% del PIL",
-      "snippet": "Il report GSMA 'Mobile Economy Europe 2026' rivela che l'impatto dell'industria mobile sull'economia UE è cresciuto del 14% nel 2025, raggiungendo 1.150 miliardi € (0.9 trilioni €). Il settore rappresenta ora il 6,1% del PIL europeo, in crescita dal 5,5% del 2024. 820 miliardi € derivano da guadagni di produttività. Previsto superamento di 1.600 miliardi € entro il 2030, con traffico dati in aumento del 75% guidato dall'AI.",
-      "url": "https://www.advanced-television.com/2026/06/15/report-europes-e1tn-mobile-industry-at-a-crossroad/",
-      "tag": "Telco"
-    },
-    {
-      "id": "private-5g-2000-organizzazioni-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "🏢 Oltre 2.000 organizzazioni globali usano reti mobili private 5G/LTE",
-      "snippet": "Uno studio GSA rivela che oltre 2.003 organizzazioni worldwide hanno deployato reti mobili private LTE o 5G entro Q1 2026, con valore contrattuale in crescita. I customer references crescono al CAGR del 37% dal 2019. Il 5G rappresenta oltre metà dei deploy annunciati dal 2022. USA, Germania e UK guidano geograficamente. Forte correlazione tra adozione e disponibilità di spettro dedicato o condiviso.",
-      "url": "https://www.computerweekly.com/news/366644379/More-than-2000-global-organisations-deploy-private-mobile-networks",
-      "tag": "Telco"
-    },
-    {
-      "id": "oracle-shinyhunters-breach-education-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "💥 Cyberattacco a Oracle PeopleSoft: esposti dati di università e college",
-      "snippet": "Per la seconda volta in due mesi, il gruppo di estorsione dati ShinyHunters ha colpito Oracle PeopleSoft. Codice malevolo ha infiltrato le applicazioni tra il 27 maggio e il 9 giugno 2026. Il 68% delle oltre 100 organizzazioni compromesse appartiene al settore higher-education. Oracle conta oltre 13.000 college e università come clienti. Google Threat Intelligence Group e Mandiant hanno emesso alert. Oracle ha rilasciato security alert CVE-2026-35273 il 10 giugno.",
-      "url": "https://www.govtech.com/education/higher-ed/cyber-attack-on-oracle-exposes-data-of-higher-ed-clients",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "irhythm-health-data-breach-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "🏥 iRhythm: breach cybersecurity espone dati sanitari pazienti",
-      "snippet": "iRhythm Technologies (Nasdaq:IRTC) ha disclosed il 15 giugno un'attività non autorizzata su applicazioni business di terze parti. Identificata l'8 giugno, la breach ha esposto dati proprietari, protected health information (PHI) e informazioni personali di pazienti. Un threat actor ha richiesto pagamento per non divulgare i dati. iRhythm ha attivato il piano di risposta cybersecurity con esperti esterni. È l'ultima di una serie di breach nel medtech: Stryker (marzo), Intuitive Surgical e Medtronic (aprile 2026).",
-      "url": "https://www.massdevice.com/irhythm-reports-cybersecurity-breach-health-data/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "italy-ai-5g-broadcast-funding-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "🇮🇹 Italia: 14 milioni € per broadcaster su AI, 5G Broadcast e DAB+",
-      "snippet": "L'Italia ha aperto le domande per finanziamenti a broadcaster per investimenti in AI, 5G Broadcast, radio digitale DAB e infrastrutture cloud media. Dal 30 giugno al 29 luglio 2026, radio broadcaster possono accedere a 4 milioni €, televisioni locali a 10 milioni €. I grant coprono fino al 70% dei costi eleggibili. Progetti eleggibili includono tecnologie AI per produzione contenuti, equipment DAB, cybersecurity, sistemi warning emergenza e automazione workflow editoriali.",
-      "url": "https://www.redtech.pro/italy-broadcast-technology-funding-ai-5g-broadcast-dab/",
-      "tag": "ICT"
-    },
-    {
-      "id": "esa-esdi-switzerland-deeptech-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "🛰️ ESA inaugura centro ESDI in Svizzera: hub per space deep-tech",
-      "snippet": "L'Agenzia Spaziale Europea (ESA) ha inaugurato l'European Space Deep-Tech Innovation Centre (ESDI), prima presenza ESA in Svizzera, in collaborazione con il Paul Scherrer Institute. Situato a Villigen, ESDI accelera l'adozione commerciale di deep-tech in robotica, nanotecnologia, quantum computing, AI e biotecnologia per applicazioni space. Firmato MoU con Deep Tech Nation Switzerland Foundation per stimolare sinergie tra settore spaziale ed ecosistema deep-tech svizzero.",
-      "url": "https://www.esa.int/About_Us/Business_with_ESA/Inauguration_of_the_European_Space_Deep-Tech_Innovation_Centre_ESDI_first_ESA_presence_in_Switzerland",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "esa-proba3-extend-2028-belgium-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "☀️ ESA estende missione Proba-3 al 2028: Belgio leader con 66 milioni €",
-      "snippet": "ESA ha esteso la missione Proba-3 fino ad agosto 2028 dopo i primi successi nello studio della corona solare. Lanciata a dicembre 2024 con due satelliti costruiti in Belgio, la missione crea eclissi solari artificiali volando a 144 metri di distanza. Il Belgio ha contribuito con 66 milioni € su 166 milioni € totali, supervisionando operazioni scientifiche chiave. ESA finanzierà completamente l'estensione. La missione produce già dati scientifici di alta qualità per migliorare forecast di solar storms.",
-      "url": "https://www.belganewsagency.eu/esa-extends-belgian-led-proba-3-space-mission-until-2028",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "riv-digital-micar-consob-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "💶 RIV Digital ottiene licenza MiCAR da Consob: crypto-asset services in Italia",
-      "snippet": "RIV-Digital, subsidiary italiana di RIV Capital Group, ha ricevuto da Consob e Banca d'Italia l'autorizzazione come Crypto-Asset Service Provider (CASP) sotto regolamento MiCAR (EU 2023/1114). Può ora fornire in Italia servizi di scambio crypto-funds, crypto-crypto e placement di crypto-asset, con possibilità di estensione ad altri Stati UE. RIV Capital punta a creare un bridge regolamentato tra finanza istituzionale e DeFi. Studio Legale LX20 ha assistito il processo.",
-      "url": "https://bebeez.eu/2026/06/15/riv-digital-receives-the-micar-license-from-consob-and-keeps-bridging-traditional-finance-with-defi/",
-      "tag": "Fintech"
-    },
-    {
-      "id": "paymove-satispay-fintech-funding-2026-06-15",
-      "date": "2026-06-15",
-      "caption": "💳 Fintech: paymove raccoglie 2,12M €, Satispay pianifica aumento da 120M €",
-      "snippet": "paymove ha secured 2,12 milioni € per espandere l'infrastruttura di pagamento AI in Europa. L'italiana Satispay ha pianificato un aumento di capitale da 120 milioni € per costruire una piattaforma finanziaria completa. Le stablecoin sono sempre più utilizzate come 'money in motion' per pagamenti cross-border veloci e disbursements automatizzati sotto il framework MiCA. Banche europee stanno pilotando iniziative blockchain e stablecoin.",
-      "url": "https://michelemattei.substack.com/p/weekly-update-136",
-      "tag": "Fintech"
-    },
-    {
-      "id": "spacex-ipo-nasdaq-75mld-record-2026",
-      "date": "2026-06-14",
-      "caption": "🚀 SpaceX debutta al Nasdaq con l'IPO più grande della storia: 75 miliardi, capitalizzazione 2.100 miliardi",
-      "snippet": "Il 12 giugno SpaceX ha completato la quotazione al Nasdaq (simbolo SPCX) con un prezzo IPO di 135 dollari per azione, apertura a 150 e chiusura a 161 dollari (+19,22%). Raccolta di 75 miliardi di dollari, capitalizzazione finale di circa 2.100 miliardi, la più grande IPO della storia dei mercati finanziari. Il 2025 si è chiuso con ricavi di 18,7 miliardi ma perdita netta di 4,9 miliardi (spese in AI, Starship, data center). Musk mantiene oltre l'80% dei voti grazie al meccanismo dual-class. SpaceX ha acquisito xAI all'inizio dell'anno, integrando Starlink, Starship e il segmento AI in un'unica infrastruttura hardware/software.",
-      "url": "https://www.wired.it/article/spacex-wall-street-debutto-nasdaq/",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "italia-decreti-attuativi-ia-legge132-2026",
-      "date": "2026-06-14",
-      "caption": "🏛️ Italia prima nazione con normativa organica sull'IA: approvati i decreti attuativi della legge 132",
-      "snippet": "Il Consiglio dei Ministri italiano ha approvato i decreti attuativi della legge 132/2025 sull'intelligenza artificiale, rendendo l'Italia 'la prima nazione a dotarsi di una normativa nazionale organica in materia' (Mantovano). I decreti introducono responsabilità civile per danni da IA, istituiscono una governance ACN-AGID con supervisione di Bankitalia, Consob, Ivass e Garante Privacy. Stanziato 1 miliardo di euro complessivo. Previsto il reato di deepfake (art. 26) e 300 milioni per la formazione AI nella scuola. I testi passeranno ora al vaglio delle commissioni parlamentari.",
-      "url": "https://www.ansa.it/canale_tecnologia/notizie/cybersecurity/2026/06/10/il-governo-accelera-sullia-litalia-prima-ad-avere-normativa-organica_c1cc107c-bef2-4c66-a262-65029628e449.html",
-      "tag": "Regolazione"
-    },
-    {
-      "id": "apple-wwdc2026-siri-gemini-timcook-2026",
-      "date": "2026-06-14",
-      "caption": "🍎 WWDC 2026: Apple integra Gemini in Siri, Tim Cook si congeda e passa il timone a John Ternus",
-      "snippet": "Alla WWDC 2026 Apple ha presentato una Siri completamente rinnovata grazie ad Apple Intelligence: più contestuale, multi-app, con integrazione storica dei modelli Gemini di Google. Privacy garantita da elaborazione on-device e Private Cloud Compute. Tim Cook ha tenuto il suo ultimo keynote da CEO: dal 1° settembre il testimone passa a John Ternus, attuale responsabile hardware. La nuova Siri sarà disponibile in beta nei prossimi mesi. La collaborazione Apple-Google segnala un cambio epocale nell'ecosistema AI mobile.",
-      "url": "https://www.ilmessaggero.it/tecnologia/news/apple_rilancia_siri_con_l_ia_e_apre_a_google_gemini-9582610.html",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "microsoft-build2026-mai-models-majorana2-2026",
-      "date": "2026-06-14",
-      "caption": "🤖 Microsoft Build 2026: modelli MAI proprietari, chip quantistico Majorana 2 e la svolta agentica",
-      "snippet": "Al Build 2026 il CEO Satya Nadella ha annunciato la famiglia di modelli MAI (MAI Image-2.5, Voice-2, Transcribe-1.5), il primo reasoning model proprietario sviluppato senza distillazione da modelli esterni, e il chip quantistico Majorana 2 con qubit topologici 1.000 volte più affidabili della versione precedente con vita media di 20 secondi. L'obiettivo: arrivare a 1 milione di qubit nel palmo di una mano entro il 2029. Microsoft consolida il controllo verticale su tutta la catena del valore AI, riducendo la dipendenza da OpenAI e altri fornitori terzi.",
-      "url": "https://en.ilsole24ore.com/art/build-2026-proprietary-models-never-chip-majorana-2-microsoft-accelerates-agents-ai-AITPTORD",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "tim-scorporo-rete-kkr-serviceco-consolidamento-2026",
-      "date": "2026-06-14",
-      "caption": "📡 TIM post-scorporo: la nuova ServiceCo affronta la sfida di Fastweb+Vodafone e il consolidamento TLC",
-      "snippet": "Dopo la cessione della rete fissa (NetCo) al fondo KKR, TIM si è trasformata in una ServiceCo su tre pilastri: Consumer, Enterprise (cloud/cybersecurity/IoT per PA e aziende) e TIM Brasil. Il mercato italiano TLC è ora dominato dalla competizione tra TIM e il nuovo polo Fastweb+Vodafone (Swisscom), che a gennaio 2026 ha siglato un accordo di network-sharing 5G con TIM per coprire 15.500 siti nelle aree con meno di 35.000 abitanti entro il 2028. WindTre e Iliad continuano la guerra dei prezzi nel mobile. Il consolidamento promette meno player ma strutturalmente più solidi per gli investimenti in 5G e AI.",
-      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga/siotto-fibreconnect-per-la-fibra-serve-piu-sinergia-non-reti-parallele/",
-      "tag": "Telco"
-    },
-    {
-      "id": "ai-act-digital-omnibus-scadenze-rinvio-2027-2026",
-      "date": "2026-06-14",
-      "caption": "⚖️ UE rinvia l'AI Act high-risk: Digital Omnibus sposta gli obblighi al 2027-2028",
-      "snippet": "Il 7 maggio 2026, dopo una notte di negoziati, Parlamento europeo e Consiglio UE hanno raggiunto un accordo provvisorio sul Digital Omnibus on AI: le scadenze per i sistemi AI ad alto rischio (allegato III) slittano al 2 dicembre 2027 (stand-alone) e al 2 agosto 2028 (componenti embedded). Confermati i divieti dell'Art. 5 (già in vigore) e l'obbligo di trasparenza su contenuti AI-generated entro dicembre 2026. L'accordo deve ancora essere votato in plenaria e adottato formalmente dal Consiglio. Industria e PMI avevano segnalato l'impossibilità di completare i percorsi di conformità entro agosto 2026.",
-      "url": "https://www.noze.it/insights/ai-act-digital-omnibus-2026/",
-      "tag": "Regolazione"
-    },
-    {
-      "id": "coupang-data-breach-multa-409mln-corea-2026",
-      "date": "2026-06-14",
-      "caption": "🔐 Coupang: multa record da 409 milioni per data breach su 33 milioni di clienti",
-      "snippet": "La Corea del Sud ha comminato a Coupang (e-commerce quotato a NY) una sanzione di 625 miliardi di won (409,3 milioni di dollari, pari all'1,4% del fatturato 2025 da 45.000 mld KRW) per la violazione dei dati personali di oltre 33 milioni di clienti avvenuta nel 2025. Il caso si è aggravato perché l'azienda non ha rilevato la violazione entro le 72 ore previste dalla legge. La Commissione per la protezione dei dati personali di Seoul ha dichiarato che l'incidente è stato causato da mancanza di misure di sicurezza adeguate. Massima sanzione mai inflitta in Corea del Sud per data breach.",
-      "url": "https://www.cybersecitalia.it/attacco-cyber-contro-coupang-in-arrivo-una-multa-record-da-40930-milioni-di-dollari/65777/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "fibreconnect-fibra-zone-industriali-sinergia-2026",
-      "date": "2026-06-14",
-      "caption": "🏭 FibreConnect: serve più sinergia e meno reti parallele per portare la fibra nelle zone industriali italiane",
-      "snippet": "Fulvio Siotto (DG FibreConnect) lancia un appello al settore: smettere di scavare reti parallele dove la fibra esiste già e puntare sulla condivisione infrastrutturale. Molte aree produttive italiane restano ai margini della banda ultra larga per un problema di modello industriale: costo certo degli investimenti vs. valore percepito. La fibra non è più accessorio ma abilitatore di cloud, AI, automazione e cybersecurity. La competizione va spostata dal piano infrastrutturale a quello commerciale, come già avviene in altri Paesi UE. FibreConnect opera nelle aree industriali e artigianali italiane.",
-      "url": "https://www.corrierecomunicazioni.it/telco/banda-ultralarga/siotto-fibreconnect-per-la-fibra-serve-piu-sinergia-non-reti-parallele/",
-      "tag": "Telco"
-    },
-    {
-      "id": "telco-mediobanca-ricavi-europa-italia-2026",
-      "date": "2026-06-14",
-      "caption": "📊 Mediobanca: telco mondiali crescono del 2,9%, ma l'Italia perde 14 miliardi dal 2010 e la redditività crolla",
-      "snippet": "Secondo lo studio annuale Area Studi Mediobanca, nel primo semestre 2025 i ricavi delle principali telco mondiali sono aumentati del 2,9%, con Usa (+3,6%) e Giappone (+3,2%) in testa. Gli operatori europei crescono solo del +1,1%, quelli italiani +1,6%. La Germania guida il mercato europeo con 61,1 miliardi di euro (+2,2%). L'Italia si posiziona quinta ma ha perso 14 miliardi di giro d'affari dal 2010 (contrazione media -2,7% annua). L'ebit margin italiano è risalito all'1,8% nel 2024 (era 8,8% nel 2020) ma resta lontanissimo dal 16,5% delle grandi telco EMEA. Investimenti in 5G e fibra calano dello 0,4% in Europa.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "europa-ai-cybersecurity-competitivita-agenda-digitale-2026",
-      "date": "2026-06-14",
-      "caption": "🇪🇺 Europa AI e Cybersecurity: la competitività dipende da NIS2, AI Act e investimenti in sovranità digitale",
-      "snippet": "Rita Forsi su Agenda Digitale: la competitività europea dipende sempre più dalla capacità di integrare AI, cybersecurity e digital sovereignty. I Rapporti Draghi e Letta tracciano la direzione ma la geopolitica complica tutto: crisi energetica, nuovi conflitti, accelerazione tecnologica. NIS2 e AI Act vanno coordinati per PA, sanità, energia e infrastrutture digitali. L'AI non va gestita solo come strumento produttivo ma come elemento di resilienza del 'Sistema Paese'. Urge investire in competenze tecniche e potenziare la sicurezza degli asset strategici, con piena consapevolezza che stiamo vivendo una trasformazione epocale.",
-      "url": "https://www.agendadigitale.eu/mercati-digitali/tra-ai-e-cybersecurity-leuropa-cerca-la-strada-per-restare-competitiva/",
-      "tag": "Economia digitale"
-    },
-    {
-      "id": "uk-ban-social-media-under-16-starmer-20260614",
-      "date": "2026-06-14",
-      "caption": "📵 Il UK vieta i social media ai minori di 16 anni: Starmer annuncia la legge",
-      "snippet": "Il premier britannico Keir Starmer ha annunciato il divieto d'accesso ai social media (TikTok, YouTube, Instagram, Facebook, X, Reddit, Snapchat, Twitch) per i minori di 16 anni, sul modello australiano. La norma vieta anche l'accesso agli under 18 ai chatbot romantici/sessuali e restringe lo scroll notturno. Il governo potrebbe usare poteri regolatori esistenti, ma per alcune misure sarà necessaria legislazione. Critici avvertono che la verifica dell'età minaccia la privacy degli utenti.",
-      "url": "https://techcrunch.com/2026/06/14/uk-may-ban-social-media-for-children-under-16/",
-      "tag": "Digital Policy"
-    },
-    {
-      "id": "xai-colossus-latency-datacenter-ai-training-20260614",
-      "date": "2026-06-14",
-      "caption": "⚡ xAI di Musk ferma il supercluster Colossus: problemi di latenza tra data center bloccano l'addestramento AI",
-      "snippet": "Secondo The Verge, xAI (ora parte di SpaceX) ha incontrato gravi problemi di latenza nel collegare il cluster Colossus 1 con altri due siti a oltre 16 km di distanza, aggravati da infrastrutture di rete obsolete. Il piano era addestrare i modelli AI frontier su tre campus collegati, ma i ritardi tecnici stanno ostacolando lo sviluppo. La notizia arriva mentre SpaceX è appena diventata pubblica e gli investitori attendono progressi concreti sull'AI.",
-      "url": "https://www.theverge.com/",
-      "tag": "AI"
-    },
-    {
-      "id": "anthropic-india-ai-autonomia-strategica-20260613",
-      "date": "2026-06-13",
-      "caption": "🌍 Stop AI Anthropic in India: il blocco riaccende il dibattito sull'autonomia strategica nell'AI",
-      "snippet": "La sospensione di Claude Fable 5 e Mythos 5 per tutti gli stranieri ha colpito anche l'India, uno dei più grandi mercati AI mondiali, che aveva appena siglato una partnership Anthropic-TCS per l'AI enterprise. L'episodio ha rilanciato il dibattito sulla dipendenza da LLM americani: 'Non esiste un modello AI geopoliticamente neutro', ha dichiarato l'esperto di policy Prasanto Roy. L'India starebbe valutando incentivi per sviluppare modelli frontier autonomi.",
-      "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
-      "tag": "AI"
-    },
-    {
-      "id": "fbi-kinetic-cyber-range-replica-town-20260613",
-      "date": "2026-06-13",
-      "caption": "🔐 L'FBI ha costruito una città replica da 22.000 mq per simulare cyberattacchi reali",
-      "snippet": "L'FBI ha svelato il 'Kinetic Cyber Range', una città artificiale di 22.000 mq ad Huntsville, Alabama, aperta a febbraio 2025, con case, hotel, ospedale, tribunale, stazione di benzina e centro dati con oltre 200 server fisici. Serve a formare investigatori su scenari reali di attacco informatico — ransomware, forensica digitale, breach su infrastrutture critiche. Dal 2025, il cybercrime USA ha generato perdite record di 20,9 miliardi di dollari (+26% anno su anno), con il ransomware come minaccia primaria.",
-      "url": "https://techcrunch.com/2026/06/13/the-fbi-built-its-own-replica-small-town-to-simulate-real-world-cyberattacks/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "anthropic-fable5-mythos-shutdown-us-gov-20260612",
-      "date": "2026-06-12",
-      "caption": "🤖 Il governo USA ordina ad Anthropic di spegnere Claude Fable 5 e Mythos 5 per tutti gli utenti",
-      "snippet": "Venerdì 12 giugno il governo statunitense ha ordinato ad Anthropic di sospendere immediatamente l'accesso a Claude Fable 5 e Mythos 5, i suoi modelli AI più potenti, per tutti gli utenti mondiali — inclusi i cittadini non statunitensi — citando ragioni di sicurezza nazionale. Anthropic ha ottemperato ma ha dichiarato pubblicamente di ritenere l'ordine sbagliato. Il modello Mythos era già stato tenuto in accesso ristretto per mesi a causa delle sue capacità in ambito cybersecurity, biologia e chimica. L'episodio riaccende il dibattito globale sulla dipendenza dai grandi modelli AI controllati da soggetti privati americani.",
-      "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
-      "tag": "AI"
-    },
-    {
-      "id": "spacex-ipo-nasdaq-trillionaire-musk-20260612",
-      "date": "2026-06-12",
-      "caption": "🚀 SpaceX quota al Nasdaq: IPO da 75 mld, Musk diventa il primo triliardario della storia",
-      "snippet": "Il 12 giugno SpaceX ha debuttato al Nasdaq (SPCX) a 150 dollari per azione, il 19% sopra il prezzo IPO di 135 dollari, raccogliendo 75 miliardi di dollari nella più grande IPO della storia. La capitalizzazione di mercato ha toccato 2.100 miliardi. Elon Musk, con circa 1.100 miliardi di dollari netti tra SpaceX e Tesla, è diventato il primo triliardario al mondo. Robinhood ha registrato traffico record nella giornata. SpaceX è la prima di tre mega-IPO attese nel 2026, seguita da Anthropic e OpenAI.",
-      "url": "https://apnews.com/article/musk-spacex-tesla-ipo-trillionaire-billionaire-worth-rockets-7723f82b6063a9a17c194e25982cd66d",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "robinhood-spacex-ipo-record-traffic-fintech-20260612",
-      "date": "2026-06-12",
-      "caption": "📈 Robinhood: traffico record nel giorno dell'IPO SpaceX — il fintech retail batte ogni storico",
-      "snippet": "Nel giorno del debutto SpaceX al Nasdaq, Robinhood ha registrato traffico record sulla sua piattaforma, con alcuni utenti che hanno segnalato latenze e interruzioni intermittenti. In un'ora dalla apertura delle negoziazioni, 263 milioni di azioni sono cambiate di mano per circa 42 miliardi di dollari. L'evento segna il più grande test di stress per le piattaforme di trading retail della storia recente e ridisegna i flussi tra fintech e mercati istituzionali.",
-      "url": "https://techcrunch.com/2026/06/12/robinhood-sees-record-breaking-traffic-after-spacex-stock-debuts/",
-      "tag": "Fintech"
-    },
-    {
-      "id": "mangos-faang-new-acronym-ai-ipo-2026",
-      "date": "2026-06-12",
-      "caption": "💹 MANGOS supera FAANG: nasce il nuovo acronimo dell'era AI con Meta, Anthropic, Nvidia, Google, OpenAI, SpaceX",
-      "snippet": "Con le IPO di SpaceX (e presto Anthropic e OpenAI), il mercato sta ridefinendo i propri benchmark: il vecchio acronimo FAANG (Facebook, Apple, Amazon, Netflix, Google) cede il passo a MANGOS — Meta (o Microsoft), Anthropic, Nvidia, Google, OpenAI, SpaceX. Queste sei aziende rappresentano oggi la nuova frontiera della capitalizzazione tech globale nell'era dell'AI, trainata da infrastrutture di compute, modelli fondazionali e satellite broadband.",
-      "url": "https://techcrunch.com/",
-      "tag": "Economia Digitale"
-    },
-    {
-      "id": "openai-anthropic-ipo-filing-june-2026",
-      "date": "2026-06-11",
-      "caption": "🏦 OpenAI e Anthropic depositano entrambe l'S-1 per l'IPO: corsa a Wall Street dell'AI",
-      "snippet": "OpenAI ha depositato in via riservata la documentazione S-1 presso la SEC l'8 giugno, pochi giorni dopo Anthropic (1° giugno). La valutazione target di OpenAI supera gli 850 miliardi di dollari, con ambizioni fino a 1 trilione secondo Reuters. SpaceX — che ha già assorbito xAI di Musk — punta a quotarsi a 1,75 trilioni, la più grande IPO della storia. Il CFO di OpenAI Sarah Friar ha dichiarato che il debutto potrebbe avvenire nel Q4 2026 ma 'non ci sono date definitive'. La settimana del 8-12 giugno 2026 segna di fatto la prima ondata di quotazioni del settore AI puro su mercati pubblici, dopo anni di capitali privati che hanno gonfiato le valutazioni.",
-      "url": "https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "anthropic-claude-fable5-mythos-june-2026",
-      "date": "2026-06-11",
-      "caption": "🤖 Anthropic lancia Claude Fable 5: il primo modello Mythos aperto al pubblico",
-      "snippet": "Anthropic ha rilasciato Claude Fable 5, il primo modello della classe Mythos accessibile commercialmente. Supera tutti i benchmark precedenti su ingegneria del software, ricerca scientifica e visione. Le capacità sono così avanzate da richiedere safeguard integrati: le query su cybersecurity vengono reindirizzate a Claude Opus 4.8 (<5% dei casi). Stripe ha dichiarato che Fable 5 ha compresso mesi di engineering in giorni. Il modello ha 26 miliardi di parametri (3,8B attivi in inferenza), costo API $10/M token input e $50/M output. Contestualmente Anthropic ha depositato l'S-1 per l'IPO la stessa settimana, facendo della nuova release il biglietto da visita verso Wall Street.",
-      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "italia-frequenze-tlc-5g-standalone-butti-saccone-2026",
-      "date": "2026-06-11",
-      "caption": "📡 Frequenze TLC: Butti punta al 5G standalone come leva industriale, Saccone (CGIL) concorda",
-      "snippet": "Il sottosegretario Alessio Butti ha dichiarato al Consiglio UE Telecomunicazioni che le aste per lo spettro radio devono diventare leve di politica industriale, accompagnando la trasformazione delle telco da fornitori di connettività a piattaforme digitali con edge computing e cloud distribuito. Il segretario SLC-CGIL Riccardo Saccone ha espresso convergenza ma ha chiesto che il cambio di paradigma sia accompagnato da investimenti infrastrutturali e programmi di upskilling per i lavoratori. L'evento 'Telco per l'Italia – Da TelCo a TechCo' si è tenuto a Roma l'11 giugno 2026, organizzato da CorCom e Nextwork360.",
-      "url": "https://www.corrierecomunicazioni.it/telco/frequenze-tlc-saccone-a-butti-siano-una-leva-per-investimenti-e-competenze/",
-      "tag": "Telco"
-    },
-    {
-      "id": "prometheus-bezos-ai-12mld-engineer-fisico-20260611",
-      "date": "2026-06-11",
-      "caption": "🏗️ Jeff Bezos raccoglie 12 mld per Prometheus: AI per progettare e costruire il mondo fisico",
-      "snippet": "La startup AI Prometheus, co-fondata da Jeff Bezos con Vik Bajaj (ex Verily/Alphabet), ha chiuso un round da 12 miliardi di dollari che valuta l'azienda 41 miliardi — era a 6,2 mld a novembre 2025. Prometheus sviluppa modelli AI per supportare ingegneri nella progettazione e produzione di prodotti fisici, incluso il drug design. Bezos ha dichiarato che gran parte dei fondi servirà ad acquistare compute per l'addestramento dei modelli. Il team è composto da ex OpenAI, Google DeepMind e Nvidia.",
-      "url": "https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html",
-      "tag": "AI"
-    },
-    {
-      "id": "openai-ipo-confidential-s1-trillion-2026",
-      "date": "2026-06-10",
-      "caption": "🚀 OpenAI deposita l'S-1 confidenziale: IPO fino a $1 trilione di valutazione",
-      "snippet": "OpenAI ha depositato in via confidenziale il modulo S-1 presso la SEC l'8 giugno 2026, avviando l'iter per quella che potrebbe diventare la più grande IPO tecnologica della storia, con una valutazione target fino a $1 trilione. L'operazione segue di una settimana il deposito di Anthropic (1° giugno, valutazione $965 miliardi) e precede di due giorni il debutto in borsa di SpaceX su Nasdaq (12 giugno, $1,77 trilioni). OpenAI ha raccolto $122 miliardi in round privati solo a marzo 2026 e registra oggi un revenue run rate di $2 miliardi mensili. L'IPO potrebbe avvenire già a settembre 2026. La settimana segna l'inizio di una corsa alle quotazioni senza precedenti nel settore AI.",
-      "url": "https://www.wired.com/story/openai-confidentially-files-for-ipo/",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "anthropic-claude-fable5-mythos-public-launch-2026",
-      "date": "2026-06-10",
-      "caption": "🤖 Anthropic lancia Claude Fable 5: il modello Mythos-class ora accessibile al pubblico",
-      "snippet": "Il 9 giugno 2026 Anthropic ha reso disponibile al pubblico Claude Fable 5, prima versione pubblica del suo modello Mythos-class, con capacità superiori in software engineering, knowledge work e vision. Il modello integra guardrail che bloccano risposte in aree ad alto rischio (cybersecurity, biologia, chimica). Il prezzo è $10 per milione di token in input e $50 per milione in output, il doppio di Opus 4.8. L'accesso via subscription sarà graduale: fino al 22 giugno solo per Claude Max e Team; successivamente per gli altri tier. Contestualmente Anthropic ha lanciato Claude Mythos 5 in accesso ristretto trusted per infrastrutture critiche in 15 paesi.",
-      "url": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "tim-cyber-security-report-ransomware-42-2026",
-      "date": "2026-06-10",
-      "caption": "🔐 TIM Cyber Security Report 2026: ransomware +42% nel mondo, +14% in Italia",
-      "snippet": "Il 9 giugno 2026, presentato alla Camera dei Deputati il secondo Cyber Security Report di TIM e Cyber Security Foundation: nel 2025 gli attacchi ransomware globali hanno superato 7.400 rivendicazioni (+42% sul 2024). In Italia i casi sono stati 166 (+14%), con la Lombardia che concentra oltre il 30% del totale nazionale. L'intelligenza artificiale accelera velocità e scala degli attacchi, riducendo drasticamente i tempi tra scoperta di una vulnerabilità e sfruttamento. Il rapporto, presentato con la partecipazione dell'ACN (Agenzia per la Cybersicurezza Nazionale), sottolinea come la cybersecurity sia diventata priorità strategica di sicurezza nazionale.",
-      "url": "https://www.firstonline.info/cybersecurity-report-tim-ransomware-42-ai-e-geopolitica-alzano-il-rischio-cyber/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "microsoft-patch-tuesday-record-206-cve-june2026",
-      "date": "2026-06-10",
-      "caption": "🛡️ Microsoft Patch Tuesday record: 206 CVE in un mese, AI accelera le vulnerabilità",
-      "snippet": "Il 9 giugno 2026, Microsoft ha rilasciato il Patch Tuesday più grande della sua storia: 206 vulnerabilità risolte, di cui 39 critiche e 56 RCE (Remote Code Execution). Tre zero-day attivamente sfruttati includono CVE-2026-41091 (Microsoft Defender) e CVE-2026-11645 (Chrome). La CISA ha aggiunto SolarWinds Serv-U (CVE-2026-28318) alla lista KEV con scadenza federale. Esperti di Tenable e Trend Micro attribuiscono il record all'AI-assisted vulnerability discovery: 'il numero di CVE del 2026 supera già l'intero 2018'. Il ransomware Nightspire e Qilin hanno rivendicato nuove vittime nella stessa finestra temporale.",
-      "url": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "spacex-ipo-nasdaq-177-trillion-june2026",
-      "date": "2026-06-10",
-      "caption": "🛸 SpaceX debutta su Nasdaq il 12 giugno: la più grande IPO della storia a $1,77 trilioni",
-      "snippet": "SpaceX è pronta al debutto su Nasdaq il 12 giugno 2026 sotto il ticker SPCX, al prezzo di $135 per azione per una raccolta di circa $75 miliardi e una valutazione di $1,77 trilioni — la più grande IPO nella storia dei mercati, superando Saudi Aramco 2019. Collegata all'IPO, c'è un'opzione da $60 miliardi per acquisire Cursor, il leader nell'AI coding. Nel 2025 SpaceX ha registrato una perdita di $4,94 miliardi, ma genera ricavi crescenti da Starlink (200+ milioni di utenti stimati nel 2026). La quotazione catalizza l'onda di IPO tech AI del 2026 con Anthropic e OpenAI in coda.",
-      "url": "https://faq.com.tw/en/startups/2026-06-07-spacex-ipo-nasdaq-spcx-history-en/",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "eu-ai-act-enforcement-august-2026-7percent",
-      "date": "2026-06-10",
-      "caption": "⚖️ EU AI Act: enforcement completo il 2 agosto 2026, multe fino al 7% del fatturato",
-      "snippet": "Il 2 agosto 2026 entrerà in vigore l'enforcement completo dell'EU AI Act, la prima regolamentazione vincolante globale sull'intelligenza artificiale. Per i sistemi AI ad alto rischio (biometria, infrastrutture critiche, occupazione, servizi essenziali) scatteranno obblighi stringenti con sanzioni fino a €35 milioni o il 7% del fatturato globale annuo — più severe del GDPR. L'EU AI Office acquisirà pieni poteri sanzionatori sui General Purpose AI (GPAI) con fines fino a €15 milioni o il 3% del turnover. Le aziende non-UE sono ugualmente soggette se operano nel mercato europeo. Mancano meno di 60 giorni alla scadenza.",
-      "url": "https://informedclearly.com/en/ai/54690/eu-ai-act-enforcement-august-2026",
-      "tag": "Regolazione"
-    },
-    {
-      "id": "proximus-5g-slicing-belgium-red-devils-2026",
-      "date": "2026-06-10",
-      "caption": "📡 Prima belga: Proximus attiva 3 slice 5G simultanee allo stadio per medici, media e pagamenti",
-      "snippet": "In occasione dell'ultima amichevole dei Red Devils prima dei Mondiali (Belgio-Tunisia, vinta 5-0), Proximus ha attivato per la prima volta in Belgio tre slice 5G simultanee al King Baudouin Stadium di Bruxelles: uno slice mission-critical per l'assistenza medica (collegamento UZ Brussels), uno broadcasting per DPG Media, uno event-critical per i pagamenti mobili. La rete si basa sulla 5G Standalone di Proximus con core 5G completamente indipendente. L'esperimento dimostra la maturità commerciale del network slicing in contesti con alta densità di traffico, ponendo le basi per deployment enterprise su larga scala.",
-      "url": "https://www.proximus.com/news/2026/202606-proximus-5g-slicing-red-devils-match.html",
-      "tag": "Telco"
-    },
-    {
-      "id": "eutelsat-voimatel-leo-finland-lightreading-2026",
-      "date": "2026-06-10",
-      "caption": "🛰️ Eutelsat-Voimatel: accordo LEO per connettività satellitare in Finlandia e Artide",
-      "snippet": "Eutelsat ha siglato un accordo strategico con Voimatel, operatore finlandese di reti fisse e wireless, per integrare i servizi LEO del satellite europeo nelle infrastrutture critiche della Finlandia, incluse le regioni artiche a copertura terrestre limitata. Voimatel combinerà connettività satellitare e terrestre per clienti enterprise e pubblica amministrazione. In parallelo, Finnair è in trattative con Starlink e Amazon Leo per il Wi-Fi in volo (Bloomberg). L'UE ha segnalato che i bandi S-band potrebbero sfavorire Starlink a vantaggio di operatori europei come Eutelsat, nel quadro della sovranità tecnologica.",
-      "url": "https://www.lightreading.com/satellite/eurobites-voimatel-hooks-up-with-eutelsat-to-reach-high-north",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "ericsson-epiroc-private5g-mining-alliance-2026",
-      "date": "2026-06-10",
-      "caption": "⛏️ Ericsson ed Epiroc espandono l'alleanza: 5G privato per l'automazione mineraria globale",
-      "snippet": "Ericsson ed Epiroc (leader globale in attrezzature minerarie) hanno annunciato il 9 giugno 2026 l'espansione della loro alleanza strategica, avviata nel 2018: Epiroc integrerà le soluzioni LTE e 5G Private di Ericsson nel proprio portfolio digitale per miniere di superficie e sotterranee a livello globale. I sensori su ogni macchina (temperatura motore, pressione idraulica, usura bit) streameranno dati in real-time per predictive maintenance e remote control. L'accordo accelera l'automazione industriale nelle mining operations, consolidando il 5G come infrastruttura critica per l'industria estrattiva.",
-      "url": "https://www.telecoms.com/5g-6g/ericsson-and-epiroc-team-up-for-mining-push",
-      "tag": "Business/Digital Transformation"
-    },
-    {
-      "id": "wef-technology-pioneers-2026-ai-infrastructure-100startups",
-      "date": "2026-06-10",
-      "caption": "🌐 WEF Technology Pioneers 2026: 100 startup costruiscono l'infrastruttura per l'AI autonoma",
-      "snippet": "Il 10 giugno 2026, il World Economic Forum ha annunciato i 100 Technology Pioneers 2026, selezionati tra 23 paesi: il tratto comune è la costruzione di infrastrutture software e fisiche per sistemi AI autonomi scalabili. Le aree chiave includono AI, quantum computing, biotecnologia, clima, space ed advanced manufacturing. Record di 9 aziende dall'India e forte presenza dalla Corea. La coorte sarà protagonista dell'Annual Meeting of the New Champions 2026. Il WEF segnala come la creazione di infrastruttura AI sia diventata il principale driver di innovazione globale, con capitale concentrato su layer infrastrutturali piuttosto che su applicazioni.",
-      "url": "https://www.weforum.org/press/2026/06/new-technology-pioneers-are-building-the-infrastructure-for-the-next-era-of-ai-96a8d3e248/",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "google-diffusiongemma-4x-speed-june-2026",
-      "date": "2026-06-10",
-      "caption": "⚡ Google lancia DiffusionGemma: inferenza AI 4x più veloce con architettura diffusion",
-      "snippet": "Google DeepMind ha rilasciato DiffusionGemma, un modello open della famiglia Gemma 4 con architettura diffusion (non autoregressive). Genera 256 token in parallelo invece che uno alla volta, raggiungendo 700 token/sec su RTX 5090 e 1.000+ token/sec su H100 — circa 4 volte la velocità dei modelli Gemma autogressivi equivalenti. Il modello MoE ha 26B parametri totali (3,8B attivi), fitting in 18GB di VRAM. Eccelle in task non lineari come editing in-line, sequenziamento molecolare e problem-solving matematico (es. Sudoku). Il codice è open source su GitHub.",
-      "url": "https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model-comes-with-a-4x-speed-boost/",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "vodafonethree-workforce-cut-ericsson-nokia-2026",
-      "date": "2026-06-10",
-      "caption": "📉 VodafoneThree: -12% del personale post-merger, reti affidate a Ericsson e Nokia",
-      "snippet": "L'annual report Vodafone pubblicato a giugno 2026 rivela che VodafoneThree (merger completato 12 mesi fa) ha già ridotto il personale del 12% rispetto alla base combinata pre-fusione: da circa 14.132 dipendenti totali a circa 12.400. La scelta operativa ha penalizzato Open RAN: il CEO Margherita Della Valle ha scelto Ericsson e Nokia per 'velocità e volumi di delivery'. Il CNO Andrea Dona ha dichiarato di aver 'rimosso interi dipartimenti'. I tagli si concentrano su ruoli duplicati in head office, senza (per ora) impatti retail.",
-      "url": "https://www.lightreading.com/5g/vodafonethree-shrank-workforce-as-it-leaned-into-ericsson-and-nokia",
-      "tag": "Telco"
-    },
-    {
-      "id": "infratel-pnrr-target-giugno-2026",
-      "date": "2026-06-09",
-      "caption": "🏗️ Infratel: tutti i target PNRR completati entro il 30 giugno",
-      "snippet": "Pietro Piccinetti, AD di Infratel, conferma il completamento dei piani PNRR sulle reti (Italia 1 Giga, Sanità connessa, Scuola) entro la scadenza del 30 giugno 2026. L'azienda punta ora a diventare partner tecnico stabile per gestione e manutenzione delle infrastrutture digitali, con ricavi diretti arrivati a 50 milioni e copertura dei costi garantita fino al 2030-2031. Il SINFI viene indicato come strumento nazionale per coordinare reti, territori e investimenti.",
-      "url": "https://www.corrierecomunicazioni.it/telco/piccinetti-target-pnrr-centrati-a-giugno-2026-infratel-pronta-a-diventare-regista-delle-reti/",
-      "tag": "Telco"
-    },
-    {
-      "id": "github-miasma-worm-microsoft-repos-2026",
-      "date": "2026-06-09",
-      "caption": "🐛 Worm Miasma colpisce 73 repo Microsoft su GitHub",
-      "snippet": "Il 5 giugno 2026, GitHub ha disabilitato 73 repository Microsoft in 105 secondi dopo la rilevazione del worm Miasma, evoluzione del Mini Shai Hulud che aveva già colpito npm. L'attacco è partito da un account contributor compromesso che ha inserito codice malevolo in Azure/durabletask, innescando RCE su chi apriva il repo in IDE o tool AI come Claude Code, Gemini CLI e Cursor. Il worm ha colpito anche oltre 50 pacchetti npm incluso un SDK Vapi.ai con 408.000 download mensili.",
-      "url": "https://www.theregister.com/security/2026/06/08/github-nukes-70-microsoft-repos-amid-suspected-worm-attack/5252169",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "ai-frodi-assicurative-aviva-2026",
-      "date": "2026-06-09",
-      "caption": "🤖 AI usata per falsificare sinistri: Aviva denuncia 18.400 frodi",
-      "snippet": "L'assicuratore britannico Aviva ha registrato 18.400+ richieste di risarcimento fraudolente nel 2025, supportate da documenti, immagini e scene di incidenti generate con AI per un valore potenziale di 233 milioni di sterline (circa 638.000 sterline al giorno). Le frodi sui sinistri auto sono cresciute del 39% in valore, quelle di responsabilità civile del 32%. Il fenomeno segna un cambio strutturale: da incidenti pilotati fisicamente a frodi digitali scalabili con AI generativa.",
-      "url": "https://www.theregister.com/ai-and-ml/2026/06/08/motor-insurance-frausters-abusing-ai-to-exaggerate-claims/5252024",
-      "tag": "AI"
-    },
-    {
-      "id": "ue-fondo-sovrano-50mld-scomparso-pacchetto-tech-2026",
-      "date": "2026-06-09",
-      "caption": "🇪🇺 Sovranità tech UE: scomparso il fondo da 50 miliardi",
-      "snippet": "La Commissione europea ha presentato il pacchetto sulla sovranità tecnologica senza il fondo sovrano da 50 miliardi di euro inizialmente annunciato come motore dell'indipendenza digitale europea. L'europarlamentare Brando Benifei (S&D) ha annunciato un'interrogazione parlamentare anche sulla nomina di Jim Hagemann Snabe (presidente Siemens) come inviato speciale UE per l'AI industriale, denunciando un conflitto d'interesse e accesso privilegiato di un incumbent a scelte strategiche su cloud, chip e appalti.",
-      "url": "https://www.key4biz.it/indipendenza-digitale-ue-giallo-sul-fondo-sovrano-da-50-miliardi-benifei-prima-annunciato-ma-poi-non-inserito-nel-pacchetto-presentero-interrogazione-sullinviato-speciale-per-lai/574315/",
-      "tag": "Digital Transformation"
-    },
-    {
-      "id": "ue-rinnovabili-piano-italia-23mld-2026",
-      "date": "2026-06-09",
-      "caption": "⚡ UE approva piano italiano da 23 mld per le rinnovabili",
-      "snippet": "La Commissione europea ha dato il via libera al regime italiano di aiuti di Stato da 23 miliardi di euro per la produzione di energia elettrica da fonti rinnovabili, nell'ambito del Clean Industrial Deal adottato a giugno 2025. L'approvazione punta a ridurre la dipendenza dalle importazioni fossili e abbassare il costo dell'energia per famiglie e imprese. La sfida ora è accelerare autorizzazioni, connessioni alla rete e realizzazione delle infrastrutture.",
-      "url": "https://www.key4biz.it/rinnovabili-via-libera-ue-al-piano-italiano-da-23-miliardi/574462/",
-      "tag": "Economy"
-    },
-    {
-      "id": "fibercop-plenitude-fibra-accordo-2026",
-      "date": "2026-06-09",
-      "caption": "🔌 FiberCop apre la rete a Plenitude: fibra fino a 10 Gbit in tutta Italia",
-      "snippet": "FiberCop ha siglato un accordo strategico con Plenitude (ENI) per mettere a disposizione dei clienti dell'azienda energetica la propria rete in fibra ottica a Banda Ultra Larga (sia FTTC che FTTH). L'accordo si inserisce nel piano da circa 10 miliardi di investimenti previsti tra luglio 2024 e 2027, con l'obiettivo di collegare in fibra oltre 20 milioni di abitazioni entro il 2027 (gia' raggiunte ~15 milioni). La partnership allarga il mercato delle utility che diventano ISP sfruttando infrastrutture wholesale di terzi, con offerte fino a 10 Gbit/s.",
-      "url": "https://www.corrierecomunicazioni.it/telco/fibercop-apre-la-rete-a-plenitude-fibra-fino-a-10-gigabit-per-i-clienti/",
-      "tag": "Telco"
-    },
-    {
-      "id": "apple-siri-ai-dma-eu-delay-2026",
-      "date": "2026-06-09",
-      "caption": "🍎 Apple blocca Siri AI nell'UE: la nuova Siri non arriva in Europa con iOS 27",
-      "snippet": "Apple ha annunciato al WWDC 2026 che Siri AI - la nuova versione di Siri potenziata da Apple Intelligence - non sara' disponibile nell'Unione Europea con il lancio di iOS 27 e iPadOS 27. La causa e' il Digital Markets Act (DMA): la Commissione europea non ha accettato nessuna delle proposte di Apple (tra cui 'Trusted System Agent', un intermediario di privacy), richiedendo che qualsiasi assistente virtuale abbia accesso quasi illimitato ai dati e al dispositivo dell'utente. Craig Federighi: 'Profondamente delusi'. Nessuna data prevista per il rollout UE.",
-      "url": "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/",
-      "tag": "Regolazione"
-    },
-    {
-      "id": "github-worm-miasma-microsoft-repos-2026",
-      "date": "2026-06-09",
-      "caption": "🐛 Il worm Miasma colpisce 73 repo Microsoft su GitHub: CI/CD pipeline in tilt",
-      "snippet": "GitHub ha disabilitato 73 repository Microsoft in 105 secondi dopo aver rilevato il worm Miasma - discendente del Mini Shai Hulud - che si propagava tramite un commit malevolo su Azure/durabletask. Il worm eseguiva codice remoto quando uno sviluppatore apriva il repo in IDE o tool AI (Claude Code, Gemini CLI, Cursor). Il gruppo TeamPCP aveva open-sourcato Mini Shai Hulud a maggio 2026. Lo stesso worm aveva gia' compromesso oltre 50 pacchetti npm incluso un Vapi.ai SDK con 408.000 download mensili.",
-      "url": "https://www.theregister.com/security/2026/06/08/github-nukes-70-microsoft-repos-amid-suspected-worm-attack/5252169",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "spacex-ipo-75-miliardi-nasdaq-2026",
-      "date": "2026-06-09",
-      "caption": "🚀 SpaceX IPO: 75 miliardi di dollari, debutto su Nasdaq come 'SPCX'",
-      "snippet": "SpaceX ha ufficializzato la sua IPO: vuole raccogliere fino a 75 miliardi di dollari collocando 555,6 milioni di azioni a 135 dollari l'una, superando il record Saudi Aramco (26 miliardi nel 2019). La valutazione implicita e' di 1,77 trilioni di dollari. Elon Musk avra' l'82,4% dei diritti di voto (5,22 miliardi di azioni Class B). Il debutto su Nasdaq con simbolo 'SPCX' e' atteso entro fine giugno 2026. Anche Anthropic ha depositato un S-1 riservato alla SEC - IPO AI che segue SpaceX.",
-      "url": "https://apnews.com/article/spacex-tesla-elon-musk-ipo-public-offering-6490112997adcbc47235479685a89b72",
-      "tag": "Space Economy"
-    },
-    {
-      "id": "anthropic-ipo-sec-s1-2026",
-      "date": "2026-06-09",
-      "caption": "🤖 Anthropic deposita S-1 riservato alla SEC: in arrivo la quotazione in Borsa",
-      "snippet": "Anthropic (maker di Claude) ha depositato in forma riservata la documentazione S-1 presso la SEC per la propria IPO, potenzialmente il piu' grande debutto mai visto nel settore AI. La valutazione implicita supera i 965 miliardi di dollari dopo un round da 65 miliardi a maggio 2026. L'azienda paga SpaceX 1,25 miliardi/mese per capacita' di calcolo al data center Colossus di Memphis fino al 2029. OpenAI si prepara a una propria IPO. Tre mega-quotazioni tech nell'arco di settimane trasformano il panorama finanziario dell'AI.",
-      "url": "https://www.wired.it/article/anthropic-ipo-debutto-in-borsa/",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "amazon-kuiper-fcc-waiver-deadline-2026",
-      "date": "2026-06-09",
-      "caption": "🛰️ FCC concede deroga ad Amazon Kuiper: via la scadenza luglio 2026 per 1.616 satelliti",
-      "snippet": "La FCC ha eliminato il requisito per Amazon Leo (ex Project Kuiper) di lanciare meta' della costellazione (1.616 su 3.232 satelliti) entro il 30 luglio 2026. La deroga e' motivata dall'interesse pubblico: SpaceX e' l'unico operatore che fornisce broadband da LEO ai consumatori americani, e Amazon ha investito oltre 10 miliardi di dollari nel sistema. Resta la scadenza del luglio 2029 per l'intera costellazione. La notizia rafforza il duopolio Starlink-Kuiper nel broadband satellitare.",
-      "url": "https://arstechnica.com/space/2026/06/fcc-lifts-looming-deadline-with-amazon-leo-satellite-broadband-constellation/",
-      "tag": "Telco"
-    },
-    {
-      "id": "hpe-juniper-record-quarter-ai-networking-2026",
-      "date": "2026-06-09",
-      "caption": "📊 HPE: trimestre record a 10,7 miliardi (+40%), AI systems orders a 1,8 miliardi",
-      "snippet": "Hewlett Packard Enterprise ha registrato il suo miglior risultato trimestrale dal 2018: ricavi di 10,7 miliardi di dollari (+40% year-over-year), networking revenue a 2,7 miliardi e ordini AI systems a 1,8 miliardi. CEO Neri ha definito l'acquisizione Juniper (14 miliardi) un 'home run'. HPE anticipa il raggiungimento dei target finanziari previsti per il 2028 gia' entro il 2026. Internamente: 1.200 use case AI sviluppati, 52 sistemi agentic gia' deployati dalla CFO.",
-      "url": "https://www.theregister.com/on-prem/2026/06/02/hpe-declares-juniper-deal-a-home-run-as-ai-and-networking-fuel-record-quarter/5250021",
-      "tag": "Business/Digital Transformation"
-    },
-    {
-      "id": "ue-piano-rinnovabili-italia-23-miliardi-2026",
-      "date": "2026-06-09",
-      "caption": "⚡ UE approva piano rinnovabili Italia da 23 miliardi: +37 GW di capacita' verde",
-      "snippet": "La Commissione europea ha dato il via libera al regime italiano di aiuti di Stato da 23 miliardi di euro per sostenere la produzione di energia da fonti rinnovabili, nell'ambito del Clean Industrial Deal di Bruxelles (giugno 2025). Il piano punta ad aggiungere oltre 37 gigawatt di nuova capacita' produttiva, ridurre la dipendenza da combustibili fossili e colmare il ritardo italiano nella transizione energetica. Ora la sfida passa all'attuazione: autorizzazioni, connessioni alla rete e infrastrutture.",
-      "url": "https://www.key4biz.it/rinnovabili-via-libera-ue-al-piano-italiano-da-23-miliardi/574462/",
-      "tag": "Energy"
-    },
-    {
-      "id": "telemarketing-energia-decreto-bollette-agendadigitale-2026",
-      "date": "2026-06-09",
-      "caption": "📵 Decreto Bollette: dal 19 giugno stop al telemarketing per luce e gas - ma le critiche non mancano",
-      "snippet": "Dal 19 giugno 2026 entra in vigore il divieto di concludere contratti telefonici per luce e gas tramite chiamate commerciali non richieste, introdotto con emendamento al Decreto Bollette (n. 21/2026). Secondo AgendaDigitale, la norma - approvata senza previa consultazione con le categorie - rischia di colpire soprattutto gli operatori regolari, creando incertezza applicativa e possibili incompatibilita' con il diritto europeo. Il settore energy telemarketing vale miliardi di euro di contratti annui.",
-      "url": "https://www.agendadigitale.eu/infrastrutture/telemarketing-energia-tanti-danni-dal-decreto-bollette-ecco-perche/",
-      "tag": "Regolazione"
-    },
-    {
-      "id": "apple-wwdc-siri-ai-do-or-die-register-2026",
-      "date": "2026-06-09",
-      "caption": "🔮 WWDC 2026: Apple punta tutto su Siri AI - analisti divisi tra ottimismo e scetticismo",
-      "snippet": "Al WWDC 2026 Apple ha presentato Siri AI e una revisione profonda di Apple Intelligence dopo due anni di risultati deludenti che avevano portato a una class action. La nuova Siri, basata su on-device processing e Private Cloud Compute, punta a integrarsi in modo invisibile nell'ecosistema Apple. Gli analisti IDC e Insider Intelligence lodano la strategia incentrata su privacy e utilita' pratica, ma sottolineano il rischio: 'ogni promessa e' seguita dalla parola if'. Developer beta iOS/iPadOS/macOS gia' disponibili.",
-      "url": "https://www.theregister.com/ai-and-ml/2026/06/08/its-do-or-die-for-apple-ai/5252479",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "ftth-italia-77-percent-copertura-30-utilizzo-2026",
-      "date": "2026-06-09",
-      "caption": "📡 FTTH Italia 2026: copertura al 77,19% ma solo il 30% delle famiglie la usa",
-      "snippet": "In Italia nel 2026 la rete FTTH (Fiber To The Home) copre il 77,19% dei nuclei familiari, ma l'utilizzo effettivo si ferma al 30%. Palermo guida la classifica delle citta' con copertura al 95%, seguita da Bari (94%) e Barletta-Andria-Trani (93%); Milano e' nella top 10 con il 90%. La Sardegna e' la regione con la maggiore crescita annua (+25,43%), mentre la Liguria e' l'unica in calo (-0,71%). Il dato evidenzia un gap strutturale tra infrastruttura disponibile e adozione reale, segnale di una sfida ancora aperta sul fronte della domanda digitale.",
-      "url": "https://www.reportonline.it/2026/06/09/scienze-e-tecnologie/fibra-ottica-in-italia-copertura-al-77",
-      "tag": "Telco"
-    },
-    {
-      "id": "mediobanca-telco-ricavi-europa-italia-2026",
-      "date": "2026-06-09",
-      "caption": "📊 Mediobanca: telco europee in ripresa timida, ma Italia perde 14 mld dal 2010",
-      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali mostra che nel 1° semestre 2025 i ricavi globali sono cresciuti del 2,9%, con USA (+3,6%) e Asia (+3,2%) davanti all'Europa (+1,1%). L'Italia segna +1,6% ma ha perso 14 miliardi di euro di giro d'affari dal 2010 (CAGR -2,7%). L'EBIT margin italiano e' risalito all'1,8% nel 2024 (era 8,8% nel 2020), contro il 16,5% delle grandi telco EMEA. I player globali piu' avanzati (come KT coreana) stanno evolvendo verso il modello AICT company: KT genera gia' il 40% dei ricavi da attivita' extra-telco e punta a triplicare l'AI/IT entro il 2028.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "cisco-network-supercycle-agentic-ai-2026",
-      "date": "2026-06-09",
-      "caption": "🤖 Cisco: l'AI agentiva innesca un 'Network Supercycle', traffico x3 in 3 anni",
-      "snippet": "Al Cisco Live di Las Vegas, il president Jeetu Patel ha dichiarato che l'ascesa dell'AI agentiva sta innescando un 'Network Supercycle': il traffico di rete legato all'AI e' atteso triplicare nei prossimi tre anni. Gli agenti AI, potenzialmente trilioni di entita' virtuali, richiedono nuove architetture a bassa latenza, sicurezza distribuita e capacita' ottica. Il CEO Chuck Robbins ha aggiunto che Cisco ha usato AI per scansionare 1,8 miliardi di righe di codice in 8 settimane (operazione che avrebbe richiesto 8 anni senza AI). Per gli operatori telecom il messaggio e' chiaro: chi non adegua l'infrastruttura rischia di diventare irrilevante.",
-      "url": "https://www.lightreading.com/ai-machine-learning/cisco-ai-driving-a-network-supercycle-",
-      "tag": "AI/LLM"
-    },
-    {
-      "id": "llm-api-attacks-theregister-prompt-exploit-2026",
-      "date": "2026-06-09",
-      "caption": "🔐 LLM e sicurezza API: i modelli cambiano il profilo degli attacchi alle imprese",
-      "snippet": "Secondo un'analisi pubblicata da The Register, l'adozione degli LLM sta trasformando radicalmente il profilo degli attacchi alle API aziendali. Le applicazioni moderne sono API-driven, interconnesse e spesso over-permissioned: terreno fertile per attacchi AI-assisted che sfruttano i modelli linguistici per automatizzare la scoperta di vulnerabilita', generare payload personalizzati e aggirare i controlli tradizionali. Il fenomeno 'From Prompt to Exploit' rappresenta una nuova frontiera della cybersicurezza enterprise, con implicazioni per ogni organizzazione che espone API a sistemi basati su AI.",
-      "url": "https://www.theregister.com/security/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "tim-cyber-security-report-2026-ransomware",
-      "date": "2026-06-09",
-      "caption": "🔐 TIM-CSF: ransomware +42% globale nel 2025, Italia +14%. Presentato alla Camera",
-      "snippet": "Il 9 giugno 2026 TIM e Cyber Security Foundation hanno presentato alla Camera dei Deputati il Cyber Security Report 2026 (dati 2025). I ransomware hanno superato le 7.400 rivendicazioni globali (+42% sul 2024); in Italia i casi sono stati 166 (+14%), con oltre il 30% concentrati in Lombardia. Il direttore ACN Gianluca Galasso ha dichiarato che 'l'AI sta riducendo drasticamente il tempo tra scoperta di una vulnerabilità e il suo sfruttamento'. La cybersecurity non è più un rischio episodico ma una 'variabile permanente per sicurezza nazionale e competitività'.",
-      "url": "https://www.corrierecomunicazioni.it/cyber-security/cybersecurity-ai-e-geopolitica-spingono-il-ransomware-42-in-tutto-il-mondo/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "five-eyes-cina-linkedin-spie-2026",
-      "date": "2026-06-09",
-      "caption": "🕵️ Five Eyes: la Cina recluta spie su LinkedIn. Primo bollettino congiunto in 80 anni",
-      "snippet": "Il 3 giugno 2026 FBI, MI5, ASIO, CSIS e NZSIS (Five Eyes) hanno pubblicato congiuntamente il bollettino 'Safeguarding Our Secrets': la prima volta in quasi 80 anni di storia dell'alleanza che tutte e cinque le agenzie firmano un documento pubblico su una singola minaccia. L'intelligence militare cinese (PLA) usa LinkedIn come vettore HUMINT scalabile per reclutare target nelle organizzazioni difesa, tech e pubblica amministrazione dei paesi occidentali. Il bollettino descrive tecniche di social engineering, falsi recruiter e approcci a basso costo/alta copertura geografica.",
-      "url": "https://www.agendadigitale.eu/sicurezza/five-eyes-cosi-la-cina-recluta-spie-su-linkedin-le-tecniche-e-come-tutelarsi/",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "eu-ai-act-omnibus-high-risk-delay-2026",
-      "date": "2026-06-09",
-      "caption": "⚖️ AI Act Omnibus UE: rinviati al 2027-28 gli obblighi per i sistemi ad alto rischio",
-      "snippet": "Il 7 maggio 2026, dopo una sessione di trilogi di 9 ore, Consiglio UE e Parlamento europeo hanno raggiunto un accordo provvisorio sull'Omnibus VII Digital: gli obblighi per i sistemi AI ad alto rischio — previsti per agosto 2026 — vengono posticipati al 2027-2028. L'accordo introduce anche nuove regole di watermarking per i contenuti generativi e vieta esplicitamente la generazione di immagini CSAM con AI. La struttura core dell'AI Act rimane invariata. L'adozione formale è attesa prima del 2 agosto 2026.",
-      "url": "https://www.hoganlovells.com/en/publications/eu-legislators-agree-to-delay-for-highrisk-ai-rules",
-      "tag": "Regolazione"
-    },
-    {
-      "id": "telco-mediobanca-europa-ricavi-investimenti-5g-2026",
-      "date": "2026-06-09",
-      "caption": "📊 Mediobanca: telco europee +1,1% ricavi ma investimenti 5G in calo. Italia EBIT all'1,8%",
-      "snippet": "Il report annuale Mediobanca sulle 34 maggiori telco mondiali (dati H1 2025) mostra una ripresa modesta in Europa (+1,1%) contro USA (+3,6%) e Asia (+3,2%). La Germania guida l'Europa con 58,4 miliardi (+3,7%), l'Italia si piazza quinta con un EBIT margin risalito all'1,8% (era l'8,8% nel 2020), lontano dal 16,5% EMEA. Gli investimenti europei nelle reti sono calati dello 0,4%. Il modello AICT emerge come strategia obbligata: KT Korea già genera il 40% dei ricavi da attività extra-telco e punta a triplicare il contributo AI/IT entro il 2028.",
-      "url": "https://www.corrierecomunicazioni.it/telco/telco-ripresa-dei-ricavi-per-europa-e-italia-male-la-redditivita-calano-gli-investimenti-in-5g-e-fibra/",
-      "tag": "Telco"
-    },
-    {
-      "id": "anthropic-fable5-pubblico-cybersecurity-guardrails-20260609",
-      "date": "2026-06-09",
-      "caption": "🧠 Anthropic lancia Claude Fable 5 al pubblico: il modello Mythos con guardrail di sicurezza",
-      "snippet": "Il 9 giugno Anthropic ha reso disponibile Claude Fable 5 — versione pubblica di Mythos — tramite API e piani Enterprise a consumo. Il modello eccelle in software engineering, knowledge work e vision, ma blocca le risposte in ambiti ad alto rischio (cybersecurity, biologia, chimica) fallback su Claude Opus 4.8. Il prezzo è 10 dollari/milione di token in input e 50 dollari/milione in output, il doppio di Opus 4.8. L'accesso su abbonamento sarà rilasciato in fasi fino al 22 giugno.",
-      "url": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
-      "tag": "AI"
+  "scheduled_tasks": [
+    {
+      "id": "task_001",
+      "title": "📧 Rassegna Stampa Quotidiana",
+      "schedule": "Ogni giorno alle 07:00",
+      "status": "active",
+      "next_run": "2026-06-20T07:00:00+02:00",
+      "description": "Generazione automatica rassegna stampa AI e telecomunicazioni"
     }
-  ]
+  ],
+  "rassegna_stampa": {
+    "date": "2026-06-19",
+    "topics": [
+      {
+        "title": "Fastweb+Vodafone entra nel TM Forum",
+        "source": "Juorno",
+        "summary": "Fastweb e Vodafone rafforzano la presenza nel TM Forum con collaborazione globale su intelligenza artificiale, reti autonome e innovazione.",
+        "impact": "high",
+        "url": "https://www.juorno.it/tlc-fastwebvodafone-entra-nellalleanza-globale-tm-forum-spinta-su-ia-e-reti-autonome/"
+      },
+      {
+        "title": "Italia approva decreti attuativi IA",
+        "source": "RaiNews",
+        "summary": "Il Consiglio dei Ministri approva i decreti attuativi per l'intelligenza artificiale. Mantovano: 'Italia prima con norme'. Vietato uso per sorveglianza di massa.",
+        "impact": "high",
+        "url": "https://www.rainews.it/articoli/2026/06/consiglio-dei-ministri-i-decreti-attuativi-intelligenza-artificiale-542c0922-bfa4-493a-be1b-c019b21cce3c.html"
+      },
+      {
+        "title": "AI Week Milano 19-20 maggio 2026",
+        "source": "NextMindLab",
+        "summary": "NextMindLab presente ad AI Week 19-20 maggio 2026 a Milano. Evento di riferimento per l'AI enterprise in Italia.",
+        "impact": "medium",
+        "url": "https://nextmindlab.com"
+      }
+    ]
+  }
 }
