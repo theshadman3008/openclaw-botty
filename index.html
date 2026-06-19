@@ -402,7 +402,16 @@
         // Load Rassegne (ultimi 7 giorni)
         async function loadRassegne() {
             try {
-                const snapshot = await db.collection('rassegne').orderBy('data', 'desc').limit(7).get();
+                // Prima prova con ordinamento
+                let snapshot;
+                try {
+                    snapshot = await db.collection('rassegne').orderBy('data', 'desc').limit(7).get();
+                } catch (orderError) {
+                    // Fallback senza ordinamento se il campo non è indicizzato
+                    console.log('Ordine non disponibile, uso query senza orderBy');
+                    snapshot = await db.collection('rassegne').limit(7).get();
+                }
+                
                 const container = document.getElementById('rassegne-list');
                 
                 if (snapshot.empty) {
@@ -448,14 +457,21 @@
                 document.getElementById('stat-rassegne').textContent = count;
             } catch (error) {
                 console.error('Error loading rassegne:', error);
-                document.getElementById('rassegne-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore caricamento rassegne</p>';
+                document.getElementById('rassegne-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore: ' + error.message + '</p>';
             }
         }
         
         // Load LinkedIn Posts
         async function loadLinkedInPosts() {
             try {
-                const snapshot = await db.collection('linkedin_post').orderBy('data', 'desc').limit(5).get();
+                let snapshot;
+                try {
+                    snapshot = await db.collection('linkedin_post').orderBy('data', 'desc').limit(5).get();
+                } catch (orderError) {
+                    console.log('Ordine non disponibile per linkedin_post');
+                    snapshot = await db.collection('linkedin_post').limit(5).get();
+                }
+                
                 const container = document.getElementById('linkedin-list');
                 
                 if (snapshot.empty) {
@@ -470,7 +486,7 @@
                     html += `
                         <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
                             <h3 class="font-semibold text-gray-800 text-sm mb-2">${data.titolo || 'Post LinkedIn'}</h3>
-                            <p class="text-xs text-gray-600 mb-3 line-clamp-3">${data.testo || ''}</p>
+                            <p class="text-xs text-gray-600 mb-3" style="white-space: pre-wrap;">${data.testo || ''}</p>
                             ${data.carouselUrl ? `
                                 <a href="${data.carouselUrl}" target="_blank" class="slide-preview mb-3 text-xs">
                                     <i class="fas fa-file-pdf mr-2"></i> Carousel PDF
@@ -488,7 +504,7 @@
                 container.innerHTML = html;
             } catch (error) {
                 console.error('Error loading LinkedIn posts:', error);
-                document.getElementById('linkedin-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore caricamento post</p>';
+                document.getElementById('linkedin-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore: ' + error.message + '</p>';
             }
         }
         
