@@ -4,516 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ross AI · Dashboard</title>
-    
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a0a00 50%, #331a00 100%);
-            min-height: 100vh;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .glass-card {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 2rem 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .header .last-update {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
         
         .stat-card {
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
         
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
         }
         
-        .tag-telco { background: #dbeafe; color: #1e40af; }
-        .tag-normativa { background: #fce7f3; color: #9d174d; }
-        .tag-eventi { background: #d1fae5; color: #065f46; }
-        .tag-ai { background: #fef3c7; color: #92400e; }
-        .tag-cybersecurity { background: #e0e7ff; color: #3730a3; }
-        .tag-default { background: #f3f4f6; color: #374151; }
-        
-        .loading-spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
+        .news-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .news-section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
         }
         
-        .slide-preview {
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .news-date {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
             font-weight: 600;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .news-item {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .news-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .news-item.priority-altissima {
+            border-left-color: #e74c3c;
+            background: #fdedec;
+        }
+        
+        .news-item.priority-alta {
+            border-left-color: #f39c12;
+            background: #fef9e7;
+        }
+        
+        .news-item.priority-media {
+            border-left-color: #3498db;
+        }
+        
+        .news-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .news-item.priority-altissima .news-tag {
+            background: #e74c3c;
+        }
+        
+        .news-item.priority-alta .news-tag {
+            background: #f39c12;
+        }
+        
+        .news-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+        
+        .news-snippet {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .news-source {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .news-url {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .news-url:hover {
+            text-decoration: underline;
+        }
+        
+        .verified-badge {
+            background: #27ae60;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
     </style>
 </head>
-<body class="p-6">
-    <!-- Header -->
-    <header class="max-w-7xl mx-auto mb-8">
-        <div class="glass-card p-6">
-            <div class="flex items-center justify-between">
-                <div>
-                    <h1 class="text-3xl font-bold text-gray-800">
-                        <i class="fas fa-robot text-purple-600 mr-3"></i>
-                        Ross AI Dashboard
-                    </h1>
-                    <p class="text-gray-600 mt-1">Panoramica attività e contenuti</p>
-                </div>
-                <div class="text-right">
-                    <p class="text-sm text-gray-500" id="current-date">--</p>
-                    <p class="text-xs text-gray-400" id="current-time">--</p>
-                </div>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Ross AI Dashboard</h1>
+            <div class="subtitle">Rassegna Stampa Tech-Telco da Firebase Firestore</div>
+            <div class="last-update">⏰ Ultimo aggiornamento: 22 June 2026 12:45</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Notizie Totali</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Date Coperte</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Priorità Altissima</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Verificate</div>
             </div>
         </div>
-    </header>
-    
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto space-y-6">
         
-        <!-- Stats Cards -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="glass-card p-6 stat-card">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-500 text-sm font-medium">Task Aperti</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1" id="stat-tasks">--</p>
-                    </div>
-                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-tasks text-blue-600 text-xl"></i>
-                    </div>
+        <div class="news-section">
+            <h2>📰 Ultime Notizie</h2>
+
+            <div class="news-date">📅 2026-06-21</div>
+
+            <div class="news-item priority-alta">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">iOS 27 AI features beyond Siri</div>
+                <div class="news-snippet">Apple Intelligence arriva su iOS 27: split bills, password security, tab organizer. Le nuove feature AI di Apple vanno oltre Siri.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ Mobile/AI</span>
+                    <a href="https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" target="_blank" class="news-url">🔗 Leggi articolo</a>
                 </div>
             </div>
-            
-            <div class="glass-card p-6 stat-card">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-500 text-sm font-medium">Task Cron</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1" id="stat-cron">--</p>
-                    </div>
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-clock text-green-600 text-xl"></i>
-                    </div>
+
+            <div class="news-item priority-media">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">TechCrunch Mobility: Robotaxi scorecard China dominance</div>
+                <div class="news-snippet">Nuova scorecard rivela dominio cinese nel settore robotaxi. Waymo richiama 4.000 veicoli autonomi per problemi con zone di costruzione.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ Mobilità/Autonomous Vehicles</span>
+                    <a href="https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/" target="_blank" class="news-url">🔗 Leggi articolo</a>
                 </div>
             </div>
-            
-            <div class="glass-card p-6 stat-card">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-500 text-sm font-medium">Documenti</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1" id="stat-docs">--</p>
-                    </div>
-                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-file-alt text-purple-600 text-xl"></i>
-                    </div>
+
+            <div class="news-item priority-altissima">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Trump administration cracks down on Anthropic</div>
+                <div class="news-snippet">L'amministrazione Trump impone export controls sui modelli AI di Anthropic. Fable 5 e Mythos offline per restrizioni governative. OpenAI e Meta potenziali beneficiari.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ AI/Regolamentazione</span>
+                    <a href="https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" target="_blank" class="news-url">🔗 Leggi articolo</a>
                 </div>
             </div>
-            
-            <div class="glass-card p-6 stat-card">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-500 text-sm font-medium">Rassegne (7gg)</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1" id="stat-rassegne">--</p>
-                    </div>
-                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-newspaper text-orange-600 text-xl"></i>
-                    </div>
+
+            <div class="news-item priority-alta">
+                <span class="news-tag">Finanza Tech</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Polymarket paid creators for deceptive videos</div>
+                <div class="news-snippet">WSJ investigation rivela che Polymarket ha pagato creator per 1.100 video ingannevoli su scommesse fake. La piattaforma di betting politico sotto inchiesta.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ Crypto/Blockchain</span>
+                    <a href="https://techcrunch.com/2026/06/21/polymarket-reportedly-paid-creators-to-post-deceptive-videos-about-fake-bets/" target="_blank" class="news-url">🔗 Leggi articolo</a>
                 </div>
             </div>
-        </section>
-        
-        <!-- Two Columns Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            
-            <!-- Left Column - Tasks & Cron (2/3 width) -->
-            <div class="lg:col-span-2 space-y-6">
-                
-                <!-- Task Aperti -->
-                <section class="glass-card p-6">
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">
-                        <i class="fas fa-tasks text-blue-600 mr-2"></i>
-                        Task Aperti
-                    </h2>
-                    <div id="tasks-list" class="space-y-3">
-                        <div class="flex justify-center py-8">
-                            <div class="loading-spinner"></div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Task Cron -->
-                <section class="glass-card p-6">
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">
-                        <i class="fas fa-clock text-green-600 mr-2"></i>
-                        Task Schedulati (Cron)
-                    </h2>
-                    <div id="cron-list" class="space-y-3">
-                        <div class="flex justify-center py-8">
-                            <div class="loading-spinner"></div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Documenti -->
-                <section class="glass-card p-6">
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">
-                        <i class="fas fa-file-alt text-purple-600 mr-2"></i>
-                        Documenti
-                    </h2>
-                    <div id="docs-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex justify-center py-8 col-span-2">
-                            <div class="loading-spinner"></div>
-                        </div>
-                    </div>
-                </section>
+
+            <div class="news-item priority-alta">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Ubisoft co-founder dies in plane crash</div>
+                <div class="news-snippet">Claude Guillemot, 69 anni, co-fondatore di Ubisoft, morto in incidente aereo in Francia. La notizia è stata confermata dalla famiglia e dall'azienda.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ Gaming</span>
+                    <a href="https://techcrunch.com/2026/06/21/ubisoft-co-founder-claude-guillemot-dies-in-plane-crash/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
             </div>
-            
-            <!-- Right Column - Rassegna & LinkedIn (1/3 width) -->
-            <div class="space-y-6">
-                
-                <!-- Rassegna Settimanale -->
-                <section class="glass-card p-6">
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">
-                        <i class="fas fa-newspaper text-orange-600 mr-2"></i>
-                        Rassegna Settimanale
-                    </h2>
-                    <div id="rassegne-list" class="space-y-4">
-                        <div class="flex justify-center py-8">
-                            <div class="loading-spinner"></div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- LinkedIn Post Giornalieri -->
-                <section class="glass-card p-6">
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">
-                        <i class="fab fa-linkedin text-blue-700 mr-2"></i>
-                        LinkedIn Post Consigliati
-                    </h2>
-                    <div id="linkedin-list" class="space-y-4">
-                        <div class="flex justify-center py-8">
-                            <div class="loading-spinner"></div>
-                        </div>
-                    </div>
-                </section>
+
+            <div class="news-date">📅 2026-06-20</div>
+
+            <div class="news-item priority-media">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Giulia Pacchioni editor Nature Reviews Materials</div>
+                <div class="news-snippet">Giulia Pacchioni, italiana, è caporedattrice di Nature Reviews Materials. Collabora con Topolino per divulgare scienza dei materiali ai bambini.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 Repubblica Tecnologia</span>
+                    <span>🏷️ Scienza/Divulgazione</span>
+                    <a href="https://www.repubblica.it/tecnologia/2026/06/20/news/decidere_cosa_si_pubblica_su_nature_giulia_pacchioni_e_le_nuove_rotte_della_scienza_dei_materiali-425420884/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
             </div>
+
+            <div class="news-date">📅 2026-06-19</div>
+
+            <div class="news-item priority-alta">
+                <span class="news-tag">Economia & Business</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">GTA 6 preordini 25 giugno</div>
+                <div class="news-snippet">Rockstar Games annuncia copertina ufficiale GTA 6. Preordini dal 25 giugno su store digitali. Stime analisti: 40 milioni di copie entro marzo 2027.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 Repubblica Tecnologia</span>
+                    <span>🏷️ Gaming</span>
+                    <a href="https://www.repubblica.it/tecnologia/2026/06/19/news/gta_6_preordini_quando_esce_copertina-425422020/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
+            </div>
+
+            <div class="news-item priority-alta">
+                <span class="news-tag">Finanza Tech</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Every fusion startup raised over $100M</div>
+                <div class="news-snippet">Fusion energy boom: Commonwealth Fusion $2B, Helion $1.2B, Xcimer $100M. Ogni startup di fusione nucleare ha raccolto oltre 100 milioni nel 2026.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ Energy/VC</span>
+                    <a href="https://techcrunch.com/2026/06/19/every-fusion-startup-that-has-raised-over-100m/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
+            </div>
+
+            <div class="news-item priority-altissima">
+                <span class="news-tag">Economia & Business</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Billionaire Ambani wants AI in every call</div>
+                <div class="news-snippet">Mukesh Ambani (Reliance Jio) punta ad avere AI assistant per 500 milioni di utenti. Partnership con Meta per data center in India. Digital transformation senza precedenti.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 TechCrunch</span>
+                    <span>🏷️ Telco/AI</span>
+                    <a href="https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
+            </div>
+
+            <div class="news-date">📅 2026-06-17</div>
+
+            <div class="news-item priority-altissima">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Ericsson 5G supera 3 miliardi abbonamenti</div>
+                <div class="news-snippet">Ericsson Mobility Report giugno 2026: 5G supera 3 miliardi di abbonamenti globali. La rete mobile diventa infrastruttura strategica per AI. Primi servizi 6G nel 2030.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 Repubblica Tecnologia</span>
+                    <span>🏷️ Telco/5G</span>
+                    <a href="https://www.repubblica.it/tecnologia/2026/06/17/news/ericsson_5g_supera_i_3_miliardi_di_abbonamenti_e_diventa_un_infrastruttura_strategica_per_l_ia-425416054/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
+            </div>
+
+            <div class="news-date">📅 2026-06-16</div>
+
+            <div class="news-item priority-altissima">
+                <span class="news-tag">Tecnologia</span>
+                <span class="verified-badge">✓ Verificato</span>
+                <div class="news-title">Cybersecurity: modelli IA vulnerabili</div>
+                <div class="news-snippet">AI4I (Istituto italiano AI) rivela: Opus 4.8 e Fable 5 vulnerabili ad attacchi automatizzati. Ricerca 'Measuring the Residual Jailbreak Surface' usa framework HackAgent.</div>
+                <div class="news-meta">
+                    <span class="news-source">📬 Repubblica Tecnologia</span>
+                    <span>🏷️ Cybersecurity/AI</span>
+                    <a href="https://www.repubblica.it/tecnologia/2026/06/16/news/cybersecurity_modelli_ia_piu_avanzati_sono_vulnerabili_opus_48_fable_5_anthropic-425414730/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+                </div>
+            </div>
+
         </div>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="max-w-7xl mx-auto mt-8 mb-6">
-        <div class="glass-card p-4 text-center">
-            <p class="text-gray-600 text-sm">
-                <i class="fas fa-robot text-purple-600 mr-2"></i>
-                Ross AI Dashboard · Ultimo aggiornamento: <span id="last-update">--</span>
-            </p>
-        </div>
-    </footer>
-    
-    <!-- Firebase Config -->
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
-            authDomain: "rossdb.firebaseapp.com",
-            projectId: "rossdb",
-            storageBucket: "rossdb.firebasestorage.app",
-            messagingSenderId: "776172557370",
-            appId: "1:776172557370:web:256c12b8e1fc660ea51103"
-        };
-        
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-    </script>
-    
-    <!-- App Logic -->
-    <script>
-        // Data e ora corrente
-        function updateDateTime() {
-            const now = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('current-date').textContent = now.toLocaleDateString('it-IT', options);
-            document.getElementById('current-time').textContent = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
-            document.getElementById('last-update').textContent = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        }
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-        
-        // Tag color mapping
-        function getTagClass(categoria) {
-            const cat = categoria.toLowerCase();
-            if (cat.includes('telco')) return 'tag-telco';
-            if (cat.includes('normativa')) return 'tag-normativa';
-            if (cat.includes('eventi')) return 'tag-eventi';
-            if (cat.includes('ai')) return 'tag-ai';
-            if (cat.includes('cyber')) return 'tag-cybersecurity';
-            return 'tag-default';
-        }
-        
-        // Load Tasks (simulato - da collezione 'task')
-        async function loadTasks() {
-            try {
-                const snapshot = await db.collection('task').orderBy('createdAt', 'desc').limit(10).get();
-                const container = document.getElementById('tasks-list');
-                
-                if (snapshot.empty) {
-                    container.innerHTML = '<p class="text-gray-500 text-center py-4">Nessun task aperto</p>';
-                    document.getElementById('stat-tasks').textContent = '0';
-                    return;
-                }
-                
-                let html = '';
-                let count = 0;
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    const statusClass = data.status === 'completed' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800';
-                    const statusIcon = data.status === 'completed' ? 'fa-check-circle' : 'fa-clock';
-                    
-                    html += `
-                        <div class="flex items-start justify-between p-4 bg-gray-50 rounded-lg">
-                            <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">${data.titolo || 'Task senza titolo'}</h3>
-                                <p class="text-sm text-gray-600 mt-1">${data.descrizione || ''}</p>
-                                ${data.tags ? `<div class="mt-2 space-x-2">${data.tags.map(t => `<span class="tag tag-default">${t}</span>`).join('')}</div>` : ''}
-                            </div>
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold ${statusClass}">
-                                <i class="fas ${statusIcon} mr-1"></i>
-                                ${data.status || 'pending'}
-                            </span>
-                        </div>
-                    `;
-                    count++;
-                });
-                
-                container.innerHTML = html;
-                document.getElementById('stat-tasks').textContent = count;
-            } catch (error) {
-                console.error('Error loading tasks:', error);
-                document.getElementById('tasks-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore caricamento task</p>';
-            }
-        }
-        
-        // Load Cron Jobs (simulato - hardcoded)
-        function loadCronJobs() {
-            const cronJobs = [
-                { name: 'Rassegna mattina', schedule: '0 8 * * 1-5', status: 'active', description: 'Genera rassegna stampa giornaliera' }
-            ];
-            
-            const container = document.getElementById('cron-list');
-            let html = '';
-            
-            cronJobs.forEach(job => {
-                html += `
-                    <div class="flex items-start justify-between p-4 bg-green-50 rounded-lg border border-green-200">
-                        <div class="flex-1">
-                            <h3 class="font-semibold text-gray-800">${job.name}</h3>
-                            <p class="text-sm text-gray-600 mt-1">${job.description}</p>
-                            <p class="text-xs text-gray-500 mt-2 font-mono bg-gray-100 inline-block px-2 py-1 rounded">
-                                <i class="fas fa-clock mr-1"></i> ${job.schedule}
-                            </p>
-                        </div>
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
-                            <i class="fas fa-check-circle mr-1"></i>
-                            ${job.status}
-                        </span>
-                    </div>
-                `;
-            });
-            
-            container.innerHTML = html;
-            document.getElementById('stat-cron').textContent = cronJobs.length;
-        }
-        
-        // Load Documents
-        async function loadDocuments() {
-            try {
-                const snapshot = await db.collection('documenti').orderBy('dataCaricamento', 'desc').limit(10).get();
-                const container = document.getElementById('docs-list');
-                
-                if (snapshot.empty) {
-                    container.innerHTML = '<p class="text-gray-500 text-center py-4 col-span-2">Nessun documento</p>';
-                    document.getElementById('stat-docs').textContent = '0';
-                    return;
-                }
-                
-                let html = '';
-                let count = 0;
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    const icon = data.tipo === 'pdf' ? 'fa-file-pdf text-red-600' : 'fa-file text-gray-600';
-                    
-                    html += `
-                        <a href="${data.githubUrl || '#'}" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-                            <i class="fas ${icon} text-2xl mr-3"></i>
-                            <div class="flex-1 min-w-0">
-                                <h3 class="font-semibold text-gray-800 truncate">${data.titolo}</h3>
-                                <p class="text-xs text-gray-500 mt-1">${data.categoria || 'Generico'}</p>
-                            </div>
-                            <i class="fas fa-external-link-alt text-gray-400"></i>
-                        </a>
-                    `;
-                    count++;
-                });
-                
-                container.innerHTML = html;
-                document.getElementById('stat-docs').textContent = count;
-            } catch (error) {
-                console.error('Error loading documents:', error);
-                document.getElementById('docs-list').innerHTML = '<p class="text-red-500 text-center py-4 col-span-2">Errore caricamento documenti</p>';
-            }
-        }
-        
-        // Load Rassegne (ultimi 7 giorni)
-        async function loadRassegne() {
-            try {
-                // Prima prova con ordinamento
-                let snapshot;
-                try {
-                    snapshot = await db.collection('rassegne').orderBy('data', 'desc').limit(7).get();
-                } catch (orderError) {
-                    // Fallback senza ordinamento se il campo non è indicizzato
-                    console.log('Ordine non disponibile, uso query senza orderBy');
-                    snapshot = await db.collection('rassegne').limit(7).get();
-                }
-                
-                const container = document.getElementById('rassegne-list');
-                
-                if (snapshot.empty) {
-                    container.innerHTML = '<p class="text-gray-500 text-center py-4">Nessuna rassegna</p>';
-                    document.getElementById('stat-rassegne').textContent = '0';
-                    return;
-                }
-                
-                let html = '';
-                let count = 0;
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    const dataFmt = new Date(data.data).toLocaleDateString('it-IT', { day: '2-digit', month: 'short' });
-                    
-                    html += `
-                        <div class="border-l-4 border-orange-500 pl-4 py-2">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-semibold text-gray-800 text-sm">Rassegna ${dataFmt}</h3>
-                                <span class="text-xs text-gray-500">${data.totaleNotizie || 0} notizie</span>
-                            </div>
-                            ${data.notizie && data.notizie.slice(0, 2).map(n => `
-                                <div class="mb-2 last:mb-0">
-                                    <a href="${n.url}" target="_blank" class="text-xs text-blue-600 hover:underline block truncate">
-                                        <i class="fas fa-link mr-1"></i> ${n.titolo}
-                                    </a>
-                                    <div class="mt-1 space-x-1">
-                                        <span class="tag ${getTagClass(n.categoria)}">${n.categoria}</span>
-                                        <span class="text-xs text-gray-400">Impact: ${n.impactScore}</span>
-                                    </div>
-                                </div>
-                            `).join('') || ''}
-                            ${data.pdfUrl ? `
-                                <a href="${data.pdfUrl}" target="_blank" class="inline-flex items-center text-xs text-purple-600 hover:underline mt-2">
-                                    <i class="fas fa-file-pdf mr-1"></i> Vedi PDF
-                                </a>
-                            ` : ''}
-                        </div>
-                    `;
-                    count++;
-                });
-                
-                container.innerHTML = html;
-                document.getElementById('stat-rassegne').textContent = count;
-            } catch (error) {
-                console.error('Error loading rassegne:', error);
-                document.getElementById('rassegne-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore: ' + error.message + '</p>';
-            }
-        }
-        
-        // Load LinkedIn Posts
-        async function loadLinkedInPosts() {
-            try {
-                let snapshot;
-                try {
-                    snapshot = await db.collection('linkedin_post').orderBy('data', 'desc').limit(5).get();
-                } catch (orderError) {
-                    console.log('Ordine non disponibile per linkedin_post');
-                    snapshot = await db.collection('linkedin_post').limit(5).get();
-                }
-                
-                const container = document.getElementById('linkedin-list');
-                
-                if (snapshot.empty) {
-                    container.innerHTML = '<p class="text-gray-500 text-center py-4">Nessun post consigliato</p>';
-                    return;
-                }
-                
-                let html = '';
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    
-                    html += `
-                        <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
-                            <h3 class="font-semibold text-gray-800 text-sm mb-2">${data.titolo || 'Post LinkedIn'}</h3>
-                            <p class="text-xs text-gray-600 mb-3" style="white-space: pre-wrap;">${data.testo || ''}</p>
-                            ${data.carouselUrl ? `
-                                <a href="${data.carouselUrl}" target="_blank" class="slide-preview mb-3 text-xs">
-                                    <i class="fas fa-file-pdf mr-2"></i> Carousel PDF
-                                </a>
-                            ` : ''}
-                            ${data.notiziaUrl ? `
-                                <a href="${data.notiziaUrl}" target="_blank" class="text-xs text-blue-600 hover:underline block">
-                                    <i class="fas fa-link mr-1"></i> Notizia sorgente
-                                </a>
-                            ` : ''}
-                        </div>
-                    `;
-                });
-                
-                container.innerHTML = html;
-            } catch (error) {
-                console.error('Error loading LinkedIn posts:', error);
-                document.getElementById('linkedin-list').innerHTML = '<p class="text-red-500 text-center py-4">Errore: ' + error.message + '</p>';
-            }
-        }
-        
-        // Init
-        loadTasks();
-        loadCronJobs();
-        loadDocuments();
-        loadRassegne();
-        loadLinkedInPosts();
-    </script>
+    </div>
 </body>
 </html>
