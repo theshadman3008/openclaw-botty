@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ross AI · Dashboard</title>
+    <title>Ross AI Dashboard</title>
     <style>
         * {
             margin: 0;
@@ -13,369 +13,399 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f7fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        
+        .navbar {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 2rem;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .navbar-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .navbar-nav a:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .navbar-nav a.active {
+            background: rgba(255,255,255,0.3);
+            color: white;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 2rem;
         }
         
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 2rem 3rem;
+        .header-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         
-        .header h1 {
-            font-size: 2.5rem;
+        .header-section h1 {
+            font-size: 2rem;
             color: #667eea;
             margin-bottom: 0.5rem;
         }
         
-        .header .subtitle {
+        .header-section .subtitle {
             color: #666;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
-        .header .last-update {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .stats {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
         
-        .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 1.5rem 2rem;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .stat-number {
-            font-size: 3rem;
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .card.clickable {
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .card.clickable:hover {
+            border-color: #667eea;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .card-icon.purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-icon.green {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        
+        .card-icon.blue {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .card-icon.orange {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        
+        .card-stat {
+            font-size: 2.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            margin: 1rem 0;
         }
         
-        .stat-label {
-            color: #666;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .card-content {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .task-list {
+            list-style: none;
+        }
+        
+        .task-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        .task-item:last-child {
+            border-bottom: none;
+        }
+        
+        .task-status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #27ae60;
             margin-top: 0.5rem;
+            flex-shrink: 0;
         }
         
-        .news-section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 2rem 3rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        .task-status.pending {
+            background: #f39c12;
         }
         
-        .news-section h2 {
-            font-size: 1.8rem;
+        .task-text {
+            font-size: 0.9rem;
             color: #333;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid #667eea;
         }
         
-        .news-date {
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .doc-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #1a1a2e;
+            transition: background 0.3s ease;
+        }
+        
+        .doc-item:hover {
+            background: #e9ecef;
+        }
+        
+        .doc-icon {
+            font-size: 1.2rem;
+        }
+        
+        .doc-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .cta-button {
+            display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 10px;
-            font-size: 1.1rem;
+            text-decoration: none;
             font-weight: 600;
-            margin: 2rem 0 1rem 0;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
         }
         
-        .news-item {
-            background: #f8f9fa;
-            border-left: 5px solid #667eea;
-            border-radius: 10px;
-            padding: 1.5rem 2rem;
-            margin-bottom: 1rem;
-            transition: transform 0.2s ease;
+        .cta-button:hover {
+            transform: scale(1.05);
         }
         
-        .news-item:hover {
-            transform: translateX(10px);
-        }
-        
-        .news-item.priority-altissima {
-            border-left-color: #e74c3c;
-            background: #fdedec;
-        }
-        
-        .news-item.priority-alta {
-            border-left-color: #f39c12;
-            background: #fef9e7;
-        }
-        
-        .news-item.priority-media {
-            border-left-color: #3498db;
-        }
-        
-        .news-tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-        
-        .news-item.priority-altissima .news-tag {
-            background: #e74c3c;
-        }
-        
-        .news-item.priority-alta .news-tag {
-            background: #f39c12;
-        }
-        
-        .news-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin-bottom: 0.8rem;
-            line-height: 1.4;
-        }
-        
-        .news-snippet {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        
-        .news-meta {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.9rem;
+        .footer {
+            text-align: center;
+            padding: 2rem;
             color: #888;
+            font-size: 0.9rem;
         }
         
-        .news-source {
-            font-weight: 600;
-            color: #667eea;
-        }
-        
-        .news-url {
+        a {
             color: #667eea;
             text-decoration: none;
         }
         
-        .news-url:hover {
+        a:hover {
             text-decoration: underline;
-        }
-        
-        .verified-badge {
-            background: #27ae60;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-brand">🚀 Ross AI</a>
+            <div class="navbar-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="rassegna.html">Rassegna Stampa</a>
+                <a href="linkedin.html">LinkedIn Posts</a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
-        <div class="header">
-            <h1>🚀 Ross AI Dashboard</h1>
-            <div class="subtitle">Rassegna Stampa Tech-Telco da Firebase Firestore</div>
-            <div class="last-update">⏰ Ultimo aggiornamento: 22 June 2026 12:45</div>
+        <div class="header-section">
+            <h1>Dashboard</h1>
+            <div class="subtitle">Panoramica attività e contenuti • Ultimo aggiornamento: 22 June 2026 12:56</div>
         </div>
         
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number">11</div>
-                <div class="stat-label">Notizie Totali</div>
+        <div class="grid">
+            <!-- Task & Topic -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon purple">📋</div>
+                    <div class="card-title">Task & Topic Attivi</div>
+                </div>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <span class="task-status"></span>
+                        <span class="task-text"><strong>Rassegna Stampa Tech-Telco</strong> - Monitoraggio fonti RSS + web fetch</span>
+                    </li>
+                    <li class="task-item">
+                        <span class="task-status"></span>
+                        <span class="task-text"><strong>Publicazione Firebase</strong> - 11 notizie verificate caricate su Firestore</span>
+                    </li>
+                    <li class="task-item">
+                        <span class="task-status"></span>
+                        <span class="task-text"><strong>Content Generation</strong> - Post LinkedIn + Carousel PDF (10 slide)</span>
+                    </li>
+                    <li class="task-item">
+                        <span class="task-status pending"></span>
+                        <span class="task-text"><strong>GitHub Upload</strong> - Dashboard + social content in attesa di propagazione</span>
+                    </li>
+                </ul>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Date Coperte</div>
+            
+            <!-- Rassegna Stampa Summary -->
+            <div class="card clickable" onclick="window.location.href='rassegna.html'">
+                <div class="card-header">
+                    <div class="card-icon green">📰</div>
+                    <div class="card-title">Rassegna Stampa</div>
+                </div>
+                <div class="card-stat">11</div>
+                <div class="card-content">
+                    <p><strong>Notizie verificate</strong> dalle ultime 72 ore</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+                        Fonti: TechCrunch, Repubblica Tecnologia, Wired, ICT Business
+                    </p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+                        Topic: AI, Telco/5G, Cybersecurity, Gaming, Fusion Energy
+                    </p>
+                </div>
+                <span class="cta-button">Visualizza tutte →</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Priorità Altissima</div>
+            
+            <!-- LinkedIn Posts Summary -->
+            <div class="card clickable" onclick="window.location.href='linkedin.html'">
+                <div class="card-header">
+                    <div class="card-icon blue">💼</div>
+                    <div class="card-title">LinkedIn Posts</div>
+                </div>
+                <div class="card-stat">1</div>
+                <div class="card-content">
+                    <p><strong>Post suggerito</strong> basato su notizia principale</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+                        Topic: Reliance Jio - 500M utenti con AI
+                    </p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+                        Inclusi: Copy pronto + Carousel PDF (10 slide)
+                    </p>
+                </div>
+                <span class="cta-button">Visualizza post →</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">11</div>
-                <div class="stat-label">Verificate</div>
+            
+            <!-- Documenti Generati -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon orange">📄</div>
+                    <div class="card-title">Documenti Generati</div>
+                </div>
+                <div class="doc-list">
+                    <a href="carousel/rassegna_2026-06-22.pdf" target="_blank" class="doc-item">
+                        <span class="doc-icon">📊</span>
+                        <span class="doc-name">Carousel PDF - Rassegna 22 Giugno 2026 (10 slide)</span>
+                    </a>
+                    <a href="social/linkedin_post_2026-06-22.txt" target="_blank" class="doc-item">
+                        <span class="doc-icon">📝</span>
+                        <span class="doc-name">LinkedIn Post - Reliance Jio AI</span>
+                    </a>
+                    <a href="https://github.com/theshadman3008/openclaw-botty" target="_blank" class="doc-item">
+                        <span class="doc-icon">🔗</span>
+                        <span class="doc-name">Repository GitHub - openclaw-botty</span>
+                    </a>
+                </div>
             </div>
         </div>
         
-        <div class="news-section">
-            <h2>📰 Ultime Notizie</h2>
-
-            <div class="news-date">📅 2026-06-21</div>
-
-            <div class="news-item priority-alta">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">iOS 27 AI features beyond Siri</div>
-                <div class="news-snippet">Apple Intelligence arriva su iOS 27: split bills, password security, tab organizer. Le nuove feature AI di Apple vanno oltre Siri.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ Mobile/AI</span>
-                    <a href="https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" target="_blank" class="news-url">🔗 Leggi articolo</a>
+        <!-- Quick Stats -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+                <div class="card-icon purple">📊</div>
+                <div class="card-title">Statistiche Rassegna</div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 0;">
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="font-size: 2rem; font-weight: 800; color: #e74c3c;">4</div>
+                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Priorità Altissima</div>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="font-size: 2rem; font-weight: 800; color: #f39c12;">5</div>
+                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Priorità Alta</div>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="font-size: 2rem; font-weight: 800; color: #3498db;">2</div>
+                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Priorità Media</div>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="font-size: 2rem; font-weight: 800; color: #27ae60;">100%</div>
+                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Verificate</div>
                 </div>
             </div>
-
-            <div class="news-item priority-media">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">TechCrunch Mobility: Robotaxi scorecard China dominance</div>
-                <div class="news-snippet">Nuova scorecard rivela dominio cinese nel settore robotaxi. Waymo richiama 4.000 veicoli autonomi per problemi con zone di costruzione.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ Mobilità/Autonomous Vehicles</span>
-                    <a href="https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-item priority-altissima">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Trump administration cracks down on Anthropic</div>
-                <div class="news-snippet">L'amministrazione Trump impone export controls sui modelli AI di Anthropic. Fable 5 e Mythos offline per restrizioni governative. OpenAI e Meta potenziali beneficiari.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ AI/Regolamentazione</span>
-                    <a href="https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-item priority-alta">
-                <span class="news-tag">Finanza Tech</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Polymarket paid creators for deceptive videos</div>
-                <div class="news-snippet">WSJ investigation rivela che Polymarket ha pagato creator per 1.100 video ingannevoli su scommesse fake. La piattaforma di betting politico sotto inchiesta.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ Crypto/Blockchain</span>
-                    <a href="https://techcrunch.com/2026/06/21/polymarket-reportedly-paid-creators-to-post-deceptive-videos-about-fake-bets/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-item priority-alta">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Ubisoft co-founder dies in plane crash</div>
-                <div class="news-snippet">Claude Guillemot, 69 anni, co-fondatore di Ubisoft, morto in incidente aereo in Francia. La notizia è stata confermata dalla famiglia e dall'azienda.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ Gaming</span>
-                    <a href="https://techcrunch.com/2026/06/21/ubisoft-co-founder-claude-guillemot-dies-in-plane-crash/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-date">📅 2026-06-20</div>
-
-            <div class="news-item priority-media">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Giulia Pacchioni editor Nature Reviews Materials</div>
-                <div class="news-snippet">Giulia Pacchioni, italiana, è caporedattrice di Nature Reviews Materials. Collabora con Topolino per divulgare scienza dei materiali ai bambini.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 Repubblica Tecnologia</span>
-                    <span>🏷️ Scienza/Divulgazione</span>
-                    <a href="https://www.repubblica.it/tecnologia/2026/06/20/news/decidere_cosa_si_pubblica_su_nature_giulia_pacchioni_e_le_nuove_rotte_della_scienza_dei_materiali-425420884/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-date">📅 2026-06-19</div>
-
-            <div class="news-item priority-alta">
-                <span class="news-tag">Economia & Business</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">GTA 6 preordini 25 giugno</div>
-                <div class="news-snippet">Rockstar Games annuncia copertina ufficiale GTA 6. Preordini dal 25 giugno su store digitali. Stime analisti: 40 milioni di copie entro marzo 2027.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 Repubblica Tecnologia</span>
-                    <span>🏷️ Gaming</span>
-                    <a href="https://www.repubblica.it/tecnologia/2026/06/19/news/gta_6_preordini_quando_esce_copertina-425422020/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-item priority-alta">
-                <span class="news-tag">Finanza Tech</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Every fusion startup raised over $100M</div>
-                <div class="news-snippet">Fusion energy boom: Commonwealth Fusion $2B, Helion $1.2B, Xcimer $100M. Ogni startup di fusione nucleare ha raccolto oltre 100 milioni nel 2026.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ Energy/VC</span>
-                    <a href="https://techcrunch.com/2026/06/19/every-fusion-startup-that-has-raised-over-100m/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-item priority-altissima">
-                <span class="news-tag">Economia & Business</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Billionaire Ambani wants AI in every call</div>
-                <div class="news-snippet">Mukesh Ambani (Reliance Jio) punta ad avere AI assistant per 500 milioni di utenti. Partnership con Meta per data center in India. Digital transformation senza precedenti.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 TechCrunch</span>
-                    <span>🏷️ Telco/AI</span>
-                    <a href="https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-date">📅 2026-06-17</div>
-
-            <div class="news-item priority-altissima">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Ericsson 5G supera 3 miliardi abbonamenti</div>
-                <div class="news-snippet">Ericsson Mobility Report giugno 2026: 5G supera 3 miliardi di abbonamenti globali. La rete mobile diventa infrastruttura strategica per AI. Primi servizi 6G nel 2030.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 Repubblica Tecnologia</span>
-                    <span>🏷️ Telco/5G</span>
-                    <a href="https://www.repubblica.it/tecnologia/2026/06/17/news/ericsson_5g_supera_i_3_miliardi_di_abbonamenti_e_diventa_un_infrastruttura_strategica_per_l_ia-425416054/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
-            <div class="news-date">📅 2026-06-16</div>
-
-            <div class="news-item priority-altissima">
-                <span class="news-tag">Tecnologia</span>
-                <span class="verified-badge">✓ Verificato</span>
-                <div class="news-title">Cybersecurity: modelli IA vulnerabili</div>
-                <div class="news-snippet">AI4I (Istituto italiano AI) rivela: Opus 4.8 e Fable 5 vulnerabili ad attacchi automatizzati. Ricerca 'Measuring the Residual Jailbreak Surface' usa framework HackAgent.</div>
-                <div class="news-meta">
-                    <span class="news-source">📬 Repubblica Tecnologia</span>
-                    <span>🏷️ Cybersecurity/AI</span>
-                    <a href="https://www.repubblica.it/tecnologia/2026/06/16/news/cybersecurity_modelli_ia_piu_avanzati_sono_vulnerabili_opus_48_fable_5_anthropic-425414730/" target="_blank" class="news-url">🔗 Leggi articolo</a>
-                </div>
-            </div>
-
         </div>
+    </div>
+    
+    <div class="footer">
+        Ross AI Dashboard • Generata il 22 June 2026 12:56 • Powered by Firebase + GitHub Pages
     </div>
 </body>
 </html>
