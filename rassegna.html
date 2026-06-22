@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rassegna Stampa - Ross AI Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f7fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .navbar-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .navbar-nav a:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .navbar-nav a.active {
+            background: rgba(255,255,255,0.3);
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .header-section h1 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section .subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .filters {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .filters-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .filter-tag {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: #f0f0f0;
+            color: #555;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .filter-tag:hover {
+            background: #e0e0e0;
+        }
+        
+        .filter-tag.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .filter-tag[data-tag="all"] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .news-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .news-item.priority-altissima {
+            border-left-color: #e74c3c;
+        }
+        
+        .news-item.priority-alta {
+            border-left-color: #f39c12;
+        }
+        
+        .news-item.priority-media {
+            border-left-color: #3498db;
+        }
+        
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+        
+        .news-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .news-tag {
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .news-tag.macro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .news-tag.categoria {
+            background: #f0f0f0;
+            color: #555;
+        }
+        
+        .news-tag.fonte {
+            background: #e8f4f8;
+            color: #667eea;
+        }
+        
+        .news-priority {
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .news-priority.altissima {
+            background: #fdedec;
+            color: #e74c3c;
+        }
+        
+        .news-priority.alta {
+            background: #fef9e7;
+            color: #f39c12;
+        }
+        
+        .news-priority.media {
+            background: #e8f4f8;
+            color: #3498db;
+        }
+        
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+        
+        .news-snippet {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .news-date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .news-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .news-link:hover {
+            text-decoration: underline;
+        }
+        
+        .verified-badge {
+            background: #27ae60;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+            border-radius: 16px;
+            color: #888;
+        }
+        
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-brand">🚀 Ross AI</a>
+            <div class="navbar-nav">
+                <a href="index.html">Home</a>
+                <a href="rassegna.html" class="active">Rassegna Stampa</a>
+                <a href="linkedin.html">LinkedIn Posts</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="header-section">
+            <h1>📰 Rassegna Stampa Tech-Telco</h1>
+            <div class="subtitle">Notizie verificate dalle ultime 72 ore • Filtra per tag</div>
+        </div>
+        
+        <div class="filters">
+            <div class="filters-title">🏷️ Filtra per tag:</div>
+            <div class="filter-tags" id="filterTags">
+                <span class="filter-tag active" data-tag="all">Tutte</span>
+                <!-- Tags verranno inseriti via JS -->
+            </div>
+        </div>
+        
+        <div class="news-list" id="newsList">
+            <!-- Notizie verranno inserite via JS -->
+        </div>
+    </div>
+    
+    <div class="footer">
+        Ross AI Dashboard • 22 June 2026 12:56 • Dati da Firebase Firestore
+    </div>
+    
+    <script>
+        const notizie = [{"titolo": "Cybersecurity: modelli IA vulnerabili", "snippet": "AI4I (Istituto italiano AI) rivela: Opus 4.8 e Fable 5 vulnerabili ad attacchi automatizzati. Ricerca 'Measuring the Residual Jailbreak Surface' usa framework HackAgent.", "url": "https://www.repubblica.it/tecnologia/2026/06/16/news/cybersecurity_modelli_ia_piu_avanzati_sono_vulnerabili_opus_48_fable_5_anthropic-425414730/", "fonte": "Repubblica Tecnologia", "data": "2026-06-16", "categoria": "Cybersecurity/AI", "macro_area": "Tecnologia", "priorita": "altissima", "tags": ["Cybersecurity/AI", "Tecnologia", "Repubblica Tecnologia"]}, {"titolo": "Ericsson 5G supera 3 miliardi abbonamenti", "snippet": "Ericsson Mobility Report giugno 2026: 5G supera 3 miliardi di abbonamenti globali. La rete mobile diventa infrastruttura strategica per AI. Primi servizi 6G nel 2030.", "url": "https://www.repubblica.it/tecnologia/2026/06/17/news/ericsson_5g_supera_i_3_miliardi_di_abbonamenti_e_diventa_un_infrastruttura_strategica_per_l_ia-425416054/", "fonte": "Repubblica Tecnologia", "data": "2026-06-17", "categoria": "Telco/5G", "macro_area": "Tecnologia", "priorita": "altissima", "tags": ["Telco/5G", "Tecnologia", "Repubblica Tecnologia"]}, {"titolo": "GTA 6 preordini 25 giugno", "snippet": "Rockstar Games annuncia copertina ufficiale GTA 6. Preordini dal 25 giugno su store digitali. Stime analisti: 40 milioni di copie entro marzo 2027.", "url": "https://www.repubblica.it/tecnologia/2026/06/19/news/gta_6_preordini_quando_esce_copertina-425422020/", "fonte": "Repubblica Tecnologia", "data": "2026-06-19", "categoria": "Gaming", "macro_area": "Economia & Business", "priorita": "alta", "tags": ["Gaming", "Economia & Business", "Repubblica Tecnologia"]}, {"titolo": "Giulia Pacchioni editor Nature Reviews Materials", "snippet": "Giulia Pacchioni, italiana, è caporedattrice di Nature Reviews Materials. Collabora con Topolino per divulgare scienza dei materiali ai bambini.", "url": "https://www.repubblica.it/tecnologia/2026/06/20/news/decidere_cosa_si_pubblica_su_nature_giulia_pacchioni_e_le_nuove_rotte_della_scienza_dei_materiali-425420884/", "fonte": "Repubblica Tecnologia", "data": "2026-06-20", "categoria": "Scienza/Divulgazione", "macro_area": "Tecnologia", "priorita": "media", "tags": ["Scienza/Divulgazione", "Tecnologia", "Repubblica Tecnologia"]}, {"titolo": "Every fusion startup raised over $100M", "snippet": "Fusion energy boom: Commonwealth Fusion $2B, Helion $1.2B, Xcimer $100M. Ogni startup di fusione nucleare ha raccolto oltre 100 milioni nel 2026.", "url": "https://techcrunch.com/2026/06/19/every-fusion-startup-that-has-raised-over-100m/", "fonte": "TechCrunch", "data": "2026-06-19", "categoria": "Energy/VC", "macro_area": "Finanza Tech", "priorita": "alta", "tags": ["Energy/VC", "Finanza Tech", "TechCrunch"]}, {"titolo": "Billionaire Ambani wants AI in every call", "snippet": "Mukesh Ambani (Reliance Jio) punta ad avere AI assistant per 500 milioni di utenti. Partnership con Meta per data center in India. Digital transformation senza precedenti.", "url": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/", "fonte": "TechCrunch", "data": "2026-06-19", "categoria": "Telco/AI", "macro_area": "Economia & Business", "priorita": "altissima", "tags": ["Telco/AI", "Economia & Business", "TechCrunch"]}, {"titolo": "iOS 27 AI features beyond Siri", "snippet": "Apple Intelligence arriva su iOS 27: split bills, password security, tab organizer. Le nuove feature AI di Apple vanno oltre Siri.", "url": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Mobile/AI", "macro_area": "Tecnologia", "priorita": "alta", "tags": ["Mobile/AI", "Tecnologia", "TechCrunch"]}, {"titolo": "TechCrunch Mobility: Robotaxi scorecard China dominance", "snippet": "Nuova scorecard rivela dominio cinese nel settore robotaxi. Waymo richiama 4.000 veicoli autonomi per problemi con zone di costruzione.", "url": "https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Mobilità/Autonomous Vehicles", "macro_area": "Tecnologia", "priorita": "media", "tags": ["Mobilità/Autonomous Vehicles", "Tecnologia", "TechCrunch"]}, {"titolo": "Trump administration cracks down on Anthropic", "snippet": "L'amministrazione Trump impone export controls sui modelli AI di Anthropic. Fable 5 e Mythos offline per restrizioni governative. OpenAI e Meta potenziali beneficiari.", "url": "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "AI/Regolamentazione", "macro_area": "Tecnologia", "priorita": "altissima", "tags": ["AI/Regolamentazione", "Tecnologia", "TechCrunch"]}, {"titolo": "Polymarket paid creators for deceptive videos", "snippet": "WSJ investigation rivela che Polymarket ha pagato creator per 1.100 video ingannevoli su scommesse fake. La piattaforma di betting politico sotto inchiesta.", "url": "https://techcrunch.com/2026/06/21/polymarket-reportedly-paid-creators-to-post-deceptive-videos-about-fake-bets/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Crypto/Blockchain", "macro_area": "Finanza Tech", "priorita": "alta", "tags": ["Crypto/Blockchain", "Finanza Tech", "TechCrunch"]}, {"titolo": "Ubisoft co-founder dies in plane crash", "snippet": "Claude Guillemot, 69 anni, co-fondatore di Ubisoft, morto in incidente aereo in Francia. La notizia è stata confermata dalla famiglia e dall'azienda.", "url": "https://techcrunch.com/2026/06/21/ubisoft-co-founder-claude-guillemot-dies-in-plane-crash/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Gaming", "macro_area": "Tecnologia", "priorita": "alta", "tags": ["Gaming", "Tecnologia", "TechCrunch"]}];
+        const allTags = [...new Set(notizie.flatMap(n => n.tags))];
+        
+        // Render filtri
+        const filterContainer = document.getElementById('filterTags');
+        allTags.forEach(tag => {
+            const span = document.createElement('span');
+            span.className = 'filter-tag';
+            span.dataset.tag = tag;
+            span.textContent = tag;
+            filterContainer.appendChild(span);
+        });
+        
+        // Filter click handlers
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                renderNews(tag.dataset.tag);
+            });
+        });
+        
+        // Render news
+        function renderNews(filterTag = 'all') {
+            const container = document.getElementById('newsList');
+            let filtered = notizie;
+            
+            if (filterTag !== 'all') {
+                filtered = notizie.filter(n => n.tags.includes(filterTag));
+            }
+            
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>Nessuna notizia trovata</h3>
+                        <p>Prova a selezionare un altro filtro o "Tutte"</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = filtered.map(n => {
+                const priorityClass = n.priorita || 'media';
+                const tagsHtml = n.tags.map(t => {
+                    let className = 'categoria';
+                    if (['Tecnologia', 'Finanza Tech', 'Economia & Business'].includes(t)) className = 'macro';
+                    if (['TechCrunch', 'Repubblica Tecnologia', 'Wired Italia'].includes(t)) className = 'fonte';
+                    return `<span class="news-tag ${className}">${t}</span>`;
+                }).join('');
+                
+                return `
+                    <div class="news-item priority-${priorityClass}">
+                        <div class="news-header">
+                            <div class="news-tags">${tagsHtml}</div>
+                            <span class="news-priority ${priorityClass}">⚡ ${n.priorita || 'N/A'}</span>
+                        </div>
+                        <div class="news-title">${n.titolo}</div>
+                        <div class="news-snippet">${n.snippet}</div>
+                        <div class="news-meta">
+                            <span class="news-date">📅 ${n.data}</span>
+                            <span class="verified-badge">✓ Verificato</span>
+                            <a href="${n.url}" target="_blank" class="news-link">🔗 Leggi articolo completo</a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Initial render
+        renderNews();
+    </script>
+</body>
+</html>
