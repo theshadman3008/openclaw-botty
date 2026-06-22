@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Posts - Ross AI Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f7fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .navbar-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .navbar-nav a:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .navbar-nav a.active {
+            background: rgba(255,255,255,0.3);
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .header-section h1 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section .subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .post-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .post-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        
+        .post-subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .post-content {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .post-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .post-content p {
+            margin-bottom: 1.2rem;
+        }
+        
+        .post-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .post-content .hashtags {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .carousel-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .carousel-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-section p {
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        
+        .carousel-preview {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .carousel-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .carousel-stat {
+            text-align: center;
+        }
+        
+        .carousel-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+        }
+        
+        .carousel-stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-box h3 {
+            font-size: 1.1rem;
+            color: #667eea;
+            margin-bottom: 0.8rem;
+        }
+        
+        .info-box p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-brand">🚀 Ross AI</a>
+            <div class="navbar-nav">
+                <a href="index.html">Home</a>
+                <a href="rassegna.html">Rassegna Stampa</a>
+                <a href="linkedin.html" class="active">LinkedIn Posts</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="header-section">
+            <h1>💼 LinkedIn Posts</h1>
+            <div class="subtitle">Contenuti pronti per la pubblicazione • 22 June 2026 12:56</div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📌 Come utilizzare</h3>
+            <p>Copia il testo del post e incollalo su LinkedIn. Allega il carousel PDF per aumentare l'engagement (fino al 3x secondo i dati LinkedIn).</p>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-header">
+                <div class="post-icon">💡</div>
+                <div>
+                    <div class="post-title">500 Milioni di Utenti con AI in Ogni Chiamata</div>
+                    <div class="post-subtitle">Notizia principale: Reliance Jio (Mukesh Ambani)</div>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <h2>🚀 500 MILIONI DI UTENTI CON AI IN OGNI CHIAMATA</h2>
+                
+                <p>Mukesh Ambani (Reliance Jio) annuncia un piano senza precedenti: portare l'intelligenza artificiale in ogni chiamata, app e casa per tutti i 500 milioni di utenti della rete indiana.</p>
+                
+                <p><strong>🔑 I numeri:</strong></p>
+                <ul>
+                    <li>500M utenti raggiunti da AI assistant</li>
+                    <li>Partnership con Meta per data center in India</li>
+                    <li>Investimento massiccio in infrastruttura AI</li>
+                </ul>
+                
+                <p><strong>🌍 Perché è rilevante:</strong></p>
+                <ul>
+                    <li>Il più grande deployment di AI al mondo per popolazione</li>
+                    <li>L'India diventa hub AI globale (alternativa a USA/Cina)</li>
+                    <li>Telco si trasforma in piattaforma AI-first</li>
+                </ul>
+                
+                <p><strong>💡 Il contesto:</strong><br>
+                Non è solo un assistente vocale. È un'infrastruttura che integra AI in chiamate vocali (traduzione, trascrizione, analisi in real-time), app consumer (personalizzazione, recommendation) e smart home (automazione, controllo vocale).</p>
+                
+                <p><strong>📈 Impatto sul mercato:</strong></p>
+                <ul>
+                    <li>Telco tradizionali: pressione per seguire il modello</li>
+                    <li>Big Tech: nuova competizione da mercati emergenti</li>
+                    <li>Enterprise: opportunità di partnership B2B</li>
+                </ul>
+                
+                <div class="hashtags">
+                    #AI #Telco #5G #DigitalTransformation #RelianceJio #India #TechNews #Innovation #ArtificialIntelligence #Telecommunications
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-section">
+            <h2>📊 Carousel PDF Pronto</h2>
+            <p>Presentazione professionale di 10 slide con tutte le 11 notizie verificate. Perfetto per aumentare engagement e visibilità del post.</p>
+            
+            <div class="carousel-preview">
+                <div class="carousel-stats">
+                    <div class="carousel-stat">
+                        <span class="carousel-stat-number">10</span>
+                        <span class="carousel-stat-label">Slide</span>
+                    </div>
+                    <div class="carousel-stat">
+                        <span class="carousel-stat-number">11</span>
+                        <span class="carousel-stat-label">Notizie</span>
+                    </div>
+                    <div class="carousel-stat">
+                        <span class="carousel-stat-number">6</span>
+                        <span class="carousel-stat-label">Macro-Aree</span>
+                    </div>
+                    <div class="carousel-stat">
+                        <span class="carousel-stat-number">100%</span>
+                        <span class="carousel-stat-label">Verificate</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="carousel/rassegna_2026-06-22.pdf" target="_blank" class="btn">
+                    📥 Scarica Carousel PDF
+                </a>
+                <a href="carousel/rassegna_2026-06-22.pdf" target="_blank" class="btn btn-outline">
+                    👁️ Anteprima
+                </a>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📍 File Disponibili</h3>
+            <p><strong>Post LinkedIn:</strong> <a href="social/linkedin_post_2026-06-22.txt" target="_blank">linkedin_post_2026-06-22.txt</a></p>
+            <p><strong>Carousel PDF:</strong> <a href="carousel/rassegna_2026-06-22.pdf" target="_blank">rassegna_2026-06-22.pdf</a> (350 KB)</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Ross AI Dashboard • 22 June 2026 12:56 • Powered by Firebase + GitHub Pages
+    </div>
+</body>
+</html>
