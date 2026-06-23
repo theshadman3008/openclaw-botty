@@ -1,0 +1,87 @@
+{
+  "rassegna": [
+    {
+      "id": "openai-astral-acquisition-20260623",
+      "date": "2026-06-23",
+      "caption": "🐍 OpenAI acquisisce Astral (uv, ruff)",
+      "snippet": "OpenAI ha acquisito Astral, la startup dietro uv e ruff, due dei tool Python più popolari per package management e linting. L'acquisizione integra questi strumenti nello stack Codex per migliorare l'esperienza di sviluppo AI.",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
+      "tag": "AI"
+    },
+    {
+      "id": "anthropic-fable5-paywall-20260623",
+      "date": "2026-06-23",
+      "caption": "🔒 Fable 5 di Anthropic diventa a pagamento",
+      "snippet": "Dal 23 giugno, Claude Fable 5 non è più incluso nelle subscription Pro/Max/Enterprise. Serve acquistare crediti usage separatamente a $10/million input token e $50/million output token. Il governo USA aveva bloccato il modello dal 12-18 giugno per sicurezza nazionale.",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
+      "tag": "AI"
+    },
+    {
+      "id": "uber-ai-budget-20260622",
+      "date": "2026-06-22",
+      "caption": "💸 Uber brucia budget AI 2026 in 4 mesi",
+      "snippet": "Uber ha esaurito l'intero budget AI per il 2026 in soli 4 mesi, spendendo circa $90 milioni in tool di coding AI per i suoi 5.000 ingegneri. La compagnia ha introdotto un tetto di $1.500 al mese per dipendente per tool. Il CTO ha definito la situazione 'abbiamo creato un mostro'.",
+      "url": "https://www.afr.com/world/north-america/we-created-a-monster-companies-rein-in-ai-as-costs-strain-budgets-20260622-p6093o",
+      "tag": "AI"
+    },
+    {
+      "id": "alphabet-capex-selloff-20260622",
+      "date": "2026-06-22",
+      "caption": "📉 Alphabet -6% per ansia capex AI",
+      "snippet": "Alphabet scende del 6% in borsa mentre gli investitori temono che la spesa in AI non generi ritorni abbastanza veloci. La compagnia ha guidato capex 2026 a $180-190 miliardi, con $35,7 miliardi già spesi in Q1. Amazon -4% per lo stesso tema.",
+      "url": "https://247wallst.com/investing/2026/06/22/alphabet-sinks-6-amazon-slides-4-amid-ai-capex-anxiety-across-the-hyperscalers/",
+      "tag": "Finanza Tech"
+    },
+    {
+      "id": "microsoft-ai-empire-20260622",
+      "date": "2026-06-22",
+      "caption": "🏗️ Microsoft costruisce impero AI oltre OpenAI",
+      "snippet": "Microsoft sta sviluppando i propri modelli AI (MAI) per ridurre la dipendenza da OpenAI. I nuovi modelli offrono efficienza di costo e sono già integrati nei prodotti Microsoft. Build 2026 ha segnato una svolta verso l'indipendenza.",
+      "url": "https://www.kavout.com/market-lens/is-microsoft-building-its-own-ai-empire-beyond-openai",
+      "tag": "AI"
+    },
+    {
+      "id": "five-eyes-ai-cyber-20260622",
+      "date": "2026-06-22",
+      "caption": "⚠️ Attacchi cyber AI +300% dal 2023",
+      "snippet": "Le agenzie cyber Five Eyes riportano un aumento del 300% degli attacchi informatici abilitati da AI dal 2023. Trump ha emesso un executive order il 2 giugno per rafforzare le difese government e private-sector contro le minacce AI-enabled.",
+      "url": "https://www.skadden.com/insights/publications/2026/06/insights-june-2026/ai-enabled-vulnerability-discovery",
+      "tag": "Cybersecurity"
+    },
+    {
+      "id": "adobe-agentic-ai-20260622",
+      "date": "2026-06-22",
+      "caption": "🎨 Adobe accelera su Agentic AI",
+      "snippet": "Adobe annuncia nuove partnership per l'adozione di AI agentica, posizionandosi come layer infrastrutturale across modelli, platform e agent. L'obiettivo è integrare creatività, marketing e AI nell'era agentica.",
+      "url": "https://www.01net.it/adobe-accelerates-agentic-ai-adoption-through-new-agency-and-technology-partnerships/",
+      "tag": "AI"
+    },
+    {
+      "id": "cfo-ai-budget-control-20260622",
+      "date": "2026-06-22",
+      "caption": "📊 CFO prendono il controllo budget AI",
+      "snippet": "OpenAI e Microsoft lanciano tool enterprise per il tracking dei costi AI. OpenAI offre analytics sull'uso dei crediti; Microsoft ha layer di management per Copilot. L'era della spesa libera in AI enterprise sta finendo.",
+      "url": "https://www.forbes.com/sites/ronschmelzer/2026/06/22/cfos-are-coming-for-the-enterprise-ai-budget/",
+      "tag": "AI"
+    },
+    {
+      "id": "sk-hynix-samsung-20260622",
+      "date": "2026-06-22",
+      "caption": "🏆 SK Hynix supera Samsung in market value",
+      "snippet": "SK Hynix raggiunge la prima posizione in Corea del Sud per market value, superando Samsung grazie agli investimenti strategici in HBM (High-Bandwidth Memory) per AI. Una svolta storica dopo anni di debito.",
+      "url": "https://technologymagazine.com/news/how-sk-hynix-overcame-debt-to-beat-samsung-in-market-value",
+      "tag": "Tech"
+    },
+    {
+      "id": "hyperscalers-capex-700b-20260621",
+      "date": "2026-06-21",
+      "caption": "💰 Hyperscalers: $700B capex AI nel 2026",
+      "snippet": "I 5 hyperscalers USA (Microsoft, Amazon, Alphabet, Meta, Oracle) prevedono di investire tra $600-720 miliardi in infrastrutture AI nel 2026. È il più grande ciclo di capex concentrato nella storia tech, superando la bolla dot-com.",
+      "url": "https://www.softwareseni.com/the-ai-industry-goes-public-anthropic-openai-and-the-biggest-capital-event-in-tech-history/",
+      "tag": "Finanza Tech"
+    }
+  ],
+  "stats": {
+    "news": 10
+  }
+}
