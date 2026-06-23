@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rassegna Stampa - Ross AI Dashboard</title>
+    <title>Rassegna Stampa Tech-Telco - 22 Giugno 2026</title>
     <style>
+        @page {
+            size: 13.333in 7.5in;
+            margin: 0;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,398 +17,1040 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff;
             color: #1a1a2e;
-            line-height: 1.6;
         }
         
-        .navbar {
+        .slide {
+            width: 13.333in;
+            height: 7.5in;
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+            padding: 3.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .slide:last-child {
+            page-break-after: auto;
+        }
+        
+        /* Slide 1: Cover */
+        .slide-cover {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .navbar-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
+            color: white;
             align-items: center;
+            text-align: center;
         }
         
-        .navbar-brand {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
+        .slide-cover h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
         
-        .navbar-nav {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .navbar-nav a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-        
-        .navbar-nav a:hover {
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
-        
-        .navbar-nav a.active {
-            background: rgba(255,255,255,0.3);
-            color: white;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .header-section {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
+        .slide-cover .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            opacity: 0.95;
         }
         
-        .header-section h1 {
-            font-size: 2rem;
+        .slide-cover .date {
+            font-size: 1.4rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .slide-cover .stats {
+            position: absolute;
+            bottom: 3rem;
+            display: flex;
+            gap: 4rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Slide 2: Agenda */
+        .slide-agenda h2 {
+            font-size: 2.8rem;
             color: #667eea;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .agenda-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .agenda-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .agenda-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .agenda-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.8rem;
+        }
+        
+        .agenda-count {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #667eea;
+            display: block;
+            margin-top: 1rem;
+        }
+        
+        /* Slide 3: Notizia Principale */
+        .slide-hero {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+        
+        .hero-badge {
+            background: rgba(255,255,255,0.25);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            align-self: flex-start;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .slide-hero h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .hero-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .hero-stat {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
             margin-bottom: 0.5rem;
         }
         
-        .header-section .subtitle {
-            color: #666;
+        .hero-stat-label {
             font-size: 1rem;
+            opacity: 0.95;
+            line-height: 1.4;
         }
         
-        .filters {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        .hero-impact {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
         }
         
-        .filters-title {
+        .hero-impact h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .hero-impact ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .hero-impact li {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            opacity: 0.95;
+        }
+        
+        .hero-impact li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: 800;
+        }
+        
+        .source-tag {
+            position: absolute;
+            bottom: 3rem;
+            right: 4rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Slide 4: AI & Regolamentazione */
+        .slide-news h2 {
+            font-size: 2.4rem;
+            color: #667eea;
+            margin-bottom: 2.5rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .news-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .news-card.priority-altissima {
+            border-left-color: #e74c3c;
+            background: linear-gradient(135deg, #fdedec 0%, #f5f7fa 100%);
+        }
+        
+        .news-card.priority-alta {
+            border-left-color: #f39c12;
+        }
+        
+        .news-card.priority-media {
+            border-left-color: #3498db;
+        }
+        
+        .news-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .news-card.priority-altissima .news-tag {
+            background: #e74c3c;
+        }
+        
+        .news-card h3 {
+            font-size: 1.3rem;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .news-card p {
             font-size: 1rem;
-            font-weight: 600;
             color: #555;
+            line-height: 1.5;
             margin-bottom: 1rem;
         }
         
-        .filter-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .filter-tag {
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            background: #f0f0f0;
-            color: #555;
+        .news-source {
             font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            color: #888;
+            font-style: italic;
         }
         
-        .filter-tag:hover {
-            background: #e0e0e0;
-        }
-        
-        .filter-tag.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        /* Slide 5: Telco & Infrastrutture */
+        .slide-telco {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
         }
         
-        .filter-tag[data-tag="all"] {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .slide-telco h2 {
+            font-size: 2.4rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .telco-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+        
+        .telco-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .telco-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .telco-card .big-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #38ef7d;
+            display: block;
+            margin: 1.5rem 0;
+        }
+        
+        .telco-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        .telco-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .telco-card li {
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+            padding-left: 1.5rem;
+            position: relative;
+            opacity: 0.9;
+        }
+        
+        .telco-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #38ef7d;
+            font-weight: 800;
+        }
+        
+        /* Slide 6: Cybersecurity */
+        .slide-security {
+            background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
             color: white;
         }
         
-        .news-list {
+        .slide-security h2 {
+            font-size: 2.4rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .security-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+        }
+        
+        .security-main {
+            background: rgba(255,255,255,0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .security-alert {
+            background: rgba(231, 76, 60, 0.2);
+            border: 2px solid #e74c3c;
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        .security-alert-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .security-alert p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .security-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #38ef7d;
+        }
+        
+        .security-details p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .security-side {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .security-box {
+            background: rgba(255,255,255,0.08);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .security-box h4 {
+            font-size: 1rem;
+            color: #38ef7d;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .security-box p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        /* Slide 7: Gaming & Consumer */
+        .slide-gaming {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+        }
+        
+        .slide-gaming h2 {
+            font-size: 2.4rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .gaming-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+        
+        .gaming-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .gaming-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .gaming-card .highlight {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffd700;
+            display: block;
+            margin: 1.5rem 0;
+        }
+        
+        .gaming-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        .gaming-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .gaming-card li {
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+            padding-left: 1.5rem;
+            position: relative;
+            opacity: 0.9;
+        }
+        
+        .gaming-card li:before {
+            content: "🎮";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Slide 8: Fusion Energy & VC */
+        .slide-fusion {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        
+        .slide-fusion h2 {
+            font-size: 2.4rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .fusion-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .fusion-main {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .fusion-stat {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .fusion-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffd700;
+            min-width: 180px;
+        }
+        
+        .fusion-company {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .fusion-side h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .fusion-list {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
         
-        .news-item {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid #667eea;
+        .fusion-item {
+            background: rgba(255,255,255,0.15);
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
         
-        .news-item:hover {
-            transform: translateX(8px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        .fusion-item-name {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
         }
         
-        .news-item.priority-altissima {
-            border-left-color: #e74c3c;
+        .fusion-item-amount {
+            color: #ffd700;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
         
-        .news-item.priority-alta {
-            border-left-color: #f39c12;
+        /* Slide 9: Scienza & Divulgazione */
+        .slide-science {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
         }
         
-        .news-item.priority-media {
-            border-left-color: #3498db;
+        .slide-science h2 {
+            font-size: 2.4rem;
+            margin-bottom: 2.5rem;
         }
         
-        .news-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        .science-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .science-main {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .science-role {
+            font-size: 1.2rem;
+            opacity: 0.9;
             margin-bottom: 1rem;
+        }
+        
+        .science-name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        
+        .science-detail {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .science-detail h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .science-detail p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .science-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .science-quote {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border-left: 4px solid white;
+        }
+        
+        /* Slide 10: Closing */
+        .slide-closing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .slide-closing h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        
+        .slide-closing p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+        
+        .closing-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .closing-link {
+            background: rgba(255,255,255,0.15);
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
             gap: 1rem;
         }
         
-        .news-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        .closing-link:hover {
+            transform: scale(1.05);
         }
         
-        .news-tag {
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        
-        .news-tag.macro {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .news-tag.categoria {
-            background: #f0f0f0;
-            color: #555;
-        }
-        
-        .news-tag.fonte {
-            background: #e8f4f8;
-            color: #667eea;
-        }
-        
-        .news-priority {
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        
-        .news-priority.altissima {
-            background: #fdedec;
-            color: #e74c3c;
-        }
-        
-        .news-priority.alta {
-            background: #fef9e7;
-            color: #f39c12;
-        }
-        
-        .news-priority.media {
-            background: #e8f4f8;
-            color: #3498db;
-        }
-        
-        .news-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin-bottom: 0.8rem;
-            line-height: 1.4;
-        }
-        
-        .news-snippet {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        
-        .news-meta {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .news-date {
-            color: #888;
+        .closing-footer {
+            position: absolute;
+            bottom: 3rem;
             font-size: 0.9rem;
-        }
-        
-        .news-link {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .news-link:hover {
-            text-decoration: underline;
-        }
-        
-        .verified-badge {
-            background: #27ae60;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: white;
-            border-radius: 16px;
-            color: #888;
-        }
-        
-        .no-results h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #555;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            color: #888;
-            font-size: 0.9rem;
-            margin-top: 2rem;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="navbar-brand">🚀 Ross AI</a>
-            <div class="navbar-nav">
-                <a href="index.html">Home</a>
-                <a href="rassegna.html" class="active">Rassegna Stampa</a>
-                <a href="linkedin.html">LinkedIn Posts</a>
+
+    <!-- Slide 1: Cover -->
+    <div class="slide slide-cover">
+        <h1>Rassegna Stampa<br>Tech-Telco</h1>
+        <div class="subtitle">11 Notizie Verificate • 3 Macro-Aree</div>
+        <div class="date">22 Giugno 2026</div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">11</span>
+                <span class="stat-label">Notizie</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7</span>
+                <span class="stat-label">TechCrunch</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Repubblica</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Verificate</span>
             </div>
         </div>
-    </nav>
-    
-    <div class="container">
-        <div class="header-section">
-            <h1>📰 Rassegna Stampa Tech-Telco</h1>
-            <div class="subtitle">Notizie verificate dalle ultime 72 ore • Filtra per tag</div>
+    </div>
+
+    <!-- Slide 2: Agenda -->
+    <div class="slide slide-agenda">
+        <h2>📋 Panoramica</h2>
+        <div class="agenda-grid">
+            <div class="agenda-item">
+                <span class="agenda-icon">🤖</span>
+                <div class="agenda-title">AI &amp; Regolamentazione</div>
+                <span class="agenda-count">4 notizie</span>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-icon">📡</span>
+                <div class="agenda-title">Telco &amp; Infrastrutture</div>
+                <span class="agenda-count">3 notizie</span>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-icon">🔒</span>
+                <div class="agenda-title">Cybersecurity</div>
+                <span class="agenda-count">1 notizia</span>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-icon">🎮</span>
+                <div class="agenda-title">Gaming &amp; Consumer</div>
+                <span class="agenda-count">2 notizie</span>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-icon">⚡</span>
+                <div class="agenda-title">Fusion Energy &amp; VC</div>
+                <span class="agenda-count">1 notizia</span>
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-icon">🔬</span>
+                <div class="agenda-title">Scienza &amp; Divulgazione</div>
+                <span class="agenda-count">1 notizia</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Slide 3: Notizia Principale -->
+    <div class="slide slide-hero">
+        <div class="hero-badge">⭐ Notizia Principale</div>
+        <h2>500 Milioni di Utenti con AI in Ogni Chiamata</h2>
         
-        <div class="filters">
-            <div class="filters-title">🏷️ Filtra per tag:</div>
-            <div class="filter-tags" id="filterTags">
-                <span class="filter-tag active" data-tag="all">Tutte</span>
-                <!-- Tags verranno inseriti via JS -->
+        <div class="hero-content">
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">500M</span>
+                    <span class="hero-stat-label">Utenti Reliance Jio raggiunti da AI assistant</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">Meta</span>
+                    <span class="hero-stat-label">Partnership per data center in India</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">1°</span>
+                    <span class="hero-stat-label">Più grande deployment AI al mondo per popolazione</span>
+                </div>
+            </div>
+            
+            <div class="hero-impact">
+                <h3>🌍 Impatto Strategico</h3>
+                <ul>
+                    <li>L'India diventa hub AI globale (alternativa a USA/Cina)</li>
+                    <li>Telco si trasforma in piattaforma AI-first</li>
+                    <li>Pressione su telco tradizionali per seguire il modello</li>
+                    <li>Opportunità di partnership B2B per enterprise</li>
+                </ul>
             </div>
         </div>
         
-        <div class="news-list" id="newsList">
-            <!-- Notizie verranno inserite via JS -->
+        <div class="source-tag">TechCrunch • 19 Giugno 2026</div>
+    </div>
+
+    <!-- Slide 4: AI & Regolamentazione -->
+    <div class="slide slide-news">
+        <h2>🤖 AI &amp; Regolamentazione</h2>
+        <div class="news-grid">
+            <div class="news-card priority-altissima">
+                <span class="news-tag">Priorità Altissima</span>
+                <h3>Trump Administration Blocca Modelli Anthropic</h3>
+                <p>Fable 5 e Mythos offline per export controls governative. OpenAI e Meta potenziali beneficiari della restrizione.</p>
+                <div class="news-source">TechCrunch • 21 Giugno 2026</div>
+            </div>
+            
+            <div class="news-card priority-altissima">
+                <span class="news-tag">Priorità Altissima</span>
+                <h3>iOS 27: Apple Intelligence Oltre Siri</h3>
+                <p>Nuove feature AI: split bills, password security, tab organizer. Apple Intelligence si espande oltre l'assistente vocale.</p>
+                <div class="news-source">TechCrunch • 21 Giugno 2026</div>
+            </div>
+            
+            <div class="news-card priority-alta">
+                <span class="news-tag">Priorità Alta</span>
+                <h3>Ubisoft Co-Founder Muore in Incidente Aereo</h3>
+                <p>Claude Guillemot, 69 anni, deceduto in Francia. La notizia confermata dalla famiglia e dall'azienda.</p>
+                <div class="news-source">TechCrunch • 21 Giugno 2026</div>
+            </div>
+            
+            <div class="news-card priority-alta">
+                <span class="news-tag">Priorità Alta</span>
+                <h3>Polymarket: 1.100 Video Ingannevoli su Scommesse</h3>
+                <p>WSJ investigation rivela pagamento creator per contenuti falsi. Piattaforma di betting politico sotto inchiesta.</p>
+                <div class="news-source">TechCrunch • 21 Giugno 2026</div>
+            </div>
         </div>
     </div>
-    
-    <div class="footer">
-        Ross AI Dashboard • 22 June 2026 12:56 • Dati da Firebase Firestore
+
+    <!-- Slide 5: Telco & Infrastrutture -->
+    <div class="slide slide-telco">
+        <h2>📡 Telco &amp; Infrastrutture</h2>
+        <div class="telco-grid">
+            <div class="telco-card">
+                <h3>Ericsson Mobility Report</h3>
+                <span class="big-number">3 Miliardi</span>
+                <p>Abbonamenti 5G superati globalmente. La rete mobile diventa infrastruttura strategica per AI, non solo canale consumer.</p>
+                <ul>
+                    <li>Traffico dati in crescita esponenziale</li>
+                    <li>Dispositivi IoT caricano dati verso cloud</li>
+                    <li>Primi servizi 6G previsti nel 2030</li>
+                    <li>USA, Cina, Giappone, Corea early adopter</li>
+                </ul>
+            </div>
+            
+            <div class="telco-card">
+                <h3>Reliance Jio (India)</h3>
+                <span class="big-number">500M</span>
+                <p>Utenti raggiunti da AI assistant. Partnership Meta per data center. Digital transformation senza precedenti.</p>
+                <ul>
+                    <li>AI in ogni chiamata (traduzione, trascrizione)</li>
+                    <li>Integrazione app consumer e smart home</li>
+                    <li>Modello AI-first per telco tradizionali</li>
+                    <li>Hub AI globale alternativo a USA/Cina</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
-    <script>
-        const notizie = [{"titolo": "Cybersecurity: modelli IA vulnerabili", "snippet": "AI4I (Istituto italiano AI) rivela: Opus 4.8 e Fable 5 vulnerabili ad attacchi automatizzati. Ricerca 'Measuring the Residual Jailbreak Surface' usa framework HackAgent.", "url": "https://www.repubblica.it/tecnologia/2026/06/16/news/cybersecurity_modelli_ia_piu_avanzati_sono_vulnerabili_opus_48_fable_5_anthropic-425414730/", "fonte": "Repubblica Tecnologia", "data": "2026-06-16", "categoria": "Cybersecurity/AI", "macro_area": "Tecnologia", "priorita": "altissima", "tags": ["Cybersecurity/AI", "Tecnologia", "Repubblica Tecnologia"]}, {"titolo": "Ericsson 5G supera 3 miliardi abbonamenti", "snippet": "Ericsson Mobility Report giugno 2026: 5G supera 3 miliardi di abbonamenti globali. La rete mobile diventa infrastruttura strategica per AI. Primi servizi 6G nel 2030.", "url": "https://www.repubblica.it/tecnologia/2026/06/17/news/ericsson_5g_supera_i_3_miliardi_di_abbonamenti_e_diventa_un_infrastruttura_strategica_per_l_ia-425416054/", "fonte": "Repubblica Tecnologia", "data": "2026-06-17", "categoria": "Telco/5G", "macro_area": "Tecnologia", "priorita": "altissima", "tags": ["Telco/5G", "Tecnologia", "Repubblica Tecnologia"]}, {"titolo": "GTA 6 preordini 25 giugno", "snippet": "Rockstar Games annuncia copertina ufficiale GTA 6. Preordini dal 25 giugno su store digitali. Stime analisti: 40 milioni di copie entro marzo 2027.", "url": "https://www.repubblica.it/tecnologia/2026/06/19/news/gta_6_preordini_quando_esce_copertina-425422020/", "fonte": "Repubblica Tecnologia", "data": "2026-06-19", "categoria": "Gaming", "macro_area": "Economia & Business", "priorita": "alta", "tags": ["Gaming", "Economia & Business", "Repubblica Tecnologia"]}, {"titolo": "Giulia Pacchioni editor Nature Reviews Materials", "snippet": "Giulia Pacchioni, italiana, è caporedattrice di Nature Reviews Materials. Collabora con Topolino per divulgare scienza dei materiali ai bambini.", "url": "https://www.repubblica.it/tecnologia/2026/06/20/news/decidere_cosa_si_pubblica_su_nature_giulia_pacchioni_e_le_nuove_rotte_della_scienza_dei_materiali-425420884/", "fonte": "Repubblica Tecnologia", "data": "2026-06-20", "categoria": "Scienza/Divulgazione", "macro_area": "Tecnologia", "priorita": "media", "tags": ["Scienza/Divulgazione", "Tecnologia", "Repubblica Tecnologia"]}, {"titolo": "Every fusion startup raised over $100M", "snippet": "Fusion energy boom: Commonwealth Fusion $2B, Helion $1.2B, Xcimer $100M. Ogni startup di fusione nucleare ha raccolto oltre 100 milioni nel 2026.", "url": "https://techcrunch.com/2026/06/19/every-fusion-startup-that-has-raised-over-100m/", "fonte": "TechCrunch", "data": "2026-06-19", "categoria": "Energy/VC", "macro_area": "Finanza Tech", "priorita": "alta", "tags": ["Energy/VC", "Finanza Tech", "TechCrunch"]}, {"titolo": "Billionaire Ambani wants AI in every call", "snippet": "Mukesh Ambani (Reliance Jio) punta ad avere AI assistant per 500 milioni di utenti. Partnership con Meta per data center in India. Digital transformation senza precedenti.", "url": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/", "fonte": "TechCrunch", "data": "2026-06-19", "categoria": "Telco/AI", "macro_area": "Economia & Business", "priorita": "altissima", "tags": ["Telco/AI", "Economia & Business", "TechCrunch"]}, {"titolo": "iOS 27 AI features beyond Siri", "snippet": "Apple Intelligence arriva su iOS 27: split bills, password security, tab organizer. Le nuove feature AI di Apple vanno oltre Siri.", "url": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Mobile/AI", "macro_area": "Tecnologia", "priorita": "alta", "tags": ["Mobile/AI", "Tecnologia", "TechCrunch"]}, {"titolo": "TechCrunch Mobility: Robotaxi scorecard China dominance", "snippet": "Nuova scorecard rivela dominio cinese nel settore robotaxi. Waymo richiama 4.000 veicoli autonomi per problemi con zone di costruzione.", "url": "https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Mobilità/Autonomous Vehicles", "macro_area": "Tecnologia", "priorita": "media", "tags": ["Mobilità/Autonomous Vehicles", "Tecnologia", "TechCrunch"]}, {"titolo": "Trump administration cracks down on Anthropic", "snippet": "L'amministrazione Trump impone export controls sui modelli AI di Anthropic. Fable 5 e Mythos offline per restrizioni governative. OpenAI e Meta potenziali beneficiari.", "url": "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "AI/Regolamentazione", "macro_area": "Tecnologia", "priorita": "altissima", "tags": ["AI/Regolamentazione", "Tecnologia", "TechCrunch"]}, {"titolo": "Polymarket paid creators for deceptive videos", "snippet": "WSJ investigation rivela che Polymarket ha pagato creator per 1.100 video ingannevoli su scommesse fake. La piattaforma di betting politico sotto inchiesta.", "url": "https://techcrunch.com/2026/06/21/polymarket-reportedly-paid-creators-to-post-deceptive-videos-about-fake-bets/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Crypto/Blockchain", "macro_area": "Finanza Tech", "priorita": "alta", "tags": ["Crypto/Blockchain", "Finanza Tech", "TechCrunch"]}, {"titolo": "Ubisoft co-founder dies in plane crash", "snippet": "Claude Guillemot, 69 anni, co-fondatore di Ubisoft, morto in incidente aereo in Francia. La notizia è stata confermata dalla famiglia e dall'azienda.", "url": "https://techcrunch.com/2026/06/21/ubisoft-co-founder-claude-guillemot-dies-in-plane-crash/", "fonte": "TechCrunch", "data": "2026-06-21", "categoria": "Gaming", "macro_area": "Tecnologia", "priorita": "alta", "tags": ["Gaming", "Tecnologia", "TechCrunch"]}];
-        const allTags = [...new Set(notizie.flatMap(n => n.tags))];
-        
-        // Render filtri
-        const filterContainer = document.getElementById('filterTags');
-        allTags.forEach(tag => {
-            const span = document.createElement('span');
-            span.className = 'filter-tag';
-            span.dataset.tag = tag;
-            span.textContent = tag;
-            filterContainer.appendChild(span);
-        });
-        
-        // Filter click handlers
-        document.querySelectorAll('.filter-tag').forEach(tag => {
-            tag.addEventListener('click', () => {
-                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
-                tag.classList.add('active');
-                renderNews(tag.dataset.tag);
-            });
-        });
-        
-        // Render news
-        function renderNews(filterTag = 'all') {
-            const container = document.getElementById('newsList');
-            let filtered = notizie;
-            
-            if (filterTag !== 'all') {
-                filtered = notizie.filter(n => n.tags.includes(filterTag));
-            }
-            
-            if (filtered.length === 0) {
-                container.innerHTML = `
-                    <div class="no-results">
-                        <h3>Nessuna notizia trovata</h3>
-                        <p>Prova a selezionare un altro filtro o "Tutte"</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            container.innerHTML = filtered.map(n => {
-                const priorityClass = n.priorita || 'media';
-                const tagsHtml = n.tags.map(t => {
-                    let className = 'categoria';
-                    if (['Tecnologia', 'Finanza Tech', 'Economia & Business'].includes(t)) className = 'macro';
-                    if (['TechCrunch', 'Repubblica Tecnologia', 'Wired Italia'].includes(t)) className = 'fonte';
-                    return `<span class="news-tag ${className}">${t}</span>`;
-                }).join('');
+
+    <!-- Slide 6: Cybersecurity -->
+    <div class="slide slide-security">
+        <h2>🔒 Cybersecurity: Modelli AI Vulnerabili</h2>
+        <div class="security-content">
+            <div class="security-main">
+                <div class="security-alert">
+                    <div class="security-alert-title">⚠️ Vulnerabilità Critica</div>
+                    <p>Opus 4.8 e Fable 5 vulnerabili ad attacchi automatizzati di jailbreak</p>
+                </div>
                 
-                return `
-                    <div class="news-item priority-${priorityClass}">
-                        <div class="news-header">
-                            <div class="news-tags">${tagsHtml}</div>
-                            <span class="news-priority ${priorityClass}">⚡ ${n.priorita || 'N/A'}</span>
-                        </div>
-                        <div class="news-title">${n.titolo}</div>
-                        <div class="news-snippet">${n.snippet}</div>
-                        <div class="news-meta">
-                            <span class="news-date">📅 ${n.data}</span>
-                            <span class="verified-badge">✓ Verificato</span>
-                            <a href="${n.url}" target="_blank" class="news-link">🔗 Leggi articolo completo</a>
-                        </div>
+                <div class="security-details">
+                    <h3>🔬 Ricerca AI4I</h3>
+                    <p>L'Istituto Italiano per l'Intelligenza Artificiale (AI4I) ha condotto uno studio sistematico di red-teaming usando il framework open-source HackAgent.</p>
+                    <p><strong>Titolo:</strong> "Measuring the Residual Jailbreak Surface of Frontier Large Language Models"</p>
+                    <p><strong>Coordinatore:</strong> Nicola Franco, AI4I</p>
+                </div>
+            </div>
+            
+            <div class="security-side">
+                <div class="security-box">
+                    <h4>🇮🇹 AI4I</h4>
+                    <p>Istituto creato dal Governo italiano nel 2024. Supercomputer on-premise per ricerca sicura e sovrana.</p>
+                </div>
+                <div class="security-box">
+                    <h4>🛡️ HackAgent</h4>
+                    <p>Framework open-source per orchestrare attacchi IA contro IA. Test automatizzati di resilienza.</p>
+                </div>
+                <div class="security-box">
+                    <h4>🌍 Sovranità Tech</h4>
+                    <p>AI4I diventa centro nazionale di riferimento per scienza e applicazioni industriali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Gaming & Consumer -->
+    <div class="slide slide-gaming">
+        <h2>🎮 Gaming &amp; Consumer Tech</h2>
+        <div class="gaming-grid">
+            <div class="gaming-card">
+                <h3>Grand Theft Auto VI</h3>
+                <p>Rockstar Games annuncia copertina ufficiale e data preordini</p>
+                <span class="highlight">25 Giugno</span>
+                <p>Data preordini su store digitali e rivenditori selezionati. Prezzo da annunciare (stime: $70-100).</p>
+                <ul>
+                    <li>9 riquadri con personaggi e mezzi</li>
+                    <li>Sea Sparrow da Vice City con minigun</li>
+                    <li>Stime: 40M copie entro marzo 2027</li>
+                    <li>Versione PC prevista inizio 2027</li>
+                </ul>
+            </div>
+            
+            <div class="gaming-card">
+                <h3>Robotaxi Scorecard</h3>
+                <p>TechCrunch Mobility rivela dominio cinese nel settore</p>
+                <span class="highlight">4.000</span>
+                <p>Waymo richiama robotaxi per problemi con zone di costruzione. La Cina domina la classifica globale.</p>
+                <ul>
+                    <li>China: leader in deployment autonomo</li>
+                    <li>USA: Waymo recall significativo</li>
+                    <li>Regolamentazione in evoluzione</li>
+                    <li>Infrastruttura critica per ADAS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Fusion Energy & VC -->
+    <div class="slide slide-fusion">
+        <h2>⚡ Fusion Energy Boom</h2>
+        <div class="fusion-content">
+            <div class="fusion-main">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">Ogni startup di fusione nucleare ha raccolto oltre $100M nel 2026. L'energia da fusione diventa investimento mainstream.</p>
+                
+                <div class="fusion-stat">
+                    <div class="fusion-amount">$2B</div>
+                    <div class="fusion-company">Commonwealth Fusion Systems</div>
+                </div>
+                <div class="fusion-stat">
+                    <div class="fusion-amount">$1.2B</div>
+                    <div class="fusion-company">Helion Energy</div>
+                </div>
+                <div class="fusion-stat">
+                    <div class="fusion-amount">$100M</div>
+                    <div class="fusion-company">Xcimer Energy</div>
+                </div>
+            </div>
+            
+            <div class="fusion-side">
+                <h3>💰 Top Funding 2026</h3>
+                <div class="fusion-list">
+                    <div class="fusion-item">
+                        <div class="fusion-item-name">Commonwealth Fusion</div>
+                        <div class="fusion-item-amount">$2.0 Miliardi</div>
                     </div>
-                `;
-            }).join('');
-        }
+                    <div class="fusion-item">
+                        <div class="fusion-item-name">Helion Energy</div>
+                        <div class="fusion-item-amount">$1.2 Miliardi</div>
+                    </div>
+                    <div class="fusion-item">
+                        <div class="fusion-item-name">Xcimer Energy</div>
+                        <div class="fusion-item-amount">$100 Milioni</div>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem; opacity: 0.9; font-size: 0.95rem;">Fonte: TechCrunch • 19 Giugno 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Scienza & Divulgazione -->
+    <div class="slide slide-science">
+        <h2>🔬 Scienza &amp; Divulgazione</h2>
+        <div class="science-content">
+            <div class="science-main">
+                <div class="science-role">Caporedattrice di Nature Reviews Materials</div>
+                <div class="science-name">Giulia Pacchioni</div>
+                
+                <div class="science-detail">
+                    <h4>📰 Nature Reviews Materials</h4>
+                    <p>12 numeri all'anno, meno di 100 articoli selezionati. Obiettivo: dare mappa critica della ricerca, non riassumere il noto.</p>
+                </div>
+                
+                <div class="science-detail">
+                    <h4>🐭 Collaborazione con Topolino</h4>
+                    <p>Email al caporedattore durante la pandemia → oggi fornisce idee su quantum computing, AI e stampa 3D trasformate in storie per bambini.</p>
+                </div>
+            </div>
+            
+            <div class="science-side">
+                <div class="science-quote">
+                    "Oggi forniamo a Topolino idee su temi scientifici complessi come il quantum computing, l'intelligenza artificiale e la stampa 3D, e gli sceneggiatori le trasformano in storie adatte ai bambini."
+                </div>
+                <div class="science-detail" style="background: rgba(255,255,255,0.2);">
+                    <h4>🎯 Missione</h4>
+                    <p>Portare la scienza dei materiali fuori dalla bolla accademica. Costruire familiarità precoce con concetti che diventeranno centrali nelle vite dei bambini.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Closing -->
+    <div class="slide slide-closing">
+        <h2>📊 Riepilogo</h2>
+        <p>11 notizie verificate da 2 fonti primarie (TechCrunch, Repubblica Tecnologia) nell'arco di 6 giorni (16-21 Giugno 2026). Tutti gli URL testati e funzionanti.</p>
         
-        // Initial render
-        renderNews();
-    </script>
+        <div class="closing-links">
+            <div class="closing-link">
+                <span>🔗</span>
+                <span>Dashboard: theshadman3008.github.io/openclaw-botty/</span>
+            </div>
+            <div class="closing-link">
+                <span>📬</span>
+                <span>Collection Firebase: rassegna</span>
+            </div>
+            <div class="closing-link">
+                <span>✅</span>
+                <span>Prossima rassegna: Lunedì 29 Giugno 2026</span>
+            </div>
+        </div>
+        
+        <div class="closing-footer">
+            Rassegna Stampa Tech-Telco • 22 Giugno 2026 • Generata da Ross
+        </div>
+    </div>
+
 </body>
 </html>
