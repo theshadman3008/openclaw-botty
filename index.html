@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ross AI Dashboard</title>
+    <title>Ross AI · Login</title>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -13,399 +18,252 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #f5f7fa;
-            color: #1a1a2e;
-            line-height: 1.6;
-        }
-        
-        .navbar {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .navbar-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .navbar-brand {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        
-        .navbar-nav {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .navbar-nav a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-        
-        .navbar-nav a:hover {
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
-        
-        .navbar-nav a.active {
-            background: rgba(255,255,255,0.3);
-            color: white;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .header-section {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        
-        .header-section h1 {
-            font-size: 2rem;
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-        
-        .header-section .subtitle {
-            color: #666;
-            font-size: 1rem;
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        
-        .card.clickable {
-            cursor: pointer;
-            border: 2px solid transparent;
-        }
-        
-        .card.clickable:hover {
-            border-color: #667eea;
-        }
-        
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .card-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            padding: 1rem;
         }
         
-        .card-icon.purple {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .login-container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         
-        .card-icon.green {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
         }
         
-        .card-icon.blue {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        
-        .card-icon.orange {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1a1a2e;
-        }
-        
-        .card-stat {
+        .logo h1 {
             font-size: 2.5rem;
-            font-weight: 800;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin: 1rem 0;
+            margin-bottom: 0.5rem;
         }
         
-        .card-content {
-            color: #555;
+        .logo p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
         
-        .task-list {
-            list-style: none;
+        .form-group input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
         
-        .task-item {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
         
-        .task-item:last-child {
-            border-bottom: none;
-        }
-        
-        .task-status {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #27ae60;
-            margin-top: 0.5rem;
-            flex-shrink: 0;
-        }
-        
-        .task-status.pending {
-            background: #f39c12;
-        }
-        
-        .task-text {
-            font-size: 0.9rem;
-            color: #333;
-        }
-        
-        .doc-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-        
-        .doc-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #1a1a2e;
-            transition: background 0.3s ease;
-        }
-        
-        .doc-item:hover {
-            background: #e9ecef;
-        }
-        
-        .doc-icon {
-            font-size: 1.2rem;
-        }
-        
-        .doc-name {
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        .cta-button {
-            display: inline-block;
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            text-decoration: none;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
             font-weight: 600;
-            margin-top: 1rem;
-            transition: transform 0.3s ease;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
-        .cta-button:hover {
-            transform: scale(1.05);
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 0.9rem 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #667eea;
+            font-size: 0.95rem;
+            display: none;
+        }
+        
+        .loading.show {
+            display: block;
         }
         
         .footer {
             text-align: center;
-            padding: 2rem;
-            color: #888;
-            font-size: 0.9rem;
-        }
-        
-        a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
+            margin-top: 2rem;
+            color: #999;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="navbar-brand">🚀 Ross AI</a>
-            <div class="navbar-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="rassegna.html">Rassegna Stampa</a>
-                <a href="linkedin.html">LinkedIn Posts</a>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="container">
-        <div class="header-section">
-            <h1>Dashboard</h1>
-            <div class="subtitle">Panoramica attività e contenuti • Ultimo aggiornamento: 22 June 2026 12:56</div>
+    <div class="login-container">
+        <div class="logo">
+            <h1>🤖 Ross AI</h1>
+            <p>Dashboard Rassegna Tech</p>
         </div>
         
-        <div class="grid">
-            <!-- Task & Topic -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon purple">📋</div>
-                    <div class="card-title">Task & Topic Attivi</div>
-                </div>
-                <ul class="task-list">
-                    <li class="task-item">
-                        <span class="task-status"></span>
-                        <span class="task-text"><strong>Rassegna Stampa Tech-Telco</strong> - Monitoraggio fonti RSS + web fetch</span>
-                    </li>
-                    <li class="task-item">
-                        <span class="task-status"></span>
-                        <span class="task-text"><strong>Publicazione Firebase</strong> - 11 notizie verificate caricate su Firestore</span>
-                    </li>
-                    <li class="task-item">
-                        <span class="task-status"></span>
-                        <span class="task-text"><strong>Content Generation</strong> - Post LinkedIn + Carousel PDF (10 slide)</span>
-                    </li>
-                    <li class="task-item">
-                        <span class="task-status pending"></span>
-                        <span class="task-text"><strong>GitHub Upload</strong> - Dashboard + social content in attesa di propagazione</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Rassegna Stampa Summary -->
-            <div class="card clickable" onclick="window.location.href='rassegna.html'">
-                <div class="card-header">
-                    <div class="card-icon green">📰</div>
-                    <div class="card-title">Rassegna Stampa</div>
-                </div>
-                <div class="card-stat">11</div>
-                <div class="card-content">
-                    <p><strong>Notizie verificate</strong> dalle ultime 72 ore</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
-                        Fonti: TechCrunch, Repubblica Tecnologia, Wired, ICT Business
-                    </p>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
-                        Topic: AI, Telco/5G, Cybersecurity, Gaming, Fusion Energy
-                    </p>
-                </div>
-                <span class="cta-button">Visualizza tutte →</span>
-            </div>
-            
-            <!-- LinkedIn Posts Summary -->
-            <div class="card clickable" onclick="window.location.href='linkedin.html'">
-                <div class="card-header">
-                    <div class="card-icon blue">💼</div>
-                    <div class="card-title">LinkedIn Posts</div>
-                </div>
-                <div class="card-stat">1</div>
-                <div class="card-content">
-                    <p><strong>Post suggerito</strong> basato su notizia principale</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
-                        Topic: Reliance Jio - 500M utenti con AI
-                    </p>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
-                        Inclusi: Copy pronto + Carousel PDF (10 slide)
-                    </p>
-                </div>
-                <span class="cta-button">Visualizza post →</span>
-            </div>
-            
-            <!-- Documenti Generati -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon orange">📄</div>
-                    <div class="card-title">Documenti Generati</div>
-                </div>
-                <div class="doc-list">
-                    <a href="carousel/rassegna_2026-06-22.pdf" target="_blank" class="doc-item">
-                        <span class="doc-icon">📊</span>
-                        <span class="doc-name">Carousel PDF - Rassegna 22 Giugno 2026 (10 slide)</span>
-                    </a>
-                    <a href="social/linkedin_post_2026-06-22.txt" target="_blank" class="doc-item">
-                        <span class="doc-icon">📝</span>
-                        <span class="doc-name">LinkedIn Post - Reliance Jio AI</span>
-                    </a>
-                    <a href="https://github.com/theshadman3008/openclaw-botty" target="_blank" class="doc-item">
-                        <span class="doc-icon">🔗</span>
-                        <span class="doc-name">Repository GitHub - openclaw-botty</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="errorMessage" class="error-message"></div>
         
-        <!-- Quick Stats -->
-        <div class="card" style="margin-bottom: 2rem;">
-            <div class="card-header">
-                <div class="card-icon purple">📊</div>
-                <div class="card-title">Statistiche Rassegna</div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="theshadman@gmail.com"
+                    required 
+                    autocomplete="email"
+                >
             </div>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 0;">
-                <div style="text-align: center; padding: 1rem;">
-                    <div style="font-size: 2rem; font-weight: 800; color: #e74c3c;">4</div>
-                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Priorità Altissima</div>
-                </div>
-                <div style="text-align: center; padding: 1rem;">
-                    <div style="font-size: 2rem; font-weight: 800; color: #f39c12;">5</div>
-                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Priorità Alta</div>
-                </div>
-                <div style="text-align: center; padding: 1rem;">
-                    <div style="font-size: 2rem; font-weight: 800; color: #3498db;">2</div>
-                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Priorità Media</div>
-                </div>
-                <div style="text-align: center; padding: 1rem;">
-                    <div style="font-size: 2rem; font-weight: 800; color: #27ae60;">100%</div>
-                    <div style="font-size: 0.85rem; color: #888; text-transform: uppercase;">Verificate</div>
-                </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="••••••••"
+                    required 
+                    autocomplete="current-password"
+                >
             </div>
+            
+            <button type="submit" class="btn-login" id="loginBtn">
+                Accedi alla Dashboard
+            </button>
+            
+            <p class="loading" id="loadingText">
+                🔐 Autenticazione in corso...
+            </p>
+        </form>
+        
+        <div class="footer">
+            Accesso riservato • Powered by Firebase Auth
         </div>
     </div>
     
-    <div class="footer">
-        Ross AI Dashboard • Generata il 22 June 2026 12:56 • Powered by Firebase + GitHub Pages
-    </div>
+    <script>
+        // ================================================================
+        // CONFIGURAZIONE FIREBASE
+        // Sostituisci con la tua config Firebase Console
+        // ================================================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
+            authDomain: "rossdb.firebaseapp.com",
+            projectId: "rossdb",
+            storageBucket: "rossdb.firebasestorage.app",
+            messagingSenderId: "776172557370",
+            appId: "1:776172557370:web:256c12b8e1fc660ea51103"
+        };
+        
+        // Inizializza Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        
+        // ================================================================
+        // LOGIN FORM HANDLER
+        // ================================================================
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+        const loadingText = document.getElementById('loadingText');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            // UI: mostra loading
+            loginBtn.disabled = true;
+            loadingText.classList.add('show');
+            errorMessage.classList.remove('show');
+            
+            try {
+                // Login con Firebase Auth
+                await auth.signInWithEmailAndPassword(email, password);
+                
+                // Successo: redirect alla dashboard
+                window.location.href = 'dashboard.html';
+                
+            } catch (error) {
+                console.error('Login error:', error);
+                
+                // Messaggio errore user-friendly
+                let errorMsg = 'Accesso non riuscito. Riprova.';
+                
+                if (error.code === 'auth/user-not-found') {
+                    errorMsg = 'Utente non trovato.';
+                } else if (error.code === 'auth/wrong-password') {
+                    errorMsg = 'Password errata.';
+                } else if (error.code === 'auth/invalid-email') {
+                    errorMsg = 'Email non valida.';
+                } else if (error.code === 'auth/too-many-requests') {
+                    errorMsg = 'Troppi tentativi. Riprova più tardi.';
+                }
+                
+                errorMessage.textContent = errorMsg;
+                errorMessage.classList.add('show');
+                
+                // Reset UI
+                loginBtn.disabled = false;
+                loadingText.classList.remove('show');
+            }
+        });
+        
+        // ================================================================
+        // CHECK SESSIONE ATTIVA
+        // ================================================================
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // Utente già loggato: redirect immediato
+                window.location.href = 'dashboard.html';
+            }
+        });
+    </script>
 </body>
 </html>
