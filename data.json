@@ -1,6 +1,16 @@
 {
   "rassegna": [
     {
+      "id": "rassegna-2026-06-24",
+      "date": "2026-06-24",
+      "caption": "5 consigli dell’AI per comprare meglio durante il Prime Day",
+      "snippet": "L'acquisto d'impulso è il nemico numero uno durante il Prime Day di Amazon. Un prompt mirato trasforma l'AI in un cacciatore di offerte.\nThe post 5 consigli dell&#8217;AI per comprare meglio durante i...",
+      "url": "https://www.punto-informatico.it/5-consigli-ai-comprare-meglio-durante-prime-day/",
+      "tag": "AI",
+      "source": "Punto Informatico",
+      "impact_score": 75
+    },
+    {
       "id": "openai-astral-acquisition-20260623",
       "date": "2026-06-23",
       "caption": "🐍 OpenAI acquisisce Astral (uv, ruff)",
@@ -82,6 +92,20 @@
     }
   ],
   "stats": {
-    "news": 10
+    "news": 11
+  },
+  "last_updated": "2026-06-24T08:02:49+02:00",
+  "linkedin_today": {
+    "date": "2026-06-24",
+    "post": "🚀 5 CONSIGLI DELL’AI PER COMPRARE MEGLIO DURANTE IL PRIME DAY\n\nFonte: Punto Informatico (2026-06-23)\n🔗 Link: https://www.punto-informatico.it/5-consigli-ai-comprare-meglio-durante-prime-day/\n\n📊 COSA SUCCEDE:\nL'acquisto d'impulso è il nemico numero uno durante il Prime Day di Amazon. Un prompt mirato trasforma l'AI in un cacciatore di offerte.\nThe post 5 consigli dell&#8217;AI per comprare meglio durante i...\n\n💡 PERCHÉ È RILEVANTE:\n- Impatto sul mercato: AI\n- Fonte verificata: Punto Informatico\n- Data evento: 2026-06-23\n\n🔍 CONTESTO:\nQuesta notizia rappresenta un segnale importante per il settore ai. \nLa fonte (Punto Informatico) è autorevole e il link è stato verificato direttamente.\n\n#Tech #News #Innovation #AI #DigitalTransformation\n\n---\n\n📎 Carousel PDF: 5-6 slide con approfondimento\n🔒 Disponibile su GitHub (link nei commenti)\n\n#LinkedInLearning #TechNews #Verified",
+    "best_news": {
+      "title": "5 consigli dell’AI per comprare meglio durante il Prime Day",
+      "link": "https://www.punto-informatico.it/5-consigli-ai-comprare-meglio-durante-prime-day/",
+      "source": "Punto Informatico",
+      "date": "2026-06-23",
+      "category": "AI",
+      "snippet": "L'acquisto d'impulso è il nemico numero uno durante il Prime Day di Amazon. Un prompt mirato trasforma l'AI in un cacciatore di offerte.\nThe post 5 consigli dell&#8217;AI per comprare meglio durante i...",
+      "impact_score": 75
+    }
   }
 }
