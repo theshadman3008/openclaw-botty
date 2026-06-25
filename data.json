@@ -1,111 +1,152 @@
 {
-  "rassegna": [
+  "last_updated": "2026-06-25 06:01",
+  "total_news": 20,
+  "best_news": {
+    "title": "OpenAI and Broadcom announce chip designed for LLM inference at scale",
+    "link": "https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/",
+    "source": "Ars Technica",
+    "date": "2026-06-24",
+    "category": "AI",
+    "snippet": "The silicon race is heating up amid the struggle to keep up with demand.",
+    "impact_score": 75
+  },
+  "linkedin_post": "🤖 OpenAI and Broadcom announce chip designed for LLM inference at scale\n\nOpenAI e Broadcom hanno annunciato un chip dedicato all'inferenza LLM su larga scala.\n\n📊 PERCHÉ È IMPORTANTE:\n• La corsa al silicio AI si intensifica\n• Riduzione dei costi di inferenza per modelli linguistici\n• Segnale che l'ecosistema AI si verticalizza sull'hardware\n• Broadcom entra nel duopolio chip AI con NVIDIA\n\n💡 COSA SIGNIFICA PER IL MERCATO:\nL'annuncio indica che i grandi player AI non si affidano più solo a NVIDIA. La verticalizzazione hardware/software accelera la competizione e potrebbe abbassare i costi di deployment dell'AI nei prossimi 12-24 mesi.\n\n🔗 Fonte: Ars Technica | 2026-06-24\n📎 https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/\n\n#AI #Broadcom #OpenAI #Chip #LLM #Tech #Innovation #ArtificialIntelligence #TechNews",
+  "carousel_slides": [
     {
-      "id": "rassegna-2026-06-24",
+      "type": "cover",
+      "title": "OpenAI + Broadcom",
+      "subtitle": "Il chip che cambia l'inferenza AI",
+      "tag": "NEWS • 24 GIUGNO 2026",
+      "source": "Ars Technica"
+    },
+    {
+      "type": "what",
+      "title": "Cosa succede?",
+      "content": "OpenAI e Broadcom hanno annunciato un chip personalizzato progettato per l'inferenza LLM su larga scala. La corsa al silicio AI si intensifica.",
+      "icon": "🔥"
+    },
+    {
+      "type": "why",
+      "title": "Perché è importante",
+      "points": [
+        "Riduzione costi di inferenza AI",
+        "Alternative a NVIDIA nel mercato chip",
+        "Verticalizzazione hardware/software",
+        "Impatto su cloud e data center"
+      ],
+      "icon": "💡"
+    },
+    {
+      "type": "impact",
+      "title": "Impatto di mercato",
+      "content": "Il chip accelera la competizione nel mercato AI. Nei prossimi 12-24 mesi i costi di deployment potrebbero scendere significativamente.",
+      "icon": "📈"
+    },
+    {
+      "type": "source",
+      "title": "Fonte verificata",
+      "content": "Ars Technica",
+      "link": "https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/",
       "date": "2026-06-24",
-      "caption": "5 consigli dell’AI per comprare meglio durante il Prime Day",
-      "snippet": "L'acquisto d'impulso è il nemico numero uno durante il Prime Day di Amazon. Un prompt mirato trasforma l'AI in un cacciatore di offerte.\nThe post 5 consigli dell&#8217;AI per comprare meglio durante i...",
-      "url": "https://www.punto-informatico.it/5-consigli-ai-comprare-meglio-durante-prime-day/",
-      "tag": "AI",
-      "source": "Punto Informatico",
-      "impact_score": 75
+      "icon": "🔗"
     },
     {
-      "id": "openai-astral-acquisition-20260623",
-      "date": "2026-06-23",
-      "caption": "🐍 OpenAI acquisisce Astral (uv, ruff)",
-      "snippet": "OpenAI ha acquisito Astral, la startup dietro uv e ruff, due dei tool Python più popolari per package management e linting. L'acquisizione integra questi strumenti nello stack Codex per migliorare l'esperienza di sviluppo AI.",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
-      "tag": "AI"
-    },
-    {
-      "id": "anthropic-fable5-paywall-20260623",
-      "date": "2026-06-23",
-      "caption": "🔒 Fable 5 di Anthropic diventa a pagamento",
-      "snippet": "Dal 23 giugno, Claude Fable 5 non è più incluso nelle subscription Pro/Max/Enterprise. Serve acquistare crediti usage separatamente a $10/million input token e $50/million output token. Il governo USA aveva bloccato il modello dal 12-18 giugno per sicurezza nazionale.",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
-      "tag": "AI"
-    },
-    {
-      "id": "uber-ai-budget-20260622",
-      "date": "2026-06-22",
-      "caption": "💸 Uber brucia budget AI 2026 in 4 mesi",
-      "snippet": "Uber ha esaurito l'intero budget AI per il 2026 in soli 4 mesi, spendendo circa $90 milioni in tool di coding AI per i suoi 5.000 ingegneri. La compagnia ha introdotto un tetto di $1.500 al mese per dipendente per tool. Il CTO ha definito la situazione 'abbiamo creato un mostro'.",
-      "url": "https://www.afr.com/world/north-america/we-created-a-monster-companies-rein-in-ai-as-costs-strain-budgets-20260622-p6093o",
-      "tag": "AI"
-    },
-    {
-      "id": "alphabet-capex-selloff-20260622",
-      "date": "2026-06-22",
-      "caption": "📉 Alphabet -6% per ansia capex AI",
-      "snippet": "Alphabet scende del 6% in borsa mentre gli investitori temono che la spesa in AI non generi ritorni abbastanza veloci. La compagnia ha guidato capex 2026 a $180-190 miliardi, con $35,7 miliardi già spesi in Q1. Amazon -4% per lo stesso tema.",
-      "url": "https://247wallst.com/investing/2026/06/22/alphabet-sinks-6-amazon-slides-4-amid-ai-capex-anxiety-across-the-hyperscalers/",
-      "tag": "Finanza Tech"
-    },
-    {
-      "id": "microsoft-ai-empire-20260622",
-      "date": "2026-06-22",
-      "caption": "🏗️ Microsoft costruisce impero AI oltre OpenAI",
-      "snippet": "Microsoft sta sviluppando i propri modelli AI (MAI) per ridurre la dipendenza da OpenAI. I nuovi modelli offrono efficienza di costo e sono già integrati nei prodotti Microsoft. Build 2026 ha segnato una svolta verso l'indipendenza.",
-      "url": "https://www.kavout.com/market-lens/is-microsoft-building-its-own-ai-empire-beyond-openai",
-      "tag": "AI"
-    },
-    {
-      "id": "five-eyes-ai-cyber-20260622",
-      "date": "2026-06-22",
-      "caption": "⚠️ Attacchi cyber AI +300% dal 2023",
-      "snippet": "Le agenzie cyber Five Eyes riportano un aumento del 300% degli attacchi informatici abilitati da AI dal 2023. Trump ha emesso un executive order il 2 giugno per rafforzare le difese government e private-sector contro le minacce AI-enabled.",
-      "url": "https://www.skadden.com/insights/publications/2026/06/insights-june-2026/ai-enabled-vulnerability-discovery",
-      "tag": "Cybersecurity"
-    },
-    {
-      "id": "adobe-agentic-ai-20260622",
-      "date": "2026-06-22",
-      "caption": "🎨 Adobe accelera su Agentic AI",
-      "snippet": "Adobe annuncia nuove partnership per l'adozione di AI agentica, posizionandosi come layer infrastrutturale across modelli, platform e agent. L'obiettivo è integrare creatività, marketing e AI nell'era agentica.",
-      "url": "https://www.01net.it/adobe-accelerates-agentic-ai-adoption-through-new-agency-and-technology-partnerships/",
-      "tag": "AI"
-    },
-    {
-      "id": "cfo-ai-budget-control-20260622",
-      "date": "2026-06-22",
-      "caption": "📊 CFO prendono il controllo budget AI",
-      "snippet": "OpenAI e Microsoft lanciano tool enterprise per il tracking dei costi AI. OpenAI offre analytics sull'uso dei crediti; Microsoft ha layer di management per Copilot. L'era della spesa libera in AI enterprise sta finendo.",
-      "url": "https://www.forbes.com/sites/ronschmelzer/2026/06/22/cfos-are-coming-for-the-enterprise-ai-budget/",
-      "tag": "AI"
-    },
-    {
-      "id": "sk-hynix-samsung-20260622",
-      "date": "2026-06-22",
-      "caption": "🏆 SK Hynix supera Samsung in market value",
-      "snippet": "SK Hynix raggiunge la prima posizione in Corea del Sud per market value, superando Samsung grazie agli investimenti strategici in HBM (High-Bandwidth Memory) per AI. Una svolta storica dopo anni di debito.",
-      "url": "https://technologymagazine.com/news/how-sk-hynix-overcame-debt-to-beat-samsung-in-market-value",
-      "tag": "Tech"
-    },
-    {
-      "id": "hyperscalers-capex-700b-20260621",
-      "date": "2026-06-21",
-      "caption": "💰 Hyperscalers: $700B capex AI nel 2026",
-      "snippet": "I 5 hyperscalers USA (Microsoft, Amazon, Alphabet, Meta, Oracle) prevedono di investire tra $600-720 miliardi in infrastrutture AI nel 2026. È il più grande ciclo di capex concentrato nella storia tech, superando la bolla dot-com.",
-      "url": "https://www.softwareseni.com/the-ai-industry-goes-public-anthropic-openai-and-the-biggest-capital-event-in-tech-history/",
-      "tag": "Finanza Tech"
+      "type": "closing",
+      "title": "Resta informato",
+      "subtitle": "Rassegna Tech giornaliera",
+      "cta": "Segui per aggiornamenti tech verificati"
     }
   ],
-  "stats": {
-    "news": 11
-  },
-  "last_updated": "2026-06-24T08:02:49+02:00",
-  "linkedin_today": {
-    "date": "2026-06-24",
-    "post": "🚀 5 CONSIGLI DELL’AI PER COMPRARE MEGLIO DURANTE IL PRIME DAY\n\nFonte: Punto Informatico (2026-06-23)\n🔗 Link: https://www.punto-informatico.it/5-consigli-ai-comprare-meglio-durante-prime-day/\n\n📊 COSA SUCCEDE:\nL'acquisto d'impulso è il nemico numero uno durante il Prime Day di Amazon. Un prompt mirato trasforma l'AI in un cacciatore di offerte.\nThe post 5 consigli dell&#8217;AI per comprare meglio durante i...\n\n💡 PERCHÉ È RILEVANTE:\n- Impatto sul mercato: AI\n- Fonte verificata: Punto Informatico\n- Data evento: 2026-06-23\n\n🔍 CONTESTO:\nQuesta notizia rappresenta un segnale importante per il settore ai. \nLa fonte (Punto Informatico) è autorevole e il link è stato verificato direttamente.\n\n#Tech #News #Innovation #AI #DigitalTransformation\n\n---\n\n📎 Carousel PDF: 5-6 slide con approfondimento\n🔒 Disponibile su GitHub (link nei commenti)\n\n#LinkedInLearning #TechNews #Verified",
-    "best_news": {
-      "title": "5 consigli dell’AI per comprare meglio durante il Prime Day",
-      "link": "https://www.punto-informatico.it/5-consigli-ai-comprare-meglio-durante-prime-day/",
-      "source": "Punto Informatico",
-      "date": "2026-06-23",
+  "all_news": [
+    {
+      "title": "GTA 6, un’ondata di truffe per i finti “early access”: phishing e malware proliferano",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/24/news/gta_6_truffe_finti_early_access_phishing_e_malware_preordini_prenotazioni-425431019/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-24",
       "category": "AI",
-      "snippet": "L'acquisto d'impulso è il nemico numero uno durante il Prime Day di Amazon. Un prompt mirato trasforma l'AI in un cacciatore di offerte.\nThe post 5 consigli dell&#8217;AI per comprare meglio durante i...",
+      "snippet": "Siti che chiedono 250 dollari in Bitcoin per un gioco che non esiste, installer infetti, app Android camuffate da beta e centinaia di pagine di phishing online: è in atto un'ondata di campagne fraudol...",
       "impact_score": 75
+    },
+    {
+      "title": "Palazzo Chigi lancia l'allarme: truffe agli imprenditori a nome del sottosegretario Mantovano",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/24/news/palazzo-chigi-lancia-allarme-truffa-imprenditori-sottosegretario-mantovano-425430885/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-24",
+      "category": "AI",
+      "snippet": "Il governo mette in guardia gli imprenditori italiani dai tentativi di frode su WhatsApp che sfruttano l'identità e l'immagine del sottosegretario alla presidenza del Consiglio",
+      "impact_score": 75
+    },
+    {
+      "title": "Mondiali di calcio, le partite di oggi 25 giugno in diretta su DAZN",
+      "link": "https://www.punto-informatico.it/mondiali-calcio-2026-partite-oggi-25-giugno-dazn/",
+      "source": "Punto Informatico",
+      "date": "2026-06-25",
+      "category": "AI",
+      "snippet": "In programma la terza e ultima giornata per le Nazionali appartenenti ai gironi D, E e F: si comincia dalle ore 22:00.\nThe post Mondiali di calcio, le partite di oggi 25 giugno in diretta su DAZN appe...",
+      "impact_score": 75
+    },
+    {
+      "title": "Former Infosys chief has a new startup that wants to challenge the IT services world",
+      "link": "https://techcrunch.com/2026/06/24/former-infosys-chief-has-a-new-startup-that-wants-to-challenge-the-it-services-world/",
+      "source": "TechCrunch",
+      "date": "2026-06-24",
+      "category": "AI",
+      "snippet": "Backed by Mayfield and Aramco Ventures, Vishal Sikka’s new venture brings together veterans from SAP, Infosys, and VianAI.",
+      "impact_score": 75
+    },
+    {
+      "title": "Elon suffers another day short of trillionaire status",
+      "link": "https://techcrunch.com/2026/06/24/elon-suffers-another-day-short-of-trillionaire-status/",
+      "source": "TechCrunch",
+      "date": "2026-06-24",
+      "category": "AI",
+      "snippet": "Right now he's merely a several-hundred-billionaire, according to Bloomberg's Billionaires Index.",
+      "impact_score": 75
+    },
+    {
+      "title": "Cerebras stock plunges after earnings as CEO says margin outlook was misunderstood",
+      "link": "https://techcrunch.com/2026/06/24/cerebras-stock-plunges-after-earnings-as-ceo-says-margin-outlook-was-misunderstood/",
+      "source": "TechCrunch",
+      "date": "2026-06-24",
+      "category": "AI",
+      "snippet": "In its first earnings report since going public, the AI chipmaker forecast a narrower gross margin in its core business, scaring investors.",
+      "impact_score": 75
+    },
+    {
+      "title": "AI was supposed to kill engineering jobs, but new data suggests they’re the most resilient",
+      "link": "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/",
+      "source": "TechCrunch",
+      "date": "2026-06-24",
+      "category": "AI",
+      "snippet": "While AI dominates the layoff narrative, engineers are actually making up a larger share of new hires, according to SignalFire data.",
+      "impact_score": 75
+    },
+    {
+      "title": "OpenAI and Broadcom announce chip designed for LLM inference at scale",
+      "link": "https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/",
+      "source": "Ars Technica",
+      "date": "2026-06-24",
+      "category": "AI",
+      "snippet": "The silicon race is heating up amid the struggle to keep up with demand.",
+      "impact_score": 75
+    },
+    {
+      "title": "One-two punch delivered in global operation disrupts cybercrime \"assembly line\"",
+      "link": "https://arstechnica.com/security/2026/06/one-two-punch-delivered-in-global-operation-disrupts-cybercrime-assembly-line/",
+      "source": "Ars Technica",
+      "date": "2026-06-24",
+      "category": "Cybersecurity",
+      "snippet": "\"Operation Endgame\" simultaneously disrupts two widely used crime tools.",
+      "impact_score": 70
+    },
+    {
+      "title": "SpaceX ha lanciato più satelliti di tutto il resto del mondo messo insieme",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/24/news/spacex_satelliti_starlink-425430294/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-24",
+      "category": "Tech",
+      "snippet": "L'azienda aerospaziale di Elon Musk ha superato l'intera storia dell'esplorazione   orbitale umana, sfondando il tetto dei quindicimila satelliti lanciati",
+      "impact_score": 60
     }
-  }
+  ]
 }
