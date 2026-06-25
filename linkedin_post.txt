@@ -1,25 +1,12 @@
-🚀 LA CRISI FRA ITALIA E USA RIPORTA AL CENTRO DEL DIBATTITO L’AUTONOMIA TECNOLOGICA
+🤖 OpenAI and Broadcom announce chip designed for LLM inference at scale
 
-Fonte: Repubblica Tech (2026-06-22)
-🔗 Link: https://www.repubblica.it/tecnologia/2026/06/22/news/la_crisi_fra_italia_e_usa_riporta_al_centro_del_dibattito_l_autonomia_tecnologica-425426711/?rss
+The silicon race is heating up amid the struggle to keep up with demand.
 
-📊 COSA SUCCEDE:
-Dagli executive order al cloud, la tensione con gli Stati Uniti mostra la fragilità di un Paese che ha delegato all’estero una parte essenziale della propria vita digitale
+📊 PERCHÉ È IMPORTANTE:
+• Categoria: AI
+• Impact score: 75/100
+• Fonte: Ars Technica | 2026-06-24
 
-💡 PERCHÉ È RILEVANTE:
-- Impatto sul mercato: Finanza Tech
-- Fonte verificata: Repubblica Tech
-- Data evento: 2026-06-22
+🔗 https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/
 
-🔍 CONTESTO:
-Questa notizia rappresenta un segnale importante per il settore finanza tech. 
-La fonte (Repubblica Tech) è autorevole e il link è stato verificato direttamente.
-
-#Tech #News #Innovation #FinanzaTech #DigitalTransformation
-
----
-
-📎 Carousel PDF: 5-6 slide con approfondimento
-🔒 Disponibile su GitHub (link nei commenti)
-
-#LinkedInLearning #TechNews #Verified
+#AI #Tech #News #Innovation #TechNews
