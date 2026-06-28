@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-26 09:04",
+  "last_updated": "2026-06-28 06:00",
   "total_news": 32,
   "best_news": {
     "title": "OpenAI ha lanciato Jalapeño, il suo primo chip IA, senza usare Nvidia",
@@ -49,57 +49,57 @@
       "impact_score": 65
     },
     {
-      "title": "Anthropic accusa Alibaba di avere estratto dati dai modelli Claude",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/25/news/anthropic_accusa_alibaba_di_avere_estratto_dati_dai_modelli_claude-425433403/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-25",
-      "category": "AI",
-      "snippet": "Anthropic si è rivolta alla Casa Bianca denunciando l’attacco di Alibaba. Un’offensiva silente che vede al centro il dominio sulle intelligenze artificiali e che pone l’accento sulla sicurezza naziona",
-      "impact_score": 65
-    },
-    {
-      "title": "Euclid fotografa il cuore della Via Lattea: oltre 60 milioni di stelle",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/25/news/euclid-fotografa-cuore-via-lattea-oltre-60-milioni-stell-425433252/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-25",
-      "category": "AI",
-      "snippet": "Il telescopio dell'Agenzia Spaziale Europea ha tracciato la più dettagliata mappa mai realizzata del cuore della nostra galassia. In un solo scatto ha immortalato il rigonfiamento centrale (il bulge) ",
-      "impact_score": 65
-    },
-    {
-      "title": "Google Finanza per Android, l’AI spiega i movimenti di Borsa",
-      "link": "https://www.punto-informatico.it/google-finanza-android-ai-spiega-movimenti-borsa/",
+      "title": "Trenitalia conferma furto dei dati avvenuto ad ottobre 2025",
+      "link": "https://www.punto-informatico.it/trenitalia-conferma-furto-dati-avvenuto-ottobre-2025/",
       "source": "Punto Informatico",
-      "date": "2026-06-26",
+      "date": "2026-06-27",
       "category": "AI",
-      "snippet": "Google Finanza diventa un'app per Android con dati in tempo reale, notizie live e AI che spiega i movimenti dei titoli.\nThe post Google Finanza per Android, l&#8217;AI spiega i movimenti di Borsa appe",
+      "snippet": "Trenitalia ha confermato il furto dei dati associati ai titoli di viaggio (biglietti e abbonamenti) durante un'intrusione avvenuta ad ottobre 2025.\nThe post Trenitalia conferma furto dei dati avvenuto",
       "impact_score": 65
     },
     {
-      "title": "GPT-5.6 in anteprima limitata, il governo approverà l’accesso",
-      "link": "https://www.punto-informatico.it/gpt-5-6-openai-anteprima-limitata-governo-approvera-accesso/",
+      "title": "OpenAI annuncia GPT-5.6: rilascio limitato dal governo USA",
+      "link": "https://www.punto-informatico.it/openai-annuncia-gpt-5-6-rilascio-limitato-governo-usa/",
       "source": "Punto Informatico",
-      "date": "2026-06-26",
+      "date": "2026-06-27",
       "category": "AI",
-      "snippet": "GPT-5.6 non sarà disponibile al pubblico subito, il governo approverà l'accesso caso per caso. Anthropic invece ha dovuto ritirare Fable.\nThe post GPT-5.6 in anteprima limitata, il governo approverà l",
+      "snippet": "I nuovi modelli Sol, Terra e Luna della serie GPT-5.6 di OpenAI verranno rilasciati solo a partner fidati con l'approvazione del governo statunitense.\nThe post OpenAI annuncia GPT-5.6: rilascio limita",
       "impact_score": 65
     },
     {
-      "title": "Codex usato dal 97,9% dei dipendenti di OpenAI",
-      "link": "https://www.punto-informatico.it/codex-usato-979-dipendenti-openai/",
+      "title": "Troppi GPT personalizzati? Un agente che smista il lavoro agli altri",
+      "link": "https://www.punto-informatico.it/troppi-gpt-personalizzati-agente-smista-lavoro-agli-altri/",
       "source": "Punto Informatico",
-      "date": "2026-06-26",
+      "date": "2026-06-27",
       "category": "AI",
-      "snippet": "OpenAI ha pubblicato alcuni dati relativi all'uso di Codex da parte dei dipendenti e l'impatto positivo sulle loro attività lavorative.\nThe post Codex usato dal 97,9% dei dipendenti di OpenAI appeared",
+      "snippet": "Invece di ricordare quale GPT personalizzato usare per ogni tipo di compito, si può costruire un agente centrale che smista il lavoro automaticamente.\nThe post Troppi GPT personalizzati? Un agente che",
       "impact_score": 65
     },
     {
-      "title": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
-      "link": "https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/",
+      "title": "Indian payments chief thinks AI will be heavily involved in next era of digital payment growth",
+      "link": "https://techcrunch.com/2026/06/27/indian-payments-chief-thinks-ai-will-be-heavily-involved-in-next-era-of-digital-payment-growth/",
       "source": "TechCrunch",
-      "date": "2026-06-25",
+      "date": "2026-06-28",
       "category": "AI",
-      "snippet": "OpenAI reportedly plans to share its newest model, GPT 5.6, with a select group of partners instead of with the broader public. The reason: the Trump administration told it to.",
+      "snippet": "Dilip Asbe said that newer UPI apps could be more competitive with a viable commercial model",
+      "impact_score": 65
+    },
+    {
+      "title": "Apple Vision Pro exec is reportedly leaving for OpenAI",
+      "link": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
+      "source": "TechCrunch",
+      "date": "2026-06-27",
+      "category": "AI",
+      "snippet": "Paul Meade, the Apple vice president in charge of the Vision Pro headset, is reportedly leaving the company to join OpenAI’s hardware team.",
+      "impact_score": 65
+    },
+    {
+      "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+      "link": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+      "source": "TechCrunch",
+      "date": "2026-06-27",
+      "category": "AI",
+      "snippet": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
       "impact_score": 65
     }
   ]
