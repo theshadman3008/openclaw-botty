@@ -1,13 +1,12 @@
-🤖 Perché è quasi impossibile produrre smartphone negli Stati Uniti
+🤖 Se l’Europa insegue Usa e Cina non è colpa dell’AI Act
 
-Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.
-The post Perché è quasi impossibile produrre smartphone 
+Il rinvio di alcune scadenze dell’AI Act riapre il confronto sul rapporto tra regole e innovazione in Europa
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: Finanza Tech
-• Impact score: 70/100
-• Fonte: Punto Informatico | 2026-06-29
+• Categoria: AI
+• Impact score: 65/100
+• Fonte: Repubblica Tech | 2026-06-28
 
-🔗 https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/
+🔗 https://www.repubblica.it/tecnologia/2026/06/28/news/ai-act-europa-usa-cina-innovazione-intelligenza-artificiale-425439273/?rss
 
-#FinanzaTech #Tech #News #Innovation #TechNews
+#AI #Tech #News #Innovation #TechNews
