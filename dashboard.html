@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ross AI · Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
+        authDomain: "rossdb.firebaseapp.com",
+        projectId: "rossdb",
+        storageBucket: "rossdb.firebasestorage.app",
+        messagingSenderId: "776172557370",
+        appId: "1:776172557370:web:256c12b8e1fc660ea51103"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="auth-guard.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-left h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .user-email {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .btn-logout {
+            padding: 0.6rem 1.4rem;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .btn-logout:hover {
+            transform: translateY(-2px);
+        }
+        
+        .last-update {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+        
+        .news-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .news-section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .news-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .news-meta {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 0.8rem;
+        }
+        
+        .news-source {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .news-snippet {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .news-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        
+        .news-link:hover {
+            color: #764ba2;
+        }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p style="font-size: 1.1rem;">🔐 Verifica accesso...</p>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <div class="container">
+            <div class="header">
+                <div class="header-left">
+                    <h1>📰 Rassegna Tech</h1>
+                    <p class="subtitle">Dashboard giornaliera - Notizie verificate</p>
+                    <div class="last-update" id="lastUpdate">
+                        Ultimo aggiornamento: --
+                    </div>
+                </div>
+                <div class="user-info">
+                    <span class="user-email" id="userEmail">--</span>
+                    <button class="btn-logout" id="logoutBtn">Esci</button>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="statTotal">0</div>
+                    <div class="stat-label">Notizie Trovate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="statVerified">0</div>
+                    <div class="stat-label">Fonti Verificate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="statImpact">0</div>
+                    <div class="stat-label">Impact Score</div>
+                </div>
+            </div>
+            
+            <div class="news-section">
+                <h2>🔍 Notizia in Evidenza</h2>
+                <div id="newsContent">
+                    <!-- News items will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // ================================================================
+        // CONFIGURAZIONE FIREBASE
+        // ================================================================
+        const auth = firebase.auth();
+        
+        // ================================================================
+        // AUTH CHECK
+        // ================================================================
+        const loadingScreen = document.getElementById('loadingScreen');
+        const mainContent = document.getElementById('mainContent');
+        const userEmailEl = document.getElementById('userEmail');
+        const logoutBtn = document.getElementById('logoutBtn');
+        
+        // Auth gestito da auth-guard.js — aspetta che sia pronto
+        window.__authGuardReady.then(function(user) {
+            userEmailEl.textContent = user.email;
+            loadingScreen.classList.add('hidden');
+            mainContent.classList.remove('hidden');
+            loadDashboard();
+        });
+
+        // Logout
+        logoutBtn.addEventListener('click', function() {
+            window.rossAuth.logout();
+        });
+        
+        // ================================================================
+        // CARICAMENTO DATI DASHBOARD
+        // ================================================================
+        async function loadDashboard() {
+            try {
+                // Carica data.json
+                const response = await fetch('data.json');
+                const data = await response.json();
+                
+                // Aggiorna stats
+                document.getElementById('statTotal').textContent = data.total_news || 0;
+                document.getElementById('statVerified').textContent = '20+' ;
+                document.getElementById('statImpact').textContent = data.best_news?.impact_score || 0;
+                
+                // Aggiorna timestamp
+                document.getElementById('lastUpdate').textContent = 
+                    'Ultimo aggiornamento: ' + (data.last_updated || '--');
+                
+                // Carica notizia principale
+                const newsContent = document.getElementById('newsContent');
+                const bestNews = data.best_news;
+                
+                if (bestNews) {
+                    newsContent.innerHTML = `
+                        <div class="news-item">
+                            <div class="news-title">${escapeHtml(bestNews.title)}</div>
+                            <div class="news-meta">
+                                <span class="news-source">${escapeHtml(bestNews.source)}</span>
+                                • ${bestNews.date} • Categoria: ${escapeHtml(bestNews.category)}
+                            </div>
+                            <p class="news-snippet">${escapeHtml(bestNews.snippet)}</p>
+                            <a href="${escapeHtml(bestNews.link)}" target="_blank" class="news-link">
+                                Leggi articolo completo →
+                            </a>
+                        </div>
+                    `;
+                }
+                
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                document.getElementById('newsContent').innerHTML = 
+                    '<p style="color: #dc2626;">Errore nel caricamento dei dati.</p>';
+            }
+        }
+        
+        // Utility: escape HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
