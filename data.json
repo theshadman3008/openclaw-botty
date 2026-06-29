@@ -1,25 +1,34 @@
 {
-  "last_updated": "2026-06-28 06:00",
+  "last_updated": "2026-06-29 08:41",
   "total_news": 32,
   "best_news": {
-    "title": "OpenAI ha lanciato Jalapeño, il suo primo chip IA, senza usare Nvidia",
-    "link": "https://www.repubblica.it/tecnologia/2026/06/25/news/openai_ha_lanciato_jalapeno_il_suo_primo_chip_ia_senza_usarenvidia-425433449/?rss",
-    "source": "Repubblica Tech",
-    "date": "2026-06-25",
-    "category": "AI",
-    "snippet": "Il chip, sviluppato con Broadcom ,  è stato progettato in nove mesi ed è ottimizzato per i modelli linguistici di grandi dimensioni. L’obiettivo dichiarato è ridurre i costi, aumentare l’efficienza e ",
-    "impact_score": 75
+    "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
+    "link": "https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/",
+    "source": "Punto Informatico",
+    "date": "2026-06-29",
+    "category": "Finanza Tech",
+    "snippet": "Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone ",
+    "impact_score": 70
   },
-  "linkedin_post": "🤖 OpenAI ha lanciato Jalapeño, il suo primo chip IA, senza usare Nvidia\n\nIl chip, sviluppato con Broadcom ,  è stato progettato in nove mesi ed è ottimizzato per i modelli linguistici di grandi dimensioni. L’obiettivo dichiarato è ridurre i costi, aumentare l’efficienza e \n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 75/100\n• Fonte: Repubblica Tech | 2026-06-25\n\n🔗 https://www.repubblica.it/tecnologia/2026/06/25/news/openai_ha_lanciato_jalapeno_il_suo_primo_chip_ia_senza_usarenvidia-425433449/?rss\n\n#AI #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Perché è quasi impossibile produrre smartphone negli Stati Uniti\n\nCostruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone \n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Punto Informatico | 2026-06-29\n\n🔗 https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "OpenAI ha lanciato Jalapeño, il suo primo chip IA, senza usare Nvidia",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/25/news/openai_ha_lanciato_jalapeno_il_suo_primo_chip_ia_senza_usarenvidia-425433449/?rss",
+      "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
+      "link": "https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
+      "category": "Finanza Tech",
+      "snippet": "Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone ",
+      "impact_score": 70
+    },
+    {
+      "title": "Se l’Europa insegue Usa e Cina non è colpa dell’AI Act",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/28/news/ai-act-europa-usa-cina-innovazione-intelligenza-artificiale-425439273/?rss",
       "source": "Repubblica Tech",
-      "date": "2026-06-25",
+      "date": "2026-06-28",
       "category": "AI",
-      "snippet": "Il chip, sviluppato con Broadcom ,  è stato progettato in nove mesi ed è ottimizzato per i modelli linguistici di grandi dimensioni. L’obiettivo dichiarato è ridurre i costi, aumentare l’efficienza e ",
-      "impact_score": 75
+      "snippet": "Il rinvio di alcune scadenze dell’AI Act riapre il confronto sul rapporto tra regole e innovazione in Europa",
+      "impact_score": 65
     },
     {
       "title": "Meta punta ai mercati predittivi: il nuovo progetto di Mark Zuckerberg per sfidare Polymarket",
@@ -49,30 +58,39 @@
       "impact_score": 65
     },
     {
-      "title": "Trenitalia conferma furto dei dati avvenuto ad ottobre 2025",
-      "link": "https://www.punto-informatico.it/trenitalia-conferma-furto-dati-avvenuto-ottobre-2025/",
-      "source": "Punto Informatico",
-      "date": "2026-06-27",
+      "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
+      "link": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
+      "source": "TechCrunch",
+      "date": "2026-06-28",
       "category": "AI",
-      "snippet": "Trenitalia ha confermato il furto dei dati associati ai titoli di viaggio (biglietti e abbonamenti) durante un'intrusione avvenuta ad ottobre 2025.\nThe post Trenitalia conferma furto dei dati avvenuto",
+      "snippet": "\"Mistakenly we thought that by just introducing artificial intelligence ... that would produce a high-quality product.”",
       "impact_score": 65
     },
     {
-      "title": "OpenAI annuncia GPT-5.6: rilascio limitato dal governo USA",
-      "link": "https://www.punto-informatico.it/openai-annuncia-gpt-5-6-rilascio-limitato-governo-usa/",
-      "source": "Punto Informatico",
-      "date": "2026-06-27",
+      "title": "Writer Ian Bogost says ‘The Small Stuff’ can help us reclaim our lives from too much convenience",
+      "link": "https://techcrunch.com/2026/06/28/writer-ian-bogost-says-the-small-stuff-can-help-us-reclaim-our-lives-from-dematerialization/",
+      "source": "TechCrunch",
+      "date": "2026-06-28",
       "category": "AI",
-      "snippet": "I nuovi modelli Sol, Terra e Luna della serie GPT-5.6 di OpenAI verranno rilasciati solo a partner fidati con l'approvazione del governo statunitense.\nThe post OpenAI annuncia GPT-5.6: rilascio limita",
+      "snippet": "Has Silicon Valley been building the wrong things?",
       "impact_score": 65
     },
     {
-      "title": "Troppi GPT personalizzati? Un agente che smista il lavoro agli altri",
-      "link": "https://www.punto-informatico.it/troppi-gpt-personalizzati-agente-smista-lavoro-agli-altri/",
-      "source": "Punto Informatico",
-      "date": "2026-06-27",
+      "title": "TechCrunch Mobility: All eyes on Tesla FSD",
+      "link": "https://techcrunch.com/2026/06/28/techcrunch-mobility-all-eyes-on-tesla-fsd/",
+      "source": "TechCrunch",
+      "date": "2026-06-28",
       "category": "AI",
-      "snippet": "Invece di ricordare quale GPT personalizzato usare per ogni tipo di compito, si può costruire un agente centrale che smista il lavoro automaticamente.\nThe post Troppi GPT personalizzati? Un agente che",
+      "snippet": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
+      "impact_score": 65
+    },
+    {
+      "title": "Why Wall Street thinks US memory maker Micron is the next Nvidia",
+      "link": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/",
+      "source": "TechCrunch",
+      "date": "2026-06-28",
+      "category": "AI",
+      "snippet": "Eager to find more public AI-related companies that may do as well as Nvidia, Wall Street investors think they've found a winner with Micron.",
       "impact_score": 65
     },
     {
@@ -82,24 +100,6 @@
       "date": "2026-06-28",
       "category": "AI",
       "snippet": "Dilip Asbe said that newer UPI apps could be more competitive with a viable commercial model",
-      "impact_score": 65
-    },
-    {
-      "title": "Apple Vision Pro exec is reportedly leaving for OpenAI",
-      "link": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
-      "source": "TechCrunch",
-      "date": "2026-06-27",
-      "category": "AI",
-      "snippet": "Paul Meade, the Apple vice president in charge of the Vision Pro headset, is reportedly leaving the company to join OpenAI’s hardware team.",
-      "impact_score": 65
-    },
-    {
-      "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
-      "link": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
-      "source": "TechCrunch",
-      "date": "2026-06-27",
-      "category": "AI",
-      "snippet": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
       "impact_score": 65
     }
   ]
