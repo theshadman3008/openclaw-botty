@@ -1,13 +1,12 @@
-🤖 Perché è quasi impossibile produrre smartphone negli Stati Uniti
+🤖 Robot hand company settles Tesla trade secret suit and announces $11M raise
 
-Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.
-The post Perché è quasi impossibile produrre smartphone 
+The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: Finanza Tech
+• Categoria: AI
 • Impact score: 70/100
-• Fonte: Punto Informatico | 2026-06-29
+• Fonte: TechCrunch | 2026-06-29
 
-🔗 https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/
+🔗 https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/
 
-#FinanzaTech #Tech #News #Innovation #TechNews
+#AI #Tech #News #Innovation #TechNews
