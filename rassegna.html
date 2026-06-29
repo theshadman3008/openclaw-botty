@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rassegna Stampa - Ross AI Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
+        authDomain: "rossdb.firebaseapp.com",
+        projectId: "rossdb",
+        storageBucket: "rossdb.firebasestorage.app",
+        messagingSenderId: "776172557370",
+        appId: "1:776172557370:web:256c12b8e1fc660ea51103"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="auth-guard.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -74,7 +88,10 @@
 
 <header class="header">
     <span class="header-brand">🚀 Ross AI</span>
-    <span class="header-meta" id="header-meta">Caricamento...</span>
+        <div style="display:flex;gap:1rem;align-items:center">
+            <span class="header-meta" id="header-meta">Caricamento...</span>
+            <button onclick="window.rossAuth.logout()" style="background:#fff2;color:white;border:1px solid rgba(255,255,255,0.4);padding:0.3rem 0.9rem;border-radius:8px;cursor:pointer;font-size:0.82rem;font-weight:600">Esci</button>
+        </div>
 </header>
 
 <div class="main">
