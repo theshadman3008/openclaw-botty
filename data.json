@@ -1,25 +1,52 @@
 {
-  "last_updated": "2026-06-29 10:34",
+  "last_updated": "2026-06-29 14:12",
   "total_news": 32,
   "best_news": {
-    "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
-    "link": "https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/",
-    "source": "Punto Informatico",
+    "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+    "link": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+    "source": "TechCrunch",
     "date": "2026-06-29",
-    "category": "Finanza Tech",
-    "snippet": "Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone ",
+    "category": "AI",
+    "snippet": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
     "impact_score": 70
   },
-  "linkedin_post": "🤖 Perché è quasi impossibile produrre smartphone negli Stati Uniti\n\nCostruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone \n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Punto Informatico | 2026-06-29\n\n🔗 https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Robot hand company settles Tesla trade secret suit and announces $11M raise\n\nThe startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 70/100\n• Fonte: TechCrunch | 2026-06-29\n\n🔗 https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/\n\n#AI #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
-      "link": "https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/",
-      "source": "Punto Informatico",
+      "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+      "link": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+      "source": "TechCrunch",
       "date": "2026-06-29",
-      "category": "Finanza Tech",
-      "snippet": "Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone ",
+      "category": "AI",
+      "snippet": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
       "impact_score": 70
+    },
+    {
+      "title": "Pocket raises $11M in bet on rising demand for AI note-taking devices",
+      "link": "https://techcrunch.com/2026/06/29/pocket-raises-11m-in-bet-on-rising-demand-for-ai-note-taking-devices/",
+      "source": "TechCrunch",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Pocket sells a $129 credit card-shaped puck, which sticks to the back of your phone, and promises unlimited recordings, transcriptions, and to-do items.",
+      "impact_score": 70
+    },
+    {
+      "title": "Omen AI’s plan to optimize data centers is all wet",
+      "link": "https://techcrunch.com/2026/06/29/omen-ais-plan-to-optimize-data-centers-is-all-wet/",
+      "source": "TechCrunch",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Omen AI raised a $31 million Series A to monitor chip coolant and stop bacterial outbreaks in data centers.",
+      "impact_score": 70
+    },
+    {
+      "title": "Chatbot e robot compagni emotivi: dall'IA che assiste all'IA che seduce",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/29/news/chatbot_e_robot_compagni_emotivi_dall_ia_che_assiste_all_ia_che_seduce-425440584/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Dalla “Davos estiva” di Dalian, in Cina, Tsoi Mang Hin (AI Safety Asia) mette in guardia dall'ascesa dell'affection economy: manipolazione emotiva, dipendenza e rischi che possono arrivare fino alla s",
+      "impact_score": 65
     },
     {
       "title": "Se l’Europa insegue Usa e Cina non è colpa dell’AI Act",
@@ -49,12 +76,12 @@
       "impact_score": 65
     },
     {
-      "title": "Cos’è Emma, l’IA italiana che ha fatto ridere il web. E ha sospeso la chat. Ecco i meme più assurdi",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/25/news/emma_ia_italiana_egomnia_meme_matteo_achilli-425433524/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-25",
+      "title": "Mondiali 2026, le tifose sexy sono create dall’AI",
+      "link": "https://www.punto-informatico.it/mondiali-2026-tifose-sexy-create-ai/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
       "category": "AI",
-      "snippet": "Il modello di Egomnia, travolto dai meme che hanno evidenziato il divario tra le promesse e ciò che è in grado di fare, ha sospeso la chat, dicendo che “l’utilizzo emerso non è stato pienamente in lin",
+      "snippet": "Da Instagram a TikTok, le tifose create con l'AI raccolgono milioni di visualizzazioni. Ecco il business dietro le influencer virtuali.\nThe post Mondiali 2026, le tifose sexy sono create dall&#8217;AI",
       "impact_score": 65
     },
     {
@@ -67,42 +94,13 @@
       "impact_score": 65
     },
     {
-      "title": "Gli USA limitano Mythos 5 e GPT-5.6, la Cina riduce il gap",
-      "link": "https://www.punto-informatico.it/usa-limitano-mythos-5-gpt-5-6-cina-riduce-gap/",
-      "source": "Punto Informatico",
+      "title": "Flipper Device’s new Busy Bar is a customizable display for productivity",
+      "link": "https://techcrunch.com/2026/06/29/flipper-devices-new-busy-bar-is-a-customizable-display-for-productivity/",
+      "source": "TechCrunch",
       "date": "2026-06-29",
       "category": "AI",
-      "snippet": "Mentre gli Stati Uniti vietano e limitano il rilascio dei modelli di Anthropic e OpenAI, le aziende cinese sviluppano modelli con simili capacità cyber.\nThe post Gli USA limitano Mythos 5 e GPT-5.6, l",
-      "impact_score": 65
-    },
-    {
-      "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
-      "link": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "\"Mistakenly we thought that by just introducing artificial intelligence ... that would produce a high-quality product.”",
-      "impact_score": 65
-    },
-    {
-      "title": "Writer Ian Bogost says ‘The Small Stuff’ can help us reclaim our lives from too much convenience",
-      "link": "https://techcrunch.com/2026/06/28/writer-ian-bogost-says-the-small-stuff-can-help-us-reclaim-our-lives-from-dematerialization/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Has Silicon Valley been building the wrong things?",
-      "impact_score": 65
-    },
-    {
-      "title": "TechCrunch Mobility: All eyes on Tesla FSD",
-      "link": "https://techcrunch.com/2026/06/28/techcrunch-mobility-all-eyes-on-tesla-fsd/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
+      "snippet": "Flipper Device's new Busy Bar will retail for $249.",
       "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/b260046a8789.pdf",
-  "pdf_storage": "github"
+  ]
 }
