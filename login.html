@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ross AI · Login</title>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .login-container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 0.9rem 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #667eea;
+            font-size: 0.95rem;
+            display: none;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1>🤖 Ross AI</h1>
+            <p>Dashboard Rassegna Tech</p>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="theshadman@gmail.com"
+                    required 
+                    autocomplete="email"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="••••••••"
+                    required 
+                    autocomplete="current-password"
+                >
+            </div>
+            
+            <button type="submit" class="btn-login" id="loginBtn">
+                Accedi alla Dashboard
+            </button>
+            
+            <p class="loading" id="loadingText">
+                🔐 Autenticazione in corso...
+            </p>
+        </form>
+        
+        <div class="footer">
+            Accesso riservato • Powered by Firebase Auth
+        </div>
+    </div>
+    
+    <script>
+        // ================================================================
+        // CONFIGURAZIONE FIREBASE
+        // Sostituisci con la tua config Firebase Console
+        // ================================================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
+            authDomain: "rossdb.firebaseapp.com",
+            projectId: "rossdb",
+            storageBucket: "rossdb.firebasestorage.app",
+            messagingSenderId: "776172557370",
+            appId: "1:776172557370:web:256c12b8e1fc660ea51103"
+        };
+        
+        // Inizializza Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        
+        // ================================================================
+        // LOGIN FORM HANDLER
+        // ================================================================
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+        const loadingText = document.getElementById('loadingText');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            // UI: mostra loading
+            loginBtn.disabled = true;
+            loadingText.classList.add('show');
+            errorMessage.classList.remove('show');
+            
+            try {
+                // Login con Firebase Auth
+                await auth.signInWithEmailAndPassword(email, password);
+                
+                // Imposta cookie sessione 24h
+                const expires = new Date(Date.now() + 24*60*60*1000).toUTCString();
+                document.cookie = 'ross_session=' + encodeURIComponent(result.user.uid)
+                  + '; expires=' + expires + '; path=/; SameSite=Strict';
+                // Successo: redirect alla dashboard
+                window.location.href = 'index.html';
+                
+            } catch (error) {
+                console.error('Login error:', error);
+                
+                // Messaggio errore user-friendly
+                let errorMsg = 'Accesso non riuscito. Riprova.';
+                
+                if (error.code === 'auth/user-not-found') {
+                    errorMsg = 'Utente non trovato.';
+                } else if (error.code === 'auth/wrong-password') {
+                    errorMsg = 'Password errata.';
+                } else if (error.code === 'auth/invalid-email') {
+                    errorMsg = 'Email non valida.';
+                } else if (error.code === 'auth/too-many-requests') {
+                    errorMsg = 'Troppi tentativi. Riprova più tardi.';
+                }
+                
+                errorMessage.textContent = errorMsg;
+                errorMessage.classList.add('show');
+                
+                // Reset UI
+                loginBtn.disabled = false;
+                loadingText.classList.remove('show');
+            }
+        });
+        
+        // ================================================================
+        // CHECK SESSIONE ATTIVA
+        // ================================================================
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // Utente già loggato: redirect immediato
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
