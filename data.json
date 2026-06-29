@@ -1,17 +1,26 @@
 {
-  "last_updated": "2026-06-29 10:32",
-  "total_news": 24,
+  "last_updated": "2026-06-29 10:33",
+  "total_news": 32,
   "best_news": {
-    "title": "Se l’Europa insegue Usa e Cina non è colpa dell’AI Act",
-    "link": "https://www.repubblica.it/tecnologia/2026/06/28/news/ai-act-europa-usa-cina-innovazione-intelligenza-artificiale-425439273/?rss",
-    "source": "Repubblica Tech",
-    "date": "2026-06-28",
-    "category": "AI",
-    "snippet": "Il rinvio di alcune scadenze dell’AI Act riapre il confronto sul rapporto tra regole e innovazione in Europa",
-    "impact_score": 65
+    "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
+    "link": "https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/",
+    "source": "Punto Informatico",
+    "date": "2026-06-29",
+    "category": "Finanza Tech",
+    "snippet": "Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone ",
+    "impact_score": 70
   },
-  "linkedin_post": "🤖 Se l’Europa insegue Usa e Cina non è colpa dell’AI Act\n\nIl rinvio di alcune scadenze dell’AI Act riapre il confronto sul rapporto tra regole e innovazione in Europa\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 65/100\n• Fonte: Repubblica Tech | 2026-06-28\n\n🔗 https://www.repubblica.it/tecnologia/2026/06/28/news/ai-act-europa-usa-cina-innovazione-intelligenza-artificiale-425439273/?rss\n\n#AI #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Perché è quasi impossibile produrre smartphone negli Stati Uniti\n\nCostruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone \n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Punto Informatico | 2026-06-29\n\n🔗 https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
   "all_news": [
+    {
+      "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
+      "link": "https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
+      "category": "Finanza Tech",
+      "snippet": "Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.\nThe post Perché è quasi impossibile produrre smartphone ",
+      "impact_score": 70
+    },
     {
       "title": "Se l’Europa insegue Usa e Cina non è colpa dell’AI Act",
       "link": "https://www.repubblica.it/tecnologia/2026/06/28/news/ai-act-europa-usa-cina-innovazione-intelligenza-artificiale-425439273/?rss",
@@ -49,6 +58,24 @@
       "impact_score": 65
     },
     {
+      "title": "Sconti incredibili su Amazon per queste offerte tech imperdibili",
+      "link": "https://www.punto-informatico.it/sconti-incredibili-su-amazon-per-queste-offerte-tech-imperdibili/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Sconti incredibili su Amazon, il re dello shopping, per queste offerte tech imperdibili che, una volta provate, non potrai farne a meno.\nThe post Sconti incredibili su Amazon per queste offerte tech i",
+      "impact_score": 65
+    },
+    {
+      "title": "Gli USA limitano Mythos 5 e GPT-5.6, la Cina riduce il gap",
+      "link": "https://www.punto-informatico.it/usa-limitano-mythos-5-gpt-5-6-cina-riduce-gap/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Mentre gli Stati Uniti vietano e limitano il rilascio dei modelli di Anthropic e OpenAI, le aziende cinese sviluppano modelli con simili capacità cyber.\nThe post Gli USA limitano Mythos 5 e GPT-5.6, l",
+      "impact_score": 65
+    },
+    {
       "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
       "link": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
       "source": "TechCrunch",
@@ -74,35 +101,6 @@
       "category": "AI",
       "snippet": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
       "impact_score": 65
-    },
-    {
-      "title": "Why Wall Street thinks US memory maker Micron is the next Nvidia",
-      "link": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Eager to find more public AI-related companies that may do as well as Nvidia, Wall Street investors think they've found a winner with Micron.",
-      "impact_score": 65
-    },
-    {
-      "title": "Indian payments chief thinks AI will be heavily involved in next era of digital payment growth",
-      "link": "https://techcrunch.com/2026/06/27/indian-payments-chief-thinks-ai-will-be-heavily-involved-in-next-era-of-digital-payment-growth/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Dilip Asbe said that newer UPI apps could be more competitive with a viable commercial model",
-      "impact_score": 65
-    },
-    {
-      "title": "South Korea plans to train entire military as \"drone warriors\"",
-      "link": "https://arstechnica.com/ai/2026/06/south-korea-plans-to-train-entire-military-as-drone-warriors/",
-      "source": "Ars Technica",
-      "date": "2026-06-26",
-      "category": "AI",
-      "snippet": "Half-million strong military will train on drones as “universal combat tool.”",
-      "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/b260046a8789.pdf",
-  "pdf_storage": "github"
+  ]
 }
