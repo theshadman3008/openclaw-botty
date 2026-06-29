@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29 14:12",
+  "last_updated": "2026-06-29 14:13",
   "total_news": 32,
   "best_news": {
     "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
@@ -102,7 +102,5 @@
       "snippet": "Flipper Device's new Busy Bar will retail for $249.",
       "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/b260046a8789.pdf",
-  "pdf_storage": "github"
+  ]
 }
