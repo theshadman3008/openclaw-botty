@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29 08:41",
+  "last_updated": "2026-06-29 10:30",
   "total_news": 32,
   "best_news": {
     "title": "Perché è quasi impossibile produrre smartphone negli Stati Uniti",
@@ -58,6 +58,24 @@
       "impact_score": 65
     },
     {
+      "title": "Sconti incredibili su Amazon per queste offerte tech imperdibili",
+      "link": "https://www.punto-informatico.it/sconti-incredibili-su-amazon-per-queste-offerte-tech-imperdibili/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Sconti incredibili su Amazon, il re dello shopping, per queste offerte tech imperdibili che, una volta provate, non potrai farne a meno.\nThe post Sconti incredibili su Amazon per queste offerte tech i",
+      "impact_score": 65
+    },
+    {
+      "title": "Gli USA limitano Mythos 5 e GPT-5.6, la Cina riduce il gap",
+      "link": "https://www.punto-informatico.it/usa-limitano-mythos-5-gpt-5-6-cina-riduce-gap/",
+      "source": "Punto Informatico",
+      "date": "2026-06-29",
+      "category": "AI",
+      "snippet": "Mentre gli Stati Uniti vietano e limitano il rilascio dei modelli di Anthropic e OpenAI, le aziende cinese sviluppano modelli con simili capacità cyber.\nThe post Gli USA limitano Mythos 5 e GPT-5.6, l",
+      "impact_score": 65
+    },
+    {
       "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
       "link": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
       "source": "TechCrunch",
@@ -82,24 +100,6 @@
       "date": "2026-06-28",
       "category": "AI",
       "snippet": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
-      "impact_score": 65
-    },
-    {
-      "title": "Why Wall Street thinks US memory maker Micron is the next Nvidia",
-      "link": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Eager to find more public AI-related companies that may do as well as Nvidia, Wall Street investors think they've found a winner with Micron.",
-      "impact_score": 65
-    },
-    {
-      "title": "Indian payments chief thinks AI will be heavily involved in next era of digital payment growth",
-      "link": "https://techcrunch.com/2026/06/27/indian-payments-chief-thinks-ai-will-be-heavily-involved-in-next-era-of-digital-payment-growth/",
-      "source": "TechCrunch",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Dilip Asbe said that newer UPI apps could be more competitive with a viable commercial model",
       "impact_score": 65
     }
   ]
