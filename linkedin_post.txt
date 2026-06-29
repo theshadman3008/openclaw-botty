@@ -1,12 +1,13 @@
-🤖 OpenAI ha lanciato Jalapeño, il suo primo chip IA, senza usare Nvidia
+🤖 Perché è quasi impossibile produrre smartphone negli Stati Uniti
 
-Il chip, sviluppato con Broadcom ,  è stato progettato in nove mesi ed è ottimizzato per i modelli linguistici di grandi dimensioni. L’obiettivo dichiarato è ridurre i costi, aumentare l’efficienza e 
+Costruire l'infrastruttura per produrre smartphone negli USA richiederebbe decenni e decine di miliardi di dollari. La forza lavoro non esiste.
+The post Perché è quasi impossibile produrre smartphone 
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: AI
-• Impact score: 75/100
-• Fonte: Repubblica Tech | 2026-06-25
+• Categoria: Finanza Tech
+• Impact score: 70/100
+• Fonte: Punto Informatico | 2026-06-29
 
-🔗 https://www.repubblica.it/tecnologia/2026/06/25/news/openai_ha_lanciato_jalapeno_il_suo_primo_chip_ia_senza_usarenvidia-425433449/?rss
+🔗 https://www.punto-informatico.it/perche-quasi-impossibile-produrre-smartphone-stati-uniti/
 
-#AI #Tech #News #Innovation #TechNews
+#FinanzaTech #Tech #News #Innovation #TechNews
