@@ -1,12 +1,12 @@
-🤖 Robot hand company settles Tesla trade secret suit and announces $11M raise
+🤖 P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)
 
-The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.
+La storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: AI
+• Categoria: Finanza Tech
 • Impact score: 70/100
-• Fonte: TechCrunch | 2026-06-29
+• Fonte: Repubblica Tech | 2026-06-30
 
-🔗 https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/
+🔗 https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss
 
-#AI #Tech #News #Innovation #TechNews
+#FinanzaTech #Tech #News #Innovation #TechNews
