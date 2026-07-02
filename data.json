@@ -1,108 +1,106 @@
 {
-  "last_updated": "2026-06-29 14:13",
+  "last_updated": "2026-07-02 06:00",
   "total_news": 32,
   "best_news": {
-    "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
-    "link": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
-    "source": "TechCrunch",
-    "date": "2026-06-29",
-    "category": "AI",
-    "snippet": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+    "title": "P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)",
+    "link": "https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss",
+    "source": "Repubblica Tech",
+    "date": "2026-06-30",
+    "category": "Finanza Tech",
+    "snippet": "La storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur",
     "impact_score": 70
   },
-  "linkedin_post": "🤖 Robot hand company settles Tesla trade secret suit and announces $11M raise\n\nThe startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 70/100\n• Fonte: TechCrunch | 2026-06-29\n\n🔗 https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/\n\n#AI #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)\n\nLa storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Repubblica Tech | 2026-06-30\n\n🔗 https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
-      "link": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
-      "source": "TechCrunch",
-      "date": "2026-06-29",
-      "category": "AI",
-      "snippet": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+      "title": "P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-30",
+      "category": "Finanza Tech",
+      "snippet": "La storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur",
       "impact_score": 70
     },
     {
-      "title": "Pocket raises $11M in bet on rising demand for AI note-taking devices",
-      "link": "https://techcrunch.com/2026/06/29/pocket-raises-11m-in-bet-on-rising-demand-for-ai-note-taking-devices/",
-      "source": "TechCrunch",
-      "date": "2026-06-29",
-      "category": "AI",
-      "snippet": "Pocket sells a $129 credit card-shaped puck, which sticks to the back of your phone, and promises unlimited recordings, transcriptions, and to-do items.",
-      "impact_score": 70
-    },
-    {
-      "title": "Omen AI’s plan to optimize data centers is all wet",
-      "link": "https://techcrunch.com/2026/06/29/omen-ais-plan-to-optimize-data-centers-is-all-wet/",
-      "source": "TechCrunch",
-      "date": "2026-06-29",
-      "category": "AI",
-      "snippet": "Omen AI raised a $31 million Series A to monitor chip coolant and stop bacterial outbreaks in data centers.",
-      "impact_score": 70
-    },
-    {
-      "title": "Chatbot e robot compagni emotivi: dall'IA che assiste all'IA che seduce",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/29/news/chatbot_e_robot_compagni_emotivi_dall_ia_che_assiste_all_ia_che_seduce-425440584/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-29",
-      "category": "AI",
-      "snippet": "Dalla “Davos estiva” di Dalian, in Cina, Tsoi Mang Hin (AI Safety Asia) mette in guardia dall'ascesa dell'affection economy: manipolazione emotiva, dipendenza e rischi che possono arrivare fino alla s",
-      "impact_score": 65
-    },
-    {
-      "title": "Se l’Europa insegue Usa e Cina non è colpa dell’AI Act",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/28/news/ai-act-europa-usa-cina-innovazione-intelligenza-artificiale-425439273/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-28",
-      "category": "AI",
-      "snippet": "Il rinvio di alcune scadenze dell’AI Act riapre il confronto sul rapporto tra regole e innovazione in Europa",
-      "impact_score": 65
-    },
-    {
-      "title": "Meta punta ai mercati predittivi: il nuovo progetto di Mark Zuckerberg per sfidare Polymarket",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/26/news/meta_punta_ai_mercati_predittivi_il_nuovo_progetto_di_mark_zuckerberg_per_sfidare_polymarket-425435131/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-26",
-      "category": "AI",
-      "snippet": "Il colosso dei social media sta sviluppando un'applicazione sperimentale chiamata \"Arena\". Basata su un sistema a punti, vuole inserirsi in un settore in rapida espansione, capitalizzando sull'enorme ",
-      "impact_score": 65
-    },
-    {
-      "title": "Apple alza i prezzi di Mac e iPad: fino al 25% in più. L’iPhone è salvo (per ora)",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/25/news/apple_aumento_prezzi_mac_ipad_iphone-425433749/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-26",
-      "category": "AI",
-      "snippet": "Dopo l’allarme lanciato da Tim Cook, Apple aumenta i prezzi dei suoi dispositvi. L’azienda giustifica i rincari: “Mai visto un aumento così forte e così rapido del costo dei componenti”",
-      "impact_score": 65
-    },
-    {
-      "title": "Mondiali 2026, le tifose sexy sono create dall’AI",
-      "link": "https://www.punto-informatico.it/mondiali-2026-tifose-sexy-create-ai/",
+      "title": "Google rende le ricette su AI Mode più visibili per i food blogger",
+      "link": "https://www.punto-informatico.it/google-ricette-ai-mode-piu-visibili-food-blogger/",
       "source": "Punto Informatico",
-      "date": "2026-06-29",
+      "date": "2026-07-01",
       "category": "AI",
-      "snippet": "Da Instagram a TikTok, le tifose create con l'AI raccolgono milioni di visualizzazioni. Ecco il business dietro le influencer virtuali.\nThe post Mondiali 2026, le tifose sexy sono create dall&#8217;AI",
+      "snippet": "Le ricette su AI Mode di Google mostrano ora chi le ha create con link in primo piano. I food blogger chiedevano più visibilità.\nThe post Google rende le ricette su AI Mode più visibili per i food blo",
+      "impact_score": 70
+    },
+    {
+      "title": "US home battery installations hit record high on rising electricity costs",
+      "link": "https://arstechnica.com/science/2026/07/us-home-battery-installations-hit-record-high-in-early-2026/",
+      "source": "Ars Technica",
+      "date": "2026-07-01",
+      "category": "AI",
+      "snippet": "Record home battery installations unlock options for grids—and AI data centers.",
+      "impact_score": 70
+    },
+    {
+      "title": "Netflix stringe ancora la vite. Ogni profilo deve avere un indirizzo email unico",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/netflix_stringe_ancora_la_vite_ogni_profilo_deve_avere_un_indirizzo_email_unico-425444854/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-01",
+      "category": "AI",
+      "snippet": "Netflix rifiuta le credenziali condivise per i profili secondari. L’obbligo di un’email unica mira a gestioni degli account più sicure e personalizzabili. Restano esclusi i profili dei bambini",
       "impact_score": 65
     },
     {
-      "title": "Sconti incredibili su Amazon per queste offerte tech imperdibili",
-      "link": "https://www.punto-informatico.it/sconti-incredibili-su-amazon-per-queste-offerte-tech-imperdibili/",
+      "title": "OpenAI rivela l’effetto IA sul lavoro in Italia: chi rischia e chi può stare tranquillo",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/openail_effetto_ia_sul_lavoro_in_italia_chi_rischia_e_chi_puo_stare_tranquillo-425444106/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-01",
+      "category": "AI",
+      "snippet": "Un nuovo studio del centro ricerche di OpenAI mappa 2.609 professioni nei 27 Stati membri. Il 16% dei mestieri italiani è ad alto rischio di sostituzione, peggio solo Germania e Grecia. Solo il 10% po",
+      "impact_score": 65
+    },
+    {
+      "title": "Bending Spoons suona oggi la campanella al Nasdaq. Cosa succede adesso?",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/bending_spoons_oggi_si_quota_al_nasdaq_cosa_succede_adesso-425443963/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-01",
+      "category": "Finanza Tech",
+      "snippet": "Il 1° luglio 2026, ticker &dollar;BSP, la tech company italiana annuncia oggi il prezzo della propria IPO, pari a &dollar; 29,00 per azione",
+      "impact_score": 65
+    },
+    {
+      "title": "A metà 2026 sono quasi 617 milioni gli investimenti in startup. Giugno chiude a quota 36,42",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/a_meta_2026_sono_quasi_617_milioni_gli_investimenti_in_startup_giugno_chiude_a_quota_3642-425442476/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-30",
+      "category": "Finanza Tech",
+      "snippet": "Tra le operazioni del mese spiccano i 7 milioni di Oversonic robotics e i 3,7 di X-nano",
+      "impact_score": 65
+    },
+    {
+      "title": "Meta sta costruendo un ponte tra cervello e computer senza impianti chirurgici",
+      "link": "https://www.repubblica.it/tecnologia/2026/06/30/news/brain2qwerty-v2-meta-ia-cervello-testo-senza-impianti-425442331/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-06-30",
+      "category": "AI",
+      "snippet": "Con Brain2Qwerty v2, l’azienda di Zuckerberg sperimenta un sistema non invasivo capace di trasformare l’attività cerebrale in testo. I risultati sono incoraggianti, pur restando legati a test controll",
+      "impact_score": 65
+    },
+    {
+      "title": "Dazio di 3 euro: nessun costo per i consumatori europei?",
+      "link": "https://www.punto-informatico.it/dazio-3-euro-nessun-costo-consumatori-europei/",
       "source": "Punto Informatico",
-      "date": "2026-06-29",
+      "date": "2026-07-01",
       "category": "AI",
-      "snippet": "Sconti incredibili su Amazon, il re dello shopping, per queste offerte tech imperdibili che, una volta provate, non potrai farne a meno.\nThe post Sconti incredibili su Amazon per queste offerte tech i",
+      "snippet": "Il dazio non verrà chiesto al momento della consegna del pacco, ma potrebbe essere addebitato ugualmente ai consumatori con l'aumento dei prezzi.\nThe post Dazio di 3 euro: nessun costo per i consumato",
       "impact_score": 65
     },
     {
-      "title": "Flipper Device’s new Busy Bar is a customizable display for productivity",
-      "link": "https://techcrunch.com/2026/06/29/flipper-devices-new-busy-bar-is-a-customizable-display-for-productivity/",
-      "source": "TechCrunch",
-      "date": "2026-06-29",
+      "title": "ChatGPT non è più solo un chatbot: 11 cose che sa fare oggi",
+      "link": "https://www.punto-informatico.it/chatgpt-non-e-piu-solo-chatbot-11-cose-sa-fare-oggi/",
+      "source": "Punto Informatico",
+      "date": "2026-07-01",
       "category": "AI",
-      "snippet": "Flipper Device's new Busy Bar will retail for $249.",
+      "snippet": "ChatGPT si è trasformato da chatbot conversazionale a spazio di lavoro digitale completo. Ecco 11 funzioni che meritano più attenzione.\nThe post ChatGPT non è più solo un chatbot: 11 cose che sa fare ",
       "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/b260046a8789.pdf",
-  "pdf_storage": "github"
+  ]
 }
