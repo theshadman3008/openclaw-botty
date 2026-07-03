@@ -4,20 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ross AI · Dashboard</title>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyDac491FBUVD_O5A2u2r2r2RlWKu26u9pA",
-        authDomain: "rossdb.firebaseapp.com",
-        projectId: "rossdb",
-        storageBucket: "rossdb.firebasestorage.app",
-        messagingSenderId: "776172557370",
-        appId: "1:776172557370:web:256c12b8e1fc660ea51103"
-      };
-      firebase.initializeApp(firebaseConfig);
+      // Auth check
+      if (sessionStorage.getItem('logged_in') !== 'true') {
+          window.location.href = 'login.html';
+      }
+      const currentUser = { displayName: sessionStorage.getItem('username') || 'utente' };
     </script>
-    <script src="auth-guard.js"></script>
     
     <style>
         * {
@@ -279,30 +272,25 @@
     
     <script>
         // ================================================================
-        // CONFIGURAZIONE FIREBASE
-        // ================================================================
-        const auth = firebase.auth();
-        
-        // ================================================================
-        // AUTH CHECK
+        // AUTH (sessionStorage)
         // ================================================================
         const loadingScreen = document.getElementById('loadingScreen');
         const mainContent = document.getElementById('mainContent');
         const userEmailEl = document.getElementById('userEmail');
         const logoutBtn = document.getElementById('logoutBtn');
-        
-        // Auth gestito da auth-guard.js — aspetta che sia pronto
-        window.__authGuardReady.then(function(user) {
-            userEmailEl.textContent = user.email;
-            loadingScreen.classList.add('hidden');
-            mainContent.classList.remove('hidden');
-            loadDashboard();
-        });
+
+        // Mostra contenuto
+        userEmailEl.textContent = currentUser.displayName;
+        if (loadingScreen) loadingScreen.classList.add('hidden');
+        if (mainContent) mainContent.classList.remove('hidden');
+        loadDashboard();
 
         // Logout
-        logoutBtn.addEventListener('click', function() {
-            window.rossAuth.logout();
-        });
+        function logout() {
+            sessionStorage.clear();
+            window.location.href = 'login.html';
+        }
+        logoutBtn.addEventListener('click', logout);
         
         // ================================================================
         // CARICAMENTO DATI DASHBOARD
