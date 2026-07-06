@@ -1,108 +1,106 @@
 {
-  "last_updated": "2026-07-02 06:00",
+  "last_updated": "2026-07-06 06:00",
   "total_news": 32,
   "best_news": {
-    "title": "P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)",
-    "link": "https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss",
+    "title": "Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole",
+    "link": "https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss",
     "source": "Repubblica Tech",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "category": "Finanza Tech",
-    "snippet": "La storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur",
+    "snippet": "Le stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote",
     "impact_score": 70
   },
-  "linkedin_post": "🤖 P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)\n\nLa storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Repubblica Tech | 2026-06-30\n\n🔗 https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole\n\nLe stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Repubblica Tech | 2026-07-03\n\n🔗 https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "P101 porta a casa PranaVentures: nasce il primo polo del venture capital italiano (da 600 milioni)",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/30/news/p101_porta_a_casa_pranaventures_nasce_il_primo_polo_del_venture_capital_italiano_da_600_milioni-425442456/?rss",
+      "title": "Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss",
       "source": "Repubblica Tech",
-      "date": "2026-06-30",
+      "date": "2026-07-03",
       "category": "Finanza Tech",
-      "snippet": "La storica sgr milanese assorbe il fondo seed fondato da Lisa Di Sevo e lancia Prana101, nuovo veicolo da 100 milioni. Obiettivo superare il miliardo di asset in gestione e accompagnare le startup eur",
+      "snippet": "Le stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote",
       "impact_score": 70
     },
     {
-      "title": "Google rende le ricette su AI Mode più visibili per i food blogger",
-      "link": "https://www.punto-informatico.it/google-ricette-ai-mode-piu-visibili-food-blogger/",
-      "source": "Punto Informatico",
-      "date": "2026-07-01",
+      "title": "Davide Venturelli, da Modena alla Nasa: computer quantistici e IA per comprendere l'universo",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/04/news/davide_venturelli_da_modena_alla_nasa_computer_quantistici_e_ia_per_comprendere_l_universo-425449026/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-03",
       "category": "AI",
-      "snippet": "Le ricette su AI Mode di Google mostrano ora chi le ha create con link in primo piano. I food blogger chiedevano più visibilità.\nThe post Google rende le ricette su AI Mode più visibili per i food blo",
-      "impact_score": 70
+      "snippet": "Cofondatore del gruppo di Quantum Artificial Intelligence dell’agenzia spaziale statunitense, il modenese è anche direttore delle tecnologie quantistiche del network accademico USRA. L’obiettivo è svi",
+      "impact_score": 65
     },
     {
-      "title": "US home battery installations hit record high on rising electricity costs",
-      "link": "https://arstechnica.com/science/2026/07/us-home-battery-installations-hit-record-high-in-early-2026/",
+      "title": "Quando il regolatore diventa socio: cosa c’è dietro l’idea di OpenAI di cedere il 5% al governo USA",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/03/news/quando_il_regolatore_diventa_socio_cosa_c_e_dietro_l_idea_di_openai_di_cedere_il_5_al_governo_usa-425449118/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-03",
+      "category": "AI",
+      "snippet": "Il denaro riversato nelle casse pubbliche sarebbe un modo, secondo Sam Altman, di far partecipare la popolazione ai guadagni. Ma l’idea non è esente da rischi. L’ultima parola spetterà al Congresso",
+      "impact_score": 65
+    },
+    {
+      "title": "Midjourney chiede agli studios di Hollywood come usano l’AI",
+      "link": "https://www.punto-informatico.it/midjourney-chiede-studios-hollywood-come-usano-ai/",
+      "source": "Punto Informatico",
+      "date": "2026-07-05",
+      "category": "AI",
+      "snippet": "Midjourney vuole conoscere tutti i dettagli sull'uso dei sistemi AI da parte di Disney, Universal e Warner Bros. Discovery per difendersi dalle accuse.\nThe post Midjourney chiede agli studios di Holly",
+      "impact_score": 65
+    },
+    {
+      "title": "NetNut: smantellati proxy residenziali della botnet Popa",
+      "link": "https://www.punto-informatico.it/netnut-smantellati-proxy-residenziali-botnet-popa/",
+      "source": "Punto Informatico",
+      "date": "2026-07-05",
+      "category": "Finanza Tech",
+      "snippet": "NetNut era un servizio di proxy residenziali (usato dalla botnet Popa) composto da oltre 2 milioni di dispositivi, tra cui streaming box e smart TV.\nThe post NetNut: smantellati proxy residenziali del",
+      "impact_score": 65
+    },
+    {
+      "title": "What is Bending Spoons? The little-known AOL and Vimeo owner that’s now public",
+      "link": "https://techcrunch.com/2026/07/05/what-is-bending-spoons-everything-to-know-about-aols-acquirer/",
+      "source": "TechCrunch",
+      "date": "2026-07-05",
+      "category": "AI",
+      "snippet": "Bending Spoons remains largely unknown, even as its portfolio of products has served more than a billion people.",
+      "impact_score": 65
+    },
+    {
+      "title": "Almost 90 new unicorns have been minted so far this year — here they are",
+      "link": "https://techcrunch.com/2026/07/05/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/",
+      "source": "TechCrunch",
+      "date": "2026-07-05",
+      "category": "AI",
+      "snippet": "With AI igniting an investor frenzy, more startups are achieving unicorn status every month.",
+      "impact_score": 65
+    },
+    {
+      "title": "New Google commercial imagines a Declaration of Independence written with help from AI",
+      "link": "https://techcrunch.com/2026/07/04/new-google-commercial-imagines-a-declaration-of-independence-written-with-help-from-ai/",
+      "source": "TechCrunch",
+      "date": "2026-07-04",
+      "category": "AI",
+      "snippet": "Two hundred and fifty years after the signing of the Declaration of Independence, a new commercial asks: What if the Founding Fathers had access to Google Workspace?",
+      "impact_score": 65
+    },
+    {
+      "title": "Midjourney wants Hollywood studios to reveal the details of their AI usage",
+      "link": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/",
+      "source": "TechCrunch",
+      "date": "2026-07-04",
+      "category": "AI",
+      "snippet": "As part of an ongoing legal dispute with three Hollywood studios, Midjourney is seeking to compel those studios to reveal how they use AI themselves.",
+      "impact_score": 65
+    },
+    {
+      "title": "When the ability to smell goes away",
+      "link": "https://arstechnica.com/science/2026/07/when-the-ability-to-smell-goes-away/",
       "source": "Ars Technica",
-      "date": "2026-07-01",
+      "date": "2026-07-04",
       "category": "AI",
-      "snippet": "Record home battery installations unlock options for grids—and AI data centers.",
-      "impact_score": 70
-    },
-    {
-      "title": "Netflix stringe ancora la vite. Ogni profilo deve avere un indirizzo email unico",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/netflix_stringe_ancora_la_vite_ogni_profilo_deve_avere_un_indirizzo_email_unico-425444854/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-01",
-      "category": "AI",
-      "snippet": "Netflix rifiuta le credenziali condivise per i profili secondari. L’obbligo di un’email unica mira a gestioni degli account più sicure e personalizzabili. Restano esclusi i profili dei bambini",
-      "impact_score": 65
-    },
-    {
-      "title": "OpenAI rivela l’effetto IA sul lavoro in Italia: chi rischia e chi può stare tranquillo",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/openail_effetto_ia_sul_lavoro_in_italia_chi_rischia_e_chi_puo_stare_tranquillo-425444106/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-01",
-      "category": "AI",
-      "snippet": "Un nuovo studio del centro ricerche di OpenAI mappa 2.609 professioni nei 27 Stati membri. Il 16% dei mestieri italiani è ad alto rischio di sostituzione, peggio solo Germania e Grecia. Solo il 10% po",
-      "impact_score": 65
-    },
-    {
-      "title": "Bending Spoons suona oggi la campanella al Nasdaq. Cosa succede adesso?",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/bending_spoons_oggi_si_quota_al_nasdaq_cosa_succede_adesso-425443963/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-01",
-      "category": "Finanza Tech",
-      "snippet": "Il 1° luglio 2026, ticker &dollar;BSP, la tech company italiana annuncia oggi il prezzo della propria IPO, pari a &dollar; 29,00 per azione",
-      "impact_score": 65
-    },
-    {
-      "title": "A metà 2026 sono quasi 617 milioni gli investimenti in startup. Giugno chiude a quota 36,42",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/01/news/a_meta_2026_sono_quasi_617_milioni_gli_investimenti_in_startup_giugno_chiude_a_quota_3642-425442476/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-30",
-      "category": "Finanza Tech",
-      "snippet": "Tra le operazioni del mese spiccano i 7 milioni di Oversonic robotics e i 3,7 di X-nano",
-      "impact_score": 65
-    },
-    {
-      "title": "Meta sta costruendo un ponte tra cervello e computer senza impianti chirurgici",
-      "link": "https://www.repubblica.it/tecnologia/2026/06/30/news/brain2qwerty-v2-meta-ia-cervello-testo-senza-impianti-425442331/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-06-30",
-      "category": "AI",
-      "snippet": "Con Brain2Qwerty v2, l’azienda di Zuckerberg sperimenta un sistema non invasivo capace di trasformare l’attività cerebrale in testo. I risultati sono incoraggianti, pur restando legati a test controll",
-      "impact_score": 65
-    },
-    {
-      "title": "Dazio di 3 euro: nessun costo per i consumatori europei?",
-      "link": "https://www.punto-informatico.it/dazio-3-euro-nessun-costo-consumatori-europei/",
-      "source": "Punto Informatico",
-      "date": "2026-07-01",
-      "category": "AI",
-      "snippet": "Il dazio non verrà chiesto al momento della consegna del pacco, ma potrebbe essere addebitato ugualmente ai consumatori con l'aumento dei prezzi.\nThe post Dazio di 3 euro: nessun costo per i consumato",
-      "impact_score": 65
-    },
-    {
-      "title": "ChatGPT non è più solo un chatbot: 11 cose che sa fare oggi",
-      "link": "https://www.punto-informatico.it/chatgpt-non-e-piu-solo-chatbot-11-cose-sa-fare-oggi/",
-      "source": "Punto Informatico",
-      "date": "2026-07-01",
-      "category": "AI",
-      "snippet": "ChatGPT si è trasformato da chatbot conversazionale a spazio di lavoro digitale completo. Ecco 11 funzioni che meritano più attenzione.\nThe post ChatGPT non è più solo un chatbot: 11 cose che sa fare ",
+      "snippet": "Disturbances in this critical sense are often linked to problems with brain health.",
       "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/edc921e8022e.pdf",
-  "pdf_storage": "github"
+  ]
 }
