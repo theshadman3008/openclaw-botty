@@ -1,108 +1,106 @@
 {
-  "last_updated": "2026-07-06 06:00",
+  "last_updated": "2026-07-08 06:00",
   "total_news": 32,
   "best_news": {
-    "title": "Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole",
-    "link": "https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss",
-    "source": "Repubblica Tech",
-    "date": "2026-07-03",
-    "category": "Finanza Tech",
-    "snippet": "Le stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote",
+    "title": "DeepSeek vuole costruire i propri chip AI e assume ingegneri",
+    "link": "https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/",
+    "source": "Punto Informatico",
+    "date": "2026-07-07",
+    "category": "AI",
+    "snippet": "Dopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.\nThe post DeepSeek vuole costruire i propri chip AI e assume inge",
     "impact_score": 70
   },
-  "linkedin_post": "🤖 Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole\n\nLe stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Repubblica Tech | 2026-07-03\n\n🔗 https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 DeepSeek vuole costruire i propri chip AI e assume ingegneri\n\nDopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.\nThe post DeepSeek vuole costruire i propri chip AI e assume inge\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 70/100\n• Fonte: Punto Informatico | 2026-07-07\n\n🔗 https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/\n\n#AI #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-03",
-      "category": "Finanza Tech",
-      "snippet": "Le stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote",
+      "title": "DeepSeek vuole costruire i propri chip AI e assume ingegneri",
+      "link": "https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/",
+      "source": "Punto Informatico",
+      "date": "2026-07-07",
+      "category": "AI",
+      "snippet": "Dopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.\nThe post DeepSeek vuole costruire i propri chip AI e assume inge",
       "impact_score": 70
     },
     {
-      "title": "Davide Venturelli, da Modena alla Nasa: computer quantistici e IA per comprendere l'universo",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/04/news/davide_venturelli_da_modena_alla_nasa_computer_quantistici_e_ia_per_comprendere_l_universo-425449026/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-03",
-      "category": "AI",
-      "snippet": "Cofondatore del gruppo di Quantum Artificial Intelligence dell’agenzia spaziale statunitense, il modenese è anche direttore delle tecnologie quantistiche del network accademico USRA. L’obiettivo è svi",
-      "impact_score": 65
-    },
-    {
-      "title": "Quando il regolatore diventa socio: cosa c’è dietro l’idea di OpenAI di cedere il 5% al governo USA",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/03/news/quando_il_regolatore_diventa_socio_cosa_c_e_dietro_l_idea_di_openai_di_cedere_il_5_al_governo_usa-425449118/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-03",
-      "category": "AI",
-      "snippet": "Il denaro riversato nelle casse pubbliche sarebbe un modo, secondo Sam Altman, di far partecipare la popolazione ai guadagni. Ma l’idea non è esente da rischi. L’ultima parola spetterà al Congresso",
-      "impact_score": 65
-    },
-    {
-      "title": "Midjourney chiede agli studios di Hollywood come usano l’AI",
-      "link": "https://www.punto-informatico.it/midjourney-chiede-studios-hollywood-come-usano-ai/",
+      "title": "Dipendenza social: Meta dovrà pagare 1.400 miliardi di dollari?",
+      "link": "https://www.punto-informatico.it/dipendenza-social-meta-dovra-pagare-1400-miliardi-dollari/",
       "source": "Punto Informatico",
-      "date": "2026-07-05",
-      "category": "AI",
-      "snippet": "Midjourney vuole conoscere tutti i dettagli sull'uso dei sistemi AI da parte di Disney, Universal e Warner Bros. Discovery per difendersi dalle accuse.\nThe post Midjourney chiede agli studios di Holly",
-      "impact_score": 65
-    },
-    {
-      "title": "NetNut: smantellati proxy residenziali della botnet Popa",
-      "link": "https://www.punto-informatico.it/netnut-smantellati-proxy-residenziali-botnet-popa/",
-      "source": "Punto Informatico",
-      "date": "2026-07-05",
+      "date": "2026-07-07",
       "category": "Finanza Tech",
-      "snippet": "NetNut era un servizio di proxy residenziali (usato dalla botnet Popa) composto da oltre 2 milioni di dispositivi, tra cui streaming box e smart TV.\nThe post NetNut: smantellati proxy residenziali del",
+      "snippet": "Quattro Stati (California, Colorado, Kentucky e New Jersey) hanno chiesto a Meta un risarcimento danni complessivo di 1.400 miliardi di dollari.\nThe post Dipendenza social: Meta dovrà pagare 1.400 mil",
+      "impact_score": 70
+    },
+    {
+      "title": "Nintendo, come cambierà la Switch in Europa a causa della legge sulle batterie",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/nintendo_switch_2_europa_legge_batterie-425456846/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-07",
+      "category": "AI",
+      "snippet": "A partire da febbraio 2027 la prima generazione della console giapponese scomparirà dai negozi Ue. Una decisione figlia delle nuove regole comunitarie sull'elettronica di consumo. La Switch 2 sopravvi",
       "impact_score": 65
     },
     {
-      "title": "What is Bending Spoons? The little-known AOL and Vimeo owner that’s now public",
-      "link": "https://techcrunch.com/2026/07/05/what-is-bending-spoons-everything-to-know-about-aols-acquirer/",
+      "title": "I sistemi IA dei social modellano l’opinione pubblica",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/i_sistemi_ia_dei_social_modellano_l_opinione_pubblica-425456563/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-07",
+      "category": "AI",
+      "snippet": "Una ricerca dell'Università di Oxford rivela come i modelli linguistici possono influenzare il dibattito collettivo attraverso piccole modifiche ai contenuti. Le distorsioni introdotte si accumulano n",
+      "impact_score": 65
+    },
+    {
+      "title": "Dentro Claude: così Anthropic ha scoperto ciò che l’IA “pensa” ma non dice",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/anthropic_ia_claude_ragionamento_nascosto-425456547/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-07",
+      "category": "AI",
+      "snippet": "I ricercatori di Anthropic dicono di aver individuato in Claude una piccola area funzionale, chiamata J-space, dove compaiono concetti che il modello può usare per “ragionare” anche quando non li scri",
+      "impact_score": 65
+    },
+    {
+      "title": "Proxima Fusion raccoglie 411 milioni di euro. Ora è la società di fusione più finanziata d'Europa",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/proxima_fusion_raccoglie_411_milioni_di_euro_ora_e_la_societa_di_fusione_piu_finanziata_d_europa-425456016/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-07",
+      "category": "AI",
+      "snippet": "La startup guidata dall’italiano Francesco Sciortino chiude il round più grande mai realizzato nel settore della fusione in Europa. Tra gli investitori RWE e Google. \"L'Europa è in corsa con Stati Uni",
+      "impact_score": 65
+    },
+    {
+      "title": "Google Search Console: arrivano le statistiche per i Social",
+      "link": "https://www.punto-informatico.it/google-search-console-arrivano-statistiche-social/",
+      "source": "Punto Informatico",
+      "date": "2026-07-07",
+      "category": "AI",
+      "snippet": "Con le nuove proprietà piattaforma, Google Search Console permette di analizzare le ricerche che portano traffico ai profili social.\nThe post Google Search Console: arrivano le statistiche per i Socia",
+      "impact_score": 65
+    },
+    {
+      "title": "Final extension: Startup Battlefield Australia applications now close July 20",
+      "link": "https://techcrunch.com/2026/07/07/final-extension-startup-battlefield-australia-applications-now-close-july-20/",
       "source": "TechCrunch",
-      "date": "2026-07-05",
-      "category": "AI",
-      "snippet": "Bending Spoons remains largely unknown, even as its portfolio of products has served more than a billion people.",
+      "date": "2026-07-07",
+      "category": "Finanza Tech",
+      "snippet": "If you're building something ambitious, this is a fast track to the people who can move your startup forward.",
       "impact_score": 65
     },
     {
-      "title": "Almost 90 new unicorns have been minted so far this year — here they are",
-      "link": "https://techcrunch.com/2026/07/05/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/",
+      "title": "Meta just launched a new AI generator, Muse Image, and users are already pushing back over use of their photos",
+      "link": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/",
       "source": "TechCrunch",
-      "date": "2026-07-05",
+      "date": "2026-07-07",
       "category": "AI",
-      "snippet": "With AI igniting an investor frenzy, more startups are achieving unicorn status every month.",
+      "snippet": "The new image-generating model has numerous use cases, including advertising and decorating, and creator-based opportunities.",
       "impact_score": 65
     },
     {
-      "title": "New Google commercial imagines a Declaration of Independence written with help from AI",
-      "link": "https://techcrunch.com/2026/07/04/new-google-commercial-imagines-a-declaration-of-independence-written-with-help-from-ai/",
+      "title": "Why the rise of open source AI isn’t hurting Anthropic … yet",
+      "link": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/",
       "source": "TechCrunch",
-      "date": "2026-07-04",
+      "date": "2026-07-07",
       "category": "AI",
-      "snippet": "Two hundred and fifty years after the signing of the Declaration of Independence, a new commercial asks: What if the Founding Fathers had access to Google Workspace?",
-      "impact_score": 65
-    },
-    {
-      "title": "Midjourney wants Hollywood studios to reveal the details of their AI usage",
-      "link": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/",
-      "source": "TechCrunch",
-      "date": "2026-07-04",
-      "category": "AI",
-      "snippet": "As part of an ongoing legal dispute with three Hollywood studios, Midjourney is seeking to compel those studios to reveal how they use AI themselves.",
-      "impact_score": 65
-    },
-    {
-      "title": "When the ability to smell goes away",
-      "link": "https://arstechnica.com/science/2026/07/when-the-ability-to-smell-goes-away/",
-      "source": "Ars Technica",
-      "date": "2026-07-04",
-      "category": "AI",
-      "snippet": "Disturbances in this critical sense are often linked to problems with brain health.",
+      "snippet": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
       "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/54e326068cf7.pdf",
-  "pdf_storage": "github"
+  ]
 }
