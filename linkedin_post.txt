@@ -1,12 +1,13 @@
-🤖 Apple, 10 milioni di iPhone Ultra in produzione: cosa sappiamo su design e prezzo del pieghevole
+🤖 DeepSeek vuole costruire i propri chip AI e assume ingegneri
 
-Le stime di vendita per il primo smartphone pieghevole di Cupertino registrano una netta revisione al rialzo. Atteso per settembre insieme alla linea iPhone 18, il nuovo dispositivo promette di scuote
+Dopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.
+The post DeepSeek vuole costruire i propri chip AI e assume inge
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: Finanza Tech
+• Categoria: AI
 • Impact score: 70/100
-• Fonte: Repubblica Tech | 2026-07-03
+• Fonte: Punto Informatico | 2026-07-07
 
-🔗 https://www.repubblica.it/tecnologia/2026/07/03/news/apple_iphone_ultra_pieghevole_design_prezzo-425449609/?rss
+🔗 https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/
 
-#FinanzaTech #Tech #News #Innovation #TechNews
+#AI #Tech #News #Innovation #TechNews
