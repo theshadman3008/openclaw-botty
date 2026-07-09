@@ -1,13 +1,13 @@
-🤖 DeepSeek vuole costruire i propri chip AI e assume ingegneri
+🤖 Apple: accordo da 30 miliardi di dollari con Broadcom
 
-Dopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.
-The post DeepSeek vuole costruire i propri chip AI e assume inge
+Apple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.
+The post Apple: accordo da 30 miliardi di dollari con
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: AI
-• Impact score: 70/100
-• Fonte: Punto Informatico | 2026-07-07
+• Categoria: Finanza Tech
+• Impact score: 75/100
+• Fonte: Punto Informatico | 2026-07-08
 
-🔗 https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/
+🔗 https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/
 
-#AI #Tech #News #Innovation #TechNews
+#FinanzaTech #Tech #News #Innovation #TechNews
