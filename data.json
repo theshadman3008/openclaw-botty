@@ -1,34 +1,88 @@
 {
-  "last_updated": "2026-07-08 06:00",
+  "last_updated": "2026-07-09 06:00",
   "total_news": 32,
   "best_news": {
-    "title": "DeepSeek vuole costruire i propri chip AI e assume ingegneri",
-    "link": "https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/",
+    "title": "Apple: accordo da 30 miliardi di dollari con Broadcom",
+    "link": "https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/",
     "source": "Punto Informatico",
-    "date": "2026-07-07",
-    "category": "AI",
-    "snippet": "Dopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.\nThe post DeepSeek vuole costruire i propri chip AI e assume inge",
-    "impact_score": 70
+    "date": "2026-07-08",
+    "category": "Finanza Tech",
+    "snippet": "Apple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.\nThe post Apple: accordo da 30 miliardi di dollari con",
+    "impact_score": 75
   },
-  "linkedin_post": "🤖 DeepSeek vuole costruire i propri chip AI e assume ingegneri\n\nDopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.\nThe post DeepSeek vuole costruire i propri chip AI e assume inge\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 70/100\n• Fonte: Punto Informatico | 2026-07-07\n\n🔗 https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/\n\n#AI #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Apple: accordo da 30 miliardi di dollari con Broadcom\n\nApple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.\nThe post Apple: accordo da 30 miliardi di dollari con\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 75/100\n• Fonte: Punto Informatico | 2026-07-08\n\n🔗 https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "DeepSeek vuole costruire i propri chip AI e assume ingegneri",
-      "link": "https://www.punto-informatico.it/deepseek-vuole-costruire-propri-chip-ai-assume-ingegneri/",
+      "title": "Apple: accordo da 30 miliardi di dollari con Broadcom",
+      "link": "https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/",
       "source": "Punto Informatico",
-      "date": "2026-07-07",
+      "date": "2026-07-08",
+      "category": "Finanza Tech",
+      "snippet": "Apple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.\nThe post Apple: accordo da 30 miliardi di dollari con",
+      "impact_score": 75
+    },
+    {
+      "title": "With EU backing, QuantumDiamonds aims to speed up chip manufacturing",
+      "link": "https://techcrunch.com/2026/07/08/with-eu-backing-quantumdiamonds-aims-to-speed-up-chip-manufacturing/",
+      "source": "TechCrunch",
+      "date": "2026-07-08",
       "category": "AI",
-      "snippet": "Dopo OpenAI con Jalapeño, Google con TPU e Amazon con Trainium, anche DeepSeek vuole i propri chip per ridurre la dipendenza da NVIDIA.\nThe post DeepSeek vuole costruire i propri chip AI e assume inge",
+      "snippet": "Like its U.S. counterpart, the European Chips Act aims to foster the semiconductor industry — in part thanks to state subsidies. One of the beneficiaries is QuantumDiamonds, a German startup that appl",
       "impact_score": 70
     },
     {
-      "title": "Dipendenza social: Meta dovrà pagare 1.400 miliardi di dollari?",
-      "link": "https://www.punto-informatico.it/dipendenza-social-meta-dovra-pagare-1400-miliardi-dollari/",
-      "source": "Punto Informatico",
-      "date": "2026-07-07",
+      "title": "La Columbia Britannica prepara una causa contro OpenAI per la strage di Tumbler Ridge",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/columbia-britannica-causa-openai-strage-tumbler-ridge-425459125/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-08",
+      "category": "AI",
+      "snippet": "Il governo provinciale canadese ha incaricato due studi legali per trascinare in tribunale l'azienda di Sam Altman. L'accusa è di aver ignorato gli allarmi interni su un utente violento, che mesi dopo",
+      "impact_score": 65
+    },
+    {
+      "title": "Trump sblocca Gpt-5.6: via libera ai modelli Sol, Terra e Luna di OpenAI",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/trump-sblocca-gpt-5-6-openai-sol-terra-luna-425458806/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-08",
+      "category": "AI",
+      "snippet": "Il governo degli Stati Uniti ha autorizzato il rilascio su larga scala dei nuovi modelli GPT-5.6, annullando i precedenti divieti legati alla sicurezza. La decisione chiude settimane di tensioni e si ",
+      "impact_score": 65
+    },
+    {
+      "title": "Assassin’s Creed Black Flag Resynced e quella bussola del futuro che punta al passato",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/assassin_s_creed_black_flag_resynced_e_quella_bussola_del_futuro_che_punta_al_passato-425458763/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-08",
       "category": "Finanza Tech",
-      "snippet": "Quattro Stati (California, Colorado, Kentucky e New Jersey) hanno chiesto a Meta un risarcimento danni complessivo di 1.400 miliardi di dollari.\nThe post Dipendenza social: Meta dovrà pagare 1.400 mil",
-      "impact_score": 70
+      "snippet": "Ubisoft guarda al futuro facendolo riemergere dal passato, in un’operazione che funziona e che trascina il giocatore tra le sue onde",
+      "impact_score": 65
+    },
+    {
+      "title": "Claude Cowork, l'agente IA arriva su web e mobile per lavorare a Pc spento",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/claude-cowork-agente-ai-arriva-web-mobile-425458594/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-08",
+      "category": "AI",
+      "snippet": "Anthropic ha annunciato l'espansione del suo strumento di automazione del lavoro su smartphone e browser. Il sistema permette ora di delegare compiti complessi che proseguono in background sui server ",
+      "impact_score": 65
+    },
+    {
+      "title": "Muse Image e Video, le nuove IA di Meta per creare contenuti visivi. I dubbi sulla privacy",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/meta_muse_image_video_ia_come_funzionano-425458563/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-08",
+      "category": "AI",
+      "snippet": "Meta AI ha presentato Muse Image, modello IA capace di eseguire istruzioni complesse, usare strumenti terzi, cercare informazioni online e correggere i file che genera. A chi serve e cosa sapere",
+      "impact_score": 65
+    },
+    {
+      "title": "Rosaia, il robot italiano intelligente che ripulisce lo Spazio dai satelliti “morti”",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/rosaia_il_robot_italiano_intelligente_che_ripulisce_lo_spazio_dai_satelliti_morti-425458298/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-08",
+      "category": "AI",
+      "snippet": "Il manipolatore spaziale intelligente è stato presentato al Festival sello Spazio di Busalla (Genova). Un satellite con le braccia 100% made in Italy, sviluppato da IIT e ASI",
+      "impact_score": 65
     },
     {
       "title": "Nintendo, come cambierà la Switch in Europa a causa della legge sulle batterie",
@@ -40,66 +94,12 @@
       "impact_score": 65
     },
     {
-      "title": "I sistemi IA dei social modellano l’opinione pubblica",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/i_sistemi_ia_dei_social_modellano_l_opinione_pubblica-425456563/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-07",
-      "category": "AI",
-      "snippet": "Una ricerca dell'Università di Oxford rivela come i modelli linguistici possono influenzare il dibattito collettivo attraverso piccole modifiche ai contenuti. Le distorsioni introdotte si accumulano n",
-      "impact_score": 65
-    },
-    {
-      "title": "Dentro Claude: così Anthropic ha scoperto ciò che l’IA “pensa” ma non dice",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/anthropic_ia_claude_ragionamento_nascosto-425456547/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-07",
-      "category": "AI",
-      "snippet": "I ricercatori di Anthropic dicono di aver individuato in Claude una piccola area funzionale, chiamata J-space, dove compaiono concetti che il modello può usare per “ragionare” anche quando non li scri",
-      "impact_score": 65
-    },
-    {
-      "title": "Proxima Fusion raccoglie 411 milioni di euro. Ora è la società di fusione più finanziata d'Europa",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/proxima_fusion_raccoglie_411_milioni_di_euro_ora_e_la_societa_di_fusione_piu_finanziata_d_europa-425456016/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-07",
-      "category": "AI",
-      "snippet": "La startup guidata dall’italiano Francesco Sciortino chiude il round più grande mai realizzato nel settore della fusione in Europa. Tra gli investitori RWE e Google. \"L'Europa è in corsa con Stati Uni",
-      "impact_score": 65
-    },
-    {
-      "title": "Google Search Console: arrivano le statistiche per i Social",
-      "link": "https://www.punto-informatico.it/google-search-console-arrivano-statistiche-social/",
+      "title": "AI e cybersicurezza: piano d’azione dell’Europa",
+      "link": "https://www.punto-informatico.it/ai-cybersicurezza-piano-azione-europa/",
       "source": "Punto Informatico",
-      "date": "2026-07-07",
+      "date": "2026-07-08",
       "category": "AI",
-      "snippet": "Con le nuove proprietà piattaforma, Google Search Console permette di analizzare le ricerche che portano traffico ai profili social.\nThe post Google Search Console: arrivano le statistiche per i Socia",
-      "impact_score": 65
-    },
-    {
-      "title": "Final extension: Startup Battlefield Australia applications now close July 20",
-      "link": "https://techcrunch.com/2026/07/07/final-extension-startup-battlefield-australia-applications-now-close-july-20/",
-      "source": "TechCrunch",
-      "date": "2026-07-07",
-      "category": "Finanza Tech",
-      "snippet": "If you're building something ambitious, this is a fast track to the people who can move your startup forward.",
-      "impact_score": 65
-    },
-    {
-      "title": "Meta just launched a new AI generator, Muse Image, and users are already pushing back over use of their photos",
-      "link": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/",
-      "source": "TechCrunch",
-      "date": "2026-07-07",
-      "category": "AI",
-      "snippet": "The new image-generating model has numerous use cases, including advertising and decorating, and creator-based opportunities.",
-      "impact_score": 65
-    },
-    {
-      "title": "Why the rise of open source AI isn’t hurting Anthropic … yet",
-      "link": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/",
-      "source": "TechCrunch",
-      "date": "2026-07-07",
-      "category": "AI",
-      "snippet": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
+      "snippet": "Il piano d'azione presentato dalla Commissione europea prevede la valutazione dei modelli AI e il miglioramento delle protezioni per le infrastrutture.\nThe post AI e cybersicurezza: piano d&#8217;azio",
       "impact_score": 65
     }
   ]
