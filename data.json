@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-10 12:42",
-  "total_news": 31,
+  "last_updated": "2026-07-10 12:52",
+  "total_news": 47,
   "best_news": {
     "title": "Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI",
     "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss",
@@ -22,87 +22,85 @@
       "impact_score": 70
     },
     {
-      "title": "Meta: nuovo chip AI e data center in Canada",
-      "link": "https://www.punto-informatico.it/meta-nuovo-chip-ai-data-center-canada/",
-      "source": "Punto Informatico",
+      "title": "API di rete, pronte al boom: entro il 2035 il mercato varrà 50 miliardi",
+      "link": "https://www.corrierecomunicazioni.it/telco/api-di-rete-pronti-al-boom-entro-il-2035-il-mercato-varra-50-miliardi/",
+      "source": "Corriere Comunicazioni",
       "date": "2026-07-10",
-      "category": "AI",
-      "snippet": "A partire dal mese di settembre, Meta inizierà la produzione di un nuovo chip AI della serie MTIA, mentre in Canada costruirà un data center da 1 GW.\nThe post Meta: nuovo chip AI e data center in Cana",
-      "impact_score": 70
+      "category": "Telco",
+      "snippet": "Secondo Sns Insider, nel prossimo decennio il giro d'affari globale esploderà, dai 2,15 miliardi di dollari del 2025, a un ritmo del 37%. A trainare gli investimenti, l'adozione del 5G da parte delle ",
+      "impact_score": 65
+    },
+    {
+      "title": "Web scraping per addestrare l’AI, tutti i paletti dell’EDPB",
+      "link": "https://www.agendadigitale.eu/sicurezza/privacy/web-scraping-per-addestrare-lai-tutti-i-paletti-delledpb/",
+      "source": "Agenda Digitale",
+      "date": "2026-07-10",
+      "category": "Finanza Tech",
+      "snippet": "Le linee guida 03/2026 dell’EDPB riportano il web scraping per l’AI generativa dentro il perimetro del GDPR: legittimo interesse, necessità del trattamento, dati sensibili, trasparenza e diritti degli",
+      "impact_score": 65
+    },
+    {
+      "title": "An AI agent startup just let its agent run its $100M fundraise",
+      "link": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/",
+      "source": "TechCrunch",
+      "date": "2026-07-09",
+      "category": "Finanza Tech",
+      "snippet": "Lyzr, a startup that builds AI agents for enterprises, used its own AI agent to raise a $100 million round — proof, evidently, that the product actually works.",
+      "impact_score": 65
     },
     {
       "title": "L'IA può prendere il controllo della mano per svolgere compiti che non sai fare",
       "link": "https://www.repubblica.it/tecnologia/2026/07/10/news/human_operator_ia_fa_muovere_mano_e_corpo-425463025/?rss",
       "source": "Repubblica Tech",
       "date": "2026-07-10",
-      "category": "AI",
+      "category": "Cybersecurity",
       "snippet": "Human Operator, un prototipo nato in un hackathon del Mit, dimostra come un sistema possa guidare fisicamente le dita di una persona tramite impulsi elettrici per fare cose di cui non si è capaci. Il ",
-      "impact_score": 65
+      "impact_score": 60
     },
     {
-      "title": "L’IA può minacciare il vostro posto di lavoro. C’è un solo modo per stare al riparo",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/ia_lavoro_formazione_master-425461440/?rss",
+      "title": "Patch per Microsoft Defender può consumare tutto lo spazio",
+      "link": "https://www.punto-informatico.it/patch-microsoft-defender-puo-consumare-tutto-spazio/",
+      "source": "Punto Informatico",
+      "date": "2026-07-10",
+      "category": "Cybersecurity",
+      "snippet": "La patch per una vulnerabilità di Microsoft Defender potrebbe causare l'esaurimento dello spazio su disco, rendendo inutilizzabile il sistema operativo.\nThe post Patch per Microsoft Defender può consu",
+      "impact_score": 60
+    },
+    {
+      "title": "AI trust gap: nelle telco il 72% si fida, ma solo il 14% può provarlo",
+      "link": "https://www.corrierecomunicazioni.it/telco/ai-trust-gap-nelle-telco-il-72-si-fida-ma-solo-il-14-puo-provarlo/",
+      "source": "Corriere Comunicazioni",
+      "date": "2026-07-10",
+      "category": "Telco",
+      "snippet": "La nuova ricerca TM Forum, realizzata con Ibm Institute for Business Value su 130 operatori, evidenzia un divario critico tra governance e assurance. Per il settore la questione non è più solo adottar",
+      "impact_score": 60
+    },
+    {
+      "title": "Una partita del Mondiale di calcio ha infranto il record di ricerche su Google",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/google_record_ricerche_mondiale_2026_argentina_egitto-425460759/?rss",
       "source": "Repubblica Tech",
       "date": "2026-07-09",
-      "category": "AI",
-      "snippet": "Sono aperte le iscrizioni all’ottava edizione del Master in AI for Business, la faculty di alto livello che la Italian Tech Academy di Repubblica offre in collaborazione con Talent Garden. Un percorso",
-      "impact_score": 65
+      "category": "Tech",
+      "snippet": "Durante gli ottavi di finale dei Mondiali che si stanno disputando in Nord America, la vittoria in extremis dell'Argentina sull'Egitto ha generato il picco di traffico più alto nella storia di Google",
+      "impact_score": 55
     },
     {
-      "title": "Il Garante per la privacy contro Character.ai, la app per parlare con l’IA: multa di 158mila euro",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/garante_privacy_multa_characterai-425461335/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-09",
-      "category": "AI",
-      "snippet": "Il Garante per la privacy ha multato per 158.000 euro una delle più famose piattaforme di intelligenza artificiale per carenze nella tutela degli utenti più giovani. Il provvedimento riaccende il diba",
-      "impact_score": 65
-    },
-    {
-      "title": "Fenomeno DuckDuckGo: cos’ha di speciale il browser ribelle che salva da IA e pubblicità",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/il_browser_duckduckgo_blocca_la_pubblicita_video_youtube_compreso-425461257/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-09",
-      "category": "AI",
-      "snippet": "Il motore di ricerca della privacy sfida Google e si propone come rifugio da un web saturo di IA. Dietro c’è un fisico del Mit e vent’anni di guerriglia contro il colosso di Mountain View",
-      "impact_score": 65
-    },
-    {
-      "title": "Luce e gas a prezzo fisso per evitare i rincari: è il momento di scegliere Octopus",
-      "link": "https://www.punto-informatico.it/luce-e-gas-a-prezzo-fisso-per-evitare-i-rincari-e-il-momento-di-scegliere-octopus/",
+      "title": "Meta: nuovo chip AI e data center in Canada",
+      "link": "https://www.punto-informatico.it/meta-nuovo-chip-ai-data-center-canada/",
       "source": "Punto Informatico",
       "date": "2026-07-10",
-      "category": "AI",
-      "snippet": "Con Octopus è possibile bloccare il prezzo di luce e gas per 12 mesi, proteggendosi dai rincari e alleggerendo le bollette, ecco i dettagli. \nThe post Luce e gas a prezzo fisso per evitare i rincari: ",
-      "impact_score": 65
+      "category": "Digital Transformation",
+      "snippet": "A partire dal mese di settembre, Meta inizierà la produzione di un nuovo chip AI della serie MTIA, mentre in Canada costruirà un data center da 1 GW.\nThe post Meta: nuovo chip AI e data center in Cana",
+      "impact_score": 55
     },
     {
-      "title": "Microsoft usa l’AI per cercare bug nascosti su Windows",
-      "link": "https://www.punto-informatico.it/microsoft-usa-ai-cercare-bug-nascosti-windows/",
-      "source": "Punto Informatico",
+      "title": "Semiconduttori, per l’Europa il rischio geopolitico diventa strutturale",
+      "link": "https://www.corrierecomunicazioni.it/europa/semiconduttori-per-leuropa-il-rischio-geopolitico-diventa-strutturale/",
+      "source": "Corriere Comunicazioni",
       "date": "2026-07-10",
-      "category": "AI",
-      "snippet": "Il sistema MDASH di Microsoft analizza il codice di Windows con l'AI per scoprire vulnerabilità e accelerare le correzioni di sicurezza.\nThe post Microsoft usa l&#8217;AI per cercare bug nascosti su W",
-      "impact_score": 65
-    },
-    {
-      "title": "Elon Musk elogia la rivale Anthropic, perché?",
-      "link": "https://www.punto-informatico.it/elon-musk-elogia-rivale-anthropic-perche/",
-      "source": "Punto Informatico",
-      "date": "2026-07-10",
-      "category": "AI",
-      "snippet": "Elon Musk elogia Anthropic dopo un maxi accordo sull'infrastruttura AI. L'azienda dei fratelli Amodei diventa uno dei principali clienti di SpaceXAI.\nThe post Elon Musk elogia la rivale Anthropic, per",
-      "impact_score": 65
-    },
-    {
-      "title": "Più patch di sicurezza per Windows 11 con l’uso dell’AI",
-      "link": "https://www.punto-informatico.it/patch-sicurezza-windows-11-uso-ai/",
-      "source": "Punto Informatico",
-      "date": "2026-07-10",
-      "category": "AI",
-      "snippet": "Microsoft sfrutterà ampiamente i modelli AI per trovare le vulnerabilità, quindi il numero di patch per Windows 11 aumenterà nei prossimi mesi.\nThe post Più patch di sicurezza per Windows 11 con l&#82",
-      "impact_score": 65
+      "category": "Tech",
+      "snippet": "Il policy paper della Chips Diplomacy Support Initiative avverte: nei prossimi cinque anni restrizioni all’export, tensioni su Taiwan e fragilità delle filiere metteranno alla prova la capacità di Bru",
+      "impact_score": 55
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/d15ec2fe98f2.pdf",
-  "pdf_storage": "github"
+  ]
 }
