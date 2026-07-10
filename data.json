@@ -1,108 +1,106 @@
 {
-  "last_updated": "2026-07-09 06:00",
-  "total_news": 32,
+  "last_updated": "2026-07-10 12:42",
+  "total_news": 31,
   "best_news": {
-    "title": "Apple: accordo da 30 miliardi di dollari con Broadcom",
-    "link": "https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/",
-    "source": "Punto Informatico",
-    "date": "2026-07-08",
-    "category": "Finanza Tech",
-    "snippet": "Apple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.\nThe post Apple: accordo da 30 miliardi di dollari con",
-    "impact_score": 75
+    "title": "Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI",
+    "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss",
+    "source": "Repubblica Tech",
+    "date": "2026-07-09",
+    "category": "AI",
+    "snippet": "È il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere",
+    "impact_score": 70
   },
-  "linkedin_post": "🤖 Apple: accordo da 30 miliardi di dollari con Broadcom\n\nApple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.\nThe post Apple: accordo da 30 miliardi di dollari con\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 75/100\n• Fonte: Punto Informatico | 2026-07-08\n\n🔗 https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI\n\nÈ il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 70/100\n• Fonte: Repubblica Tech | 2026-07-09\n\n🔗 https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss\n\n#AI #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "Apple: accordo da 30 miliardi di dollari con Broadcom",
-      "link": "https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/",
-      "source": "Punto Informatico",
-      "date": "2026-07-08",
-      "category": "Finanza Tech",
-      "snippet": "Apple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.\nThe post Apple: accordo da 30 miliardi di dollari con",
-      "impact_score": 75
-    },
-    {
-      "title": "With EU backing, QuantumDiamonds aims to speed up chip manufacturing",
-      "link": "https://techcrunch.com/2026/07/08/with-eu-backing-quantumdiamonds-aims-to-speed-up-chip-manufacturing/",
-      "source": "TechCrunch",
-      "date": "2026-07-08",
+      "title": "Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-09",
       "category": "AI",
-      "snippet": "Like its U.S. counterpart, the European Chips Act aims to foster the semiconductor industry — in part thanks to state subsidies. One of the beneficiaries is QuantumDiamonds, a German startup that appl",
+      "snippet": "È il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere",
       "impact_score": 70
     },
     {
-      "title": "La Columbia Britannica prepara una causa contro OpenAI per la strage di Tumbler Ridge",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/columbia-britannica-causa-openai-strage-tumbler-ridge-425459125/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-08",
-      "category": "AI",
-      "snippet": "Il governo provinciale canadese ha incaricato due studi legali per trascinare in tribunale l'azienda di Sam Altman. L'accusa è di aver ignorato gli allarmi interni su un utente violento, che mesi dopo",
-      "impact_score": 65
-    },
-    {
-      "title": "Trump sblocca Gpt-5.6: via libera ai modelli Sol, Terra e Luna di OpenAI",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/trump-sblocca-gpt-5-6-openai-sol-terra-luna-425458806/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-08",
-      "category": "AI",
-      "snippet": "Il governo degli Stati Uniti ha autorizzato il rilascio su larga scala dei nuovi modelli GPT-5.6, annullando i precedenti divieti legati alla sicurezza. La decisione chiude settimane di tensioni e si ",
-      "impact_score": 65
-    },
-    {
-      "title": "Assassin’s Creed Black Flag Resynced e quella bussola del futuro che punta al passato",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/assassin_s_creed_black_flag_resynced_e_quella_bussola_del_futuro_che_punta_al_passato-425458763/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-08",
-      "category": "Finanza Tech",
-      "snippet": "Ubisoft guarda al futuro facendolo riemergere dal passato, in un’operazione che funziona e che trascina il giocatore tra le sue onde",
-      "impact_score": 65
-    },
-    {
-      "title": "Claude Cowork, l'agente IA arriva su web e mobile per lavorare a Pc spento",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/claude-cowork-agente-ai-arriva-web-mobile-425458594/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-08",
-      "category": "AI",
-      "snippet": "Anthropic ha annunciato l'espansione del suo strumento di automazione del lavoro su smartphone e browser. Il sistema permette ora di delegare compiti complessi che proseguono in background sui server ",
-      "impact_score": 65
-    },
-    {
-      "title": "Muse Image e Video, le nuove IA di Meta per creare contenuti visivi. I dubbi sulla privacy",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/meta_muse_image_video_ia_come_funzionano-425458563/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-08",
-      "category": "AI",
-      "snippet": "Meta AI ha presentato Muse Image, modello IA capace di eseguire istruzioni complesse, usare strumenti terzi, cercare informazioni online e correggere i file che genera. A chi serve e cosa sapere",
-      "impact_score": 65
-    },
-    {
-      "title": "Rosaia, il robot italiano intelligente che ripulisce lo Spazio dai satelliti “morti”",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/08/news/rosaia_il_robot_italiano_intelligente_che_ripulisce_lo_spazio_dai_satelliti_morti-425458298/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-08",
-      "category": "AI",
-      "snippet": "Il manipolatore spaziale intelligente è stato presentato al Festival sello Spazio di Busalla (Genova). Un satellite con le braccia 100% made in Italy, sviluppato da IIT e ASI",
-      "impact_score": 65
-    },
-    {
-      "title": "Nintendo, come cambierà la Switch in Europa a causa della legge sulle batterie",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/07/news/nintendo_switch_2_europa_legge_batterie-425456846/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-07",
-      "category": "AI",
-      "snippet": "A partire da febbraio 2027 la prima generazione della console giapponese scomparirà dai negozi Ue. Una decisione figlia delle nuove regole comunitarie sull'elettronica di consumo. La Switch 2 sopravvi",
-      "impact_score": 65
-    },
-    {
-      "title": "AI e cybersicurezza: piano d’azione dell’Europa",
-      "link": "https://www.punto-informatico.it/ai-cybersicurezza-piano-azione-europa/",
+      "title": "Meta: nuovo chip AI e data center in Canada",
+      "link": "https://www.punto-informatico.it/meta-nuovo-chip-ai-data-center-canada/",
       "source": "Punto Informatico",
-      "date": "2026-07-08",
+      "date": "2026-07-10",
       "category": "AI",
-      "snippet": "Il piano d'azione presentato dalla Commissione europea prevede la valutazione dei modelli AI e il miglioramento delle protezioni per le infrastrutture.\nThe post AI e cybersicurezza: piano d&#8217;azio",
+      "snippet": "A partire dal mese di settembre, Meta inizierà la produzione di un nuovo chip AI della serie MTIA, mentre in Canada costruirà un data center da 1 GW.\nThe post Meta: nuovo chip AI e data center in Cana",
+      "impact_score": 70
+    },
+    {
+      "title": "L'IA può prendere il controllo della mano per svolgere compiti che non sai fare",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/10/news/human_operator_ia_fa_muovere_mano_e_corpo-425463025/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-10",
+      "category": "AI",
+      "snippet": "Human Operator, un prototipo nato in un hackathon del Mit, dimostra come un sistema possa guidare fisicamente le dita di una persona tramite impulsi elettrici per fare cose di cui non si è capaci. Il ",
+      "impact_score": 65
+    },
+    {
+      "title": "L’IA può minacciare il vostro posto di lavoro. C’è un solo modo per stare al riparo",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/ia_lavoro_formazione_master-425461440/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-09",
+      "category": "AI",
+      "snippet": "Sono aperte le iscrizioni all’ottava edizione del Master in AI for Business, la faculty di alto livello che la Italian Tech Academy di Repubblica offre in collaborazione con Talent Garden. Un percorso",
+      "impact_score": 65
+    },
+    {
+      "title": "Il Garante per la privacy contro Character.ai, la app per parlare con l’IA: multa di 158mila euro",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/garante_privacy_multa_characterai-425461335/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-09",
+      "category": "AI",
+      "snippet": "Il Garante per la privacy ha multato per 158.000 euro una delle più famose piattaforme di intelligenza artificiale per carenze nella tutela degli utenti più giovani. Il provvedimento riaccende il diba",
+      "impact_score": 65
+    },
+    {
+      "title": "Fenomeno DuckDuckGo: cos’ha di speciale il browser ribelle che salva da IA e pubblicità",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/il_browser_duckduckgo_blocca_la_pubblicita_video_youtube_compreso-425461257/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-09",
+      "category": "AI",
+      "snippet": "Il motore di ricerca della privacy sfida Google e si propone come rifugio da un web saturo di IA. Dietro c’è un fisico del Mit e vent’anni di guerriglia contro il colosso di Mountain View",
+      "impact_score": 65
+    },
+    {
+      "title": "Luce e gas a prezzo fisso per evitare i rincari: è il momento di scegliere Octopus",
+      "link": "https://www.punto-informatico.it/luce-e-gas-a-prezzo-fisso-per-evitare-i-rincari-e-il-momento-di-scegliere-octopus/",
+      "source": "Punto Informatico",
+      "date": "2026-07-10",
+      "category": "AI",
+      "snippet": "Con Octopus è possibile bloccare il prezzo di luce e gas per 12 mesi, proteggendosi dai rincari e alleggerendo le bollette, ecco i dettagli. \nThe post Luce e gas a prezzo fisso per evitare i rincari: ",
+      "impact_score": 65
+    },
+    {
+      "title": "Microsoft usa l’AI per cercare bug nascosti su Windows",
+      "link": "https://www.punto-informatico.it/microsoft-usa-ai-cercare-bug-nascosti-windows/",
+      "source": "Punto Informatico",
+      "date": "2026-07-10",
+      "category": "AI",
+      "snippet": "Il sistema MDASH di Microsoft analizza il codice di Windows con l'AI per scoprire vulnerabilità e accelerare le correzioni di sicurezza.\nThe post Microsoft usa l&#8217;AI per cercare bug nascosti su W",
+      "impact_score": 65
+    },
+    {
+      "title": "Elon Musk elogia la rivale Anthropic, perché?",
+      "link": "https://www.punto-informatico.it/elon-musk-elogia-rivale-anthropic-perche/",
+      "source": "Punto Informatico",
+      "date": "2026-07-10",
+      "category": "AI",
+      "snippet": "Elon Musk elogia Anthropic dopo un maxi accordo sull'infrastruttura AI. L'azienda dei fratelli Amodei diventa uno dei principali clienti di SpaceXAI.\nThe post Elon Musk elogia la rivale Anthropic, per",
+      "impact_score": 65
+    },
+    {
+      "title": "Più patch di sicurezza per Windows 11 con l’uso dell’AI",
+      "link": "https://www.punto-informatico.it/patch-sicurezza-windows-11-uso-ai/",
+      "source": "Punto Informatico",
+      "date": "2026-07-10",
+      "category": "AI",
+      "snippet": "Microsoft sfrutterà ampiamente i modelli AI per trovare le vulnerabilità, quindi il numero di patch per Windows 11 aumenterà nei prossimi mesi.\nThe post Più patch di sicurezza per Windows 11 con l&#82",
       "impact_score": 65
     }
-  ],
-  "pdf_url": "https://theshadman3008.github.io/openclaw-botty/carousel/63f3c42eac52.pdf",
-  "pdf_storage": "github"
+  ]
 }
