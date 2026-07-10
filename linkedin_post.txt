@@ -1,13 +1,12 @@
-🤖 Apple: accordo da 30 miliardi di dollari con Broadcom
+🤖 Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI
 
-Apple acquisterà oltre 15 miliardi di chip progettati e prodotti da Broadcom nelle fabbriche statunitensi, spendendo oltre 30 miliardi di dollari.
-The post Apple: accordo da 30 miliardi di dollari con
+È il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere
 
 📊 PERCHÉ È IMPORTANTE:
-• Categoria: Finanza Tech
-• Impact score: 75/100
-• Fonte: Punto Informatico | 2026-07-08
+• Categoria: AI
+• Impact score: 70/100
+• Fonte: Repubblica Tech | 2026-07-09
 
-🔗 https://www.punto-informatico.it/apple-accordo-30-miliardi-dollari-broadcom/
+🔗 https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss
 
-#FinanzaTech #Tech #News #Innovation #TechNews
+#AI #Tech #News #Innovation #TechNews
