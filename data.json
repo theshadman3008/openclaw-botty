@@ -1,24 +1,24 @@
 {
-  "last_updated": "2026-07-10 12:52",
-  "total_news": 47,
+  "last_updated": "2026-07-13 06:00",
+  "total_news": 48,
   "best_news": {
-    "title": "Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI",
-    "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss",
-    "source": "Repubblica Tech",
-    "date": "2026-07-09",
-    "category": "AI",
-    "snippet": "È il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere",
+    "title": "Xavier Niel diventa primo azionista di Vodafone: compra il 16% dagli Emirati per 5,2 miliardi",
+    "link": "https://www.corrierecomunicazioni.it/telco/xavier-niel-diventa-primo-azionista-di-vodafone-compra-il-16-dagli-emirati-per-52-miliardi/",
+    "source": "Corriere Comunicazioni",
+    "date": "2026-07-10",
+    "category": "Telco",
+    "snippet": "Il patron di Iliad rileva da e&#38; la partecipazione per 5,1 miliardi di euro attraverso il veicolo Vega. Esclusa un’offerta sull’intero capitale: la strategia punta a sostenere crescita, performance",
     "impact_score": 70
   },
-  "linkedin_post": "🤖 Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI\n\nÈ il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: AI\n• Impact score: 70/100\n• Fonte: Repubblica Tech | 2026-07-09\n\n🔗 https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss\n\n#AI #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Xavier Niel diventa primo azionista di Vodafone: compra il 16% dagli Emirati per 5,2 miliardi\n\nIl patron di Iliad rileva da e&#38; la partecipazione per 5,1 miliardi di euro attraverso il veicolo Vega. Esclusa un’offerta sull’intero capitale: la strategia punta a sostenere crescita, performance\n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Telco\n• Impact score: 70/100\n• Fonte: Corriere Comunicazioni | 2026-07-10\n\n🔗 https://www.corrierecomunicazioni.it/telco/xavier-niel-diventa-primo-azionista-di-vodafone-compra-il-16-dagli-emirati-per-52-miliardi/\n\n#Telco #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "Musk lancia Grok 4.5, il primo modello IA dell’era SpaceXAI",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/grok_nuovo_standard_ia_spacexai-425461508/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-09",
-      "category": "AI",
-      "snippet": "È il modello IA di SpaceXAI che punta a ridefinire coding, agenti software e produttività tecnica. Cosa sapere su Grok 4.5 e perché ha una ragione d’essere",
+      "title": "Xavier Niel diventa primo azionista di Vodafone: compra il 16% dagli Emirati per 5,2 miliardi",
+      "link": "https://www.corrierecomunicazioni.it/telco/xavier-niel-diventa-primo-azionista-di-vodafone-compra-il-16-dagli-emirati-per-52-miliardi/",
+      "source": "Corriere Comunicazioni",
+      "date": "2026-07-10",
+      "category": "Telco",
+      "snippet": "Il patron di Iliad rileva da e&#38; la partecipazione per 5,1 miliardi di euro attraverso il veicolo Vega. Esclusa un’offerta sull’intero capitale: la strategia punta a sostenere crescita, performance",
       "impact_score": 70
     },
     {
@@ -31,21 +31,21 @@
       "impact_score": 65
     },
     {
-      "title": "Web scraping per addestrare l’AI, tutti i paletti dell’EDPB",
-      "link": "https://www.agendadigitale.eu/sicurezza/privacy/web-scraping-per-addestrare-lai-tutti-i-paletti-delledpb/",
-      "source": "Agenda Digitale",
-      "date": "2026-07-10",
+      "title": "Phia accused of ‘cookie stuffing,’ taking affiliate credit on purchases it didn’t earn",
+      "link": "https://techcrunch.com/2026/07/10/phia-accused-of-cookie-stuffing-taking-affiliate-credit-on-purchases-it-didnt-earn/",
+      "source": "TechCrunch",
+      "date": "2026-07-11",
       "category": "Finanza Tech",
-      "snippet": "Le linee guida 03/2026 dell’EDPB riportano il web scraping per l’AI generativa dentro il perimetro del GDPR: legittimo interesse, necessità del trattamento, dati sensibili, trasparenza e diritti degli",
+      "snippet": "Phia, the shopping startup founded by Bill Gates’ daughter, Phoebe, and her friend Sophia Kianni is under fire for a practice known as “cookie stuffing,” which helped the product receive commissions a",
       "impact_score": 65
     },
     {
-      "title": "An AI agent startup just let its agent run its $100M fundraise",
-      "link": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/",
-      "source": "TechCrunch",
-      "date": "2026-07-09",
-      "category": "Finanza Tech",
-      "snippet": "Lyzr, a startup that builds AI agents for enterprises, used its own AI agent to raise a $100 million round — proof, evidently, that the product actually works.",
+      "title": "La fine della scarsità: la nostra epoca alla luce dell’avvento dell’intelligenza artificiale",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/12/news/la_fine_della_scarsita_la_nostra_epoca_alla_luce_dell_avvento_dell_intelligenza_artificiale-425460905/?rss",
+      "source": "Repubblica Tech",
+      "date": "2026-07-11",
+      "category": "AI",
+      "snippet": "Se l’epoca che si apre rende le risposte a buon mercato, resta un solo giardino che valga la pena coltivare: quello delle domande",
       "impact_score": 65
     },
     {
@@ -58,49 +58,49 @@
       "impact_score": 60
     },
     {
-      "title": "Patch per Microsoft Defender può consumare tutto lo spazio",
-      "link": "https://www.punto-informatico.it/patch-microsoft-defender-puo-consumare-tutto-spazio/",
-      "source": "Punto Informatico",
+      "title": "AI in azienda, perché gestire il cambiamento è anche una questione di sicurezza",
+      "link": "https://www.agendadigitale.eu/sicurezza/ai-in-azienda-perche-gestire-il-cambiamento-e-anche-una-questione-di-sicurezza/",
+      "source": "Agenda Digitale",
       "date": "2026-07-10",
       "category": "Cybersecurity",
-      "snippet": "La patch per una vulnerabilità di Microsoft Defender potrebbe causare l'esaurimento dello spazio su disco, rendendo inutilizzabile il sistema operativo.\nThe post Patch per Microsoft Defender può consu",
+      "snippet": "Change management e AI devono procedere insieme quando l’innovazione entra nei processi aziendali. La formazione, la governance e la cybersecurity diventano leve decisive per usare l’intelligenza arti",
       "impact_score": 60
     },
     {
-      "title": "AI trust gap: nelle telco il 72% si fida, ma solo il 14% può provarlo",
-      "link": "https://www.corrierecomunicazioni.it/telco/ai-trust-gap-nelle-telco-il-72-si-fida-ma-solo-il-14-puo-provarlo/",
-      "source": "Corriere Comunicazioni",
-      "date": "2026-07-10",
-      "category": "Telco",
-      "snippet": "La nuova ricerca TM Forum, realizzata con Ibm Institute for Business Value su 130 operatori, evidenzia un divario critico tra governance e assurance. Per il settore la questione non è più solo adottar",
-      "impact_score": 60
-    },
-    {
-      "title": "Una partita del Mondiale di calcio ha infranto il record di ricerche su Google",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/09/news/google_record_ricerche_mondiale_2026_argentina_egitto-425460759/?rss",
-      "source": "Repubblica Tech",
-      "date": "2026-07-09",
+      "title": "Starship: SpaceX annuncia data e obiettivi del 13esimo lancio",
+      "link": "https://www.punto-informatico.it/starship-spacex-annuncia-data-obiettivi-13esimo-lancio/",
+      "source": "Punto Informatico",
+      "date": "2026-07-12",
       "category": "Tech",
-      "snippet": "Durante gli ottavi di finale dei Mondiali che si stanno disputando in Nord America, la vittoria in extremis dell'Argentina sull'Egitto ha generato il picco di traffico più alto nella storia di Google",
+      "snippet": "Il 13esimo volo del razzo Starship è previsto il 16 luglio (17 luglio in Italia) con obiettivi simili a quelli del 12esimo test, quindi senza cattura.\nThe post Starship: SpaceX annuncia data e obietti",
       "impact_score": 55
     },
     {
-      "title": "Meta: nuovo chip AI e data center in Canada",
-      "link": "https://www.punto-informatico.it/meta-nuovo-chip-ai-data-center-canada/",
+      "title": "Anche la Cina ha un razzo riutilizzabile come SpaceX",
+      "link": "https://www.punto-informatico.it/cina-razzo-riutilizzabile-spacex/",
       "source": "Punto Informatico",
+      "date": "2026-07-12",
+      "category": "Tech",
+      "snippet": "Il primo stadio del Long March 10B è stato catturato al volo con una rete di cavi, quindi anche la Cina ha un razzo parzialmente riutilizzabile.\nThe post Anche la Cina ha un razzo riutilizzabile come ",
+      "impact_score": 55
+    },
+    {
+      "title": "Reed Jobs would rather talk about curing cancer than his last name",
+      "link": "https://techcrunch.com/2026/07/11/reed-jobs-would-rather-talk-about-curing-cancer-than-his-last-name/",
+      "source": "TechCrunch",
+      "date": "2026-07-12",
+      "category": "Digital Transformation",
+      "snippet": "When we last sat down with Jobs at TechCrunch Disrupt nearly three years ago, his firm Yosemite was brand new and biotech was still reeling from its post-pandemic crash. Now, the venture outfit has a ",
+      "impact_score": 50
+    },
+    {
+      "title": "Check out the first images of Quest shipwreck",
+      "link": "https://arstechnica.com/science/2026/07/expedition-captures-first-images-of-shackletons-last-ship/",
+      "source": "Ars Technica",
       "date": "2026-07-10",
       "category": "Digital Transformation",
-      "snippet": "A partire dal mese di settembre, Meta inizierà la produzione di un nuovo chip AI della serie MTIA, mentre in Canada costruirà un data center da 1 GW.\nThe post Meta: nuovo chip AI e data center in Cana",
-      "impact_score": 55
-    },
-    {
-      "title": "Semiconduttori, per l’Europa il rischio geopolitico diventa strutturale",
-      "link": "https://www.corrierecomunicazioni.it/europa/semiconduttori-per-leuropa-il-rischio-geopolitico-diventa-strutturale/",
-      "source": "Corriere Comunicazioni",
-      "date": "2026-07-10",
-      "category": "Tech",
-      "snippet": "Il policy paper della Chips Diplomacy Support Initiative avverte: nei prossimi cinque anni restrizioni all’export, tensioni su Taiwan e fragilità delle filiere metteranno alla prova la capacità di Bru",
-      "impact_score": 55
+      "snippet": "The Quest shipwreck is in worse shape than expected, but it has turned into a thriving marine ecosystem.",
+      "impact_score": 50
     }
   ]
 }
