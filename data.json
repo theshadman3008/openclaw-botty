@@ -1,69 +1,69 @@
 {
-  "last_updated": "2026-07-15 06:00",
+  "last_updated": "2026-07-16 06:00",
   "total_news": 48,
   "best_news": {
-    "title": "Perché Satya Nadella mette in guardia chi usa ChatGPT e Claude",
-    "link": "https://www.punto-informatico.it/perche-satya-nadella-mette-in-guardia-chi-usa-chatgpt-claude/",
-    "source": "Punto Informatico",
-    "date": "2026-07-14",
+    "title": "Data center AI, Pure DC vara in Finlandia il campus dei record",
+    "link": "https://www.corrierecomunicazioni.it/digital-economy/data-center-ai-pure-dc-vara-in-finlandia-il-campus-dei-record/",
+    "source": "Corriere Comunicazioni",
+    "date": "2026-07-15",
     "category": "Finanza Tech",
-    "snippet": "Nadella critica il modo in cui ChatGPT e company raccolgono valore dai dati delle aziende e denuncia l'ipocrisia sulla distillazione dei modelli AI.\nThe post Perché Satya Nadella mette in guardia chi ",
-    "impact_score": 70
+    "snippet": "Via a uno dei più grandi progetti infrastrutturali europei: la Fase 1 prevede un investimento di oltre 1,5 miliardi di euro per un impianto da 110 MW a Seinäjoki, con la possibilità di espansione del ",
+    "impact_score": 75
   },
-  "linkedin_post": "🤖 Perché Satya Nadella mette in guardia chi usa ChatGPT e Claude\n\nNadella critica il modo in cui ChatGPT e company raccolgono valore dai dati delle aziende e denuncia l'ipocrisia sulla distillazione dei modelli AI.\nThe post Perché Satya Nadella mette in guardia chi \n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 70/100\n• Fonte: Punto Informatico | 2026-07-14\n\n🔗 https://www.punto-informatico.it/perche-satya-nadella-mette-in-guardia-chi-usa-chatgpt-claude/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
+  "linkedin_post": "🤖 Data center AI, Pure DC vara in Finlandia il campus dei record\n\nVia a uno dei più grandi progetti infrastrutturali europei: la Fase 1 prevede un investimento di oltre 1,5 miliardi di euro per un impianto da 110 MW a Seinäjoki, con la possibilità di espansione del \n\n📊 PERCHÉ È IMPORTANTE:\n• Categoria: Finanza Tech\n• Impact score: 75/100\n• Fonte: Corriere Comunicazioni | 2026-07-15\n\n🔗 https://www.corrierecomunicazioni.it/digital-economy/data-center-ai-pure-dc-vara-in-finlandia-il-campus-dei-record/\n\n#FinanzaTech #Tech #News #Innovation #TechNews",
   "all_news": [
     {
-      "title": "Perché Satya Nadella mette in guardia chi usa ChatGPT e Claude",
-      "link": "https://www.punto-informatico.it/perche-satya-nadella-mette-in-guardia-chi-usa-chatgpt-claude/",
+      "title": "Data center AI, Pure DC vara in Finlandia il campus dei record",
+      "link": "https://www.corrierecomunicazioni.it/digital-economy/data-center-ai-pure-dc-vara-in-finlandia-il-campus-dei-record/",
+      "source": "Corriere Comunicazioni",
+      "date": "2026-07-15",
+      "category": "Finanza Tech",
+      "snippet": "Via a uno dei più grandi progetti infrastrutturali europei: la Fase 1 prevede un investimento di oltre 1,5 miliardi di euro per un impianto da 110 MW a Seinäjoki, con la possibilità di espansione del ",
+      "impact_score": 75
+    },
+    {
+      "title": "Fusione Paramount-WBD: denunce da 12 Stati e dalla WGA",
+      "link": "https://www.punto-informatico.it/fusione-paramount-wbd-denunce-12-stati-wga/",
       "source": "Punto Informatico",
-      "date": "2026-07-14",
+      "date": "2026-07-15",
       "category": "Finanza Tech",
-      "snippet": "Nadella critica il modo in cui ChatGPT e company raccolgono valore dai dati delle aziende e denuncia l'ipocrisia sulla distillazione dei modelli AI.\nThe post Perché Satya Nadella mette in guardia chi ",
+      "snippet": "Secondo 12 Stati, guidati dalla California, l'acquisizione di WBD da parte di Paramount danneggia la concorrenza, quindi deve essere bloccata.\nThe post Fusione Paramount-WBD: denunce da 12 Stati e dal",
       "impact_score": 70
     },
     {
-      "title": "Farmaci e digitale, la sfida che decide il futuro competitivo dell’Ue",
-      "link": "https://www.agendadigitale.eu/sanita/farmaci-e-digitale-la-sfida-che-decide-il-futuro-competitivo-dellue/",
-      "source": "Agenda Digitale",
-      "date": "2026-07-14",
-      "category": "AI",
-      "snippet": "Farmaci, sanità digitale, intelligenza artificiale e bilancio europeo diventano terreni decisivi per la competitività dell’UE. Il Rapporto Cantiere Europa+ indica rischi industriali, ritardi infrastru",
-      "impact_score": 70
-    },
-    {
-      "title": "Il T-Rex Gus venduto da Sotheby’s per 50,1 milioni di dollari: è il fossile più costoso di sempre",
-      "link": "https://www.repubblica.it/tecnologia/2026/07/14/news/t-rex-gus-venduto-sothebys-50-milioni-dollari-425470942/?rss",
+      "title": "Booking, dopo il furto dei dati aumentano i tentativi di truffa con false richieste di pagamento",
+      "link": "https://www.repubblica.it/tecnologia/2026/07/15/news/booking_truffa_dati_personali_false_richieste_pagamento-425471875/?rss",
       "source": "Repubblica Tech",
-      "date": "2026-07-14",
-      "category": "Finanza Tech",
-      "snippet": "Uno dei più grandi e completi scheletri di Tyrannosaurus rex mai arrivati sul mercato ha superato ogni previsione durante un’asta a New York. L’acquirente resta anonimo. La vendita riapre il conflitto",
-      "impact_score": 65
-    },
-    {
-      "title": "Iliad offerta fibra ottica FTTH a 22,99 € per sempre",
-      "link": "https://www.corrierecomunicazioni.it/digital-economy/iliad-offerta-fibra-incluso-router-wi-fi-7-a-22-99-euro/",
-      "source": "Corriere Comunicazioni",
-      "date": "2026-07-14",
-      "category": "Telco",
-      "snippet": "L'offerta Iliad offerta fibra consente di attivare una connessione FTTH a 22,99 euro al mese per sempre per i clienti mobile idonei. Inclusi router Wi-Fi 7 in comodato d'uso gratuito, velocità fino a ",
-      "impact_score": 60
-    },
-    {
-      "title": "Offerta Very Mobile: 200 Giga e 5G Full Speed a 6,99 euro, la promozione scade il 23 luglio",
-      "link": "https://www.corrierecomunicazioni.it/digital-economy/offerta-very-mobile-2/",
-      "source": "Corriere Comunicazioni",
-      "date": "2026-07-14",
-      "category": "Telco",
-      "snippet": "L'Offerta Very Mobile con 200 Giga, minuti illimitati e 200 SMS a 6,99 euro al mese resta disponibile solo fino al 23 luglio. L'iniziativa include 5G Full Speed fino a 2 Gbps, un mese gratuito, SIM ed",
-      "impact_score": 60
-    },
-    {
-      "title": "Prodotti connessi, il CRA obbliga le imprese a rivedere le varianti",
-      "link": "https://www.agendadigitale.eu/sicurezza/prodotti-connessi-il-cra-obbliga-le-imprese-a-rivedere-le-varianti/",
-      "source": "Agenda Digitale",
-      "date": "2026-07-14",
+      "date": "2026-07-15",
       "category": "Cybersecurity",
-      "snippet": "Il Cyber Resilience Act consente una valutazione del rischio condivisa solo quando le varianti di prodotto hanno le stesse proprietà di sicurezza. Firmware, interfacce, aggiornamenti e connettività po",
+      "snippet": "Non sono i classici messaggi di phishing: i truffatori conoscono nome dell'hotel, date del soggiorno e spesso il numero della prenotazione. Dopo la violazione di dati comunicata da Booking.com la scor",
+      "impact_score": 60
+    },
+    {
+      "title": "Meno di 6 euro al mese per 300 giga: la nuova offerta di Kena su rete TIM",
+      "link": "https://www.punto-informatico.it/meno-di-6-euro-al-mese-per-300-giga-la-nuova-offerta-di-kena-su-rete-tim/",
+      "source": "Punto Informatico",
+      "date": "2026-07-15",
+      "category": "Telco",
+      "snippet": "L'offerta riservata se attivi un nuovo numero o passi il tuo da un altro operatore virtuale.\nThe post Meno di 6 euro al mese per 300 giga: la nuova offerta di Kena su rete TIM appeared first on Punto ",
+      "impact_score": 60
+    },
+    {
+      "title": "TIM down il 15 luglio? Tutti gli aggiornamenti (risolto)",
+      "link": "https://www.punto-informatico.it/tim-down-15072026/",
+      "source": "Punto Informatico",
+      "date": "2026-07-15",
+      "category": "Telco",
+      "snippet": "Segnalazioni per problemi alla rete TIM: si moltiplicano i feedback relativi al down per i servizi dell'operatore.\nThe post TIM down il 15 luglio? Tutti gli aggiornamenti (risolto) appeared first on P",
+      "impact_score": 60
+    },
+    {
+      "title": "Mondiali 2026, la cybersicurezza entra nel campo del calcio globale",
+      "link": "https://www.agendadigitale.eu/sicurezza/mondiali-2026-la-cybersicurezza-entra-nel-campo-del-calcio-globale/",
+      "source": "Agenda Digitale",
+      "date": "2026-07-15",
+      "category": "Cybersecurity",
+      "snippet": "Il Mondiale 2026 mette il calcio davanti a una superficie d’attacco senza precedenti. Tra supply chain digitale, dati biometrici degli atleti, sistemi di intelligenza artificiale e standard di resilie",
       "impact_score": 60
     },
     {
@@ -76,30 +76,30 @@
       "impact_score": 55
     },
     {
-      "title": "Garante privacy, la Cassazione chiarisce termini e sanzioni",
-      "link": "https://www.agendadigitale.eu/sicurezza/privacy/garante-privacy-la-cassazione-chiarisce-termini-e-sanzioni/",
-      "source": "Agenda Digitale",
-      "date": "2026-07-14",
+      "title": "Buzz Aldrin sells famous felt-tip pen that helped launch Apollo from the Moon",
+      "link": "https://arstechnica.com/space/2026/07/apollo-11s-broken-switch-and-mission-saving-pen-sell-for-860k/",
+      "source": "Ars Technica",
+      "date": "2026-07-15",
       "category": "Tech",
-      "snippet": "La sentenza 22791/2026 della Cassazione distingue procedimento di reclamo e procedimento sanzionatorio del Garante privacy, chiarendo che i ritardi nella conclusione del primo non fanno decadere il po",
+      "snippet": "While an impressive sale, the pen and switch did not break records.",
       "impact_score": 55
     },
     {
-      "title": "Che ci insegnano i rincari a smartphone e console causati dall’AI",
-      "link": "https://www.agendadigitale.eu/mercati-digitali/mac-e-xbox-piu-cari-perche-la-filiera-ai-spinge-al-rialzo-i-prezzi-dei-dispositivi/",
-      "source": "Agenda Digitale",
-      "date": "2026-07-14",
+      "title": "Dopo le frequenze e la numerazione si aggiorna la lista dei canali HbbTV del digitale terrestre",
+      "link": "https://www.punto-informatico.it/dopo-le-frequenze-e-la-numerazione-si-aggiorna-la-lista-dei-canali-hbbtv-del-digitale-terrestre/",
+      "source": "Punto Informatico",
+      "date": "2026-07-16",
       "category": "Digital Transformation",
-      "snippet": "Gli aumenti annunciati da Apple, Microsoft e vari marchi di smartphone mostrano come la domanda dei data center AI stia sottraendo memoria e capacità produttiva all’elettronica di consumo, facendo sal",
+      "snippet": "Dopo le frequenze e la numerazione LCN nazionale, sulla piattaforma digitale terrestre si è aggiornata la lista dei canali HbbTV.\nThe post Dopo le frequenze e la numerazione si aggiorna la lista dei c",
       "impact_score": 50
     },
     {
-      "title": "New York bans data center construction for a year, rattling AI industry",
-      "link": "https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/",
-      "source": "Ars Technica",
-      "date": "2026-07-14",
+      "title": "Ai-Ran, da Nokia la prima piattaforma commerciale: efficienza dello spettro fino a +100%",
+      "link": "https://www.corrierecomunicazioni.it/telco/ai-ran-da-nokia-la-prima-piattaforma-commerciale-efficienza-dello-spettro-fino-a-100/",
+      "source": "Corriere Comunicazioni",
+      "date": "2026-07-15",
       "category": "Digital Transformation",
-      "snippet": "New York’s data center moratorium may become the blueprint for anti-AI movement.",
+      "snippet": "La tecnologia consente agli operatori di ottenere di più dalla propria infrastruttura, incluso l'aggiornamento verso il 6G. La piattaforma è basata sul software anyRan della casa finlandese e su Aeria",
       "impact_score": 50
     }
   ]
